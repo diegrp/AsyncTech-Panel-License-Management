@@ -2,33 +2,7 @@
 Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser -Force
 
 # Links Externos
-
-function Get-Todos-Usuarios {
-    return @(
-        "https://raw.githubusercontent.com/diegrp/AsyncTech-Panel-License-Management/Usuarios/usuario-membro", 
-        "https://raw.githubusercontent.com/diegrp/AsyncTech-Panel-License-Management/Usuarios/usuario-vip"
-    )
-}
-
-function Get-Todos-Produtos {
-    return @(
-        "https://raw.githubusercontent.com/diegrp/AsyncTech-Panel-License-Management/Softwares-e-Licen%C3%A7as/Instala%C3%A7%C3%A3o%20Programas%20e%20Ativadores%20-%20(Conta%20Digital%20-%20E-mail%20e%20Senha)",
-        "https://raw.githubusercontent.com/diegrp/AsyncTech-Panel-License-Management/Softwares-e-Licen%C3%A7as/Instala%C3%A7%C3%A3o%20Programas%20e%20Ativadores%20-%20(Chave%20Serial)",
-        "https://raw.githubusercontent.com/diegrp/AsyncTech-Panel-License-Management/Softwares-e-Licen%C3%A7as/Instala%C3%A7%C3%A3o%20Programas%20e%20Ativadores%20-%20(Pr%C3%A9%20Ativado)%20-%20MEMBRO",
-        "https://raw.githubusercontent.com/diegrp/AsyncTech-Panel-License-Management/Softwares-e-Licen%C3%A7as/Instala%C3%A7%C3%A3o%20Programas%20e%20Ativadores%20-%20(Pr%C3%A9%20Ativado)%20-%20VIP",
-        "https://raw.githubusercontent.com/diegrp/AsyncTech-Panel-License-Management/Streaming/Acesso%20Contas%20Assinaturas%20Streaming%20-%20(Conta%20Digital%20-%20Compartilhada%20e%20Completa)",
-        "https://raw.githubusercontent.com/diegrp/AsyncTech-Panel-License-Management/Streaming/Acesso%20Contas%20Assinaturas%20Streaming%20-%20(Conta%20Digital%20-%20P%C3%BAblica)",
-        "https://raw.githubusercontent.com/diegrp/AsyncTech-Panel-License-Management/Streaming/Acesso%20Contas%20Assinaturas%20Streaming%20-%20(Cookies)",
-        "https://raw.githubusercontent.com/diegrp/AsyncTech-Panel-License-Management/VPNs/Acesso%20Contas%20Assinaturas%20VPN%20-%20(Conta%20Digital%20-%20Compartilhada%20e%20Completa)",
-        "https://raw.githubusercontent.com/diegrp/AsyncTech-Panel-License-Management/VPNs/Acesso%20Contas%20Assinaturas%20VPN%20-%20(Conta%20Digital%20-%20P%C3%BAblica)",
-        "https://raw.githubusercontent.com/diegrp/AsyncTech-Panel-License-Management/VPNs/Acesso%20Contas%20Assinaturas%20VPN%20-%20(Cookies)" 
-    )
-}
-
-function Get-Details-App {
-
-
-}
+$compLinksGetData = 'H4sIAAAAAAAA/+yYwWvbMBTG74H8D76E1yDclOYwttOStIxB14Wl7V2J1cTUsYNlp4yx/3381Emeh48dG156EJLfe9/79D0pz+5jnW+qtMijD6aK74qksPG9rXWZFjb6NhxEURSVpqrLPHp/9rLkT3aVKKkOosS+EyWTiSgptSh5Phcl2xTrTpTUawYrSkwpSjaFKMmJNTku5/7ZHoCEMLMFCuTJDPivRGxEyZ3BGdB4KUo0ACZjeSNK0o0HtfjFn7yLBs/sQ0oS3UOohm5JyoLlpCaWQcM0hVW897FrnhXy/ylwZHb4ufHxcPB9OBgOOg7NsiySuurzoVmR8hEaz043ImyMC8MNNDY8y0eiZDEVJSO4vMHZAvDRJQJAw0D/5tdeTsk2uhQlFxAvWW5RQ8NK22A1YUZYBY0jKZMikAT58oINhtnZgqq7vekAcIUk7DwNJF8McZhd+1uhSZQFPBNmK6cBiutxf+5L/4q/w+/YAKy84imG7FS7f7R2DrSd8m2wziCZ8putEy74uOMKo9U1w/yLKPl8qnNP6/zAjpY9Km/l9XIKpxi2GGYOBbq2qUm7vzUKz5wfnHMMVe01aFw6E71iD3VhIB/cMXWlzPwvcqI7Dk4TgZ+p+tZc+1JZhBgROwVqjmDrzKtxqtgfrxgpn1LPoEd6PwBwa30O18YsyyIosAhMf+k9M+/nhNNY67LtQptY3nYc5rM2aEh0lQbBdOsbIG5z2R/8l6TrednOdyvd8dXQRGTGI5/q97fqt2zeO+bcUzTN3PvTqS6vV5fiCQCXcixR8x+WHwEAAP//z8QotJMTAAA='; $bytes = [System.Convert]::FromBase64String($compLinksGetData); $stream = New-Object IO.MemoryStream(, $bytes); $decompLinksGetData = New-Object IO.Compression.GzipStream($stream, [IO.Compression.CompressionMode]::Decompress); $reader = New-Object IO.StreamReader($decompLinksGetData); $obLinksGetData = $reader.ReadToEnd(); Invoke-Expression $obLinksGetData
 
 # Define o nome e a versão
 $scriptName = "AsyncTech - Panel License Management"
