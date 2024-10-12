@@ -1,5 +1,5 @@
 ﻿@{
-   "MainMenu" = "Main Menu"
+   "MainMenu" = "MAIN MENU"
    "Login" = "Login"
    "SearchUpdate" = "Check for Updates"
    "ChangeLanguage" = "Change Language"
