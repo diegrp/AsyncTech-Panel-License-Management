@@ -23,7 +23,26 @@
    "ErrorLoginN2" = "Usuário ou senha incorretos."
    "EmptyLogin" = "Usuário ou senha não podem estar vazios."
 
-   # Product Menu
+   # Select Produc Menu
+   # Details Login Account
+   "LoginStatusMenu" = "STATUS DE LOGIN"
+   "UserLoginStatus" = "USUÁRIO" 
+   "PassLoginStatus" = "SENHA" 
+   "PlanTypeAccount" = "TIPO PLANO CONTA" 
+   "TotalQuantityDV" = "QTD TOTAL DOWNLOAD E VISUALIZAÇÕES"
+   "TotalQuantityDVUsed" = "QTD TOTAL DOWNLOAD E VISUALIZAÇÕES UTILIZADO"
+   # Select Product
+   "SelectProductMenu" = "MENU DE SELEÇÃO DO PRODUTO"
+   "DetailtAccount" = "DETALHES DA CONTA"
+   "TotalQuantityCategories" = "QTD TOTAL CATEGORIAS DISPONÍVEIS"
+   "TotalQuantityProducts" = "QTD TOTAL PRODUTOS DISPONÍVEIS"
+   "SubscriptionPlan" = "PLANO ASSINATURA"
+   "PlanDuration" = "DURAÇÃO PLANO"
+   "StartDate" = "DATA INÍCIO"
+   "EndDate" = "DATA FIM"
+   "RemainingDays" = "DIAS RESTANTES"
+   "PaymentStatus" = "STATUS PAGAMENTO"
+   "ChoiceOptionCategorieMenu" = "Selecione a letra ou número de sua categoria disponível"
    
    # Select Language Menu
    "SelectLanguageMenu" = "MENU DE SELEÇÃO DO IDIOMA"
