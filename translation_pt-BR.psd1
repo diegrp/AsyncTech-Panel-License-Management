@@ -25,12 +25,17 @@
 
    # Select Produc Menu
    # Details Login Account
+   "Unlimited" = "Ilimitado"
+   "Pending" = "Pendente"
+   "Approved" = "Aprovado"
+   "Nothing" = "Nenhum"
+   "TotalQTDTitle" = QTDV TOTAL
+   "TotalQTDV" = "QTD TOTAL DOWNLOAD E VISUALIZAÇÕES"
+   "TotalQTDVUsed" = "QTD TOTAL DOWNLOAD E VISUALIZAÇÕES UTILIZADO"
    "LoginStatusMenu" = "STATUS DE LOGIN"
    "UserLoginStatus" = "USUÁRIO" 
    "PassLoginStatus" = "SENHA" 
-   "PlanTypeAccount" = "TIPO PLANO CONTA" 
-   "TotalQuantityDV" = "QTD TOTAL DOWNLOAD E VISUALIZAÇÕES"
-   "TotalQuantityDVUsed" = "QTD TOTAL DOWNLOAD E VISUALIZAÇÕES UTILIZADO"
+   "PlanTypeAccount" = "TIPO PLANO CONTA"
    # Select Product
    "SelectProductMenu" = "MENU DE SELEÇÃO DO PRODUTO"
    "DetailstAccount" = "DETALHES DA CONTA"
