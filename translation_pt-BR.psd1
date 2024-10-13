@@ -33,7 +33,7 @@
    "TotalQuantityDVUsed" = "QTD TOTAL DOWNLOAD E VISUALIZAÇÕES UTILIZADO"
    # Select Product
    "SelectProductMenu" = "MENU DE SELEÇÃO DO PRODUTO"
-   "DetailtAccount" = "DETALHES DA CONTA"
+   "DetailstAccount" = "DETALHES DA CONTA"
    "TotalQuantityCategories" = "QTD TOTAL CATEGORIAS DISPONÍVEIS"
    "TotalQuantityProducts" = "QTD TOTAL PRODUTOS DISPONÍVEIS"
    "SubscriptionPlan" = "PLANO ASSINATURA"
@@ -43,6 +43,16 @@
    "RemainingDays" = "DIAS RESTANTES"
    "PaymentStatus" = "STATUS PAGAMENTO"
    "ChoiceOptionCategorieMenu" = "Selecione a letra ou número de sua categoria disponível"
+   
+   # Select Produc Category Menu
+   "SelectProductCategoryMenu" = "MENU DE SELEÇÃO DO PRODUTO DA CATEGORIA"
+   "DetailsProducts" = "DETALHES DE PRODUTOS"
+   "SelectCategory" = "CATEGORIA SELECIONADA"
+   "TotalAvailableProducts" = "QTD PRODUTOS DISPONÍVEIS"
+   "TotalProducts" = "QTD TOTAL DE PRODUTOS"
+   "SelectedYouProduct" = "Você selecionou o produto"
+   "ProductNotFound" = "Produto não disponível para seleção."
+   "ChoiceOptionProductAvailable" = "Selecione a letra ou número do seu produto disponível"
    
    # Select Language Menu
    "SelectLanguageMenu" = "MENU DE SELEÇÃO DO IDIOMA"
