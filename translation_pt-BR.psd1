@@ -7,6 +7,7 @@
    "VIPGroup" = "Grupo VIP" 
    "Exit" = "Sair"
    "ChoiceOption" = "Digite o número da opção escolhida"
+   
    # Select Language Menu
    "SelectLanguageMenu" = "MENU DE SELEÇÃO DO IDIOMA"
    "LanguageUnknown" = "Idioma Desconhecido"
@@ -16,7 +17,7 @@
    "LanguagePTBR" = "Português BR"
    "LanguagePTBROption" = "Português BR (Padrão)"
    "ChoiceOptionLanguageMenu" = "Selecione a letra ou número do seu idioma"
-   # Login Menu
+
    # Default Options
    "RenewPlanMenuOption" = "Renovar Plano Assinatura"
    "ViewAccountMenuOption" = "Visualizar Senha da Conta"
@@ -24,6 +25,7 @@
    "GoBackMenuOption" = "Voltar"
    "MainMenuOption" = "Menu Principal"
    "InvalidOption" = "Opção inválida. Por favor, digite um número ou letra que seja válido."
+   
    # Default Message Alert
    "AlertMessageUserNotFound" = "Usuário não encontrado."
    "AlertMessageAccessContentURLNotFound" = "Erro ao acessar a URL"
