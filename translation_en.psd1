@@ -17,4 +17,17 @@
    "LanguagePTBROption" = "Portuguese BR - (Default)"
    "MainMenuOption" = "Main Menu"
    "ChoiceOptionLanguageMenu" = "Select the letter or number of your language"
+   # Login Menu
+   
+   # Default Options
+   "RenewPlanMenuOption" = "Renew Subscription Plan"
+   "ViewAccountMenuOption" = "View Account Password"
+   "LogoutMenuOption" = "Log out"
+   "GoBackMenuOption" = "Go Back"
+   "MainMenuOption" = "Main Menu"
+   "InvalidOption" = "Invalid option. Please enter a valid number or letter."
+   # Default Message Alert
+   "AlertMessageUserNotFound" = "User not found."
+   "AlertMessageAccessContentURLNotFound" = "Error accessing URL"
+   "AlertMessageGetContentURLNotFound" = "URL content is empty or could not be retrieved" 
 }
