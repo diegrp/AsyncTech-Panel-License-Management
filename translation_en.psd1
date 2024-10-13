@@ -18,7 +18,6 @@
    "MainMenuOption" = "Main Menu"
    "ChoiceOptionLanguageMenu" = "Select the letter or number of your language"
    # Login Menu
-   
    # Default Options
    "RenewPlanMenuOption" = "Renew Subscription Plan"
    "ViewAccountMenuOption" = "View Account Password"
