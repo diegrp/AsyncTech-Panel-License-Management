@@ -6,4 +6,13 @@
    "VIPGroup" = "Grupo VIP" 
    "Exit" = "Sair"
    "ChoiceOption" = "Digite o número da opção escolhida"
+   "SelectLanguageMenu" = "MENU DE SELEÇÃO DO IDIOMA"
+   "LanguageUnknown" = "Idioma Desconhecido"
+   "LanguageTitle" = "IDIOMA"
+   "LanguageSelected" = "IDIOMA SELECIONADO"
+   "LanguageEn" = "Inglês"
+   "LanguagePTBR" = "Português BR"
+   "LanguagePTBROption" = "Português BR (Padrão)"
+   "MainMenuOption" = "Menu Principal"
+   "ChoiceOptionLanguageMenu" = "Selecione a letra ou número do seu idioma"	
 }
