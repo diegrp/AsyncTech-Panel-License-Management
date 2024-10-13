@@ -15,6 +15,12 @@
    "LanguageEn" = "Inglês"
    "LanguagePTBR" = "Português BR"
    "LanguagePTBROption" = "Português BR (Padrão)"
+   "ChoiceOptionLanguageMenu" = "Selecione a letra ou número do seu idioma"
+   # Login Menu
+   
+   # Default Options
+   "ViewAccountMenuOption" = "Visualizar Senha da Conta"
+   "LogoutMenuOption" = "Deslogar"
+   "GoBackMenuOption" = "Voltar"
    "MainMenuOption" = "Menu Principal"
-   "ChoiceOptionLanguageMenu" = "Selecione a letra ou número do seu idioma"	
 }
