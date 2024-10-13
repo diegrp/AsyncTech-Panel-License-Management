@@ -34,8 +34,8 @@
    # Select Product
    "SelectProductMenu" = "MENU DE SELEÇÃO DO PRODUTO"
    "DetailstAccount" = "DETALHES DA CONTA"
-   "TotalQuantityCategories" = "QTD TOTAL CATEGORIAS DISPONÍVEIS"
-   "TotalQuantityProducts" = "QTD TOTAL PRODUTOS DISPONÍVEIS"
+   "TotalQtdCategories" = "QTD TOTAL CATEGORIAS DISPONÍVEIS"
+   "TotalQtdProducts" = "QTD TOTAL PRODUTOS DISPONÍVEIS"
    "SubscriptionPlan" = "PLANO ASSINATURA"
    "PlanDuration" = "DURAÇÃO PLANO"
    "StartDate" = "DATA INÍCIO"
@@ -53,6 +53,17 @@
    "SelectedYouProduct" = "Você selecionou o produto"
    "ProductNotFound" = "Produto não disponível para seleção."
    "ChoiceOptionProductAvailable" = "Selecione a letra ou número do seu produto disponível"
+
+   # Select Methods Product Menu
+   "SelectMethodsProductMenu" = "MENU DE SELEÇÃO MÉTODOS DO PRODUTO"
+   "DetailsMethodActivate" = "DETALHES MÉTODO DE ATIVAÇÃO"
+   "SelectedCategory" = "CATEGORIA SELECIONADA"
+   "SelectedProduct" = "PRODUTO SELECIONADO"
+   "QtdAvailableMethods" = "QTD MÉTODOS DISPONÍVEIS"
+   "TotalQtdMethods" = "QTD TOTAL MÉTODOS"
+   "SelectedYouMethod" = "Você selecionou o método" 
+   "MethodNotFound" = "Método não disponível para o seu"
+   "ChoiceOptionMethodsProductMenu" = "Selecione a letra ou número do método disponível para seu"
    
    # Select Language Menu
    "SelectLanguageMenu" = "MENU DE SELEÇÃO DO IDIOMA"
