@@ -1,4 +1,5 @@
 ﻿@{
+   # Main Menu
    "MainMenu" = "MENU PRINCIPAL"
    "Login" = "Login"
    "SearchUpdate" = "Verificar Atualizações"
@@ -6,6 +7,7 @@
    "VIPGroup" = "Grupo VIP" 
    "Exit" = "Sair"
    "ChoiceOption" = "Digite o número da opção escolhida"
+   # Select Language Menu
    "SelectLanguageMenu" = "MENU DE SELEÇÃO DO IDIOMA"
    "LanguageUnknown" = "Idioma Desconhecido"
    "LanguageTitle" = "IDIOMA"
