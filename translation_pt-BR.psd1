@@ -49,6 +49,23 @@
    "PaymentStatus" = "STATUS PAGAMENTO"
    "ChoiceOptionCategorieMenu" = "Selecione a letra ou número de sua categoria disponível"
 
+   # Details Timing Delivery Product
+   "FomartTimeInvalid" = "Formato de tempo inválido e nenhum estado salvo encontrado. Usando valor padrão de 30 minutos."
+   "DeliveryDetails" = "DETALHES DA ENTREGA DO"
+   "DeliveryWaiting" = "TEMPO ESPERA ENTREGA"
+   "AvailabilityStatus" = "STATUS DISPONIBILIDADE"
+   "ProductAvailability" = "DISPONIBILIDADE PRODUTO"
+   "TimeLeftDelivery" = "TEMPO RESTANTE PARA ENTREGA"
+   "HoursTiming" = "Horas"
+   "MinutesTiming" = "Minutos"
+   "SecondsTiming" = "Segundos"
+   "EndDeliveryTime" = "O prazo do tempo de entrega chegou ao fim!"
+   "BackSelectMethodActivated" = "Volte e selecione novamente o método de ativação do seu"
+   "TryLoginAccount" = "Ou faça o login em sua conta novamente."
+   "ProductRebootTiming" = "O temporizador pode reiniciar, se o produto ainda não estiver disponível para entrega."
+   "ErrorOccurred" = "Ocorreu um erro"
+   "PleaseTryAgain" = "Por favor, tente novamente."
+
    # Renew Plan Account Menu
    "RPAPrazoPlanAccount" = "O prazo do seu plano de assinatura do seu produto em sua conta chegou ao fim!"
    "RPAEndPrazoPlanAccount" = "O prazo do seu plano de assinatura em sua conta chegou ao fim!"
