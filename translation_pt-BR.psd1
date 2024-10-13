@@ -17,7 +17,6 @@
    "LanguagePTBROption" = "Português BR (Padrão)"
    "ChoiceOptionLanguageMenu" = "Selecione a letra ou número do seu idioma"
    # Login Menu
-   
    # Default Options
    "RenewPlanMenuOption" = "Renovar Plano Assinatura"
    "ViewAccountMenuOption" = "Visualizar Senha da Conta"
