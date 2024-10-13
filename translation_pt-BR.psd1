@@ -7,6 +7,23 @@
    "VIPGroup" = "Grupo VIP" 
    "Exit" = "Sair"
    "ChoiceOption" = "Digite o número da opção escolhida"
+
+   # Login Menu
+   "LoginMenu" = "MENU DE LOGIN"
+   "EnterPass" = "Digite a sua senha"
+   "EnterUser" = "Digite seu usuário"
+   "ShowUser" = "Usuário digitado"
+   "ShowPass" = "Senha digitada"
+   # Login Successfull
+   "SuccessLoginN1" = "Login bem-sucedido,"
+   "SuccessLoginN2" = "abrindo"
+   "SuccessLoginN3" = "'MENU DE SELEÇÃO DO SEU PRODUTO'."
+   # Login Failure
+   "ErrorLoginN1" = "Erro ao fazer login."
+   "ErrorLoginN2" = "Usuário ou senha incorretos."
+   "EmptyLogin" = "Usuário ou senha não podem estar vazios."
+
+   # Product Menu
    
    # Select Language Menu
    "SelectLanguageMenu" = "MENU DE SELEÇÃO DO IDIOMA"
