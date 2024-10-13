@@ -21,7 +21,7 @@
    # Default Options
    "RenewPlanMenuOption" = "Renew Subscription Plan"
    "ViewAccountMenuOption" = "View Account Password"
-   "LogoutMenuOption" = "Log out"
+   "LogoutMenuOption" = "Logout"
    "GoBackMenuOption" = "Go Back"
    "MainMenuOption" = "Main Menu"
    "InvalidOption" = "Invalid option. Please enter a valid number or letter."
