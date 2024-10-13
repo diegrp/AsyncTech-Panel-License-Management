@@ -16,7 +16,6 @@
    "LanguageEn" = "English"
    "LanguagePTBR" = "Portuguese BR"
    "LanguagePTBROption" = "Portuguese BR - (Default)"
-   "MainMenuOption" = "Main Menu"
    "ChoiceOptionLanguageMenu" = "Select the letter or number of your language"
    
    # Default Options
