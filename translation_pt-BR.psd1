@@ -145,6 +145,7 @@
    "GoBackMenuOption" = "Voltar"
    "MainMenuOption" = "Menu Principal"
    "InvalidOption" = "Opção inválida. Por favor, digite um número ou letra que seja válido."
+   "QuestionSelectOption" = "Selecione sua opção no menu"
    
    # Default Message Alert
    "AlertMessageUserNotFound" = "Usuário não encontrado."
