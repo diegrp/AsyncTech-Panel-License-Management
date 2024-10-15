@@ -242,7 +242,14 @@
    "DPMSODPMMANothingQTDVAvailable" = "Você não tem mais QTD Download e Visualizações, disponível para seu"
    "DPMSODPMMANotMetCondition" = "Condição não atendida. Verifique os valores de"
    "DPMSODPMMAProductNotAvailableAccount" = "O produto dessa categoria não disponível em sua conta!"
-
+   
+   # QTDV Values Total and Individual
+   "VTIMQTDV" = "QTD DOWNLOAD E VISUALIZAÇÕES"
+   "VTIMUnlimited" = "Ilimitado"
+   "VTIMPending" = "Pendente"
+   "VTIMApproved" = "Aprovado"
+   "VTIMNothing" = "Nenhum"
+   
    # Default Options
    "DORenewPlanMenuOption" = "Renovar Plano Assinatura"
    "DORenewPlanVIPGroupMenuOption" = "Renovar Assinatura Grupo VIP"
@@ -254,7 +261,7 @@
    "DOMainMenuOption" = "Menu Principal"
    "DOInvalidOption" = "Opção inválida. Por favor, digite um número ou letra que seja válido."
    "DOQuestionSelectOption" = "Selecione sua opção no menu"
-   
+
    # Default Message Alert
    "DMAAlertMessageUserNotFound" = "Usuário não encontrado."
    "DMAAlertMessageAccessContentURLNotFound" = "Erro ao acessar a URL"
