@@ -122,7 +122,7 @@
    "SPCMDetailsProducts" = "PRODUCT DETAILS"
    "SPCMSelectCategory" = "SELECTED CATEGORY"
    "SPCMTotalAvailableProducts" = "TOTAL AVAILABLE PRODUCTS"
-   "SPCMTotalProducts" = "TOTAL PRODUCTS"
+   "SPCMTotalProducts" = "QTD TOTAL PRODUCTS"
    "SPCMSelectedYouProduct" = "You selected the product"
    "SPCMProductNotFound" = "Product not available for selection."
    "SPCMChoiceOptionProductAvailable" = "Select the letter or number of your available product."
