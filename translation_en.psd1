@@ -118,6 +118,8 @@
    "RPAMQTDVUnlimited" = "(QTDV: UNLIMITED)"
    "RPAMPrice" = "Price"
    "RPAMChoiceOptionRenewalSelected" = "Enter the letter or number of your chosen renewal option"
+   "RPAMMessageOptionLinkRenewalSelectedN1" = "Your Subscription Plan"
+   "RPAMMessageOptionLinkRenewalSelectedN2" = "has come to an end."
 
    # Select Product Category Menu
    "SPCMSelectProductCategoryMenu" = "PRODUCT CATEGORY SELECTION MENU"
