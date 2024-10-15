@@ -88,7 +88,7 @@
    "RPAMSANDL" = "Softwares e Licenças"
    "RPAMActivationMethodPA" = "[Método de Ativação: Pré-Ativado]"
    "RPAMStreamingAccounts" = "Contas Streaming"
-   "RPAMActivationMethodPA" = "[Método de Ativação: Cookies]"
+   "RPAMActivationMethodCookies" = "[Método de Ativação: Cookies]"
    "RPAMAttPeriodPP" = "Atualizações Periódicas Pré-paga"
    "RPAMAttPeriodLT" = "Atualizações Periódicas e Vitalícias"
    "RPAMWhenAvailable" = "(Quando Disponível)"
