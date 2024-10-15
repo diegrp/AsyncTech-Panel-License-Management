@@ -118,6 +118,8 @@
    "RPAMQTDVUnlimited" = "(QTDV:ILIMITADO)"
    "RPAMPrice" = "Preço"
    "RPAMChoiceOptionRenewalSelected" = "Digite a letra ou número de sua opção de renovação escolhida"
+   "RPAMMessageOptionLinkRenewalSelectedN1" = "O seu Plano de Assinatura"
+   "RPAMMessageOptionLinkRenewalSelectedN2" = "chegou ao fim."
    
    # Select Produc Category Menu
    "SPCMSelectProductCategoryMenu" = "MENU DE SELEÇÃO DO PRODUTO DA CATEGORIA"
