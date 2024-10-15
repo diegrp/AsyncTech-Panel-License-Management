@@ -113,9 +113,11 @@
    "RPAMQuarterly" = "Trimestral"
    "RPAMBiannual" = "Semestral"
    "RPAMAnnual" = "Anual"
+   "RPAMLifeTime" = "Vitalício"
    "RPAMTimeDays" = "(15 Dias)"
    "RPAMQTDVUnlimited" = "(QTDV:ILIMITADO)"
    "RPAMPrice" = "Preço"
+   "RPAMChoiceOptionRenewalSelected" = "Digite a letra ou número de sua opção de renovação escolhida"
    
    # Select Produc Category Menu
    "SPCMSelectProductCategoryMenu" = "MENU DE SELEÇÃO DO PRODUTO DA CATEGORIA"
