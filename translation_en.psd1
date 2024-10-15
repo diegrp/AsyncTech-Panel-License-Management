@@ -117,6 +117,7 @@
    "RPAMTimeDays" = "(15 Days)"
    "RPAMQTDVUnlimited" = "(QTDV: UNLIMITED)"
    "RPAMPrice" = "Price"
+   "RPAMChoiceOptionRenewalSelected" = "Enter the letter or number of your chosen renewal option"
 
    # Select Product Category Menu
    "SPCMSelectProductCategoryMenu" = "PRODUCT CATEGORY SELECTION MENU"
