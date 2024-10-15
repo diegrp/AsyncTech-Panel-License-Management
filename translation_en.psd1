@@ -242,6 +242,13 @@
    "DPMSODPMMANotMetCondition" = "Condition not met. Check the values of"
    "DPMSODPMMAProductNotAvailableAccount" = "The product in this category is not available in your account!"
 
+   # QTDV Values Total and Individual
+   "VTIMQTDV" = "QTD DOWNLOAD AND VIEWS"
+   "VTIMUnlimited" = "Unlimited"
+   "VTIMPending" = "Pending"
+   "VTIMApproved" = "Approved"
+   "VTIMNothing" = "None"
+   
    # Default Options
    "DORenewPlanMenuOption" = "Renew Subscription Plan"
    "DORenewPlanVIPGroupMenuOption" = "Renew VIP Group Subscription Plan"
