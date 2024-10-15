@@ -215,6 +215,7 @@
    "DPMCTStepProcedureN1" = "Please wait"
    "DPMCTStepProcedureN2" = "to begin the procedure..."
    "DPMCTStepProcedureN3" = "Starting the"
+   "DPMCTStepProcedureN4MDP" = "'PRODUCT DETAILS MENU'"
    "DPMCTStepProcedureN4EI" = "'INSTALLATION STEP'"
    "DPMCTStepProcedureN4EA" = "'ACTIVATION STEP'"
    "DPMCTStepProcedureN4ED" = "'UNINSTALLATION STEP'"
