@@ -113,6 +113,7 @@
    "RPAMQuarterly" = "Quarterly"
    "RPAMBiannual" = "Biannual"
    "RPAMAnnual" = "Annual"
+   "RPAMLifeTime" = "Lifetime"
    "RPAMTimeDays" = "(15 Days)"
    "RPAMQTDVUnlimited" = "(QTDV: UNLIMITED)"
    "RPAMPrice" = "Price"
@@ -234,6 +235,9 @@
 
    # Default Options
    "DORenewPlanMenuOption" = "Renew Subscription Plan"
+   "DORenewPlanVIPGroupMenuOption" = "Renew VIP Group Subscription Plan"
+   "DORenewPlanMemberGroupMenuOption" = "Renew Member Group Subscription Plan"
+   "DORenewPlanKeyAccessMenuOption" = "Renew Access Keys"
    "DOViewAccountMenuOption" = "View Account Password"
    "DOLogoutMenuOption" = "Logout"
    "DOGoBackMenuOption" = "Go Back"
