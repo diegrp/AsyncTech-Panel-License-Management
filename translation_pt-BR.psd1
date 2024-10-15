@@ -203,13 +203,13 @@
    "DPMSODPSimpleCompleteUninstallationN1" = "(DESINSTALAÇÃO SIMPLES/COMPLETA)"
    "DPMSODPSimpleCompleteUninstallationN2" = "e"
    "DPMSODPSimpleCompleteUninstallationN3" = "Ativar"
+   
    # Closing Timer
    "DPMCTClosingTimeEndN1" = "Etapa de"
-   "DPMCTClosingTimeEndN2" = "do"
-   "DPMCTClosingTimeEndN3" = "esta sendo encerrada..."
-   "DPMCTClosingTimeEndN4" = "Voltando ao"
-   "DPMCTClosingTimeEndN5" = "em"
-   "DPMCTClosingTimeEndN6" = "segundos..."
+   "DPMCTClosingTimeEndN2" = "esta sendo encerrada..."
+   "DPMCTClosingTimeEndN3" = "Voltando ao"
+   "DPMCTClosingTimeEndN4" = "em"
+   "DPMCTClosingTimeEndN5" = "segundos..."
    "DPMCTHidingAccessDataN1" = "Ocultando dados de acesso em"
    "DPMCTHidingAccessDataN2" = "segundos"
    "DPMCTHidingAccessDataN3" = "Dados de acesso ocultados."
