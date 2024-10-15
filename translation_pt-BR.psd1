@@ -235,6 +235,9 @@
 
    # Default Options
    "DORenewPlanMenuOption" = "Renovar Plano Assinatura"
+   "DORenewPlanVIPGroupMenuOption" = "Renovar Assinatura Grupo VIP"
+   "DORenewPlanMemberGroupMenuOption" = "Renovar Assinatura Grupo Membro"
+   "DORenewPlanKeyAccessMenuOption" = "Renovar Chaves de Acesso"
    "DOViewAccountMenuOption" = "Visualizar Senha da Conta"
    "DOLogoutMenuOption" = "Deslogar"
    "DOGoBackMenuOption" = "Voltar"
