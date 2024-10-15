@@ -227,7 +227,7 @@
    "DPMCTStepProcedureN4EV" = "'VIEWING STEP'"
    "DPMCTStepProcedureN41EIA" = "STEP OF"
    "DPMCTStepProcedureN42EIA" = "INSTALLATION"
-   "DPMCTStepProcedureN43EIA" = "and"
+   "DPMCTStepProcedureN43EIA" = "AND"
    "DPMCTStepProcedureN44EIA" = "ACTIVATION"
    "DPMCTStepProcedureN45EIA" = "of"
    # Select Options Details Products Menu Message Alerts
