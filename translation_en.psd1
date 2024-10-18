@@ -174,6 +174,9 @@
    "DPMEStartDeliveryDate" = "START DATE"
    "DPMEEndDeliveryDate" = "END DATE"
    "DPMERemainingDeliveryDays" = "REMAINING DELIVERY DAYS"
+   "DPMEShippingDelivered" = "Entregue"
+   "DPMEShippingNone" = "Nenhum"
+   "DPMEShippingPending" = "Pendente"
    # Access Data
    "DPMDAAccessDataTitle" = "ACCESS DATA"
    "DPMDAUserAndEmail" = "USER/EMAIL"
