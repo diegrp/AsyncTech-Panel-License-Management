@@ -188,7 +188,7 @@
    # Rules Instructions and Benefits
    "DPMRIBPlanBenefitsTitle" = "BENEFICIOS DEL PLAN"
    "DPMRIBRulesUse" = "REGLAS DE USO"
-   "DPMRIBPleaseNote" = "Atención:"
+   "DPMRIBPleaseNote" = "Atención"
    "DPMRIBAnyViolationAnnunce" = "Cualquier violación de las reglas revocará el acceso a la cuenta y no emitiremos ningún reembolso."
    "DPMRIBInstructionsUse" = "INSTRUCCIONES DE USO"
    "DPMRIBActivationProcess" = "PROCESO DE ACTIVACIÓN"
