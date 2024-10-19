@@ -262,7 +262,8 @@
    "DOLogoutMenuOption" = "Cerrar Sesión"
    "DOGoBackMenuOption" = "Volver"
    "DOMainMenuOption" = "Menú Principal"
-   "DOInvalidOption" = "Opción inválida. Por favor, ingrese un número o letra válido."
+   "DOInvalidOptionN1" = "Opción inválida. Por favor, ingrese un número o letra válido."
+   "DOInvalidOptionN2" = "Opción inválida. Por favor, ingrese un número válido."
    "DOQuestionSelectOption" = "Seleccione su opción del menú"
 
    # Default Message Alert
