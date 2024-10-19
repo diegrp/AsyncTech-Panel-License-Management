@@ -262,7 +262,8 @@
    "DOLogoutMenuOption" = "Logout"
    "DOGoBackMenuOption" = "Go Back"
    "DOMainMenuOption" = "Main Menu"
-   "DOInvalidOption" = "Invalid option. Please enter a valid number or letter."
+   "DOInvalidOptionN1" = "Invalid option. Please enter a valid number or letter."
+   "DOInvalidOptionN2" = "Invalid option. Please enter a valid number."
    "DOQuestionSelectOption" = "Select your option from the menu"
 
    # Default Message Alert
