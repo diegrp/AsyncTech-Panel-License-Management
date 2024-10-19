@@ -14,8 +14,8 @@
    "SLMLanguageTitle" = "IDIOMA"
    "SLMLanguageSelected" = "IDIOMA SELECCIONADO"
    "SLMLanguageEn" = "Inglés"
-   "SLMLanguagePTBR" = "Portugués BR"
    "SLMLanguageEs" = "Español"
+   "SLMLanguagePTBR" = "Portugués BR"
    "SLMLanguagePTBROption" = "Portugués BR (Predeterminado)"
    "SLMChoiceOptionLanguageMenu" = "Seleccione la letra o número de su idioma"
 
