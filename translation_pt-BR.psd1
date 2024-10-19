@@ -165,7 +165,7 @@
    "DPMUpdateRenewalStatus" = "STATUS ATUALIZAÇÃO/RENOVAÇÃO"
    "DPMDaysSupport" = "DIAS GARANTIA SUPORTE"
    "DPMRenewalStatus" = "STATUS RENOVAÇÃO"
-   # Entrega
+   # Delivery
    "DPMEDeliveryDetails" = "DETALHES DE ENTREGA"
    "DPMEProductDeliveryTime" = "PRAZO DE ENTREGA DO PRODUTO"
    "DPMEProductDeliveryStatus" = "STATUS DE ENTREGA DO PRODUTO"
@@ -177,14 +177,14 @@
    "DPMEShippingDelivered" = "Entregue"
    "DPMEShippingNone" = "Nenhum"
    "DPMEShippingPending" = "Pendente"
-   # Dados de Acesso
+   # Access Data
    "DPMDAAccessDataTitle" = "DADOS DE ACESSO"
    "DPMDAUserAndEmail" = "USUÁRIO/E-MAIL"
    "DPMDAPassAccessData" = "SENHA"
    "DPMDAPinLockAccessDataScreen" = "TELA PIN LOCK"
    "DPMDAKeysAccessDataKey" = "CHAVE KEYS"
    "DPMDAQTDKeysAccessData" = "QTD CHAVES"
-   # Regras Instruções e Beneficios
+   # Rules Instructions and Benefits
    "DPMRIBPlanBenefitsTitle" = "BENEFÍCIOS DO PLANO"
    "DPMRIBRulesUse" = "REGRAS DE USO"
    "DPMRIBPleaseNote" = "Atenção:"
