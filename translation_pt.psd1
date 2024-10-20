@@ -17,6 +17,7 @@
    "SLMLanguageEs" = "Espanhol"
    "SLMLanguagePTBR" = "Português BR"
    "SLMLanguagePTBROption" = "Português BR (Padrão)"
+   "SLMLanguageChanged" = "Idioma alterado para"
    "SLMChoiceOptionLanguageMenu" = "Selecione a letra ou número do seu idioma"
 
    # Login Menu
