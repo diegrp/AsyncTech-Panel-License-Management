@@ -58,6 +58,7 @@
    "SPMEndDate" = "END DATE"
    "SPMRemainingDays" = "REMAINING DAYS"
    "SPMPaymentStatus" = "PAYMENT STATUS"
+   "SPMSelectedYouCategory" = "You have selected the category" 
    "SPMChoiceOptionCategorieMenu" = "Select the letter or number of your available category"
 
    # Details Timing Delivery Product
