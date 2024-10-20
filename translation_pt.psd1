@@ -40,6 +40,7 @@
    "SPMDLAPending" = "Pendente"
    "SPMDLAApproved" = "Aprovado"
    "SPMDLANothing" = "Nenhum"
+   "SPMDLALastDay" = "Último Dia"
    "SPMDLATotalQTDTitle" = "QTDV TOTAL"
    "SPMDLATotalQTDV" = "QTD TOTAL DOWNLOAD E VISUALIZAÇÕES"
    "SPMDLATotalQTDVUsed" = "QTD TOTAL DOWNLOAD E VISUALIZAÇÕES UTILIZADO"
