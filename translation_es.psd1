@@ -329,7 +329,6 @@
    "PPMUSUninstallFailedOrNotCompleteN1" = "La desinstalación falló, no se completó correctamente."
    "PPMUSUninstallFailedOrNotCompleteN2" = "La desinstalación falló, no se completó correctamente o fue."
    "PPMUSProcessNotAvailableExecuteOrNotInstalled" = "Algún proceso no permitido está en ejecución, o el programa no está instalado en su computadora."
-   "PPMUSOpeningUninstallOf" = "Abriendo desinstalador de"
    "PPMUSUninstallCompleteOf" = "Desinstalación completa de"
    "PPMUSNotIsInstalled" = "no está instalado."
    # Activation Step
