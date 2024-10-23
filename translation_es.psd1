@@ -197,8 +197,10 @@
    "DPMRIBActivationProcess" = "PROCESO DE ACTIVACIÓN"
    "DPMRIBStepsForActivation" = "PASOS PARA LA ACTIVACIÓN"
    # Select Options Details Procuts Menu
-   "DPMSODPViewLoginDataScreen" = "Ver Datos de Login y/o Pantalla"
-   "DPMSODPViewKeysLoginData" = "Ver Claves Keys y/o Datos de Login"
+   "DPMSODPViewLoginDataScreenN1" = "Ver"
+   "DPMSODPViewLoginDataScreenN2" = "Datos de Login y/o Pantalla"
+   "DPMSODPViewKeysLoginDataN1" = "Ver"
+   "DPMSODPViewKeysLoginDataN2" = "Claves Keys y/o Datos de Login"
    "DPMSODPAccessCodeLink" = "Acceder al Enlace del Código de Acceso"
    "DPMSODPAccessAccount" = "Acceder a la Cuenta"
    "DPMSODPUsageTutorial" = "Tutorial de Uso"
