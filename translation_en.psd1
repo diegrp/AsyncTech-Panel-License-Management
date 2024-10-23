@@ -264,7 +264,7 @@
    "PPMISYourComputer" = "on your computer."
    "PPMISPreparingDispStartInstall" = "Preparing your device to start the installation step of"
    "PPMISWishInstallQuestion" = "Do you want to install"
-   "PPMISYourComputerInstallQuestion" = "on your computer?"
+   "PPMISYourComputerInstallQuestion" = "on your computer? (Y/N)"
    "PPMISClosingProcessToStartInstall" = "Closing the processes to start the installation..."
    "PPMISOfficialOfInstall" = "Official installation of"
    "PPMISStartingStep" = "started..."
