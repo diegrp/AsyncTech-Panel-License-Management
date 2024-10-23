@@ -197,8 +197,10 @@
    "DPMRIBActivationProcess" = "ACTIVATION PROCESS"
    "DPMRIBStepsForActivation" = "STEPS FOR ACTIVATION"
    # Select Options Details Products Menu
-   "DPMSODPViewLoginDataScreen" = "View Login Data and/or Screen"
-   "DPMSODPViewKeysLoginData" = "View Keys and/or Login Data"
+   "DPMSODPViewLoginDataScreenN1" = "View"
+   "DPMSODPViewLoginDataScreenN2" = "Login Data and/or Screen"
+   "DPMSODPViewKeysLoginDataN1" = "View"
+   "DPMSODPViewKeysLoginDataN2" = "Keys and/or Login Data"
    "DPMSODPAccessCodeLink" = "Access Link for Access Code"
    "DPMSODPAccessAccount" = "Access Account"
    "DPMSODPUsageTutorial" = "Usage Tutorial"
