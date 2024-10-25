@@ -389,6 +389,7 @@
    "PPMVASInTheAreaOf" = "in the area of"
    "PPMVASStepAccessData" = "'ACCESS DATA.'"
    "PPMVASQuestionEnterYourKeyActivation" = "to enter your activation key data? (Y/N)"
+   "PPMVASQuestionOpenLinkWithTutorialActivation" = "Do you want to open the link with tutorials for activating your key registration? (Y/N)"
    "PPMVASSimpleTutorial" = "Simple Tutorial of"
    "PPMVASActivationOf" = "Activation of"
    "PPMVASAvailableForViewing" = "available for viewing to be"
