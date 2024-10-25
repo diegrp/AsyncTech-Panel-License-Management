@@ -390,6 +390,8 @@
    "PPMVASStepAccessData" = "'ACCESS DATA.'"
    "PPMVASQuestionEnterYourKeyActivation" = "to enter your activation key data? (Y/N)"
    "PPMVASQuestionOpenLinkWithTutorialActivation" = "Do you want to open the link with tutorials for activating your key registration? (Y/N)"
+   "PPMVAUnfortunatelyDescription" = "Unfortunately, the"
+   "PPMVANotHaveLinkActivation" = "does not have an activation tutorial link."
    "PPMVASSimpleTutorial" = "Simple Tutorial of"
    "PPMVASActivationOf" = "Activation of"
    "PPMVASAvailableForViewing" = "available for viewing to be"
