@@ -368,6 +368,7 @@
    "PPMVISOfYou" = "de tu"
    # Visualization Step In Activation Step
    "PPMVASStageAccessDataViewMenu" = "ETAPA DE VISUALIZACIÓN DE LOS DATOS DE ACCESO DE"
+   "PPMVASInstallationProcessSuccessStarted" = "¡El proceso de instalación comenzó exitosamente!"
    "PPMVASStartingThe" = "Iniciando la"
    "PPMVASStageAccessDataViewInMenu" = "'ETAPA DE VISUALIZACIÓN DE LOS DATOS DE ACCESO'"
    "PPMVASOf" = "de"
