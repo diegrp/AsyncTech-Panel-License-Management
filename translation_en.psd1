@@ -387,7 +387,7 @@
    "PPMVASAvailableForViewingIn" = "And are available for viewing in the"
    "PPMVASStepProductDetailsMenu" = "'PRODUCT DETAILS MENU'"
    "PPMVASInTheAreaOf" = "in the area of"
-   "PPMVASStepAccessData" = "'ACCESS DATA.'"
+   "PPMVASStepAccessData" = "'ACCESS DATA'."
    "PPMVASQuestionEnterYourKeyActivation" = "to enter your activation key data? (Y/N)"
    "PPMVASQuestionOpenLinkWithTutorialActivation" = "Do you want to open the link with tutorials for activating your key registration? (Y/N)"
    "PPMVAUnfortunatelyDescription" = "Unfortunately, the"
