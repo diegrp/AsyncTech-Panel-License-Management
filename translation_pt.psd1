@@ -390,6 +390,8 @@
    "PPMVASStepAccessData" = "'DADOS DE ACESSO'."
    "PPMVASQuestionEnterYourKeyActivation" = "para inserir os dados de sua chave para ativação? (S/N)"
    "PPMVASQuestionOpenLinkWithTutorialActivation" = "Deseja abrir o link com tutorias para ativação de registro de sua chave key? (S/N)"
+   "PPMVAUnfortunatelyDescription" = "Infelizmente, o"
+   "PPMVANotHaveLinkActivation" = "não possui um link de tutorial de ativação."
    "PPMVASSimpleTutorial" = "Tutorial Simples de"
    "PPMVASActivationOf" = "Ativação do"
    "PPMVASAvailableForViewing" = "disponível para visualização seja"
