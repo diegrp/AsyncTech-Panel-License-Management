@@ -25,8 +25,8 @@
    "SLMChoiceOptionUpdateMenu" = "Selecione a letra ou número da opção de atualização disponível no menu"
 
    # VIP Group Menu
-   "SUMSearchUpdateMenu" = "GRUPO VIP MENU"
-   "SLMChoiceOptionUpdateMenu" = "Selecione a letra ou número da opção do grupo disponível no menu"
+   "VGMVIPGroupMenu" = "GRUPO VIP MENU"
+   "VGMChoiceOptionVIPGroupMenu" = "Selecione a letra ou número da opção do grupo disponível no menu"
 
    # Login Menu
    "LMLoginMenu" = "MENU DE LOGIN"
