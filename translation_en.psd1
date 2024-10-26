@@ -22,7 +22,7 @@
 
    # Search Update Menu
    "SUMSearchUpdateMenu" = "CHECK FOR UPDATE MENU"
-   "SLMChoiceOptionUpdateMenu" = "Select the letter or number available from the menu"
+   "SLMChoiceOptionUpdateMenu" = "Select the letter or number of the option available in the menu"
 
    # Login Menu
    "LMLoginMenu" = "LOGIN MENU"
