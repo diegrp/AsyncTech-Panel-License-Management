@@ -22,7 +22,7 @@
 
    # Search Update Menu
    "SUMSearchUpdateMenu" = "VERIFICAR MENÚ DE ACTUALIZACIÓN"
-   "SLMChoiceOptionUpdateMenu" = "Seleccione la letra o número de la opción disponible en el menú"
+   "SLMChoiceOptionUpdateMenu" = "Seleccione la letra o número de la opción de actualización disponible en el menú"
 
    # VIP Group Menu
    "SUMSearchUpdateMenu" = "MENÚ GRUPO VIP"
