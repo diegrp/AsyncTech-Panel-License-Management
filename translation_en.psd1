@@ -20,6 +20,10 @@
    "SLMLanguageChanged" = "Language changed to"
    "SLMChoiceOptionLanguageMenu" = "Select the letter or number of your language"
 
+   # Search Update Menu
+   "SUMSearchUpdateMenu" = "CHECK FOR UPDATE MENU"
+   "SLMChoiceOptionUpdateMenu" = "Select the letter or number available from the menu"
+
    # Login Menu
    "LMLoginMenu" = "LOGIN MENU"
    "LMEnterPass" = "Enter your password"
