@@ -20,6 +20,9 @@
    "SLMLanguageChanged" = "Idioma alterado para"
    "SLMChoiceOptionLanguageMenu" = "Selecione a letra ou número do seu idioma"
 
+   # Search Update Menu
+   "SUMSearchUpdateMenu" = "MENU DE VERIFICAÇÃO DE ATUALIZAÇÕES"
+
    # Login Menu
    "LMLoginMenu" = "MENU DE LOGIN"
    "LMEnterPass" = "Digite a sua senha"
