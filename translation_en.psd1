@@ -24,6 +24,10 @@
    "SUMSearchUpdateMenu" = "CHECK FOR UPDATE MENU"
    "SLMChoiceOptionUpdateMenu" = "Select the letter or number of the option available in the menu"
 
+   # VIP Group Menu
+   "SUMSearchUpdateMenu" = "VIP GROUP MENU"
+   "SLMChoiceOptionUpdateMenu" = "Select the letter or number of the group option available in the menu"
+
    # Login Menu
    "LMLoginMenu" = "LOGIN MENU"
    "LMEnterPass" = "Enter your password"
