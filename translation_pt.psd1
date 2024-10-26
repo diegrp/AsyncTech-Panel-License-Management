@@ -22,7 +22,7 @@
 
    # Search Update Menu
    "SUMSearchUpdateMenu" = "MENU DE VERIFICAÇÃO DE ATUALIZAÇÕES"
-   "SLMChoiceOptionUpdateMenu" = "Selecione a letra ou número disponível no menu"
+   "SLMChoiceOptionUpdateMenu" = "Selecione a letra ou número da opção disponível no menu"
 
    # Login Menu
    "LMLoginMenu" = "MENU DE LOGIN"
