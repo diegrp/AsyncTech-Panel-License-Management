@@ -24,6 +24,10 @@
    "SUMSearchUpdateMenu" = "VERIFICAR MENÚ DE ACTUALIZACIÓN"
    "SLMChoiceOptionUpdateMenu" = "Seleccione la letra o número de la opción disponible en el menú"
 
+   # VIP Group Menu
+   "SUMSearchUpdateMenu" = "MENÚ GRUPO VIP"
+   "SLMChoiceOptionUpdateMenu" = "Seleccione la letra o número de la opción de grupo disponible en el menú"
+
    # Login Menu
    "LMLoginMenu" = "MENÚ DE INICIO DE SESIÓN"
    "LMEnterPass" = "Ingrese su contraseña"
