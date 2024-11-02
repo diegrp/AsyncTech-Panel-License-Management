@@ -51,7 +51,6 @@
    "SUMRUNewVersionOf" = "Nova versão do" 
    "SUMRUCurrentlyAvailableDownload" = "disponível neste momento para download." 
    "SUMRUUpdateNotAvailable" = "ATUALIZAÇÃO NÃO DISPONÍVEL!" 
-   "SUMRUNewVersionOf" = "Nova versão do" 
    "SUMRUIsNotCurrentlyAvailableDownload" = "não está disponível neste momento para download." 
    "SUMRUErrorExecutingUpdate" = "Erro ao executar a atualização."
    # Options Menu Check Update:
