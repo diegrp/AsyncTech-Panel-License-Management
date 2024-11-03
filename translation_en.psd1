@@ -7,7 +7,7 @@
    "MMVIPGroup" = "VIP Group"
    "MMExit" = "Exit"
    "MMChoiceOption" = "Enter the number of the chosen option"
-   "MMChoiceOptionExit" = "Saindo da aplicação..."
+   "MMChoiceOptionExit" = "Exiting the application..."
 
    # Select Language Menu
    "SLMSelectLanguageMenu" = "LANGUAGE SELECTION MENU"
