@@ -70,7 +70,28 @@
    # VIP Group Menu
    "VGMVIPGroupMenu" = "VIP GROUP MENU"
    "VGMChoiceOptionVIPGroupMenu" = "Select the letter or number of the group option available in the menu"
-
+   # Initial Notification Alert Menu:
+   "VGMINAMTitleNotification" = "NOTIFICATION"
+   "VGMINAMDescritpionNotificationVIPN1" = "Stay connected to stay informed about notifications, including: new updates, offers, product discounts,"
+   "VGMINAMDescritpionNotificationVIPN2" = "new product launches, and also to have support/assistance or warranty for any product purchased."
+   "VGMINAMDescritpionNotificationMEMBRON1" = "Stay connected to stay informed about notifications, such as new updates or to have"
+   "VGMINAMDescritpionNotificationMEMBRON2" = "support/assistance or warranty for any product purchased."
+   # Group Access Options Menu:
+   "VGMGAPMAccessWebsite" = "Access Website"
+   "VGMGAPMProductsPage" = "Product/Categories Page"
+   "VGMGAPMLoginCustomerPanelClient" = "Login to Customer Panel"
+   "VGMGAPMJoinGroupN1" = "Join the Group"
+   "VGMGAPMJoinGroupN2" = "VIP"
+   "VGMGAPMLoggedIntoAccount" = "Be logged into your account in the panel to view group access on Telegram or WhatsApp."
+   # Group and Website Access Links:
+   "VGMGWALAccessGroupParticipation" = "Accessing group participation link."
+   "VGMGWALAccessPageLink" = "Accessing page link for"
+   "VGMGWALProductCategoriesLink" = "'Product/Categories'"
+   "VGMGWALLoginCustomerPanelClientLink" = "'Login to Customer Panel'"
+   "VGMGWALWaitLink" = "Please wait..."
+   "VGMGWALNothingLinkGroupParticipation" = "At the current moment, there is no group participation link."
+   "VGMGWALNothingLinkAccessWebsite" = "At the current moment, there is no website access link."
+   
    # Login Menu
    "LMLoginMenu" = "LOGIN MENU"
    "LMEnterPass" = "Enter your password"
