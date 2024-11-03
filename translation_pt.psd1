@@ -70,6 +70,27 @@
    # VIP Group Menu
    "VGMVIPGroupMenu" = "GRUPO VIP MENU"
    "VGMChoiceOptionVIPGroupMenu" = "Selecione a letra ou número da opção do grupo disponível no menu"
+   # Initial Notification Alert Menu:
+   "VGMINAMTitleNotification" = "NOTIFICAÇÃO" 
+   "VGMINAMDescritpionNotificationVIPN1" = "Mantenha-se conectado para ficar por dentro de notificações, sobre: novas atualizações, ofertas, descontos de"
+   "VGMINAMDescritpionNotificationVIPN2" = "produtos, lançamento de novos produtos. E também ter suporte/assistência ou garântia sobre algum produto adquirido."
+   "VGMINAMDescritpionNotificationMEMBRON1" = "Mantenha-se conectado para ficar por dentro de notificações, como: lançamento de novas atualizações ou ter"
+   "VGMINAMDescritpionNotificationMEMBRON2" = "suporte/assintência ou garântia sobre algum produto adquirido."
+   # Group Access Options Menu:
+   "VGMGAPMAccessWebsite" = "Acessar Web Site"
+   "VGMGAPMProductsPage" = "Página de Produtos/Categorias"
+   "VGMGAPMLoginCustomerPanelClient" = "Logar no Painel de Cliente"
+   "VGMGAPMJoinGroupN1" = "Participar do Grupo"
+   "VGMGAPMJoinGroupN2" = "VIP"
+   "VGMGAPMLoggedIntoAccount" = "Esteja logado em sua conta no painel, para visualizar os acessos ao grupo no telegram ou whatsapp."
+   # Group and Website Access Links:
+   "VGMGWALAccessGroupParticipation" = "Acessando o link de participação do grupo."
+   "VGMGWALAccessPageLink" = "Acessando o link da página de"
+   "VGMGWALProductCategoriesLink" = "'Produtos/Categorias'"
+   "VGMGWALLoginCustomerPanelClientLink" = "'Logar no Painel de Cliente'"
+   "VGMGWALWaitLink" = "Aguarde..."
+   "VGMGWALNothingLinkGroupParticipation" = "No momento atual, não possui um link de participação para o grupo."
+   "VGMGWALNothingLinkAccessWebsite" = "No momento atual, não possui um link de acesso a página do web site."
 
    # Login Menu
    "LMLoginMenu" = "MENU DE LOGIN"
