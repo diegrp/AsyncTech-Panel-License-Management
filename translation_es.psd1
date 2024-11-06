@@ -1,5 +1,5 @@
 ﻿@{
-    # Start Loading Menu
+   # Start Loading Menu
    "SLAMInitialLoadingCheckingTitleMenu" = "CARREGAMENTO INICIAL PARA VERIFICACIÓN DE REQUISITOS"
    "SLAMSubtitleDependencies" = "DEPENDENCIAS"
    "SLAMSubtitleTranslationLanguage" = "TRADUCCIÓN Y CONFIGURACIÓN DE IDIOMA"
