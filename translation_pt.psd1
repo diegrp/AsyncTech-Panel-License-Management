@@ -1,17 +1,4 @@
 ﻿@{
-   # Start Loading Menu
-   "SLAMInitialLoadingCheckingTitleMenu" = "CARREGAMENTO INICIAL PARA VERIFICAÇÃO DE REQUISITOS"
-   "SLAMSubtitleDependencies" = "DEPENDÊNCIAS"
-   "SLAMSubtitleTranslationLanguage" = "TRADUÇÃO E CONFIGURAÇÃO DO IDIOMA"
-   "SLAMSubtitleVersionAvailableUpdate" = "VERSÃO DISPONÍVEL PARA ATUALIZAÇÃO"
-   # Dependencies
-   "SLAMDChocoDependenciesNotInstalled" = "Chocolatey não está instalado. Instalando agora..."
-   "SLAMDChocoDependenciesInstalledYourComputer" = "Chocolatey já está instalado em seu computador."
-   "SLAMDWinrarDependenciesNotInstalled" = "WinRAR não está instalado. Instalando agora..."
-   "SLAMDWinrarDependenciesInstalledYourComputer" = "WinRAR já está instalado em seu computador."
-   # Error Translation API
-   "SLAMETAErrorTranslationAPI" = "Erro ao acessar a API de Tradução."
-   
    # Main Menu
    "MMMainMenu" = "MENU PRINCIPAL"
    "MMLogin" = "Login"
