@@ -41,7 +41,10 @@ function Show-Menu {
         1 { Fazer-Login }
         2 { Status-Servidor }
         3 { Grupo-Telegram }
-        4 { Exit }
+        4 { 
+	    Stop-Process -Name "PowershellShowcase"
+	    Exit 
+ 	}
         default { Show-Menu }
     }
 }
