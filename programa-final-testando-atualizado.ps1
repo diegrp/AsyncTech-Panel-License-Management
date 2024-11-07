@@ -42,7 +42,7 @@ function Show-Menu {
         2 { Status-Servidor }
         3 { Grupo-Telegram }
         4 { 
-	    Stop-Process -Name "PowershellShowcase"
+	    # Stop-Process -Name "PowershellShowcase"
 	    Exit 
  	}
         default { Show-Menu }
