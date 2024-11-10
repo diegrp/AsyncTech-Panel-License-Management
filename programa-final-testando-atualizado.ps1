@@ -2,67 +2,952 @@
 Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser -Force
 
 # Links Externos
-$compLinksGetData = 'H4sIAAAAAAAA/+yYwWvbMBTG74H8D76E1yDclOYwttOStIxB14Wl7V2J1cTUsYNlp4yx/3381Emeh48dG156EJLfe9/79D0pz+5jnW+qtMijD6aK74qksPG9rXWZFjb6NhxEURSVpqrLPHp/9rLkT3aVKKkOosS+EyWTiSgptSh5Phcl2xTrTpTUawYrSkwpSjaFKMmJNTku5/7ZHoCEMLMFCuTJDPivRGxEyZ3BGdB4KUo0ACZjeSNK0o0HtfjFn7yLBs/sQ0oS3UOohm5JyoLlpCaWQcM0hVW897FrnhXy/ylwZHb4ufHxcPB9OBgOOg7NsiySuurzoVmR8hEaz043ImyMC8MNNDY8y0eiZDEVJSO4vMHZAvDRJQJAw0D/5tdeTsk2uhQlFxAvWW5RQ8NK22A1YUZYBY0jKZMikAT58oINhtnZgqq7vekAcIUk7DwNJF8McZhd+1uhSZQFPBNmK6cBiutxf+5L/4q/w+/YAKy84imG7FS7f7R2DrSd8m2wziCZ8putEy74uOMKo9U1w/yLKPl8qnNP6/zAjpY9Km/l9XIKpxi2GGYOBbq2qUm7vzUKz5wfnHMMVe01aFw6E71iD3VhIB/cMXWlzPwvcqI7Dk4TgZ+p+tZc+1JZhBgROwVqjmDrzKtxqtgfrxgpn1LPoEd6PwBwa30O18YsyyIosAhMf+k9M+/nhNNY67LtQptY3nYc5rM2aEh0lQbBdOsbIG5z2R/8l6TrednOdyvd8dXQRGTGI5/q97fqt2zeO+bcUzTN3PvTqS6vV5fiCQCXcixR8x+WHwEAAP//z8QotJMTAAA='; $bytes = [System.Convert]::FromBase64String($compLinksGetData); $stream = New-Object IO.MemoryStream(, $bytes); $decompLinksGetData = New-Object IO.Compression.GzipStream($stream, [IO.Compression.CompressionMode]::Decompress); $reader = New-Object IO.StreamReader($decompLinksGetData); $obLinksGetData = $reader.ReadToEnd(); Invoke-Expression $obLinksGetData
+$compLinksGetData = 'H4sIAAAAAAAA/+xYQWvbMBS+B/IffAmvQbgtzWFspzlJGYOuC0vbu2IrsahiGUtOGWP/fXwKT55HYJeODS85CMnvve99+p5kydm2Ve61rZIPyqdL5aUplUuz2uhcen2wybfxKEmSpFG+bark/cVxiB+VngT5mgS5dyTo6ooENZIEvVySoJ2GtSRB7QaNI0GqIUG5JUEVYlUFl0t+tgdAgTC1AxSQrzLAf0VEToIeFJwBmq5IkASAMhjekSCdM6iDX/qJXSTw1D6mDEzhsgUrjEqMZIFQDPeYhq6YQA0q6RLx4C0NRzg66jEdj76PR+NRT84HW1iXPrpWNtq64Sr5CEIt6DZIaYOmLWLRSDDVYJXuOXaDZ5b+PwUO6NW/XzSrxhatH/KiWSPlFjReJO9Gl8IFzR1o5HhWTUjQYkaCJuDyRvIW/RgSxe0of/HrD2fINrkhQdcg3mC4gxoSrKSLVhV7CPOgcUDKwkaSQL65xgRj72KBqoe5yQiA14XGzHUkeTSksXfLu0IikYl4KvbWQQMoLqfD2S/DK34Jv0MHsGbFNQzmXLt/tHYBtJ/ybbRmIKkPfDOw0xNbGFrdopl/IUGfz3UeaJ2fMKPVgMrrWa+gcLjr7mDIAgrouq4m/fOtUzgLfuBcweBb1qBzOZnoFc/QEAbkOizTUErDb+RCnlg4XYSJN/ohvaCHUlkIMUHsDFBzCLYxrMa5Yn+8Ykj5rJnBgPR+AsC94xzhGHMY2qjAIjL96ezJ2C8IJ2Ftm74LjonV/YnFfNEHjYmWOgome98AaZ/LvuYvyXDmmZJPK3niq6GLMIqRz/X7W/VbdfeOOfYpNDXh/nSuy+vVxT4DIKScUtL9w/IjAAD//7nV0W3iFAAA'; $bytes = [System.Convert]::FromBase64String($compLinksGetData); $stream = New-Object IO.MemoryStream(, $bytes); $decompLinksGetData = New-Object IO.Compression.GzipStream($stream, [IO.Compression.CompressionMode]::Decompress); $reader = New-Object IO.StreamReader($decompLinksGetData); $obLinksGetData = $reader.ReadToEnd(); Invoke-Expression $obLinksGetData
+
+<#
+function Get-Detalhes-Aplicativo {
+    return @(
+        "https://raw.githubusercontent.com/diegrp/AsyncTech-Panel-License-Management/refs/heads/main/App-Detalhes"
+    )
+}
+#>
+
+<#
+function Get-Todos-Usuarios {
+    return @(
+        "https://raw.githubusercontent.com/diegrp/AsyncTech-Panel-License-Management/Usuarios/usuario-membro", 
+        "https://raw.githubusercontent.com/diegrp/AsyncTech-Panel-License-Management/Usuarios/usuario-vip"
+    )
+}
+#>
+<#
+function Get-Todos-Produtos {
+    return @(
+        "https://raw.githubusercontent.com/diegrp/AsyncTech-Panel-License-Management/Softwares-e-Licen%C3%A7as/Instala%C3%A7%C3%A3o%20Programas%20e%20Ativadores%20-%20(Conta%20Digital%20-%20E-mail%20e%20Senha)",
+        "https://raw.githubusercontent.com/diegrp/AsyncTech-Panel-License-Management/Softwares-e-Licen%C3%A7as/Instala%C3%A7%C3%A3o%20Programas%20e%20Ativadores%20-%20(Chave%20Serial)",
+        "https://raw.githubusercontent.com/diegrp/AsyncTech-Panel-License-Management/Softwares-e-Licen%C3%A7as/Instala%C3%A7%C3%A3o%20Programas%20e%20Ativadores%20-%20(Pr%C3%A9%20Ativado)%20-%20MEMBRO",
+        "https://raw.githubusercontent.com/diegrp/AsyncTech-Panel-License-Management/Softwares-e-Licen%C3%A7as/Instala%C3%A7%C3%A3o%20Programas%20e%20Ativadores%20-%20(Pr%C3%A9%20Ativado)%20-%20VIP",
+        "https://raw.githubusercontent.com/diegrp/AsyncTech-Panel-License-Management/Streaming/Acesso%20Contas%20Assinaturas%20Streaming%20-%20(Conta%20Digital%20-%20Compartilhada%20e%20Completa)",
+        "https://raw.githubusercontent.com/diegrp/AsyncTech-Panel-License-Management/Streaming/Acesso%20Contas%20Assinaturas%20Streaming%20-%20(Conta%20Digital%20-%20P%C3%BAblica)",
+        "https://raw.githubusercontent.com/diegrp/AsyncTech-Panel-License-Management/Streaming/Acesso%20Contas%20Assinaturas%20Streaming%20-%20(Cookies)",
+        "https://raw.githubusercontent.com/diegrp/AsyncTech-Panel-License-Management/VPNs/Acesso%20Contas%20Assinaturas%20VPN%20-%20(Conta%20Digital%20-%20Compartilhada%20e%20Completa)",
+        "https://raw.githubusercontent.com/diegrp/AsyncTech-Panel-License-Management/VPNs/Acesso%20Contas%20Assinaturas%20VPN%20-%20(Conta%20Digital%20-%20P%C3%BAblica)",
+        "https://raw.githubusercontent.com/diegrp/AsyncTech-Panel-License-Management/VPNs/Acesso%20Contas%20Assinaturas%20VPN%20-%20(Cookies)" 
+    )
+}
+#>
+
+# Variáveis âmbiente de configuração inicial da linguagem e idioma selecionado:
+
+# $PSScriptRoot é o diretório onde o script está sendo executado
+$global:configFolderPath = "$PSScriptRoot\config"
+# Caminho do arquivo de configuração
+$global:configFilePath = "$global:configFolderPath\config_language.json"
+# Caminho da pasta de configuração onde os arquivos de tradução estarão localizados
+$global:translationFolderPath = "$PSScriptRoot\translations"
+
+# Verificação e validação inicial, antes de iniciar o script principal
+
+# Verifica se o Chocolatey está instalado
+function Check-Chocolatey {
+
+    # Seleciona o idioma inicial no arquivo de configuração
+    $idiomaSelecionado = $global:language = Get-LanguageConfig
+
+    # Traduções
+    $SLAMDChocoDependenciesNotInstalled = Translate-Text -Text "Chocolatey não está instalado. Instalando agora..." -TargetLanguage $idiomaSelecionado
+    $SLAMDChocoDependenciesInstalledYourComputer = Translate-Text -Text "Chocolatey já está instalado em seu computador." -TargetLanguage $idiomaSelecionado
+
+    if (-Not (Get-Command choco -ErrorAction SilentlyContinue)) {
+        Write-Host "     $SLAMDChocoDependenciesNotInstalled" -ForegroundColor Yellow
+        # Instalar Chocolatey
+        [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.SecurityProtocolType]::Tls12
+        Set-ExecutionPolicy Bypass -Scope Process -Force
+        iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+    } else {
+        Write-Host "     $SLAMDChocoDependenciesInstalledYourComputer" -ForegroundColor Green
+    }
+}
+
+# Função para verificar se o WinRAR está instalado
+function Check-WinRAR {
+
+    # Seleciona o idioma inicial no arquivo de configuração
+    $idiomaSelecionado = $global:language = Get-LanguageConfig
+
+    # Traduções
+    $SLAMDWinrarDependenciesNotInstalled = Translate-Text -Text "WinRAR não está instalado. Instalando agora..." -TargetLanguage $idiomaSelecionado
+    $SLAMDWinrarDependenciesInstalledYourComputer = Translate-Text -Text "WinRAR já está instalado em seu computador." -TargetLanguage $idiomaSelecionado
+
+    $winrarPath = "C:\Program Files\WinRAR\WinRAR.exe"
+    
+    if (-Not (Test-Path $winrarPath)) {
+        Write-Host "     $SLAMDWinrarDependenciesNotInstalled" -ForegroundColor Yellow
+        choco install winrar -y
+    } else {
+        Write-Host "     $SLAMDWinrarDependenciesInstalledYourComputer" -ForegroundColor Green
+    }
+}
+
+# Função para carregar ou criar o arquivo de configuração do idioma
+function Get-LanguageConfig {
+
+    if (Test-Path $global:configFilePath) {
+        # Se o arquivo existir, carrega o idioma salvo
+        $config = Get-Content -Raw -Path $global:configFilePath | ConvertFrom-Json
+        return $config.language
+    } else {
+        # Se não existir, cria a pasta config com o arquivo de configuração com o idioma padrão (Português)
+        New-Item -Path $global:configFolderPath -ItemType Directory -Force
+        $defaultConfig = @{ language = "pt" }
+        $defaultConfig | ConvertTo-Json | Set-Content -Path $global:configFilePath
+        return "pt"  # Retorna o idioma padrão
+    }
+}
+
+# Caminho do arquivo de cache
+$CacheFilePath = "$PSScriptRoot\config\translationCache.dat"
+
+# Crie uma variável global para armazenar o cache
+$TranslationCache = @{}
+
+# Função para carregar o cache do arquivo JSON
+function Load-Cache {
+    if (Test-Path $CacheFilePath) {
+        $json = Get-Content $CacheFilePath -Raw
+        # Cria um Hashtable vazio
+        $localCache = @{}
+
+        # Preenche o Hashtable com os dados do JSON
+        $data = ConvertFrom-Json $json
+        foreach ($key in $data.PSObject.Properties.Name) {
+            $localCache[$key] = $data.$key
+        }
+
+        return $localCache  # Retorna o Hashtable preenchido
+    }
+    return @{}  # Retorna um dicionário vazio se o arquivo não existir
+}
+
+# Função para salvar o cache no arquivo JSON
+function Save-Cache {
+    $json = $TranslationCache | ConvertTo-Json -Depth 5
+    Set-Content -Path $CacheFilePath -Value $json
+}
+
+# Função para traduzir variáveis dinâmicas em todo o código, diferente da configuração de tradução.
+function Translate-Text {
+    param (
+        [string]$Text,
+        [string]$TargetLanguage
+    )
+
+    # Cria uma chave única para o cache usando o texto e o idioma de destino
+    $cacheKey = "$Text-$TargetLanguage"
+
+    # Verifica se a tradução já está no cache
+    
+    # Primeiro, verifica o cache salvo no arquivo
+    if (Test-Path $CacheFilePath) {
+        $localCache = Load-Cache
+        if ($localCache.ContainsKey($cacheKey)) {
+            return $localCache[$cacheKey]  # Retorna a tradução do cache local
+        }
+    }
+
+    # Em seguida, verifica o cache em memória
+    if ($TranslationCache.ContainsKey($cacheKey)) {
+        return $TranslationCache[$cacheKey]  # Retorna a tradução do cache em memória
+    }
+
+    # Verifique se a variável $Text não está vazia ou nula
+    if (![string]::IsNullOrEmpty($Text)) {
+        # Monte a URL somente se $Text tiver conteúdo
+        # Defina a URL da API do PythonAnywhere
+        $url = "https://ftapi.pythonanywhere.com/translate?sl=pt&dl=$TargetLanguage&text=$Text"
+    } else {
+        # Caso contrário, construa a URL sem o parâmetro text
+        # Defina a URL da API do PythonAnywhere
+        $url = "https://ftapi.pythonanywhere.com/"
+    }
+
+    try {
+
+        # Faz a requisição HTTP GET para a API
+        $response = Invoke-RestMethod -Uri $url -Method Get -ErrorAction SilentlyContinue
+
+        $translatedText = $response."destination-text"
+
+        # Armazena a tradução no cache
+        $TranslationCache[$cacheKey] = $translatedText
+
+        if (Test-Path $CacheFilePath) {
+            # Adiciona a nova tradução ao cache local
+            if (-not $localCache.ContainsKey($cacheKey)) {
+                $localCache[$cacheKey] = $translatedText  # Adiciona nova tradução
+            }
+
+            # Salva o cache atualizado no arquivo
+            $json = $localCache | ConvertTo-Json -Depth 5
+            Set-Content -Path $CacheFilePath -Value $json
+        } else {
+
+            # Salva o cache no arquivo
+            Save-Cache
+        }
+        
+        # Exibe o texto traduzido da resposta
+        return $translatedText
+
+    } catch {
+
+        # Seleciona o idioma inicial no arquivo de configuração
+        $idiomaSelecionado = $global:language = Get-LanguageConfig
+
+        # Traduções
+        $SLAMETAErrorTranslationAPI = Translate-Text -Text "Erro ao acessar a API de Tradução" -TargetLanguage $idiomaSelecionado
+
+        Write-Host "$($SLAMETAErrorTranslationAPI): $_" -ForegroundColor Red
+    }
+}
+
+# Função para salvar o idioma selecionado no arquivo de configuração
+function Set-LanguageConfig {
+    param (
+        [string]$language
+    )
+
+    $config = @{ language = $language }
+    $config | ConvertTo-Json | Set-Content -Path $global:configFilePath
+    
+    
+    $languageSaved = Translate-Text -Text "Idioma salvo como $language." -TargetLanguage $global:language
+    
+    Write-Host "$languageSaved" -ForegroundColor Green
+}
+
+# Função para carregar ou criar o arquivo de tradução
+function Get-Translation {
+    param (
+        [string]$language  # O idioma selecionado, como 'pt' ou 'en'
+    )
+    
+    # Caminho do arquivo de tradução baseado no idioma selecionado
+    $translationFile = "$global:translationFolderPath\translation_$language.psd1"
+
+    # Link do arquivo de tradução no GitHub (substitua pelo link correto do seu repositório)
+    $gitTranslateUrl = "https://raw.githubusercontent.com/diegrp/AsyncTech-Panel-License-Management/main/translation_$language.psd1"
+    $tempDownloadPath = "$global:translationFolderPath\translation_temp_$language.psd1"
+
+    # Função para calcular o hash de um arquivo
+    function Get-FileHashValue {
+        param (
+            [string]$filePath
+        )
+        if (Test-Path $filePath) {
+            $hash = Get-FileHash -Algorithm SHA256 -Path $filePath
+            return $hash.Hash
+        } else {
+            return $null
+        }
+    }
+
+    # Verifica se o arquivo de tradução existe
+    if (Test-Path $translationFile) {
+
+        $verifyAttLanguageN1 = Translate-Text -Text "Verificando atualizações do arquivo de tradução para o idioma $language..." -TargetLanguage $global:language
+        $verifyAttLanguageN2 = Translate-Text -Text "[OK]" -TargetLanguage $global:language
+        
+        if ([console]::Title -match "SELECIONAR IDIOMA|SELECT LANGUAGE|SELECCIONAR IDIOMA") {
+            Write-Host -NoNewline "$verifyAttLanguageN1 " -ForegroundColor Yellow
+            Start-Sleep -Seconds 2
+            Write-Host -NoNewline "$verifyAttLanguageN2" -ForegroundColor Green
+            Write-Host ""
+            Start-Sleep -Seconds 1
+        } else {
+
+            Write-Host -NoNewline "     $verifyAttLanguageN1 " -ForegroundColor Yellow
+            Start-Sleep -Seconds 2
+            Write-Host -NoNewline "$verifyAttLanguageN2" -ForegroundColor Green
+            Write-Host ""
+            Start-Sleep -Seconds 1
+        }
+
+        try {
+            # Baixa o arquivo de tradução do GitHub para um local temporário
+            $ProgressPreference = 'SilentlyContinue'
+            Invoke-WebRequest -Uri $gitTranslateUrl -OutFile $tempDownloadPath -ErrorAction Stop 
+            $ProgressPreference = 'Continue'  # Restaurar o progresso ao comportamento padrão, se necessário
+
+            # Calcula o hash do arquivo existente e do arquivo baixado
+            $localFileHash = Get-FileHashValue -filePath $translationFile
+            $downloadedFileHash = Get-FileHashValue -filePath $tempDownloadPath
+
+            # Compara os hashes
+            if ($localFileHash -eq $downloadedFileHash) {
+                
+                $fileAttCurrentLanguage = Translate-Text -Text "O arquivo de tradução local já está atualizado." -TargetLanguage $global:language
+
+                if ([console]::Title -match "SELECIONAR IDIOMA|SELECT LANGUAGE|SELECCIONAR IDIOMA") {
+                    Write-Host ""
+                    Write-Host "$fileAttCurrentLanguage" -ForegroundColor Green
+                } else {
+                    Write-Host ""
+                    Write-Host "     $fileAttCurrentLanguage" -ForegroundColor Green
+                }
+
+                # Remove o arquivo temporário, pois não houve alterações
+                Remove-Item -Path $tempDownloadPath -Force
+                
+            } else {
+
+                $fileAttCurrentLanguageSubstN1 = Translate-Text -Text "O arquivo de tradução foi atualizado." -TargetLanguage $global:language
+                $fileAttCurrentLanguageSubstN2 = Translate-Text -Text "Substituindo o arquivo local..." -TargetLanguage $global:language
+                
+                Write-Host ""
+                Write-Host -NoNewline "$fileAttCurrentLanguageSubstN1 " -ForegroundColor Green
+                Write-Host -NoNewline "$fileAttCurrentLanguageSubstN2" -ForegroundColor Yellow
+                Write-Host ""
+                
+                # Substitui o arquivo local pelo novo arquivo
+                Move-Item -Path $tempDownloadPath -Destination $translationFile -Force
+
+            }
+
+            # Carrega o arquivo de tradução (.psd1) e retorna as traduções
+            $global:translations = Import-PowerShellDataFile -Path $translationFile
+            return $global:translations
+
+        } catch {
+
+            $errorVerifyDownloadFileLanguageN1 = Translate-Text -Text "Erro ao verificar ou baixar a tradução" -TargetLanguage $global:language
+            $errorVerifyDownloadFileLanguageN2 = Translate-Text -Text "para o idioma $language." -TargetLanguage $global:language
+            $errorVerifyDownloadFileLanguageN3 = Translate-Text -Text "Verifique sua conexão ou o link do arquivo." -TargetLanguage $global:language
+            
+            Write-Host ""   
+            Write-Host -NoNewline "$errorVerifyDownloadFileLanguageN1 " -ForegroundColor Red
+            Write-Host -NoNewline "$errorVerifyDownloadFileLanguageN2" -ForegroundColor Green
+            Write-Host "$errorVerifyDownloadFileLanguageN3" -ForegroundColor Yellow
+            Write-Host ""
+
+            return $null
+        }
+
+    } else {
+
+        $fileLanguageNotFound = Translate-Text -Text "     Arquivo de tradução para o idioma $language não encontrado." -TargetLanguage $global:language
+        $selectedDownloadLanguageN1 = Translate-Text -Text "Baixando a tradução selecionada..." -TargetLanguage $global:language       
+        $selectedDownloadLanguageN2 = Translate-Text -Text "[OK]" -TargetLanguage $global:language  
+        
+        if ([console]::Title -match "SELECIONAR IDIOMA|SELECT LANGUAGE|SELECCIONAR IDIOMA") {
+            Write-Host ""
+            Write-Host "$fileLanguageNotFound" -ForegroundColor Red
+            Write-Host ""
+            Write-Host -NoNewline "$selectedDownloadLanguageN1 " -ForegroundColor Yellow
+            Start-Sleep -Seconds 3
+            Write-Host -NoNewline "$selectedDownloadLanguageN2" -ForegroundColor Green
+            Start-Sleep -Seconds 1
+            Write-Host ""
+        } else {
+            Write-Host ""
+            Write-Host "     $fileLanguageNotFound" -ForegroundColor Red
+            Write-Host ""
+            Write-Host -NoNewline "     $selectedDownloadLanguageN1 " -ForegroundColor Yellow
+            Start-Sleep -Seconds 3
+            Write-Host -NoNewline "$selectedDownloadLanguageN2" -ForegroundColor Green
+            Start-Sleep -Seconds 1
+            Write-Host ""
+        }
+
+        try {
+
+            # Baixa o arquivo de tradução do GitHub e salva no local correto
+            $ProgressPreference = 'SilentlyContinue'
+            Invoke-WebRequest -Uri $gitTranslateUrl -OutFile $translationFile -ErrorAction Stop
+            $ProgressPreference = 'Continue'  # Restaurar o progresso ao comportamento padrão, se necessário
+            
+            $fileLanguageDownloadSucefullN1 = Translate-Text -Text "Arquivo de tradução $language baixado com sucesso." -TargetLanguage $global:language
+            $fileLanguageDownloadSucefullN2 = Translate-Text -Text "[OK]" -TargetLanguage $global:language
+
+            if ([console]::Title -match "SELECIONAR IDIOMA|SELECT LANGUAGE|SELECCIONAR IDIOMA") {
+                Write-Host -NoNewline "$fileLanguageDownloadSucefullN1 " -ForegroundColor Yellow
+                Start-Sleep -Seconds 1
+                Write-Host -NoNewline "$fileLanguageDownloadSucefullN2" -ForegroundColor Green
+                Start-Sleep -Seconds 1
+                Write-Host ""
+            } else {
+                Write-Host -NoNewline "     $fileLanguageDownloadSucefullN1 " -ForegroundColor Yellow
+                Start-Sleep -Seconds 1
+                Write-Host -NoNewline "$fileLanguageDownloadSucefullN2" -ForegroundColor Green
+                Start-Sleep -Seconds 1
+                Write-Host ""
+            }
+
+            # Pausa breve para garantir que o arquivo foi baixado
+            Start-Sleep -Milliseconds 500
+
+            $loadingfileLanguageDownloadN1 = Translate-Text -Text "Carregando o arquivo de tradução baixado..." -TargetLanguage $global:language
+            $loadingfileLanguageDownloadN2 = Translate-Text -Text "[OK]" -TargetLanguage $global:language
+
+            if ([console]::Title -match "SELECIONAR IDIOMA|SELECT LANGUAGE|SELECCIONAR IDIOMA") {
+                Write-Host -NoNewline "$loadingfileLanguageDownloadN1 " -ForegroundColor Yellow
+                Start-Sleep -Seconds 2
+                Write-Host -NoNewline "$loadingfileLanguageDownloadN2" -ForegroundColor Green
+                Start-Sleep -Seconds 1
+                Write-Host ""
+            } else {
+                Write-Host -NoNewline "     $loadingfileLanguageDownloadN1 " -ForegroundColor Yellow
+                Start-Sleep -Seconds 2
+                Write-Host -NoNewline "$loadingfileLanguageDownloadN2" -ForegroundColor Green
+                Start-Sleep -Seconds 1
+                Write-Host ""
+            }
+
+            $global:translations = Import-PowerShellDataFile -Path $translationFile
+            return $global:translations
+            
+        } catch {
+
+            $errorDownloadFileLanguage = Translate-Text -Text "Erro ao baixar o arquivo de tradução para o idioma $language. Verifique sua conexão ou o link do arquivo." -TargetLanguage $global:language
+            
+            $errorDownloadFileLanguageN1 = Translate-Text -Text "Erro ao baixar o arquivo de tradução" -TargetLanguage $global:language
+            $errorDownloadFileLanguageN2 = Translate-Text -Text "para o idioma $language. " -TargetLanguage $global:language
+            $errorDownloadFileLanguageN3 = Translate-Text -Text "Verifique sua conexão ou o link do arquivo." -TargetLanguage $global:language
+            
+            Write-Host ""
+            Write-Host -NoNewline "$errorDownloadFileLanguageN1 " -ForegroundColor Red
+            Write-Host -NoNewline "$errorDownloadFileLanguageN2" -ForegroundColor Green
+            Write-Host "$errorDownloadFileLanguageN3" -ForegroundColor Yellow
+            Write-Host ""
+
+            return $null            
+        }
+    }
+
+}
+
+# Função para configurar o idioma globalmente
+function Initialize-Language {
+    
+    # Certifique-se de que a pasta de configuração existe
+    if (-not (Test-Path $global:configFolderPath) -or -not (Test-Path $global:translationFolderPath)) {
+        New-Item -Path $global:configFolderPath -ItemType Directory -Force
+        New-Item -Path $global:translationFolderPath -ItemType Directory -Force
+        # Carrega o idioma salvo no arquivo de configuração JSON
+        $global:language = Get-LanguageConfig
+    }
+
+    # Verifica se o arquivo de configuração existe
+    if (Test-Path $global:configFilePath) {
+       
+        try {
+
+            $global:language = Get-LanguageConfig
+            $loadingLanguageConfigN1 = Translate-Text -Text "Carregando o idioma do arquivo de configuração..." -TargetLanguage $global:language
+            $loadingLanguageConfigN2 = Translate-Text -Text "[OK]" -TargetLanguage $global:language
+            
+            Write-Host ""
+            Write-Host -NoNewline "     $loadingLanguageConfigN1 " -ForegroundColor Yellow
+            Start-Sleep -Seconds 2
+            Write-Host -NoNewline "$loadingLanguageConfigN2" -ForegroundColor Green
+            Write-Host ""
+            Start-Sleep -Seconds 1
+
+        } catch {
+
+            $global:language = "pt"  # Define idioma padrão
+            $errorLoadingLanguageConfigN1 = Translate-Text -Text "Erro ao carregar a configuração." -TargetLanguage $global:language
+            $errorLoadingLanguageConfigN2 = Translate-Text -Text "Usando idioma padrão (português)." -TargetLanguage $global:language
+            
+            Write-Host ""
+            Write-Host -NoNewline "$errorLoadingLanguageConfigN1 " -ForegroundColor Red
+            Write-Host -NoNewline "$errorLoadingLanguageConfigN2" -ForegroundColor Yellow
+            Write-Host ""
+
+        }
+
+    } else {
+        
+        $fileLoadingLanguageNotFoundCreatedN1 = Translate-Text -Text "Arquivo de configuração não encontrado." -TargetLanguage $global:language
+        $fileLoadingLanguageNotFoundCreatedN2 = Translate-Text -Text "Criando um novo com idioma padrão (português)." -TargetLanguage $global:language
+        
+        Write-Host ""
+        Write-Host -NoNewline "$fileLoadingLanguageNotFoundCreatedN1 " -ForegroundColor Red
+        Write-Host -NoNewline "$fileLoadingLanguageNotFoundCreatedN2" -ForegroundColor Green
+        Write-Host ""
+        
+        # Carrega o idioma salvo no arquivo de configuração
+        $global:language = "pt"
+        Set-LanguageConfig -language $global:language
+    }
+
+    
+    # Carrega as traduções para o idioma selecionado
+    $fileLoadingLanguageTraductionN1 = Translate-Text -Text "Carregando traduções para o idioma:" -TargetLanguage $global:language
+    $fileLoadingLanguageTraductionN2 = Translate-Text -Text "[OK]" -TargetLanguage $global:language
+    
+    Write-Host -NoNewline "     $fileLoadingLanguageTraductionN1 $global:language " -ForegroundColor Yellow
+    Start-Sleep -Seconds 2
+    Write-Host -NoNewline "$fileLoadingLanguageTraductionN2" -ForegroundColor Green
+    Write-Host ""
+    Start-Sleep -Seconds 1
+
+    $global:translations = Get-Translation -language $global:language
+
+    if ($global:translations -eq $null) {
+        
+        $errorLoadingLanguageScriptExit = Translate-Text -Text "Erro ao carregar as traduções. O script não pode continuar." -TargetLanguage $global:language
+        
+        Write-Host "$errorLoadingLanguageScriptExit" -ForegroundColor Red
+        Start-Sleep -Seconds 5
+
+    }
+
+    $loadingLanguageSuccessfull = Translate-Text -Text "Traduções carregadas com sucesso!" -TargetLanguage $global:language
+    
+    Write-Host ""
+    Write-Host "     $loadingLanguageSuccessfull" -ForegroundColor Green
+}
+
+# Função para verificar a versão da aplicação
+function Check-Version-App {
+
+    # Última data de atualização da versão atual instalada da aplicação
+    $idiomaSelecionado = $global:language = Get-LanguageConfig
+
+    # Traduções
+    $CompVADATTApp = Translate-Text -Text "Comparando a versão atual com a disponível para atualização da aplicação..." -TargetLanguage $global:language
+    $CompVADATTAppOK = Translate-Text -Text "[OK]" -TargetLanguage $global:language
+    $VDATTInstallApp = Translate-Text -Text "A aplicação já se encontra atualizada, com a versão disponível atualmente instalada." -TargetLanguage $global:language
+    $LoadingDoneReqApp = Translate-Text -Text "Concluindo o carregamento inicial para verificação de requisitos em cada etapa e dando continuidade á execução da aplicação..." -TargetLanguage $global:language
+    $PleaseWaitApp = Translate-Text -Text "Aguarde um momento..." -TargetLanguage $global:language
+    $ATTSuccessApp = Translate-Text -Text "Atualização concluída com sucesso!" -TargetLanguage $global:language
+    $RestartStepVA = Translate-Text -Text "Reiniciando a etapa de verificação da versão atual e disponível para atualização." -TargetLanguage $global:language
+    $VAInstallOutdatedStartAttApp = Translate-Text -Text "A versão atual da aplicação instalada esta desatualizada, deseja iniciar a atualização agora? (S/N)" -TargetLanguage $global:language
+    $SearchRequerimentsStartApp = Translate-Text -Text "Verificando requisitos necessários para dar iniciar a aplicação..." -TargetLanguage $global:language
+
+    # Lê o conteúdo do arquivo JSON e converte para um objeto PowerShell
+    $jsonFileDataLog = Get-Content -Path $global:configFilePath | ConvertFrom-Json
+
+    # Variáveis para armazenar as informações de detalhes da aplicação
+    $detalhes_app_info = $null
+
+    # URLs para obter todos os detalhes do aplicativo
+    $urls = Get-Detalhes-Aplicativo
+
+    foreach ($url in $urls) {
+        try {
+            # Obter o conteúdo do arquivo do Pastebin
+            $conteudo = Invoke-RestMethod -Uri $url -ErrorAction Stop
+        } catch {
+            Write-Host "     $($global:translations["DMAAlertMessageAccessContentURLNotFound"]): $url" -ForegroundColor Red
+            continue
+        }
+
+        # Verificar se o conteúdo está vazio
+        if ([string]::IsNullOrWhiteSpace($conteudo)) {
+            Write-Host "     $($global:translations["DMAAlertMessageGetContentURLNotFound"]): $url" -ForegroundColor Red
+            continue
+        }
+
+        # Verificar detalhes da aplicação no conteúdo obtido
+        $linhas = $conteudo -split "`n"
+
+        foreach ($linha in $linhas) {
+            
+            $campos = $linha -split "\|"
+            
+            # Verificar se há pelo menos três campos
+
+            if ($campos.Count -ge 3) {
+                
+                $detalhes_app_info = @{
+                    "versao_atual_app" = $campos[2].Trim()
+                    "versao_disp_app" = $campos[3].Trim()
+                    "versao_fult_app" = $campos[4].Trim()
+                    "url_setup_install" = $campos[5].Trim()
+                    "url_exe_install" = $campos[6].Trim()
+                    "hash_arquivo_app" = $campos[15].Trim()
+                    "caminho_setup_inst_app" = $campos[17].Trim()
+                    "status_att_app" = $campos[18].Trim()
+                    "status_disp_att_app" = $campos[19].Trim()
+                }
+
+                break
+            }
+        }
+
+        # Se os detalhes da aplicação não foi encontrado, não precisa verificar outros links
+        if ($detalhes_app_info) {
+            break
+        }
+    }
+
+    $versao_atual_app = $detalhes_app_info["versao_atual_app"]
+    $versao_disp_app = $detalhes_app_info["versao_disp_app"]
+    $versao_fult_app = $detalhes_app_info["versao_fult_app"]
+    $url_setup_install = $detalhes_app_info["url_setup_install"]
+    $url_exe_install = $detalhes_app_info["url_exe_install"]
+    $hash_arquivo_app = $detalhes_app_info["hash_arquivo_app"]
+    $tamanho_arquivo_app = $detalhes_app_info["tamanho_arquivo_app"]
+    $status_att_app = $detalhes_app_info["status_att_app"]
+    $status_disp_att_app = $detalhes_app_info["status_disp_att_app"] 
+
+    # Caminho completo do .exe
+    $exeFilePath = Join-Path -Path $PSScriptRoot -ChildPath $exeFileName
+
+    # Verifica se o arquivo existe
+    if (Test-Path -Path $exeFilePath) {
+        # Obtém as informações de versão do arquivo .exe
+        $ExeVersion = (Get-Item $exeFilePath).VersionInfo.FileVersion
+        $fileExeVersion = $ExeVersion.Split(".")[0..2] -join "."
+        $tamanhoExeVersion = (Get-Item $exeFilePath).Length
+        $tamanhoMBFileExeVersion = [math]::Round($tamanhoExeVersion / 1MB, 2)
+
+        # Write-Host "Tamanho do arquivo: $tamanhoMBFileExeVersion MB"
+        # Write-Host "Versão do arquivo .exe: $fileExeVersion" 
+    } else {
+        # Obtém as informações de versão do script .ps1
+        $fileScriptVersion = $scriptVersion.Substring(1)
+        # Write-Host "Versão do arquivo .ps1: $fileScriptVersion"
+    }
+
+    function ExecutarAtualizacao {
+                
+        try {
+            # Variáveis Globais
+            $local_default = "C:\Users\$env:USERNAME\AppData\Local\Temp\$nome_app"
+
+            if (-not (Test-Path -Path $local_default)) { New-Item -ItemType Directory -Path $local_default > $nul }
+
+            $url_att_app = @(
+                if ("Nenhum" -ne $url_setup_install) { $url_setup_install }
+                if ("Nenhum" -ne $url_exe_install) { $url_exe_install }
+            ) | Where-Object { $_ -ne "Nenhum" } | Select-Object -First 1
+            $destino_att_app = @(
+                if ("Nenhum" -ne $url_setup_install) { "$local_default\setup.exe" }
+                if ("Nenhum" -ne $url_exe_install) { "$local_default\AsyncTech - Panel License Management.exe" }
+            ) | Where-Object { $_ -ne "Nenhum" } | Select-Object -First 1
+
+            if (Test-Path $destino_att_app) {
+
+                # Calcula o hash SHA256 do arquivo .exe
+                $hash_destino_att_app = (Get-FileHash -Path $destino_att_app -Algorithm SHA256).Hash
+
+                # Compara o hash calculado com o hash original
+                if ($hash_destino_att_app -eq $hash_arquivo_app) {
+
+                    if ($destino_att_app.Contains("setup.exe")) {
+                        
+                        # Executar o arquivo a ativador .exe, e aguarda a conclusão.
+                        Start-Process -FilePath $destino_att_app -PassThru -Wait
+                        
+                        # Data última Atualização 
+
+                        # Adiciona a data atual ao objeto
+                        $jsonFileDataLog | Add-Member -MemberType NoteProperty -Name "data_att_app" -Value (Get-Date -Format "dd/MM/yyyy HH:mm:ss") -Force
+                        # Converte o objeto de volta para JSON e salva no arquivo
+                        $jsonFileDataLog | ConvertTo-Json | Set-Content -Path $global:configFilePath 
+
+                        Start-Sleep -Seconds 3
+                        Exit
+
+                    } elseif ($destino_att_app.Contains("AsyncTech - Panel License Management.exe")) {
+
+                        # Caminho do script atual
+                        $exeFileAppRoot = "$PSScriptRoot\AsyncTech - Panel License Management.exe"
+
+                        # Mover os arquivos e substitui pelos existentes
+                        Move-Item -Path "$destino_att_app" -Destination $PSScriptRoot -Force
+                        # Atualização data final
+
+                        # Data última Atualização 
+
+                        # Adiciona a data atual ao objeto
+                        $jsonFileDataLog | Add-Member -MemberType NoteProperty -Name "data_att_app" -Value (Get-Date -Format "dd/MM/yyyy HH:mm:ss") -Force
+                        # Converte o objeto de volta para JSON e salva no arquivo
+                        $jsonFileDataLog | ConvertTo-Json | Set-Content -Path $global:configFilePath 
+
+                        Start-Sleep -Seconds 3
+
+                        # Inicia o script novamente
+                        # Start-Process -FilePath $exeFileAppRoot
+                        # Exit
+                    }
+
+                } else {
+
+                    Remove-Item -Recurse -Force -Path $destino_att_app
+                    
+                    Start-Sleep -Seconds 3
+
+                    return ExecutarAtualizacao
+                }
+
+            } else {
+
+                # Usando Invoke-WebRequest para baixar o arquivo
+                $response = Invoke-WebRequest -Uri "$url_att_app" -OutFile "$destino_att_app" -ErrorAction Stop
+
+                if ($destino_att_app.Contains("setup.exe")) {
+                    # Executar o arquivo a ativador .exe, e aguarda a conclusão.
+                    Start-Process -FilePath $destino_att_app -PassThru -Wait
+
+                    # Data última Atualização 
+
+                    # Adiciona a data atual ao objeto
+                    $jsonFileDataLog | Add-Member -MemberType NoteProperty -Name "data_att_app" -Value (Get-Date -Format "dd/MM/yyyy HH:mm:ss") -Force
+                    # Converte o objeto de volta para JSON e salva no arquivo
+                    $jsonFileDataLog | ConvertTo-Json | Set-Content -Path $global:configFilePath 
+
+                    Start-Sleep -Seconds 3
+                    Exit
+
+                } elseif ($destino_att_app.Contains("AsyncTech - Panel License Management.exe")) {
+                    # Caminho do script atual
+                    $exeFileAppRoot = "$PSScriptRoot\AsyncTech - Panel License Management.exe"
+
+                    # Mover os arquivos e substitui pelos existentes
+                    Move-Item -Path "$destino_att_app" -Destination $PSScriptRoot -Force
+                    
+                    # Data última Atualização 
+
+                    # Adiciona a data atual ao objeto
+                    $jsonFileDataLog | Add-Member -MemberType NoteProperty -Name "data_att_app" -Value (Get-Date -Format "dd/MM/yyyy HH:mm:ss") -Force
+                    # Converte o objeto de volta para JSON e salva no arquivo
+                    $jsonFileDataLog | ConvertTo-Json | Set-Content -Path $global:configFilePath 
+
+                    Start-Sleep -Seconds 3
+
+                    # Inicia o script novamente
+                    # Start-Process -FilePath $exeFileAppRoot 
+                    # Exit
+                }
+            }
+
+        } catch {
+            Write-Host "$($global:translations["SUMRUErrorExecutingUpdate"]): $_" -ForegroundColor Red
+        }
+    }
+
+    
+    if ($versao_disp_app -ne "Nenhum" -and $versao_disp_app -ne $fileExeVersion){
+
+
+        $LoadingConfirmOK = Translate-Text -Text "[OK]" -TargetLanguage $global:language
+        
+        Write-Host -NoNewline "     $SearchRequerimentsStartApp" -ForegroundColor Yellow
+        Start-Sleep -Seconds 2
+        Write-Host -NoNewline " $LoadingConfirmOK" -ForegroundColor Green
+        Write-Host ""
+
+        Write-Host ""
+    
+        $opcao_verificar_versaoapp = Read-Host "     $VAInstallOutdatedStartAttApp"
+        
+        if($opcao_verificar_versaoapp -eq "s") {
+
+
+            ExecutarAtualizacao
+            Write-Host ""
+            Write-Host "     $PleaseWaitApp" -ForegroundColor Green
+            Start-Sleep -Seconds 3
+            Write-Host "     $ATTSuccessApp" -ForegroundColor Green
+            Write-Host ""
+            Write-Host -NoNewline "     $RestartStepVA" -ForegroundColor Yellow
+            Start-Sleep -Seconds 2
+            Write-Host -NoNewline " $LoadingConfirmOK" -ForegroundColor Green
+            Start-Sleep -Seconds 1
+            Write-Host ""
+            Check-Version-App
+
+        } else {
+
+
+            Write-Host -NoNewline "     $CompVADATTApp" -ForegroundColor Yellow
+            Start-Sleep -Seconds 2
+            Write-Host -NoNewline " $LoadingConfirmOK" -ForegroundColor Green
+            Write-Host ""
+            Start-Sleep -Seconds 3
+            Write-Host "     ================================================================================================================" -ForegroundColor Green
+            Write-Host ""
+            Write-Host "     $LoadingDoneReqApp" -ForegroundColor Yellow
+            Start-Sleep -Seconds 2
+            Write-Host ""
+            Write-Host "     $PleaseWaitApp" -ForegroundColor Green
+            Start-Sleep -Seconds 3
+        }
+
+    } else {
+
+
+
+        Write-Host -NoNewline "     $CompVADATTApp" -ForegroundColor Yellow
+        Start-Sleep -Seconds 2
+        Write-Host -NoNewline " $CompVADATTAppOK" -ForegroundColor Green
+        Start-Sleep -Seconds 3
+        Write-Host ""
+        Write-Host ""
+        Write-Host "     $VDATTInstallApp" -ForegroundColor Green
+        Write-Host ""
+        Start-Sleep -Seconds 3
+        Write-Host "     ================================================================================================================" -ForegroundColor Green
+        Write-Host ""
+        Write-Host "     $LoadingDoneReqApp" -ForegroundColor Yellow
+        Start-Sleep -Seconds 2
+        Write-Host ""
+        Write-Host "     $PleaseWaitApp" -ForegroundColor Green
+        Start-Sleep -Seconds 3
+    }
+
+}
 
 # Define o nome e a versão
 $scriptName = "AsyncTech - Panel License Management"
 $scriptVersion = "v1.0.0"
+# Nome do arquivo .exe
+$exeFileName = "$($scriptName).exe"
 
 # Adiciona o título na janela do PowerShell
 $windowTitle = "$scriptName - $scriptVersion"
 [console]::Title = $windowTitle
 
+# Função simples para atualizar o título do console de forma dinâmica
+function Update-Title-WindowMenu {
+    param (
+        [string]$menuKey,  # A chave do menu (ex: "MainMenu", "Option1")
+        [string]$menuExt, 
+        [string]$idiomaSelecionado
+    )
+
+    # Atualiza o título do console com base na chave fornecida
+    $newTitle = "$scriptName - $scriptVersion"
+    
+    if ($idiomaSelecionado) {
+
+        $menyKeyTranslate = Translate-Text -Text "$menuKey" -TargetLanguage $language
+        $newTitle += " - " + $menyKeyTranslate.ToUpper()
+
+    } else {
+     
+        if ($global:translations.ContainsKey($menuKey) -and $menuExt) {
+            $newTitle += " - " + $global:translations[$menuKey].ToUpper() + " - " + $menuExt
+        } elseif ($global:translations.ContainsKey($menuKey)) {
+            $newTitle += " - " + $global:translations[$menuKey].ToUpper()
+        }
+    }
+
+    [console]::Title = $newTitle
+
+    # Armazena a chave do menu atual para referência
+    $global:currentMenu = $menuKey
+}
+
 # Menu Principal
 
 function Show-Menu {
+
+    param (
+        [bool]$LoginStatus = $false,
+        [string]$UsuarioAtual = $null,
+        [string]$SenhaAtual = $null,
+        [string]$TipoPlanoConta = $null
+    )
+    
+    Update-Title-WindowMenu -menuKey "MMMainMenu"  # Atualiza o título para o menu principal
+
     cls
+
+    $fixedWidthMainMenu = 120  # Largura total da linha
+
+    # Frase a ser centralizada
+    $mainMenuTexto = $($global:translations["MMMainMenu"])
+    $mainMenuTextoLength = $mainMenuTexto.Length
+
+    # Calcula o número de espaços necessários para centralizar
+    $spacesNeededMainMenu = [Math]::Max(([Math]::Floor(($fixedWidthMainMenu - $mainMenuTextoLength) / 2)), 0)
+    $spacesMainMenu = " " * $spacesNeededMainMenu
+
     Write-Host ""
     Write-Host "     ================================================================================================================" -ForegroundColor Green
-    Write-Host "                                                      MENU PRINCIPAL                                                 " -ForegroundColor Cyan
+    Write-Host "$spacesMainMenu$mainMenuTexto" -ForegroundColor Cyan
     Write-Host "     ================================================================================================================" -ForegroundColor Green 
     Write-Host ""
     Write-Host "     ================================================================================================================" -ForegroundColor Gray
-    Write-Host ""  
+    Write-Host "" 
     Write-Host -NoNewline "     [1] - "  -ForegroundColor Yellow
-    Write-Host "Fazer Login" -ForegroundColor Green
-    Write-Host -NoNewline "     [2] - "  -ForegroundColor Yellow
-    Write-Host "Status do Servidor" -ForegroundColor Blue
+    Write-Host $($global:translations["MMLogin"]) -ForegroundColor Green
+    Write-Host -NoNewline "     [2] - " -ForegroundColor Yellow
+    Write-Host $($global:translations["MMSearchUpdate"]) -ForegroundColor Blue
     Write-Host -NoNewline "     [3] - "  -ForegroundColor Yellow
-    Write-Host "Grupo Telegram" -ForegroundColor Cyan
+    Write-Host $($global:translations["MMSelectLanguage"]) -ForegroundColor Magenta
     Write-Host -NoNewline "     [4] - "  -ForegroundColor Yellow
-    Write-Host "Sair" -ForegroundColor Red
+    Write-Host $($global:translations["MMVIPGroup"]) -ForegroundColor Cyan
+    Write-Host -NoNewline "     [5] - "  -ForegroundColor Yellow
+    Write-Host $($global:translations["MMExit"]) -ForegroundColor Red
     Write-Host ""
     Write-Host "     ================================================================================================================" -ForegroundColor Gray
     Write-Host ""
 
-    $opcao = Read-Host "Digite o número da opção escolhida"
+    $opcao = Read-Host $($global:translations["MMChoiceOption"])
 
     switch ($opcao) {
-        1 { Fazer-Login }
-        2 { Status-Servidor }
-        3 { Grupo-Telegram }
-        4 { 
-	    # Stop-Process -Name "PowershellShowcase"
-	    Exit 
- 	}
-        default { Show-Menu }
+        1 { Fazer-Login -LoginStatus $LoginStatus -UsuarioAtual $usuario_atual -SenhaAtual $senha_atual -TipoPlanoConta $plano_conta_atual }
+        2 { Verificar-Atualizacoes -LoginStatus $LoginStatus -UsuarioAtual $usuario_atual -SenhaAtual $senha_atual -TipoPlanoConta $plano_conta_atual }
+        3 { Selecionar-Idioma -LoginStatus $LoginStatus -UsuarioAtual $usuario_atual -SenhaAtual $senha_atual -TipoPlanoConta $plano_conta_atual }
+        4 { Grupo-VIP -LoginStatus $LoginStatus -UsuarioAtual $usuario_atual -SenhaAtual $senha_atual -TipoPlanoConta $plano_conta_atual }
+        5 { 
+            Write-Host ""
+            Write-Host -NoNewline "$($global:translations["MMChoiceOptionExit"])" -ForegroundColor Red
+            Start-Sleep -Seconds 2
+            # Stop-Process -Name "PowershellShowcase"
+            Exit 
+        }
+        default { 
+
+            Write-Host ""
+            Write-Host $($global:translations["DOInvalidOptionN2"]) -ForegroundColor Red
+            Write-Host ""
+
+            Start-Sleep -Seconds 3
+            Show-Menu -LoginStatus $LoginStatus -UsuarioAtual $usuario_atual -SenhaAtual $senha_atual -TipoPlanoConta $plano_conta_atual ; 
+        }
     }
 }
 
-
 # Menu Fazer Login
-
 function Fazer-Login {
+
+    param (
+        [bool]$LoginStatus = $false,
+        [string]$UsuarioAtual = $null,
+        [string]$SenhaAtual = $null,
+        [string]$TipoPlanoConta = $null
+    )
+
+    Update-Title-WindowMenu -menuKey "MMLogin"  # Atualiza o título para o menu principal
+
     cls
+
+    $fixedWidthLoginMenu = 120  # Largura total da linha
+
+    # Frase a ser centralizada
+    $loginMenuTexto = $($global:translations["LMLoginMenu"])
+    $loginMenuTextoLength = $loginMenuTexto.Length
+
+    # Calcula o número de espaços necessários para centralizar
+    $spacesNeededLoginMenu = [Math]::Max(([Math]::Floor(($fixedWidthLoginMenu - $loginMenuTextoLength) / 2)), 0)
+    $spacesLoginMenu = " " * $spacesNeededLoginMenu
+
     Write-Host ""
     Write-Host "     ================================================================================================================" -ForegroundColor Green
-    Write-Host "                                                      EFETUAR LOGIN                                                  " -ForegroundColor Cyan
+    Write-Host "$spacesLoginMenu$loginMenuTexto" -ForegroundColor Cyan
     Write-Host "     ================================================================================================================" -ForegroundColor Green 
     Write-Host ""
 
     function Read-Password {
         [System.Console]::ForegroundColor = 'Yellow'
-        [Console]::Write("     Digite a sua senha: ") 
+        [Console]::Write("     $($global:translations["LMEnterPass"]): ") 
         # Redefinir a cor do texto para a cor padrão
         [System.Console]::ResetColor()
         $password = "" 
@@ -83,99 +968,191 @@ function Fazer-Login {
         return $password
     }
 
-    Write-Host -NoNewline "     Digite seu usuário: " -ForegroundColor Yellow 
-    # Captura da entrada do usuário (entrada em si não pode ser colorida)
-    $usuario = Read-Host
-    
-    Write-Host ""
-
-    # Exibir o que foi digitado em uma cor específica
-    Write-Host -NoNewline "     Usuário digitado: "
-    Write-Host $usuario -ForegroundColor Yellow
-    
-    Write-Host ""
-
-    # Prompt para a senha
-    $senha = Read-Password
-    # Exibir a senha digitada em uma cor específica (por razões de segurança, geralmente não se exibe a senha)
-    
-    Write-Host ""
-
-    # Substituir o conteúdo da senha por asteriscos
-    $asteriscosSenha = "*" * $senha.Length
-
-    Write-Host -NoNewline "     Senha digitada: "
-    Write-Host $asteriscosSenha -ForegroundColor Yellow
-
-    # URLs para obter todos os usuarios
-    $urls = Get-Todos-Usuarios
-
-    # Verificar usuário e senha no conteúdo obtido
-    $encontrado = $false
-
-    # Verifica se o usuário ou a senha estão vazios
-    if ([string]::IsNullOrEmpty($usuario) -or [string]::IsNullOrEmpty($senha)) {
+    if ($loginStatus -eq $true) {
+       
+        Write-Host -NoNewline "     $($global:translations["LMEnterUser"]): " -ForegroundColor Yellow 
+        # Captura da entrada do usuário (entrada em si não pode ser colorida)
+        $usuario = $UsuarioAtual
+        
         Write-Host ""
-        Write-Host -NoNewline "     Erro ao fazer login." -ForegroundColor Red
-        Write-Host " Usuário ou senha não podem estar vazios." -ForegroundColor Yellow
+
+        # Exibir o que foi digitado em uma cor específica
+        Write-Host -NoNewline "     $($global:translations["LMShowUser"]): "
+        Write-Host $usuario -ForegroundColor Yellow
+    
         Write-Host ""
+
+        Write-Host -NoNewline "     $($global:translations["LMEnterPass"]): " -ForegroundColor Yellow 
+        # Captura da entrada da senha (entrada em si não pode ser colorida)
+        # Exibir a senha digitada em uma cor específica (por razões de segurança, geralmente não se exibe a senha)
+        $senha = $SenhaAtual
+        # Substituir o conteúdo da senha por asteriscos
+        $asteriscosSenha = "*" * $senha.Length
+
+        Write-Host ""
+
+        Write-Host -NoNewline "     $($global:translations["LMShowPass"]): "
+        Write-Host $asteriscosSenha -ForegroundColor Yellow
+
+        # URLs para obter todos os usuarios
+        $urls = Get-Todos-Usuarios
+
+        # Verificar usuário e senha no conteúdo obtido
         $encontrado = $false
-        pause
-    } else {
-        foreach ($url in $urls) {
-            try {
-                # Obter o conteúdo do arquivo do Pastebin
-                $conteudo = Invoke-RestMethod -Uri $url -ErrorAction Stop
-            } catch {
-                Write-Host "     Erro ao acessar a URL: $url" -ForegroundColor Red
-                continue
-            }
 
-            # Verificar se o conteúdo está vazio
-            if ([string]::IsNullOrWhiteSpace($conteudo)) {
-                Write-Host "     Conteúdo da URL $url está vazio ou não pôde ser obtido." -ForegroundColor Yellow
-                continue
-            }
+        # Verifica se o usuário ou a senha estão vazios
+        if ([string]::IsNullOrEmpty($usuario) -or [string]::IsNullOrEmpty($senha)) {
+            Write-Host ""
+            Write-Host -NoNewline "     $($global:translations["LMErrorLoginN1"])" -ForegroundColor Red
+            Write-Host " $($global:translations["LMEmptyLogin"])" -ForegroundColor Yellow
+            Write-Host ""
+            $encontrado = $false
+            pause
+        } else {
+            foreach ($url in $urls) {
+                try {
+                    # Obter o conteúdo do arquivo do Pastebin
+                    $conteudo = Invoke-RestMethod -Uri $url -ErrorAction Stop
+                } catch {
+                    Write-Host "     $($global:translations["DMAAlertMessageAccessContentURLNotFound"]): $url" -ForegroundColor Red
+                    continue
+                }
 
-            # Verificar usuário e senha no conteúdo obtido
-            $linhas = $conteudo -split "`n"
+                # Verificar se o conteúdo está vazio
+                if ([string]::IsNullOrWhiteSpace($conteudo)) {
+                    Write-Host "     $($global:translations["DMAAlertMessageGetContentURLNotFound"]): $url" -ForegroundColor Red
+                    continue
+                }
 
-            foreach ($linha in $linhas) {
+                # Verificar usuário e senha no conteúdo obtido
+                $linhas = $conteudo -split "`n"
+
+                foreach ($linha in $linhas) {
             
-                $campos = $linha -split "\|"
+                    $campos = $linha -split "\|"
             
-                if ($campos.Count -ge 3) {
+                    if ($campos.Count -ge 3) {
 
-                    $usuario_atual = $campos[1].Trim()
-                    $senha_atual = $campos[2].Trim()
-                    $plano_conta_atual = $campos[8].Trim()
+                        $usuario_atual = $campos[1].Trim()
+                        $senha_atual = $campos[2].Trim()
+                        $plano_conta_atual = $campos[8].Trim()
 
-                    if ([string]::Equals($usuario, $usuario_atual, [System.StringComparison]::Ordinal) -and 
-                        [string]::Equals($senha, $senha_atual, [System.StringComparison]::Ordinal)) {
-                        Write-Host ""
-                        Write-Host -NoNewline "     Login bem-sucedido, " -ForegroundColor Green
-                        Write-Host -NoNewline "abrindo " -ForegroundColor Yellow
-                        Write-Host -NoNewline "'MENU DE SELEÇÃO DO SEU PRODUTO'." -ForegroundColor Cyan 
-                        Write-Host ""
-                        $encontrado = $true
-                        Show-Menu-Produto -UsuarioAtual $usuario_atual -SenhaAtual $senha_atual -TipoPlanoConta $plano_conta_atual
-                        break
+                        if ([string]::Equals($usuario, $usuario_atual, [System.StringComparison]::Ordinal) -and 
+                            [string]::Equals($senha, $senha_atual, [System.StringComparison]::Ordinal)) {
+                            Write-Host ""
+                            Write-Host -NoNewline "     $($global:translations["LMSuccessLoginN1"]) " -ForegroundColor Green
+                            Write-Host -NoNewline "$($global:translations["LMSuccessLoginN2"]) " -ForegroundColor Yellow
+                            Write-Host -NoNewline "$($global:translations["LMSuccessLoginN3"])" -ForegroundColor Cyan 
+                            Write-Host ""
+                            $encontrado = $true
+                            Show-Menu-Produto -UsuarioAtual $usuario_atual -SenhaAtual $senha_atual -TipoPlanoConta $plano_conta_atual
+                            break
+                        }
                     }
                 }
-            }
 
-            # Se o usuário foi encontrado, não precisa verificar outros links
-            if ($encontrado) {
-                break
+                # Se o usuário foi encontrado, não precisa verificar outros links
+                if ($encontrado) {
+                    break
+                }
             }
         }
-    }
+    
+    } else {
 
+        Write-Host -NoNewline "     $($global:translations["LMEnterUser"]): " -ForegroundColor Yellow 
+        # Captura da entrada do usuário (entrada em si não pode ser colorida)
+        $usuario = Read-Host
+    
+        Write-Host ""
+
+        # Exibir o que foi digitado em uma cor específica
+        Write-Host -NoNewline "     $($global:translations["LMShowUser"]): "
+        Write-Host $usuario -ForegroundColor Yellow
+    
+        Write-Host ""
+
+        # Prompt para a senha
+        $senha = Read-Password
+        # Exibir a senha digitada em uma cor específica (por razões de segurança, geralmente não se exibe a senha)
+    
+        Write-Host ""
+
+        # Substituir o conteúdo da senha por asteriscos
+        $asteriscosSenha = "*" * $senha.Length
+
+        Write-Host -NoNewline "     $($global:translations["LMShowPass"]): "
+        Write-Host $asteriscosSenha -ForegroundColor Yellow
+
+        # URLs para obter todos os usuarios
+        $urls = Get-Todos-Usuarios
+
+        # Verificar usuário e senha no conteúdo obtido
+        $encontrado = $false
+
+        # Verifica se o usuário ou a senha estão vazios
+        if ([string]::IsNullOrEmpty($usuario) -or [string]::IsNullOrEmpty($senha)) {
+            Write-Host ""
+            Write-Host -NoNewline "     $($global:translations["LMErrorLoginN1"])" -ForegroundColor Red
+            Write-Host " $($global:translations["LMEmptyLogin"])" -ForegroundColor Yellow
+            Write-Host ""
+            $encontrado = $false
+            pause
+        } else {
+            foreach ($url in $urls) {
+                try {
+                    # Obter o conteúdo do arquivo do Pastebin
+                    $conteudo = Invoke-RestMethod -Uri $url -ErrorAction Stop
+                } catch {
+                    Write-Host "     $($global:translations["DMAAlertMessageAccessContentURLNotFound"]): $url" -ForegroundColor Red
+                    continue
+                }
+
+                # Verificar se o conteúdo está vazio
+                if ([string]::IsNullOrWhiteSpace($conteudo)) {
+                    Write-Host "     $($global:translations["DMAAlertMessageGetContentURLNotFound"]): $url" -ForegroundColor Red
+                    continue
+                }
+
+                # Verificar usuário e senha no conteúdo obtido
+                $linhas = $conteudo -split "`n"
+
+                foreach ($linha in $linhas) {
+            
+                    $campos = $linha -split "\|"
+            
+                    if ($campos.Count -ge 3) {
+
+                        $usuario_atual = $campos[1].Trim()
+                        $senha_atual = $campos[2].Trim()
+                        $plano_conta_atual = $campos[8].Trim()
+
+                        if ([string]::Equals($usuario, $usuario_atual, [System.StringComparison]::Ordinal) -and 
+                            [string]::Equals($senha, $senha_atual, [System.StringComparison]::Ordinal)) {
+                            Write-Host ""
+                            Write-Host -NoNewline "     $($global:translations["LMSuccessLoginN1"]) " -ForegroundColor Green
+                            Write-Host -NoNewline "$($global:translations["LMSuccessLoginN2"]) " -ForegroundColor Yellow
+                            Write-Host -NoNewline "$($global:translations["LMSuccessLoginN3"])" -ForegroundColor Cyan 
+                            Write-Host ""
+                            $encontrado = $true
+                            Show-Menu-Produto -UsuarioAtual $usuario_atual -SenhaAtual $senha_atual -TipoPlanoConta $plano_conta_atual
+                            break
+                        }
+                    }
+                }
+
+                # Se o usuário foi encontrado, não precisa verificar outros links
+                if ($encontrado) {
+                    break
+                }
+            }
+        }   
+    }
 
     if (-not $encontrado -and -not [string]::IsNullOrEmpty($usuario) -and -not [string]::IsNullOrEmpty($senha)) {
         Write-Host ""
-        Write-Host -NoNewline "     Erro ao fazer login." -ForegroundColor Red
-        Write-Host " Usuário ou senha incorretos." -ForegroundColor Yellow
+        Write-Host -NoNewline "     $($global:translations["LMErrorLoginN1"])" -ForegroundColor Red
+        Write-Host " $($global:translations["LMErrorLoginN2"])" -ForegroundColor Yellow
         Write-Host ""
         pause
     }
@@ -184,38 +1161,1372 @@ function Fazer-Login {
 }
 
 # Menu Status Servidor
+function Verificar-Atualizacoes {
+  
+    param (
+        [bool]$LoginStatus = $false,
+        [string]$UsuarioAtual = $null,
+        [string]$SenhaAtual = $null,
+        [string]$TipoPlanoConta = $null
+    )
 
-function Status-Servidor {
-    cls
-    Write-Host ""
-    Write-Host "     ======================================" -ForegroundColor Green
-    Write-Host "              Status do Servidor           " -ForegroundColor Cyan
-    Write-Host "     ======================================" -ForegroundColor Green
-    Write-Host ""
-    # Aqui você deve adicionar a lógica para consultar o status do servidor
-    # e exibir a mensagem com a resposta
-    pause
-    Show-Menu
+    
+    Update-Title-WindowMenu -menuKey "MMSearchUpdate"  # Atualiza o título para o menu principal
+    
+    # Última data de atualização da versão atual instalada da aplicação
+    $idiomaSelecionado = $global:language = Get-LanguageConfig
+
+    # Lê o conteúdo do arquivo JSON e converte para um objeto PowerShell
+    $jsonFileDataLog = Get-Content -Path $global:configFilePath | ConvertFrom-Json
+
+
+    if ((Test-Path -Path $global:configFilePath) -and (-not $jsonFileDataLog.PSObject.Properties["data_att_app"])) { 
+        
+        # Adiciona a data atual ao objeto
+        $jsonFileDataLog | Add-Member -MemberType NoteProperty -Name "data_att_app" -Value (Get-Date -Format "dd/MM/yyyy HH:mm:ss") -Force
+        # Converte o objeto de volta para JSON e salva no arquivo
+        $jsonFileDataLog | ConvertTo-Json | Set-Content -Path $global:configFilePath 
+
+    } else {
+
+        # Recarrega o conteúdo atualizado do arquivo JSON
+        $jsonFileDataAtualizado = Get-Content -Path $global:configFilePath | ConvertFrom-Json
+        # Armazena o valor de "data_att_app" em uma variável
+        $getFileDataLog = $jsonFileDataAtualizado.data_att_app
+    }
+   
+
+    # Start-Sleep -Seconds 15
+
+    # Variáveis para armazenar as informações de detalhes da aplicação
+    $detalhes_app_info = $null
+
+    # URLs para obter todos os detalhes do aplicativo
+    $urls = Get-Detalhes-Aplicativo
+
+    foreach ($url in $urls) {
+        try {
+            # Obter o conteúdo do arquivo do Pastebin
+            $conteudo = Invoke-RestMethod -Uri $url -ErrorAction Stop
+        } catch {
+            Write-Host "     $($global:translations["DMAAlertMessageAccessContentURLNotFound"]): $url" -ForegroundColor Red
+            continue
+        }
+
+        # Verificar se o conteúdo está vazio
+        if ([string]::IsNullOrWhiteSpace($conteudo)) {
+            Write-Host "     $($global:translations["DMAAlertMessageGetContentURLNotFound"]): $url" -ForegroundColor Red
+            continue
+        }
+
+        # Verificar detalhes da aplicação no conteúdo obtido
+        $linhas = $conteudo -split "`n"
+
+        foreach ($linha in $linhas) {
+            
+            $campos = $linha -split "\|"
+            
+            # Verificar se há pelo menos três campos
+
+            if ($campos.Count -ge 3) {
+                
+                $detalhes_app_info = @{
+                    "id_detail_app" = $campos[0].Trim()
+                    "nome_app" = $campos[1].Trim()
+                    "versao_atual_app" = $campos[2].Trim()
+                    "versao_disp_app" = $campos[3].Trim()
+                    "versao_fult_app" = $campos[4].Trim()
+                    "url_setup_install" = $campos[5].Trim()
+                    "url_exe_install" = $campos[6].Trim()
+                    "registro_alteracoes_app" = $campos[13].Trim()
+                    "data_att_app" = $campos[14].Trim()
+                    "hash_arquivo_app" = $campos[15].Trim()
+                    "tamanho_arquivo_app" = $campos[16].Trim()
+                    "caminho_setup_inst_app" = $campos[17].Trim()
+                    "status_att_app" = $campos[18].Trim()
+                    "status_disp_att_app" = $campos[19].Trim()
+                }
+
+                break
+            }
+        }
+
+        # Se os detalhes da aplicação não foi encontrado, não precisa verificar outros links
+        if ($detalhes_app_info) {
+            break
+        }
+    }
+
+
+    $nome_app = $detalhes_app_info["nome_app"]
+    $versao_atual_app = $detalhes_app_info["versao_atual_app"]
+    $versao_disp_app = $detalhes_app_info["versao_disp_app"]
+    $versao_fult_app = $detalhes_app_info["versao_fult_app"]
+    $url_setup_install = $detalhes_app_info["url_setup_install"]
+    $url_exe_install = $detalhes_app_info["url_exe_install"]
+    $registro_alteracoes = $detalhes_app_info["registro_alteracoes_app"]
+    $hash_arquivo_app = $detalhes_app_info["hash_arquivo_app"]
+    $tamanho_arquivo_app = $detalhes_app_info["tamanho_arquivo_app"]
+    $status_att_app = $detalhes_app_info["status_att_app"]
+    $status_disp_att_app = $detalhes_app_info["status_disp_att_app"]
+
+    $status_disp_att_app = Translate-Text -Text "$status_disp_att_app" -TargetLanguage $global:language
+    $registro_alteracoes = Translate-Text -Text "$registro_alteracoes" -TargetLanguage $global:language
+    $status_habilitacao = Translate-Text -Text "Habilitado" -TargetLanguage $global:language
+
+    function ExecutarAtualizacao {
+
+        try {
+            # Variáveis Globais
+            $local_default = "C:\Users\$env:USERNAME\AppData\Local\Temp\$nome_app"
+
+            if (-not (Test-Path -Path $local_default)) { New-Item -ItemType Directory -Path $local_default > $nul }
+
+            $url_att_app = @(
+                if ("Nenhum" -ne $url_setup_install) { $url_setup_install }
+                if ("Nenhum" -ne $url_exe_install) { $url_exe_install }
+            ) | Where-Object { $_ -ne "Nenhum" } | Select-Object -First 1
+            $destino_att_app = @(
+                if ("Nenhum" -ne $url_setup_install) { "$local_default\setup.exe" }
+                if ("Nenhum" -ne $url_exe_install) { "$local_default\AsyncTech - Panel License Management.exe" }
+            ) | Where-Object { $_ -ne "Nenhum" } | Select-Object -First 1
+
+            if (Test-Path $destino_att_app) {
+
+                # Calcula o hash SHA256 do arquivo .exe
+                $hash_destino_att_app = (Get-FileHash -Path $destino_att_app -Algorithm SHA256).Hash
+
+                # Compara o hash calculado com o hash original
+                if ($hash_destino_att_app -eq $hash_arquivo_app) {
+
+                    if ($destino_att_app.Contains("setup.exe")) {
+                        
+                        # Executar o arquivo a ativador .exe, e aguarda a conclusão.
+                        Start-Process -FilePath $destino_att_app -PassThru -Wait
+                        
+                        # Data última Atualização 
+
+                        # Adiciona a data atual ao objeto
+                        $jsonFileDataLog | Add-Member -MemberType NoteProperty -Name "data_att_app" -Value (Get-Date -Format "dd/MM/yyyy HH:mm:ss") -Force
+                        # Converte o objeto de volta para JSON e salva no arquivo
+                        $jsonFileDataLog | ConvertTo-Json | Set-Content -Path $global:configFilePath 
+
+                        Start-Sleep -Seconds 3
+                        Exit
+
+                    } elseif ($destino_att_app.Contains("AsyncTech - Panel License Management.exe")) {
+
+                        # Caminho do script atual
+                        $exeFileAppRoot = "$PSScriptRoot\AsyncTech - Panel License Management.exe"
+
+                        # Mover os arquivos e substitui pelos existentes
+                        Move-Item -Path "$destino_att_app" -Destination $PSScriptRoot -Force
+                        # Atualização data final
+
+                        # Data última Atualização 
+
+                        # Adiciona a data atual ao objeto
+                        $jsonFileDataLog | Add-Member -MemberType NoteProperty -Name "data_att_app" -Value (Get-Date -Format "dd/MM/yyyy HH:mm:ss") -Force
+                        # Converte o objeto de volta para JSON e salva no arquivo
+                        $jsonFileDataLog | ConvertTo-Json | Set-Content -Path $global:configFilePath 
+
+                        Start-Sleep -Seconds 3
+
+                        # Inicia o script novamente
+                        # Start-Process -FilePath $exeFileAppRoot
+                        # Exit
+                    }
+
+                } else {
+
+                    Remove-Item -Recurse -Force -Path $destino_att_app
+                    
+                    Start-Sleep -Seconds 3
+
+                    return ExecutarAtualizacao
+                }
+
+            } else {
+
+                # Usando Invoke-WebRequest para baixar o arquivo
+                $response = Invoke-WebRequest -Uri "$url_att_app" -OutFile "$destino_att_app" -ErrorAction Stop
+
+                if ($destino_att_app.Contains("setup.exe")) {
+                    # Executar o arquivo a ativador .exe, e aguarda a conclusão.
+                    Start-Process -FilePath $destino_att_app -PassThru -Wait
+
+                    # Data última Atualização 
+
+                    # Adiciona a data atual ao objeto
+                    $jsonFileDataLog | Add-Member -MemberType NoteProperty -Name "data_att_app" -Value (Get-Date -Format "dd/MM/yyyy HH:mm:ss") -Force
+                    # Converte o objeto de volta para JSON e salva no arquivo
+                    $jsonFileDataLog | ConvertTo-Json | Set-Content -Path $global:configFilePath 
+
+                    Start-Sleep -Seconds 3
+                    Exit
+
+                } elseif ($destino_att_app.Contains("AsyncTech - Panel License Management.exe")) {
+                    # Caminho do script atual
+                    $exeFileAppRoot = "$PSScriptRoot\AsyncTech - Panel License Management.exe"
+
+                    # Mover os arquivos e substitui pelos existentes
+                    Move-Item -Path "$destino_att_app" -Destination $PSScriptRoot -Force
+                    
+                    # Data última Atualização 
+
+                    # Adiciona a data atual ao objeto
+                    $jsonFileDataLog | Add-Member -MemberType NoteProperty -Name "data_att_app" -Value (Get-Date -Format "dd/MM/yyyy HH:mm:ss") -Force
+                    # Converte o objeto de volta para JSON e salva no arquivo
+                    $jsonFileDataLog | ConvertTo-Json | Set-Content -Path $global:configFilePath 
+
+                    Start-Sleep -Seconds 3
+
+                    # Inicia o script novamente
+                    # Start-Process -FilePath $exeFileAppRoot 
+                    # Exit
+                }
+            }
+
+        } catch {
+            Write-Host "$($global:translations["SUMRUErrorExecutingUpdate"]): $_" -ForegroundColor Red
+        }
+    }
+
+
+    do {
+
+        # Analisar detalhes da aplicação e retirar os
+        $versoes_alteracoes = $registro_alteracoes -split ';'
+
+        $detalhesTitleVersaoAtualApp = $null
+        $detalhesTitleVersaoFuturaApp = $null
+
+        $detalhesItemsVersaoAtualApp = $null
+        $detalhesItemsVersaoFuturaApp = $null
+
+        # Iterando sobre os conjuntos para identificar o índice e armazenar na variável correspondente
+        foreach ($versao_alteracao in $versoes_alteracoes) {
+
+            if ($versao_alteracao.StartsWith($versao_atual_app)) {
+
+                $detalhesVersaoAtual = $versao_alteracao -split ';'
+                $detalhesItemsVersaoAtual = $detalhesVersaoAtual -split '>>'
+                $detalhesTitleVersaoAtual = $detalhesItemsVersaoAtual -split '>'
+
+                $detalhesTitleVersaoAtualApp = $detalhesTitleVersaoAtual -notmatch ":|$versao_atual_app"
+                $detalhesItemsVersaoAtualApp = $detalhesItemsVersaoAtual -notmatch "$versao_atual_app"
+                                                       
+            } elseif ($versao_alteracao.StartsWith($versao_fult_app)) {
+
+                $detalhesVersaoFutura = $versao_alteracao -split ';'
+                $detalhesItemsVersaoFutura = $detalhesVersaoFutura -split '>>'
+                $detalhesTitleVersaoFutura = $detalhesItemsVersaoFutura -split '>'
+
+                $detalhesTitleVersaoFuturaApp = $detalhesTitleVersaoFutura -notmatch ":|$versao_fult_app"
+                $detalhesItemsVersaoFuturaApp = $detalhesItemsVersaoFutura -notmatch "$versao_fult_app"
+            }
+        }
+
+        # Caminho completo do .exe
+        $exeFilePath = Join-Path -Path $PSScriptRoot -ChildPath $exeFileName
+
+        # Verifica se o arquivo existe
+        if (Test-Path -Path $exeFilePath) {
+            # Obtém as informações de versão do arquivo .exe
+            $ExeVersion = (Get-Item $exeFilePath).VersionInfo.FileVersion
+            $fileExeVersion = $ExeVersion.Split(".")[0..2] -join "."
+            $tamanhoExeVersion = (Get-Item $exeFilePath).Length
+            $tamanhoMBFileExeVersion = [math]::Round($tamanhoExeVersion / 1MB, 2)
+
+            # Write-Host "Tamanho do arquivo: $tamanhoMBFileExeVersion MB"
+            # Write-Host "Versão do arquivo .exe: $fileExeVersion" 
+        } else {
+            # Obtém as informações de versão do script .ps1
+            $fileScriptVersion = $scriptVersion.Substring(1)
+            # Write-Host "Versão do arquivo .ps1: $fileScriptVersion"
+        }
+
+        function ListarMudancasAtualizacao {
+
+
+            try {
+
+                if($opcao_verificar_atualizacoes -eq 3 -and $fileExeVersion -eq $versao_fult_app) {
+                    
+                    Write-Host ""
+                    Write-Host -NoNewline "      $($global:translations["SUMSCUStatusChangesAvailableVersion"]) " -ForegroundColor Yellow
+                    Write-Host -NoNewline "$versao_disp_app" -ForegroundColor Green
+                    Write-Host -NoNewline ":" -ForegroundColor Yellow
+                    Write-Host ""
+                    Write-Host ""
+
+                    foreach ($regAltTitleVF in $detalhesTitleVersaoFuturaApp) {
+                    
+                        Write-Host -NoNewline "      > " -ForegroundColor Green
+                        Write-Host -NoNewline "$($regAltTitleVF):" -ForegroundColor Yellow
+                        Write-Host ""
+
+                        foreach ($regAltItemVF in $detalhesItemsVersaoFuturaApp) {
+
+                            $regAltItemVFCampo = $regAltItemVF -split '>'
+                                            
+
+                            if($regAltItemVFCampo[0] -eq $regAltTitleVF) {
+                            
+                                $regAltItemVFCorrigido = $regAltItemVFCampo -notmatch "$regAltTitleVF"
+                                $regAltItemVFCorrigido = $regAltItemVFCorrigido -split ","
+
+                                foreach ($regAltCorrigido in $regAltItemVFCorrigido) {
+                                
+                                    $texto, $status = $regAltCorrigido -split ":"
+
+                                    Write-Host -NoNewline "      $($texto):" -ForegroundColor White
+                                    if($status -eq $status_habilitacao) {
+                                        Write-Host -NoNewline " $status" -ForegroundColor Green 
+                                    } else {
+                                        Write-Host -NoNewline " $status" -ForegroundColor Red
+                                    }
+                                    Write-Host ""
+
+                                }
+                            }
+                        }
+                    }
+
+                    Write-Host ""
+                    Write-Host "     ================================================================================================================" -ForegroundColor Green
+                    Write-Host ""
+
+                } elseif ($opcao_verificar_atualizacoes -eq 3 -and $fileExeVersion -ne $versao_fult_app) {
+
+                    if ($versao_alteracao.Contains($versao_disp_app)) {
+
+                        Write-Host ""
+                        Write-Host -NoNewline "      $($global:translations["SUMSCUStatusChangesAvailableVersion"]) " -ForegroundColor Yellow
+                        Write-Host -NoNewline "$versao_disp_app" -ForegroundColor Magenta
+                        Write-Host -NoNewline ":" -ForegroundColor Yellow
+                        Write-Host ""
+                        Write-Host ""
+
+                        foreach ($regAltTitleVF in $detalhesTitleVersaoFuturaApp) {
+                    
+                            Write-Host -NoNewline "      > " -ForegroundColor Magenta
+                            Write-Host -NoNewline "$($regAltTitleVF):" -ForegroundColor Yellow
+                            Write-Host ""
+
+                            foreach ($regAltItemVF in $detalhesItemsVersaoFuturaApp) {
+
+                                $regAltItemVFCampo = $regAltItemVF -split '>'
+                                            
+
+                                if($regAltItemVFCampo[0] -eq $regAltTitleVF) {
+                            
+                                    $regAltItemVFCorrigido = $regAltItemVFCampo -notmatch "$regAltTitleVF"
+                                    $regAltItemVFCorrigido = $regAltItemVFCorrigido -split ","
+
+                                    foreach ($regAltCorrigido in $regAltItemVFCorrigido) {
+                                
+                                        $texto, $status = $regAltCorrigido -split ":"
+
+                                        Write-Host -NoNewline "      $($texto):" -ForegroundColor White
+                                        if($status -eq $status_habilitacao) {
+                                            Write-Host -NoNewline " $status" -ForegroundColor Green 
+                                        } else {
+                                            Write-Host -NoNewline " $status" -ForegroundColor Red
+                                        }
+                                        Write-Host ""
+
+                                    }
+                                }
+                            }
+                        }
+
+                        Write-Host ""
+                        Write-Host "     ================================================================================================================" -ForegroundColor Green
+                        Write-Host "" 
+                            
+                                                        
+                    } else {
+
+                        Write-Host ""
+                        Write-Host -NoNewline "      $($global:translations["SUMSCUStatusChangesAvailableVersion"]) " -ForegroundColor Yellow
+                        Write-Host -NoNewline "$versao_disp_app" -ForegroundColor Magenta
+                        Write-Host -NoNewline ": " -ForegroundColor Yellow
+                        Write-Host -NoNewline "$($global:translations["SUMSNotAvailableMoment"])" -ForegroundColor Red
+                        Write-Host ""
+                        Write-Host ""
+                        Write-Host "     ================================================================================================================" -ForegroundColor Green
+                        Write-Host "" 
+                            
+
+                    }
+                
+                } elseif ($opcao_verificar_atualizacoes -eq 2 -and $fileExeVersion -eq $versao_atual_app) {
+                    
+                    Write-Host ""
+                    Write-Host -NoNewline "      $($global:translations["SUMSCUStatusChangesCurrentVersion"]) " -ForegroundColor Yellow
+                    Write-Host -NoNewline "$versao_atual_app" -ForegroundColor Green
+                    Write-Host -NoNewline ":" -ForegroundColor Yellow
+                    Write-Host ""
+                    Write-Host ""
+
+                    foreach ($regAltTitleVA in $detalhesTitleVersaoAtualApp) {
+                    
+                        Write-Host -NoNewline "      > " -ForegroundColor Cyan
+                        Write-Host -NoNewline "$($regAltTitleVA):" -ForegroundColor Yellow
+                        Write-Host ""
+
+                        foreach ($regAltItemVA in $detalhesItemsVersaoAtualApp) {
+
+                            $regAltItemVACampo = $regAltItemVA -split '>'
+                                            
+
+                            if($regAltItemVACampo[0] -eq $regAltTitleVA) {
+                            
+                                $regAltItemVACorrigido = $regAltItemVACampo -notmatch "$regAltTitleVA"
+                                $regAltItemVACorrigido = $regAltItemVACorrigido -split ","
+
+                                foreach ($regAltCorrigido in $regAltItemVACorrigido) {
+                                
+                                    $texto, $status = $regAltCorrigido -split ":"
+
+                                    Write-Host -NoNewline "      $($texto):" -ForegroundColor White
+                                    if($status -eq $status_habilitacao) {
+                                        Write-Host -NoNewline " $status" -ForegroundColor Green 
+                                    } else {
+                                        Write-Host -NoNewline " $status" -ForegroundColor Red
+                                    }
+                                    Write-Host ""
+
+                                }
+                            }
+                        }
+                    }
+
+                    Write-Host ""
+                    Write-Host "     ================================================================================================================" -ForegroundColor Green
+                    Write-Host ""
+
+                } else {
+                        
+                    Write-Host ""
+                    Write-Host -NoNewline "      $($global:translations["SUMSCUStatusChangesAvailableVersion"]) " -ForegroundColor Yellow
+                    Write-Host -NoNewline "$versao_disp_app" -ForegroundColor Green
+                    Write-Host -NoNewline ":" -ForegroundColor Yellow
+                    Write-Host ""
+                    Write-Host ""
+
+                    foreach ($regAltTitleVF in $detalhesTitleVersaoFuturaApp) {
+                    
+                        Write-Host -NoNewline "      > " -ForegroundColor Green
+                        Write-Host -NoNewline "$($regAltTitleVF):" -ForegroundColor Yellow
+                        Write-Host ""
+
+                        foreach ($regAltItemVF in $detalhesItemsVersaoFuturaApp) {
+
+                            $regAltItemVFCampo = $regAltItemVF -split '>'
+                                            
+
+                            if($regAltItemVFCampo[0] -eq $regAltTitleVF) {
+                            
+                                $regAltItemVFCorrigido = $regAltItemVFCampo -notmatch "$regAltTitleVF"
+                                $regAltItemVFCorrigido = $regAltItemVFCorrigido -split ","
+
+                                foreach ($regAltCorrigido in $regAltItemVFCorrigido) {
+                                
+                                    $texto, $status = $regAltCorrigido -split ":"
+
+                                    Write-Host -NoNewline "      $($texto):" -ForegroundColor White
+                                    if($status -eq $status_habilitacao) {
+                                        Write-Host -NoNewline " $status" -ForegroundColor Green 
+                                    } else {
+                                        Write-Host -NoNewline " $status" -ForegroundColor Red
+                                    }
+                                    Write-Host ""
+
+                                }
+                            }
+                        }
+                    }
+
+                    Write-Host ""
+                    Write-Host "     ================================================================================================================" -ForegroundColor Green
+                    Write-Host ""
+                    
+                }
+            
+            } catch {
+                Write-Host "$($global:translations["SUMSCUErrorListingChanges"]): $_" -ForegroundColor Red
+            }
+        }
+
+        function Show-Menu-Verificar-Atualizacoes {
+
+            cls
+
+            $fixedWidthMenuSearchUpdate = 120  # Largura total da linha
+
+            # Frase a ser centralizada
+
+            $menuSearchUpdateTexto = $($global:translations["SUMSearchUpdateMenu"])
+            $menuSearchUpdateTextoLength = $menuSearchUpdateTexto.Length
+
+            # Calcula o número de espaços necessários para centralizar
+            $spacesNeededMenuSearchUpdate = [Math]::Max(([Math]::Floor(($fixedWidthMenuSearchUpdate - $menuSearchUpdateTextoLength) / 2)), 0)
+            $spacesMenuSearchUpdate = " " * $spacesNeededMenuSearchUpdate
+
+            Write-Host ""
+            Write-Host "     ================================================================================================================" -ForegroundColor Green
+            Write-Host "$spacesMenuSearchUpdate$menuSearchUpdateTexto" -ForegroundColor Cyan
+            Write-Host "     ================================================================================================================" -ForegroundColor Green
+            Write-Host ""
+            Write-Host "     ================================================================================================================" -ForegroundColor Green
+            Write-Host ""
+            Write-Host "      $($global:translations["SUMCUPApplicationDetails"]): " -ForegroundColor Cyan
+            Write-Host ""
+            Write-Host -NoNewline "      $($global:translations["SUMCUPApplicationName"]): " -ForegroundColor White
+            Write-Host -NoNewline "$nome_app" -ForegroundColor Yellow
+            Write-Host ""
+            Write-Host -NoNewline "      $($global:translations["SUMCUPCurrentVersion"]): " -ForegroundColor White
+            Write-Host -NoNewline "$fileExeVersion" -ForegroundColor Green
+            Write-Host ""
+            Write-Host -NoNewline "      $($global:translations["SUMCUPAvailableVersion"]): " -ForegroundColor White
+            if (($versao_disp_app -ne "Nenhum" -and $fileExeVersion -eq $versao_disp_app)) {
+                Write-Host -NoNewline "$versao_disp_app" -ForegroundColor Green
+            } elseif(($versao_disp_app -eq "Nenhum" -and $fileExeVersion -eq $versao_atual_app)) {
+                Write-Host -NoNewline "$fileExeVersion" -ForegroundColor Green
+            } else {
+                Write-Host -NoNewline "$versao_disp_app" -ForegroundColor Magenta  
+            }
+            Write-Host ""
+            Write-Host -NoNewline "      $($global:translations["SUMCUPUpdateChangelog"]): " -ForegroundColor White
+            Write-Host ""
+
+            $contador = 1
+
+            # Verifica a versão uma vez, antes dos laços
+            if (($versao_disp_app -ne "Nenhum" -and $fileExeVersion -eq $versao_disp_app)) {
+                foreach ($regAltVF in $detalhesTitleVersaoFuturaApp) {
+                    Write-Host -NoNewline "       $($contador): " -ForegroundColor Yellow
+                    Write-Host "$regAltVF" -ForegroundColor White
+                    $contador++
+                }
+            } elseif ($versao_disp_app -ne "Nenhum" -and $fileExeVersion -ne $versao_disp_app) {
+                foreach ($regAltVA in $detalhesTitleVersaoAtualApp) {
+                    Write-Host -NoNewline "       $($contador): " -ForegroundColor Yellow
+                    Write-Host "$regAltVA" -ForegroundColor White
+                    $contador++
+                }
+            } elseif (($versao_disp_app -eq "Nenhum" -and $fileExeVersion -eq $versao_atual_app)) {
+                foreach ($regAltVA in $detalhesTitleVersaoAtualApp) {
+                    Write-Host -NoNewline "       $($contador): " -ForegroundColor Yellow
+                    Write-Host "$regAltVA" -ForegroundColor White
+                    $contador++
+                }
+            } else {
+                foreach ($regAltVF in $detalhesTitleVersaoFuturaApp) {
+                    Write-Host -NoNewline "       $($contador): " -ForegroundColor Yellow
+                    Write-Host "$regAltVF" -ForegroundColor White
+                    $contador++
+                }
+            }
+
+            Write-Host -NoNewline "      $($global:translations["SUMCUPReleaseDateUpdate"]): " -ForegroundColor White
+            Write-Host -NoNewline "$($detalhes_app_info["data_att_app"])" -ForegroundColor Yellow
+            Write-Host ""
+            Write-Host -NoNewline "      $($global:translations["SUMCUPDateLastUpdate"]): " -ForegroundColor White
+            if (($versao_disp_app -ne "Nenhum" -and $fileExeVersion -eq $versao_disp_app) -or ($versao_disp_app -eq "Nenhum" -and $fileExeVersion -eq $versao_atual_app)) {
+               
+                # Recarrega o conteúdo atualizado do arquivo JSON
+                $jsonFileDataAtualizado = Get-Content -Path $global:configFilePath | ConvertFrom-Json
+                # Armazena o valor de "data_att_app" em uma variável
+                $getFileDataLog = $jsonFileDataAtualizado.data_att_app
+
+                Write-Host -NoNewline "$getFileDataLog - " -ForegroundColor Yellow
+                Write-Host -NoNewline "$($global:translations["SUMCUPUpdated"])" -ForegroundColor Green 
+            } else {
+                Write-Host -NoNewline "$($global:translations["SUMCUPNone"])" -ForegroundColor Yellow
+                Write-Host -NoNewline " - $($global:translations["SUMCUPOutdated"])" -ForegroundColor Red
+            }
+            Write-Host ""
+            Write-Host -NoNewline "      $($global:translations["SUMCUPUpdatedApplicationSize"]): " -ForegroundColor White
+            if (($versao_disp_app -ne "Nenhum" -and $fileExeVersion -eq $versao_disp_app) -or ($versao_disp_app -eq "Nenhum" -and $fileExeVersion -eq $versao_atual_app)) {
+                Write-Host -NoNewline "$($tamanhoMBFileExeVersion) MB" -ForegroundColor Yellow
+            } else {
+                Write-Host -NoNewline "$tamanho_arquivo_app" -ForegroundColor Yellow
+            }
+            Write-Host ""
+            Write-Host -NoNewline "      $($global:translations["SUMCUPStatusUpdate"]): " -ForegroundColor White
+            if (($versao_disp_app -ne "Nenhum" -and $fileExeVersion -eq $versao_disp_app) -or ($versao_disp_app -eq "Nenhum" -and $fileExeVersion -eq $versao_atual_app)) {
+                Write-Host -NoNewline "$status_att_app" -ForegroundColor Green  
+            } else {
+                Write-Host -NoNewline "$($global:translations["SUMCUPOutdated"])" -ForegroundColor Red
+            }
+            Write-Host ""
+            Write-Host -NoNewline "      $($global:translations["SUMCUPStatusDownloadUpdate"]): " -ForegroundColor White
+            if (($versao_disp_app -ne "Nenhum" -and $fileExeVersion -eq $versao_disp_app) -or ($versao_disp_app -eq "Nenhum" -and $fileExeVersion -eq $versao_atual_app)) {
+                Write-Host -NoNewline "$($global:translations["SUMCUPNotAvailable"])" -ForegroundColor Gray
+            } else {
+                if ($versao_alteracao.Contains($versao_disp_app)) {
+                    Write-Host -NoNewline "$status_disp_att_app" -ForegroundColor Green 
+                } else {
+                    Write-Host -NoNewline "$($global:translations["SUMCUPNotAvailable"])" -ForegroundColor Gray 
+                } 
+            }
+
+            Write-Host ""
+            Write-Host ""
+
+            if (($versao_disp_app -ne "Nenhum" -and $fileExeVersion -eq $versao_disp_app) -or ($versao_disp_app -eq "Nenhum" -and $fileExeVersion -eq $versao_atual_app)) {
+                Write-Host -NoNewline "     >> " -ForegroundColor Green 
+                Write-Host -NoNewline "$($global:translations["SUMRUApplicationUpdated"])" -ForegroundColor Green
+                Write-Host ""
+                Write-Host -NoNewline "     $($global:translations["SUMRUNoneVersionOf"])" -ForegroundColor Yellow
+                Write-Host -NoNewline " '$scriptName' " -ForegroundColor Cyan
+                Write-Host -NoNewline "$($global:translations["SUMRUAvailableThisTime"])" -ForegroundColor Yellow
+            } else {
+                
+                if($versao_alteracao.Contains($versao_disp_app)) {
+                    Write-Host -NoNewline "     >> " -ForegroundColor Green 
+                    Write-Host -NoNewline "$($global:translations["SUMRUUpdateAvailable"])" -ForegroundColor Green
+                    Write-Host ""
+                    Write-Host -NoNewline "     $($global:translations["SUMRUNewVersionOf"])" -ForegroundColor Yellow
+                    Write-Host -NoNewline " '$scriptName' " -ForegroundColor Cyan
+                    Write-Host -NoNewline "$($global:translations["SUMRUCurrentlyAvailableDownload"])" -ForegroundColor Yellow
+                } else {
+                    Write-Host -NoNewline "     >> " -ForegroundColor Red
+                    Write-Host -NoNewline "$($global:translations["SUMRUUpdateNotAvailable"])" -ForegroundColor Yellow
+                    Write-Host ""
+                    Write-Host -NoNewline "     $($global:translations["SUMRUNewVersionOf"])" -ForegroundColor Yellow
+                    Write-Host -NoNewline " '$scriptName' " -ForegroundColor Cyan
+                    Write-Host -NoNewline "$($global:translations["SUMRUIsNotCurrentlyAvailableDownload"])" -ForegroundColor Red
+                }
+            }
+
+            Write-Host ""
+            Write-Host ""
+            Write-Host "     ================================================================================================================" -ForegroundColor Green
+
+            if ($opcao_verificar_atualizacoes -eq 2 -or ($opcao_verificar_atualizacoes -eq 3 -and ($versao_disp_app -eq "Nenhum" -and $fileExeVersion -ne $versao_disp_app) -or $opcao_verificar_atualizacoes -eq 3 -and ($versao_disp_app -ne "Nenhum" -and $versao_atual_app -ne $versao_disp_app -and $fileExeVersion -eq $versao_atual_app))) {
+                ListarMudancasAtualizacao
+            } else {
+                Write-Host ""
+            }
+
+            if ($versao_disp_app -ne "Nenhum" -and $fileExeVersion -eq $versao_disp_app) {
+                Write-Host -NoNewline "     [1] - " -ForegroundColor Gray
+                Write-Host -NoNewline "$($global:translations["SUMOMCUMakeUpdate"]) " -ForegroundColor Gray
+                Write-Host -NoNewline "(" -ForegroundColor Gray
+                Write-Host -NoNewline "$($global:translations["SUMCUPAvailableVersion"]):" -ForegroundColor Gray
+                Write-Host -NoNewline "$versao_disp_app" -ForegroundColor Gray
+                Write-Host -NoNewline ")" -ForegroundColor Gray
+                Write-Host "" 
+                            
+            } elseif($versao_disp_app -eq "Nenhum" -and $fileExeVersion -eq $versao_atual_app) {
+                Write-Host -NoNewline "     [1] - " -ForegroundColor Gray
+                Write-Host -NoNewline "$($global:translations["SUMOMCUMakeUpdate"]) " -ForegroundColor Gray
+                Write-Host -NoNewline "(" -ForegroundColor Gray
+                Write-Host -NoNewline "$($global:translations["SUMCUPAvailableVersion"]):" -ForegroundColor Gray
+                Write-Host -NoNewline "$fileExeVersion" -ForegroundColor Gray
+                Write-Host -NoNewline ")" -ForegroundColor Gray
+                Write-Host "" 
+            } else {
+                if($versao_alteracao.Contains($versao_disp_app)) {
+                    Write-Host -NoNewline "     [1] - " -ForegroundColor Yellow
+                    Write-Host -NoNewline "$($global:translations["SUMOMCUMakeUpdate"]) " -ForegroundColor Yellow
+                    Write-Host -NoNewline "(" -ForegroundColor Cyan
+                    Write-Host -NoNewline "$($global:translations["SUMCUPAvailableVersion"]):" -ForegroundColor Yellow
+                    Write-Host -NoNewline "$versao_disp_app" -ForegroundColor Magenta
+                    Write-Host -NoNewline ")" -ForegroundColor Cyan
+                    Write-Host "" 
+                } else {
+                    Write-Host -NoNewline "     [1] - " -ForegroundColor Gray
+                    Write-Host -NoNewline "$($global:translations["SUMOMCUMakeUpdate"]) " -ForegroundColor Gray
+                    Write-Host -NoNewline "(" -ForegroundColor Gray
+                    Write-Host -NoNewline "$($global:translations["SUMCUPAvailableVersion"]):" -ForegroundColor Gray
+                    Write-Host -NoNewline "$versao_disp_app" -ForegroundColor Gray
+                    Write-Host -NoNewline ")" -ForegroundColor Gray
+                    Write-Host "" 
+                }
+            }
+            if (($versao_disp_app -ne "Nenhum" -and $fileExeVersion -eq $versao_disp_app) -or ($versao_disp_app -eq "Nenhum" -and $fileExeVersion -eq $versao_atual_app)) {
+                Write-Host -NoNewline "     [2] - " -ForegroundColor Yellow
+                Write-Host -NoNewline "$($global:translations["SUMOMCUViewChanges"]) " -ForegroundColor Yellow
+                Write-Host -NoNewline "(" -ForegroundColor Cyan
+                Write-Host -NoNewline "$($global:translations["SUMCUPCurrentVersion"]):" -ForegroundColor Yellow
+                Write-Host -NoNewline "$fileExeVersion" -ForegroundColor Green
+                Write-Host -NoNewline ")" -ForegroundColor Cyan
+                Write-Host ""   
+            } else {
+                Write-Host -NoNewline "     [2] - " -ForegroundColor Yellow
+                Write-Host -NoNewline "$($global:translations["SUMOMCUViewChanges"]) " -ForegroundColor Yellow
+                Write-Host -NoNewline "(" -ForegroundColor Cyan
+                Write-Host -NoNewline "$($global:translations["SUMCUPCurrentVersion"]):" -ForegroundColor Yellow
+                Write-Host -NoNewline "$fileExeVersion" -ForegroundColor Green
+                Write-Host -NoNewline ")" -ForegroundColor Cyan
+                Write-Host ""  
+                Write-Host -NoNewline "     [3] - " -ForegroundColor Yellow
+                Write-Host -NoNewline "$($global:translations["SUMOMCUViewChanges"]) " -ForegroundColor Yellow
+                Write-Host -NoNewline "(" -ForegroundColor Cyan
+                Write-Host -NoNewline "$($global:translations["SUMCUPAvailableVersion"]):" -ForegroundColor Yellow
+                Write-Host -NoNewline "$versao_disp_app" -ForegroundColor Magenta
+                Write-Host -NoNewline ")" -ForegroundColor Cyan
+                Write-Host ""  
+            }
+            Write-Host ""  
+            Write-Host -NoNewline "     [M] - "  -ForegroundColor Cyan
+            Write-Host "$($global:translations["DOMainMenuOption"])" -ForegroundColor Gray
+            Write-Host ""
+            Write-Host "     ================================================================================================================" -ForegroundColor Green
+            Write-Host ""
+        }
+
+        # Exibe o menu de verificar atualizações
+        Show-Menu-Verificar-Atualizacoes
+
+        $opcao_verificar_atualizacoes = Read-Host $($global:translations["SLMChoiceOptionUpdateMenu"])
+
+        # Verificar se a opção é válida
+        $selecionadoValido = $false
+
+        if ($opcao_verificar_atualizacoes -eq 1) {
+
+            if (($versao_disp_app -ne "Nenhum" -and $fileExeVersion -eq $versao_disp_app) -or ($versao_disp_app -eq "Nenhum" -and $fileExeVersion -eq $versao_atual_app)) {
+                Write-Host ""
+                Write-Host -NoNewline "$($global:translations["SUMRRUApplicationAlreadyUpdate"]): " -ForegroundColor Yellow
+                Write-Host -NoNewline "$fileExeVersion." -ForegroundColor Green
+                Write-Host ""
+            } else {
+
+                if($versao_alteracao.Contains($versao_disp_app)) {
+
+                    Write-Host ""
+                    Write-Host -NoNewline "$($global:translations["SUMRRUApplicationOutdated"]) " -ForegroundColor Red
+                    Write-Host -NoNewline "$($global:translations["SUMRRUStartingUpdateVersion"]):" -ForegroundColor Yellow
+                    Write-Host -NoNewline " $versao_disp_app." -ForegroundColor Magenta
+                    Write-Host ""
+
+                    # Executa a função
+                    ExecutarAtualizacao  
+
+                } else {
+
+                    Write-Host ""
+                    Write-Host -NoNewline "$($global:translations["SUMRRUApplicationOutdated"]) " -ForegroundColor Red
+                    Write-Host -NoNewline "$($global:translations["SUMRRUNewApplicationUpdate"]) " -ForegroundColor Yellow
+                    Write-Host ""
+                    Write-Host "$($global:translations["SUMRRUIsNotAvailableDownload"])" -ForegroundColor Yellow
+                    Write-Host ""
+                }
+            }
+
+            Start-Sleep -Seconds 5
+            Verificar-Atualizacoes
+                           
+        } elseif ($opcao_verificar_atualizacoes -eq 2) { 
+            
+            Write-Host ""
+            Write-Host -NoNewline "$($global:translations["SUMRRUListingAboveStatusChangesN1"]) " -ForegroundColor Yellow
+            Write-Host -NoNewline "$($global:translations["SUMRRUListingAboveStatusChangesCurrentVersionN2"]):" -ForegroundColor Yellow
+            Write-Host -NoNewline " $fileExeVersion" -ForegroundColor Green
+            Write-Host ""
+            
+            Start-Sleep -Seconds 5
+            Verificar-Atualizacoes
+
+        } elseif($opcao_verificar_atualizacoes -eq 3 -and ($versao_disp_app -eq "Nenhum" -and $fileExeVersion -ne $versao_disp_app) -or $opcao_verificar_atualizacoes -eq 3 -and ($versao_disp_app -ne "Nenhum" -and $versao_atual_app -ne $versao_disp_app -and $fileExeVersion -eq $versao_atual_app)) {
+
+            Write-Host ""
+            Write-Host -NoNewline "$($global:translations["SUMRRUListingAboveStatusChangesN1"]) " -ForegroundColor Yellow
+            Write-Host -NoNewline "$($global:translations["SUMRRUListingAboveStatusChangesAvailableVersionN2"]):" -ForegroundColor Yellow
+            Write-Host -NoNewline " $versao_disp_app" -ForegroundColor Magenta
+            Write-Host ""
+            
+            Start-Sleep -Seconds 5
+            Verificar-Atualizacoes
+
+        } elseif ($opcao_verificar_atualizacoes -eq "M") {
+
+            Show-Menu -LoginStatus $LoginStatus -UsuarioAtual $usuario_atual -SenhaAtual $senha_atual -TipoPlanoConta $plano_conta_atual
+        
+        } else {
+            
+            Write-Host ""
+            Write-Host "$($global:translations["DOInvalidOptionN1"])" -ForegroundColor Red
+            Write-Host ""
+
+            $selecionadoValido = $false
+
+            Start-Sleep -Seconds 3
+            Verificar-Atualizacoes
+
+        }
+
+    } while (-not $selecionadoValido)
+}
+
+# Menu Modificar Idioma
+function Selecionar-Idioma {
+
+    param (
+        [bool]$LoginStatus = $false,
+        [string]$UsuarioAtual = $null,
+        [string]$SenhaAtual = $null,
+        [string]$TipoPlanoConta = $null
+    )
+    
+    Update-Title-WindowMenu -menuKey "MMSelectLanguage"  # Atualiza o título para o menu principal
+    $idiomaSelecionado = $global:language = Get-LanguageConfig
+
+    if ($idiomaSelecionado -eq 'en') {
+        $idiomaSelecionado = $($global:translations["SLMLanguageEn"])
+    } elseif ($idiomaSelecionado -eq 'es') {
+        $idiomaSelecionado = $($global:translations["SLMLanguageEs"]) 
+    } elseif ($idiomaSelecionado -eq 'pt') {
+        $idiomaSelecionado = $($global:translations["SLMLanguagePTBR"]) 
+    } else {
+        $idiomaSelecionado = $($global:translations["SLMLanguageUnknown"])  # Caso seja necessário lidar com outros idiomas
+    }
+
+    do {
+        
+        function Show-Menu-Selecionar-Idioma {
+            cls
+
+            $fixedWidthMenuSelectLanguage = 120  # Largura total da linha
+
+            # Frase a ser centralizada
+
+            $menuSelectLanguageTexto = $($global:translations["SLMSelectLanguageMenu"])
+            $menuSelectLanguageTextoLength = $menuSelectLanguageTexto.Length
+
+            # Calcula o número de espaços necessários para centralizar
+            $spacesNeededMenuSelectLanguage = [Math]::Max(([Math]::Floor(($fixedWidthMenuSelectLanguage - $menuSelectLanguageTextoLength) / 2)), 0)
+            $spacesMenuSelectLanguage = " " * $spacesNeededMenuSelectLanguage
+
+            Write-Host ""
+            Write-Host "     ================================================================================================================" -ForegroundColor Green
+            Write-Host "$spacesMenuSelectLanguage$menuSelectLanguageTexto" -ForegroundColor Cyan
+            Write-Host "     ================================================================================================================" -ForegroundColor Green
+            Write-Host ""
+            Write-Host "     ================================================================================================================" -ForegroundColor Green
+            Write-Host ""
+            Write-Host "      $($global:translations["SLMLanguageTitle"]): " -ForegroundColor Cyan
+            Write-Host ""
+            Write-Host -NoNewline "      $($global:translations["SLMLanguageSelected"]): " -ForegroundColor White
+            Write-Host -NoNewline "$idiomaSelecionado" -ForegroundColor Yellow
+            Write-Host ""
+            Write-Host ""
+            Write-Host "     ================================================================================================================" -ForegroundColor Green
+            Write-Host ""
+            if ($idiomaSelecionado -eq $($global:translations["SLMLanguageEn"])) {
+                Write-Host -NoNewline "     [1] - " -ForegroundColor Yellow
+                Write-Host "$($global:translations["SLMLanguageEn"])" -ForegroundColor Yellow # Cor amarela para a opção selecionada
+            } else {
+                Write-Host -NoNewline "     [1] - " -ForegroundColor Gray
+                Write-Host "$($global:translations["SLMLanguageEn"])" -ForegroundColor Gray # Cor cinza para a opção não selecionada
+            }
+            if ($idiomaSelecionado -eq $($global:translations["SLMLanguageEs"])) {
+                Write-Host -NoNewline "     [2] - " -ForegroundColor Yellow
+                Write-Host "$($global:translations["SLMLanguageEs"])" -ForegroundColor Yellow # Cor amarela para a opção selecionada
+            } else {
+                Write-Host -NoNewline "     [2] - " -ForegroundColor Gray
+                Write-Host "$($global:translations["SLMLanguageEs"])" -ForegroundColor Gray # Cor cinza para a opção não selecionada
+            }
+            if ($idiomaSelecionado -eq $($global:translations["SLMLanguagePTBR"])) {
+                Write-Host -NoNewline "     [3] - " -ForegroundColor Yellow
+                Write-Host "$($global:translations["SLMLanguagePTBROption"])" -ForegroundColor Yellow # Cor amarela para a opção selecionada
+            } else {
+                Write-Host -NoNewline "     [3] - " -ForegroundColor Gray
+                Write-Host "$($global:translations["SLMLanguagePTBROption"])" -ForegroundColor Gray # Cor cinza para a opção não selecionada
+            }
+            Write-Host ""
+            Write-Host -NoNewline "     [M] - "  -ForegroundColor Cyan
+            Write-Host "$($global:translations["DOMainMenuOption"])" -ForegroundColor Gray
+            Write-Host ""
+            Write-Host "     ================================================================================================================" -ForegroundColor Green
+            Write-Host ""
+
+        }
+
+        # Exibe o menu de modificar o idioma
+        Show-Menu-Selecionar-Idioma
+
+        $opcao_idioma = Read-Host $($global:translations["SLMChoiceOptionLanguageMenu"])
+
+        # Verificar se a opção é válida
+        $selecionadoValido = $false
+
+        if ($opcao_idioma -eq 1) {
+           
+            $global:language = "en"
+            Write-Host ""
+            # Salva o novo idioma no arquivo de configuração
+            Set-LanguageConfig -language $global:language
+
+            # Recarrega as traduções com o novo idioma
+            $global:translations = Get-Translation -language $global:language
+
+            #Write-Host ""
+            #Write-Host -NoNewline "$($global:translations["SLMLanguageChanged"]) " -ForegroundColor Yellow
+            #Write-Host -NoNewline "$global:language." -ForegroundColor Green
+            #Write-Host ""
+
+            # Atualiza o título da janela para refletir o novo idioma e o menu atual
+            if ($global:currentMenu) {
+                Update-Title-WindowMenu -menuKey $global:currentMenu
+            } else {
+                Update-Title-WindowMenu -menuKey "MMMainMenu"  # Se não houver menu atual, define o título para o menu principal
+            }
+
+            Start-Sleep -Seconds 3
+
+            # Caminho do script atual
+            # $scriptPath = $MyInvocation.MyCommand.Definition
+
+            # Inicia o script novamente
+            # Start-Process powershell -ArgumentList "-File `"$scriptPath`""
+            # Start-Process powershell "-NoProfile -ExecutionPolicy Bypass -File `"$scriptPath`"" -Verb RunAs
+
+            Selecionar-Idioma
+
+            # Sai do script atual
+            # Exit
+                           
+        } elseif ($opcao_idioma -eq 2) { 
+        
+            $global:language = "es"
+            Write-Host ""
+            # Salva o novo idioma no arquivo de configuração
+            Set-LanguageConfig -language $global:language
+
+            # Recarrega as traduções com o novo idioma
+            $global:translations = Get-Translation -language $global:language
+
+            #Write-Host ""
+            #Write-Host -NoNewline "$($global:translations["SLMLanguageChanged"]) " -ForegroundColor Yellow
+            #Write-Host -NoNewline "$global:language." -ForegroundColor Green
+            #Write-Host ""
+
+            # Atualiza o título da janela para refletir o novo idioma e o menu atual
+            if ($global:currentMenu) {
+                Update-Title-WindowMenu -menuKey $global:currentMenu
+            } else {
+                Update-Title-WindowMenu -menuKey "MMMainMenu"  # Se não houver menu atual, define o título para o menu principal
+            }
+
+            Start-Sleep -Seconds 3
+
+            # Caminho do script atual
+            # $scriptPath = $MyInvocation.MyCommand.Definition
+
+            # Inicia o script novamente
+            # Start-Process powershell -ArgumentList "-File `"$scriptPath`""
+            # Start-Process powershell "-NoProfile -ExecutionPolicy Bypass -File `"$scriptPath`"" -Verb RunAs
+
+            Selecionar-Idioma
+
+            # Sai do script atual
+            # Exit
+
+        } elseif ($opcao_idioma -eq 3) {
+            
+            $global:language = "pt"
+            Write-Host ""
+            # Salva o novo idioma no arquivo de configuração
+            Set-LanguageConfig -language $global:language
+
+            # Recarrega as traduções com o novo idioma
+            $global:translations = Get-Translation -language $global:language
+
+            #Write-Host ""
+            #Write-Host -NoNewline "$($global:translations["SLMLanguageChanged"]) " -ForegroundColor Yellow
+            #Write-Host -NoNewline "$global:language." -ForegroundColor Green
+            #Write-Host ""
+
+            # Atualiza o título da janela para refletir o novo idioma e o menu atual
+            if ($global:currentMenu) {
+                Update-Title-WindowMenu -menuKey $global:currentMenu
+            } else {
+                Update-Title-WindowMenu -menuKey "MMMainMenu"  # Se não houver menu atual, define o título para o menu principal
+            }
+
+            Start-Sleep -Seconds 3
+
+            # Caminho do script atual
+            # $scriptPath = $MyInvocation.MyCommand.Definition
+
+            # Inicia o script novamente
+            # Start-Process powershell -ArgumentList "-File `"$scriptPath`""
+            # Start-Process powershell "-NoProfile -ExecutionPolicy Bypass -File `"$scriptPath`"" -Verb RunAs
+
+            Selecionar-Idioma
+
+            # Sai do script atual
+            # Exit
+
+        } elseif ($opcao_idioma -eq "M") {
+
+            Show-Menu -LoginStatus $LoginStatus -UsuarioAtual $usuario_atual -SenhaAtual $senha_atual -TipoPlanoConta $plano_conta_atual
+        
+        } else {
+
+            $global:language = "pt"
+            Write-Host ""
+            # Salva o novo idioma no arquivo de configuração
+            Set-LanguageConfig -language $global:language
+
+            # Recarrega as traduções com o novo idioma
+            $global:translations = Get-Translation -language $global:language
+
+            Write-Host ""
+            Write-Host "Opção inválida selecionada..." -ForegroundColor Yellow
+            Write-Host "Idioma padrão mantido para $global:language." -ForegroundColor Green
+            Write-Host ""
+
+            # Atualiza o título da janela para refletir o novo idioma e o menu atual
+            if ($global:currentMenu) {
+                Update-Title-WindowMenu -menuKey $global:currentMenu
+            } else {
+                Update-Title-WindowMenu -menuKey "MMMainMenu"  # Se não houver menu atual, define o título para o menu principal
+            }
+
+            Start-Sleep -Seconds 3
+
+            # Caminho do script atual
+            # $scriptPath = $MyInvocation.MyCommand.Definition
+
+            # Inicia o script novamente
+            # Start-Process powershell -ArgumentList "-File `"$scriptPath`""
+            # Start-Process powershell "-NoProfile -ExecutionPolicy Bypass -File `"$scriptPath`"" -Verb RunAs
+
+            Selecionar-Idioma
+
+            # Sai do script atual
+            # Exit
+        }
+
+    } while (-not $selecionadoValido)
+
 }
 
 # Menu Grupo Wpp ou Telegram
+function Grupo-VIP {
+  
+    param (
+        [bool]$LoginStatus = $false,
+        [string]$UsuarioAtual = $null,
+        [string]$SenhaAtual = $null,
+        [string]$TipoPlanoConta = $null
+    )
+    
+    Update-Title-WindowMenu -menuKey "MMVIPGroup"  # Atualiza o título para o menu principal
+    $idiomaSelecionado = $global:language = Get-LanguageConfig
 
-function Grupo-Telegram {
-    cls
-    Write-Host ""
-    Write-Host "     ======================================" -ForegroundColor Green
-    Write-Host "               Grupo Telegram              " -ForegroundColor Cyan
-    Write-Host "     ======================================" -ForegroundColor Green
-    Write-Host ""
-    # Aqui você deve adicionar a lógica para consultar o grupo do Telegram
-    # e exibir a mensagem com a resposta
-    pause
-    Show-Menu
+    # Variáveis para armazenar as informações de detalhes da aplicação
+    $detalhes_app_info = $null
+
+    # URLs para obter todos os detalhes do aplicativo
+    $urls = Get-Detalhes-Aplicativo
+
+    foreach ($url in $urls) {
+
+        try {
+            # Obter o conteúdo do arquivo do Pastebin
+            $conteudo = Invoke-RestMethod -Uri $url -ErrorAction Stop
+        } catch {
+            Write-Host "     $($global:translations["DMAAlertMessageAccessContentURLNotFound"]): $url" -ForegroundColor Red
+            continue
+        }
+
+        # Verificar se o conteúdo está vazio
+        if ([string]::IsNullOrWhiteSpace($conteudo)) {
+            Write-Host "     $($global:translations["DMAAlertMessageGetContentURLNotFound"]): $url" -ForegroundColor Red
+            continue
+        }
+
+        # Verificar detalhes da aplicação no conteúdo obtido
+        $linhas = $conteudo -split "`n"
+
+        foreach ($linha in $linhas) {
+            
+            $campos = $linha -split "\|"
+            
+            # Verificar se há pelo menos três campos
+
+            if ($campos.Count -ge 3) {
+                
+                $detalhes_app_info = @{
+                    "url_painel_cliente" = $campos[7].Trim()
+                    "url_pagina_produtos" = $campos[8].Trim()
+                    "url_grupo_wpp_normal" = $campos[9].Trim()
+                    "url_grupo_telegram_normal" = $campos[10].Trim()
+                    "url_grupo_wpp_vip" = $campos[11].Trim()
+                    "url_grupo_wpp_telegram_vip" = $campos[12].Trim()
+                }
+
+                break
+            }
+        }
+
+        # Se os detalhes da aplicação não foi encontrado, não precisa verificar outros links
+        if ($detalhes_app_info) {
+            break
+        }
+
+    }
+
+    $painel_cliente = $detalhes_app_info["url_painel_cliente"]
+    $pagina_produtos = $detalhes_app_info["url_pagina_produtos"]
+    $grupo_wpp_normal = $detalhes_app_info["url_grupo_wpp_normal"]
+    $grupo_telegram_normal = $detalhes_app_info["url_grupo_telegram_normal"]
+    $grupo_wpp_vip = $detalhes_app_info["url_grupo_wpp_vip"]
+    $grupo_wpp_telegram_vip = $detalhes_app_info["url_grupo_wpp_telegram_vip"]
+
+    do {
+        
+        function Show-Menu-Grupo-VIP {
+            cls
+
+            $fixedWidthMenuVIPGroup = 120  # Largura total da linha
+
+            # Frase a ser centralizada
+
+            $menuVIPGroupTexto = $($global:translations["VGMVIPGroupMenu"])
+            $menuVIPGroupTextoLength = $menuVIPGroupTexto.Length
+
+            # Calcula o número de espaços necessários para centralizar
+            $spacesNeededMenuVIPGroup = [Math]::Max(([Math]::Floor(($fixedWidthMenuVIPGroup - $menuVIPGroupTextoLength) / 2)), 0)
+            $spacesMenuVIPGroup = " " * $spacesNeededMenuVIPGroup
+
+            Write-Host ""
+            Write-Host "     ================================================================================================================" -ForegroundColor Green
+            Write-Host "$spacesMenuVIPGroup$menuVIPGroupTexto" -ForegroundColor Cyan
+            Write-Host "     ================================================================================================================" -ForegroundColor Green
+            Write-Host ""
+
+            if($LoginStatus -eq $true) {
+                
+                if($TipoPlanoConta -eq "VIP"){
+
+                    Write-Host "     ================================================================================================================" -ForegroundColor Gray
+                    Write-Host ""
+                    Write-Host "      $($global:translations["VGMINAMTitleNotification"]): " -ForegroundColor Cyan
+                    Write-Host ""
+                    Write-Host "      $($global:translations["VGMINAMDescritpionNotificationVIPN1"])" -ForegroundColor White
+                    Write-Host "      $($global:translations["VGMINAMDescritpionNotificationVIPN2"])" -ForegroundColor White
+                    Write-Host ""
+                    Write-Host "     ================================================================================================================" -ForegroundColor Gray
+                    Write-Host ""
+                    Write-Host -NoNewline "     [1] - " -ForegroundColor Yellow
+                    Write-Host -NoNewline "$($global:translations["VGMGAPMJoinGroupN1"])" -ForegroundColor Yellow 
+                    Write-Host -NoNewline " - " -ForegroundColor Yellow
+                    Write-Host -NoNewline "$($global:translations["VGMGAPMJoinGroupN2"])" -ForegroundColor Magenta
+                    Write-Host -NoNewline " (WhatsApp)" -ForegroundColor Green
+                    Write-Host ""
+                    Write-Host -NoNewline "     [2] - " -ForegroundColor Yellow
+                    Write-Host -NoNewline "$($global:translations["VGMGAPMJoinGroupN1"])" -ForegroundColor Yellow
+                    Write-Host -NoNewline " - " -ForegroundColor Yellow
+                    Write-Host -NoNewline "$($global:translations["VGMGAPMJoinGroupN2"])" -ForegroundColor Magenta
+                    Write-Host -NoNewline " (Telegram)" -ForegroundColor Cyan
+                    Write-Host ""
+                    Write-Host ""
+                } else {
+                    Write-Host "     ================================================================================================================" -ForegroundColor Gray
+                    Write-Host ""
+                    Write-Host "      $($global:translations["VGMINAMTitleNotification"]): " -ForegroundColor Cyan
+                    Write-Host ""
+                    Write-Host "      $($global:translations["VGMINAMDescritpionNotificationMEMBRON1"])" -ForegroundColor White
+                    Write-Host "      $($global:translations["VGMINAMDescritpionNotificationMEMBRON2"])" -ForegroundColor White
+                    Write-Host ""
+                    Write-Host "     ================================================================================================================" -ForegroundColor Gray
+                    Write-Host ""
+                    Write-Host -NoNewline "     [1] - " -ForegroundColor Yellow
+                    Write-Host -NoNewline "$($global:translations["VGMGAPMJoinGroupN1"]) - " -ForegroundColor Yellow 
+                    Write-Host -NoNewline "(WhatsApp)" -ForegroundColor Green
+                    Write-Host ""
+                    Write-Host -NoNewline "     [2] - " -ForegroundColor Yellow
+                    Write-Host -NoNewline "$($global:translations["VGMGAPMJoinGroupN1"]) - " -ForegroundColor Yellow
+                    Write-Host -NoNewline "(Telegram)" -ForegroundColor Cyan
+                    Write-Host ""
+                    Write-Host ""
+                }
+
+            } else {
+                Write-Host "     ================================================================================================================" -ForegroundColor Red
+                Write-Host ""
+                Write-Host "     $($global:translations["VGMGAPMLoggedIntoAccount"])" -ForegroundColor Gray
+                Write-Host ""
+                Write-Host "     ================================================================================================================" -ForegroundColor Red
+                Write-Host ""
+            }
+
+            Write-Host "     ================================================================================================================" -ForegroundColor Green
+            Write-Host ""
+            Write-Host -NoNewline "     [3] - " -ForegroundColor Yellow
+            Write-Host -NoNewline "$($global:translations["VGMGAPMAccessWebsite"]) AsyncTech - " -ForegroundColor Yellow
+            Write-Host -NoNewline "$($global:translations["VGMGAPMProductsPage"])" -ForegroundColor Blue
+            Write-Host ""
+            Write-Host -NoNewline "     [4] - " -ForegroundColor Yellow
+            Write-Host -NoNewline "$($global:translations["VGMGAPMAccessWebsite"]) AsyncTech - " -ForegroundColor Yellow
+            Write-Host -NoNewline "$($global:translations["VGMGAPMLoginCustomerPanelClient"])" -ForegroundColor Magenta
+            Write-Host ""
+            Write-Host ""
+            Write-Host -NoNewline "     [M] - "  -ForegroundColor Cyan
+            Write-Host "$($global:translations["DOMainMenuOption"])" -ForegroundColor Gray
+            Write-Host ""
+            Write-Host "     ================================================================================================================" -ForegroundColor Green
+            Write-Host ""
+
+        }
+
+        # Exibe o menu de verificar atualizações
+        Show-Menu-Grupo-VIP
+
+        $opcao_grupo_vip = Read-Host $($global:translations["VGMChoiceOptionVIPGroupMenu"])
+
+        # Verificar se a opção é válida
+        $selecionadoValido = $false
+        # urlPattern
+        $urlPattern = '^(https?|ftp)://[^\s/$.?#].[^\s]*$'
+
+        if ($opcao_grupo_vip -eq 1 -and $LoginStatus -eq $true) {
+
+            if ($LoginStatus -eq $true -and $TipoPlanoConta -eq "VIP") {
+
+                Write-Host ""
+                Write-Host -NoNewline "$($global:translations["VGMGWALAccessGroupParticipation"])" -ForegroundColor Yellow
+                Write-Host -NoNewline " $($global:translations["VGMGWALWaitLink"])" -ForegroundColor Green
+                Write-Host ""
+
+                if ($grupo_wpp_vip -match $urlPattern) {
+                    Start-Process $grupo_wpp_vip
+                } else {
+                    Write-Host ""
+                    Write-Host "$($global:translations["VGMGWALNothingLinkGroupParticipation"])" -ForegroundColor Red
+                    Write-Host ""
+                }
+
+            } else {
+
+                Write-Host ""
+                Write-Host -NoNewline "$($global:translations["VGMGWALAccessGroupParticipation"])" -ForegroundColor Yellow
+                Write-Host -NoNewline " $($global:translations["VGMGWALWaitLink"])" -ForegroundColor Green
+                Write-Host ""
+
+                if ($grupo_wpp_normal -match $urlPattern) {
+                    Start-Process $grupo_wpp_normal
+                } else {
+                    Write-Host ""
+                    Write-Host "$($global:translations["VGMGWALNothingLinkGroupParticipation"])" -ForegroundColor Red
+                    Write-Host ""
+                }
+            }
+
+            Start-Sleep -Seconds 5
+            Show-Menu-Grupo-VIP
+                           
+        } elseif ($opcao_grupo_vip -eq 2 -and $LoginStatus -eq $true) { 
+            
+            if ($LoginStatus -eq $true -and $TipoPlanoConta -eq "VIP") {
+                
+                Write-Host ""
+                Write-Host -NoNewline "$($global:translations["VGMGWALAccessGroupParticipation"])" -ForegroundColor Yellow
+                Write-Host -NoNewline " $($global:translations["VGMGWALWaitLink"])" -ForegroundColor Green
+                Write-Host ""
+
+                if ($grupo_telegram_vip -match $urlPattern) {
+                    Start-Process $grupo_telegram_vip
+                } else {
+                    Write-Host ""
+                    Write-Host "$($global:translations["VGMGWALNothingLinkGroupParticipation"])" -ForegroundColor Red
+                    Write-Host ""
+                }
+
+            } else {
+                
+                Write-Host ""
+                Write-Host -NoNewline "$($global:translations["VGMGWALAccessGroupParticipation"])" -ForegroundColor Yellow
+                Write-Host -NoNewline " $($global:translations["VGMGWALWaitLink"])" -ForegroundColor Green
+                Write-Host ""
+
+                if ($grupo_telegram_normal -match $urlPattern) {
+                    Start-Process $grupo_telegram_normal
+                } else {
+                    Write-Host ""
+                    Write-Host "$($global:translations["VGMGWALNothingLinkGroupParticipation"])" -ForegroundColor Red
+                    Write-Host ""
+                }
+            }
+
+            Start-Sleep -Seconds 5
+            Show-Menu-Grupo-VIP
+
+        } elseif ($opcao_grupo_vip -eq 3) { 
+        
+            Write-Host ""
+            Write-Host -NoNewline "$($global:translations["VGMGWALAccessPageLink"]) " -ForegroundColor Yellow
+            Write-Host -NoNewline "$($global:translations["VGMGWALProductCategoriesLink"])" -ForegroundColor Cyan
+            Write-Host -NoNewline "." -ForegroundColor Yellow
+            Write-Host -NoNewline " $($global:translations["VGMGWALWaitLink"])" -ForegroundColor Green
+            Write-Host ""
+
+            if ($pagina_produtos -match $urlPattern) {
+                Start-Process $pagina_produtos
+            } else {
+                Write-Host ""
+                Write-Host "$($global:translations["VGMGWALNothingLinkAccessWebsite"])" -ForegroundColor Red
+                Write-Host ""
+            }
+
+            Start-Sleep -Seconds 3
+            Show-Menu-Grupo-VIP
+
+        } elseif ($opcao_grupo_vip -eq 4) {
+
+            Write-Host ""
+            Write-Host -NoNewline "$($global:translations["VGMGWALAccessPageLink"]) " -ForegroundColor Yellow
+            Write-Host -NoNewline "$($global:translations["VGMGWALLoginCustomerPanelClientLink"])" -ForegroundColor Cyan
+            Write-Host -NoNewline "." -ForegroundColor Yellow
+            Write-Host -NoNewline " $($global:translations["VGMGWALWaitLink"])" -ForegroundColor Green
+            Write-Host ""
+
+            if ($painel_cliente -match $urlPattern) {
+                Start-Process $painel_cliente
+            } else {
+                Write-Host ""
+                Write-Host "$($global:translations["VGMGWALNothingLinkAccessWebsite"])" -ForegroundColor Red
+                Write-Host ""
+            }
+
+            Start-Sleep -Seconds 3
+            Show-Menu-Grupo-VIP
+
+        } elseif ($opcao_grupo_vip -eq "M") {
+
+            Show-Menu -LoginStatus $LoginStatus -UsuarioAtual $usuario_atual -SenhaAtual $senha_atual -TipoPlanoConta $plano_conta_atual
+        
+        } else {
+            
+            Write-Host ""
+            Write-Host "$($global:translations["DOInvalidOptionN1"])" -ForegroundColor Red
+            Write-Host ""
+
+            $selecionadoValido = $false
+
+            Start-Sleep -Seconds 3
+            Show-Menu-Grupo-VIP
+
+        }
+
+    } while (-not $selecionadoValido)
 }
-
 
 # Função para carregar valores de qtdv
 function Load-QTDVValues {
+    
+    # Correção de Ajuste # 2 (Erro)
+    # troquei $parts[1].Trim() [int] para [string] erro
 
     if (Test-Path $qtdvFilePath) {
         $content = Get-Content $qtdvFilePath -Raw
@@ -250,7 +2561,6 @@ function Load-QTDVValues {
             $qtdvValues["qtdv_valor_atual"] = 0
             
         } elseif($qtdvTotal -ne "Ilimitado" -and $qtdvValues["status_pagamento"] -eq "Pendente" -and $countIsPendente -ge 1 -and $qtdvValues["qtdv_valor_atual"] -ge 0 -and ($qtdvValues["qtdv_valor_inicial"] -eq $qtdvTotal -or $qtdvValues["qtdv_valor_inicial"] -gt $qtdvTotal -or $qtdvValues["qtdv_valor_inicial"] -lt $qtdvTotal)) {
-
 
             if($qtdvTotal -ne "Ilimitado" -and $countIsAprovado -ge 1 -and $qtdvValues["qtdv_valor_inicial"] -ne $qtdvTotal -or $qtdvValues["qtdv_valor_individual"] -ne $totalIndividualTotalAtualizado) {
                 
@@ -342,7 +2652,6 @@ function Calculate-QTDVTotal {
 }
 
 # Função para salvar valores de qtdv
-
 function Save-QTDVValues {
     param (
         [hashtable]$qtdvValues
@@ -359,6 +2668,7 @@ function Save-QTDVValues {
 }
 
 function Update-QTDVTotal {
+
     param (
         [array]$products
     )
@@ -428,22 +2738,22 @@ function Update-QTDVInMenu {
         
         Write-Host ""
         Write-Host -NoNewline "      2 - " -ForegroundColor Green
-        Write-Host "QTDV TOTAL:" -ForegroundColor Yellow
+        Write-Host "$($global:translations["SPMDLATotalQTDTitle"]):" -ForegroundColor Yellow
         Write-Host ""
 
         if ($qtdvTotal -eq "Ilimitado") {
-            Write-QTDVMessage -label "QTD TOTAL DOWNLOAD E VISUALIZAÇÕES" -value $qtdvTotal -color Cyan
+            Write-QTDVMessage -label $($global:translations["SPMDLATotalQTDV"]) -value $qtdvTotal -color Cyan
         } else {
             if ($qtdvTotal -eq 0) {
-                Write-QTDVMessage -label "QTD TOTAL DOWNLOAD E VISUALIZAÇÕES" -value "Nenhum" -color Red
+                Write-QTDVMessage -label $($global:translations["SPMDLATotalQTDV"]) -value $($global:translations["SPMDLANothing"]) -color Red
             } else {
-                Write-QTDVMessage -label "QTD TOTAL DOWNLOAD E VISUALIZAÇÕES" -value $qtdvTotal -color Yellow
+                Write-QTDVMessage -label $($global:translations["SPMDLATotalQTDV"]) -value $qtdvTotal -color Yellow
             }
 
             if ($qtdvUtilizado -eq 0) {
-                Write-QTDVMessage -label "QTD TOTAL DOWNLOAD E VISUALIZAÇÕES UTILIZADO" -value "Nenhum" -color Red
+                Write-QTDVMessage -label $($global:translations["SPMDLATotalQTDVUsed"]) -value $($global:translations["SPMDLANothing"]) -color Red
             } else {
-                Write-QTDVMessage -label "QTD TOTAL DOWNLOAD E VISUALIZAÇÕES UTILIZADO" -value $qtdvUtilizado -color Yellow
+                Write-QTDVMessage -label $($global:translations["SPMDLATotalQTDVUsed"]) -value $qtdvUtilizado -color Yellow
             }
         }
 
@@ -463,13 +2773,12 @@ function Show-Menu-Detalhes-Login {
         [string]$qtdvUtilizado,
         [switch]$silent
     )
-    
 
     # Define uma largura fixa para o conteúdo antes do pipe
     if ( $TipoPlanoConta -eq "VIP" ) { 
 
         $fixedWidthStatusLogin = 51
-        $fixedWidthDefault = 46
+        $fixedWidthDefault = if ($idiomaSelecionado -eq "es") { 55 } else { 46 }
         $fixedWidthUsuario = 44
         $fixedWidthSenha = 46
         $fixedWidthTipoPlano = 35 
@@ -479,7 +2788,7 @@ function Show-Menu-Detalhes-Login {
     } else {
 
         $fixedWidthStatusLogin = 58
-        $fixedWidthDefault = 53
+        $fixedWidthDefault = if ($idiomaSelecionado -eq "es") { 62 } else { 53 }
         $fixedWidthUsuario = 51
         $fixedWidthSenha = 53
         $fixedWidthTipoPlano = 42
@@ -488,27 +2797,41 @@ function Show-Menu-Detalhes-Login {
                     
     } 
 
-    $titulostatuslogin = "STATUS DE LOGIN"
+    $titulostatuslogin = $($global:translations["SPMDLALoginStatusMenu"])
+    $titulousuarioatual = $($global:translations["SPMDLAUserLoginStatus"])
+    $titulosenhaatual = $($global:translations["SPMDLAPassLoginStatus"])
+    $titulotipoplanousuarioatual = $($global:translations["SPMDLAPlanTypeAccount"])
+    $titulototalqtdv = $($global:translations["SPMDLATotalQTDV"])
+    $titulototalqtdvutilizado = $($global:translations["SPMDLATotalQTDVUsed"])
+
     $nomeusuarioatual = $UsuarioAtual
     $senhausuarioatual = $detalheslogin_senhadisplay
     $tipoplanousuarioatual = $TipoPlanoConta
-    $qtdvtotalatual = if ($qtdvTotal -eq 0) { "Nenhum" } else { $qtdvTotal }
-    $qtdvutilizadoatual = if ($qtdvUtilizado -eq 0) { "Nenhum" } else { $qtdvUtilizado }
-
+    $qtdvtotalatual = if ($qtdvTotal -eq 0) { $($global:translations["SPMDLANothing"]) } else { $qtdvTotal }
+    $qtdvutilizadoatual = if ($qtdvUtilizado -eq 0) { $($global:translations["SPMDLANothing"]) } else { $qtdvUtilizado }
+    
     if ( $TipoPlanoConta -eq "VIP" ) {
 
-        Write-Host "     =================================================" -ForegroundColor Yellow
+        if ($idiomaSelecionado -eq "es") {
+            Write-Host "     ==========================================================" -ForegroundColor Yellow
+        } else {
+            Write-Host "     =================================================" -ForegroundColor Yellow
+        }
 
-    } else {
+    } else { #=========
 
-        Write-Host "     ========================================================" -ForegroundColor Yellow
-    } 
+        if ($idiomaSelecionado -eq "es") {
+            Write-Host "     =================================================================" -ForegroundColor Yellow
+        } else {
+            Write-Host "     ========================================================" -ForegroundColor Yellow
+        }
+    }  
 
     # Usuário
 
     Write-Host -NoNewline "     | " -ForegroundColor Yellow
     Write-Host -NoNewline "$($titulostatuslogin): " -ForegroundColor Cyan
-    $spacesNeededStatusLogin = $fixedWidthStatusLogin - ("$titulostatuslogin".Length + 7)
+    $spacesNeededStatusLogin = if ($idiomaSelecionado -eq "es") {$fixedWidthStatusLogin - ("$titulostatuslogin".Length - 2)} else {$fixedWidthStatusLogin - ("$titulostatuslogin".Length + 7)}
     $spacesStatusLogin = " " * [Math]::Max($spacesNeededStatusLogin, 0)
     Write-Host -NoNewline $spacesStatusLogin -ForegroundColor Yellow
     Write-Host "|" -ForegroundColor Yellow
@@ -518,9 +2841,9 @@ function Show-Menu-Detalhes-Login {
     Write-Host -NoNewline $spacesDefault -ForegroundColor Yellow
     Write-Host "|" -ForegroundColor Yellow
     Write-Host -NoNewline "     | " -ForegroundColor Yellow
-    Write-Host -NoNewline "USUÁRIO: " -ForegroundColor White
+    Write-Host -NoNewline "$($titulousuarioatual): " -ForegroundColor White
     Write-Host -NoNewline "$nomeusuarioatual" -ForegroundColor $revelarAcessoColor
-    $spacesNeededUsuario = $fixedWidthUsuario - ("$nomeusuarioatual".Length + 7) 
+    $spacesNeededUsuario = if ($idiomaSelecionado -eq "es") {$fixedWidthUsuario - ($titulousuarioatual.Length + $nomeusuarioatual.Length - 9)} else {$fixedWidthUsuario - ($titulousuarioatual.Length + $nomeusuarioatual.Length)} 
     $spacesUsuario = " " * [Math]::Max($spacesNeededUsuario, 0)
     Write-Host -NoNewline $spacesUsuario -ForegroundColor Yellow
     Write-Host "|" -ForegroundColor Yellow
@@ -528,23 +2851,27 @@ function Show-Menu-Detalhes-Login {
     # Senha
 
     Write-Host -NoNewline "     | " -ForegroundColor Yellow
-    Write-Host -NoNewline "SENHA: " -ForegroundColor White
+    Write-Host -NoNewline "$($titulosenhaatual): " -ForegroundColor White
     Write-Host -NoNewline "$detalheslogin_senhadisplay" -ForegroundColor $revelarAcessoColor
-    $spacesNeededSenha = $fixedWidthSenha - ("$senhausuarioatual".Length + 7) 
+    $spacesNeededSenha = if ($idiomaSelecionado -eq "es") {$fixedWidthSenha - ($titulosenhaatual.Length + $senhausuarioatual.Length - 7)} else {$fixedWidthSenha - ($titulosenhaatual.Length + $senhausuarioatual.Length + 2)}
     $spacesSenha = " " * [Math]::Max($spacesNeededSenha, 0)
     Write-Host -NoNewline $spacesSenha -ForegroundColor Yellow
     Write-Host "|" -ForegroundColor Yellow
 
     # Tipo de Plano de Conta
-
+   
     Write-Host -NoNewline "     | " -ForegroundColor Yellow
-    Write-Host -NoNewline "TIPO PLANO CONTA: " -ForegroundColor White
+    Write-Host -NoNewline "$($titulotipoplanousuarioatual): " -ForegroundColor White
     if ($tipoplanousuarioatual -eq "VIP") {
-        Write-Host -NoNewline "$tipoplanousuarioatual" -ForegroundColor Magenta
+
+        $tipoplanousuarioatual = Translate-Text -Text $tipoplanousuarioatual -TargetLanguage $idiomaSelecionado
+        Write-Host -NoNewline "$tipoplanousuarioatual".ToUpper() -ForegroundColor Magenta
     } else {
-        Write-Host -NoNewline "$tipoplanousuarioatual" -ForegroundColor Blue
+        $tipoplanousuarioatual = Translate-Text -Text $tipoplanousuarioatual -TargetLanguage $idiomaSelecionado
+        Write-Host -NoNewline "$tipoplanousuarioatual".ToUpper() -ForegroundColor Blue
     }
-    $spacesNeeded = $fixedWidthTipoPlano - ("$tipoplanousuarioatual".Length + 7) 
+
+    $spacesNeeded = if ($idiomaSelecionado -eq "es") {$fixedWidthTipoPlano - ($titulotipoplanousuarioatual.Length + $tipoplanousuarioatual.Length - 18)} else {$fixedWidthTipoPlano - ($titulotipoplanousuarioatual.Length + $tipoplanousuarioatual.Length - 9)} 
     $spaces = " " * [Math]::Max($spacesNeeded, 0)
     Write-Host -NoNewline $spaces -ForegroundColor Yellow
     Write-Host "|" -ForegroundColor Yellow
@@ -553,23 +2880,23 @@ function Show-Menu-Detalhes-Login {
 
         if ($QtdvTotal -eq "Ilimitado") {
             Write-Host -NoNewline "     | " -ForegroundColor Yellow
-            Write-QTDVMessageMenuLogin -label "QTD TOTAL DOWNLOAD E VISUALIZAÇÕES" -value $qtdvtotalatual -color Cyan
-            $spacesNeededQTDTOTALDV = $fixedWidthQTDTOTALDV - ("$qtdvtotalatual".Length + 7) 
+            Write-QTDVMessageMenuLogin -label $($titulototalqtdv) -value $qtdvtotalatual -color Cyan
+            $spacesNeededQTDTOTALDV = if ($idiomaSelecionado -eq "es") {$fixedWidthQTDTOTALDV - ($titulototalqtdv.Length + $qtdvtotalatual.Length - 36)} else {$fixedWidthQTDTOTALDV - ($titulototalqtdv.Length + $qtdvtotalatual.Length - 27)} 
             $spacesQTDTOTALDV = " " * [Math]::Max($spacesNeededQTDTOTALDV, 0)
             Write-Host -NoNewline $spacesQTDTOTALDV -ForegroundColor Yellow
             Write-Host "|" -ForegroundColor Yellow
         } else {
             if ($QtdvTotal -eq 0) {
                 Write-Host -NoNewline "     | " -ForegroundColor Yellow
-                Write-QTDVMessageMenuLogin -label "QTD TOTAL DOWNLOAD E VISUALIZAÇÕES" -value $qtdvtotalatual -color Red
-                $spacesNeededQTDTOTALDV = $fixedWidthQTDTOTALDV - ($qtdvtotalatual.Length + 7) 
+                Write-QTDVMessageMenuLogin -label $($titulototalqtdv) -value $qtdvtotalatual -color Red
+                $spacesNeededQTDTOTALDV = if ($idiomaSelecionado -eq "es") {$fixedWidthQTDTOTALDV - ($titulototalqtdv.Length + $qtdvtotalatual.Length - 36)} else {$fixedWidthQTDTOTALDV - ($titulototalqtdv.Length + $qtdvtotalatual.Length - 27)}
                 $spacesQTDTOTALDV = " " * [Math]::Max($spacesNeededQTDTOTALDV, 0)
                 Write-Host -NoNewline $spacesQTDTOTALDV -ForegroundColor Yellow
                 Write-Host "|" -ForegroundColor Yellow
             } else {
                 Write-Host -NoNewline "     | " -ForegroundColor Yellow
-                Write-QTDVMessageMenuLogin -label "QTD TOTAL DOWNLOAD E VISUALIZAÇÕES" -value $qtdvtotalatual -color Yellow
-                $spacesNeededQTDTOTALDV = $fixedWidthQTDTOTALDV - ("$qtdvtotalatual".Length + 7)
+                Write-QTDVMessageMenuLogin -label $($titulototalqtdv) -value $qtdvtotalatual -color Yellow
+                $spacesNeededQTDTOTALDV = if ($idiomaSelecionado -eq "es") {$fixedWidthQTDTOTALDV - ($titulototalqtdv.Length + $qtdvtotalatual.Length - 36)} else {$fixedWidthQTDTOTALDV - ($titulototalqtdv.Length + $qtdvtotalatual.Length - 27)}
                 $spacesQTDTOTALDV = " " * [Math]::Max($spacesNeededQTDTOTALDV, 0) 
                 Write-Host -NoNewline $spacesQTDTOTALDV -ForegroundColor Yellow
                 Write-Host "|" -ForegroundColor Yellow
@@ -577,30 +2904,39 @@ function Show-Menu-Detalhes-Login {
 
             if ($QtdvUtilizado -eq 0) {
                 Write-Host -NoNewline "     | " -ForegroundColor Yellow
-                Write-QTDVMessageMenuLogin -label "QTD TOTAL DOWNLOAD E VISUALIZAÇÕES UTILIZADO" -value $qtdvutilizadoatual -color Red
-                $spacesNeededQTDINDVDV = $fixedWidthQTDINDVDV - ("$qtdvutilizadoatual".Length + 7)
+                Write-QTDVMessageMenuLogin -label $($titulototalqtdvutilizado) -value $qtdvutilizadoatual -color Red
+                $spacesNeededQTDINDVDV = if($idiomaSelecionado -eq "es") {$fixedWidthQTDINDVDV - ($titulototalqtdvutilizado.Length + $qtdvutilizadoatual.Length - 46)} else {$fixedWidthQTDINDVDV - ($titulototalqtdvutilizado.Length + $qtdvutilizadoatual.Length - 37)}
                 $spacesQTDINDVDV = " " * [Math]::Max($spacesNeededQTDINDVDV, 0) 
                 Write-Host -NoNewline $spacesQTDINDVDV -ForegroundColor Yellow
                 Write-Host "|" -ForegroundColor Yellow
             } else {
                 Write-Host -NoNewline "     | " -ForegroundColor Yellow
-                Write-QTDVMessageMenuLogin -label "QTD TOTAL DOWNLOAD E VISUALIZAÇÕES UTILIZADO" -value $qtdvutilizadoatual -color Yellow
-                $spacesNeededQTDINDVDV = $fixedWidthQTDINDVDV - ("$qtdvutilizadoatual".Length + 7)
+                Write-QTDVMessageMenuLogin -label $($titulototalqtdvutilizado) -value $qtdvutilizadoatual -color Yellow
+                $spacesNeededQTDINDVDV = if($idiomaSelecionado -eq "es") {$fixedWidthQTDINDVDV - ($titulototalqtdvutilizado.Length + $qtdvutilizadoatual.Length - 46)} else {$fixedWidthQTDINDVDV - ($titulototalqtdvutilizado.Length + $qtdvutilizadoatual.Length - 37)}
                 $spacesQTDINDVDV = " " * [Math]::Max($spacesNeededQTDINDVDV, 0) 
                 Write-Host -NoNewline $spacesQTDINDVDV -ForegroundColor Yellow
                 Write-Host "|" -ForegroundColor Yellow
             }
+
         }
 
     }
 
     if ( $TipoPlanoConta -eq "VIP" ) {
 
-        Write-Host "     =================================================" -ForegroundColor Yellow
+        if ($idiomaSelecionado -eq "es") {
+            Write-Host "     ==========================================================" -ForegroundColor Yellow
+        } else {
+            Write-Host "     =================================================" -ForegroundColor Yellow
+        }
 
-    } else {
+    } else { #======================
 
-        Write-Host "     ========================================================" -ForegroundColor Yellow
+        if ($idiomaSelecionado -eq "es") {
+            Write-Host "     =================================================================" -ForegroundColor Yellow
+        } else {
+            Write-Host "     ========================================================" -ForegroundColor Yellow
+        }
     } 
 
 }
@@ -608,224 +2944,269 @@ function Show-Menu-Detalhes-Login {
 function MostrarCabecalhoRenovacao{
     
     param (
-        [string]$mensagemproduto = "O prazo do seu plano de assinatura do seu produto em sua conta chegou ao fim!",
-        [string]$mensagemplano = "O prazo do seu plano de assinatura em sua conta chegou ao fim!",
-        [string]$fimensagem = "Selecione as outras opções no menu para conferir os preços e vantagens de cada oferta.",
+        [string]$mensagemproduto = $($global:translations["RPAMPrazoPlanAccount"]),
+        [string]$mensagemplano = $($global:translations["RPAMEndPrazoPlanAccount"]),
+        [string]$fimensagem = $($global:translations["RPAMSelectOptionOfferSubscriptionPlan"]),
         [string]$opcao_mensagem = "",
         [string]$url=""
     )
 
     if ($url -and $opcao_mensagem -eq "GRUPO MEMBRO") {
+        
         Start-Process $url
         cls
+
+        # Tradução Dinâmica:
+        $opcao_mensagem = Translate-Text -Text $opcao_mensagem -TargetLanguage $idiomaSelecionado
+
+        $fixedWidthMenuRenewPlan = 120  # Largura total da linha
+
+        # Frase a ser centralizada
+        $menuRenewPlanTexto = $($global:translations["RPAMRenewPlanMenu"])
+        $menuRenewPlanTextoLength = $menuRenewPlanTexto.Length
+
+        # Calcula o número de espaços necessários para centralizar
+        $spacesNeededMenuRenewPlan = [Math]::Max(([Math]::Floor(($fixedWidthMenuRenewPlan - $menuRenewPlanTextoLength) / 2)), 0)
+        $spacesMenuRenewPlan = " " * $spacesNeededMenuRenewPlan
+
         Write-Host ""
         Write-Host "     ================================================================================================================" -ForegroundColor Green
-        Write-Host "                                              MENU DE RENOVAÇÃO DO PLANO                                             " -ForegroundColor Cyan
+        Write-Host "$spacesMenuRenewPlan$menuRenewPlanTexto" -ForegroundColor Cyan
         Write-Host "     ================================================================================================================" -ForegroundColor Green
-        Write-Host ""
-        Write-Host -NoNewline "     BENEFÍCIOS" -ForegroundColor Cyan
+	    Write-Host ""
+        Write-Host -NoNewline "     $($global:translations["RPAMBenefits"])" -ForegroundColor Cyan
         Write-Host -NoNewline " | " -ForegroundColor Cyan 
-        Write-Host -NoNewline "PLANO ASSINATURA: $opcao_mensagem" -ForegroundColor Yellow
+        Write-Host -NoNewline "$($global:translations["RPAMSubscriptionPlan"]): $opcao_mensagem" -ForegroundColor Yellow
         Write-Host -NoNewline " | " -ForegroundColor Cyan 
         Write-Host ""
         Write-Host ""
         Write-Host "     ===============================================================================================================" -ForegroundColor DarkYellow
         Write-Host -NoNewline "     > " -ForegroundColor Cyan                                                                   
-        Write-Host -NoNewline "Softwares e Licenças" -ForegroundColor Yellow
-        Write-Host -NoNewline " [Método de Ativação: Pré-Ativado]" -ForegroundColor Green
+        Write-Host -NoNewline $($global:translations["RPAMSANDL"]) -ForegroundColor Yellow
+        Write-Host -NoNewline " $($global:translations["RPAMActivationMethodPA"])" -ForegroundColor Green
         Write-Host ""
         Write-Host -NoNewline "     - " -ForegroundColor Cyan
-        Write-Host -NoNewline "Atualizações Periódicas Pré-paga" -ForegroundColor Yellow
-        Write-Host -NoNewline " (Quando Disponível)" -ForegroundColor Green
+        Write-Host -NoNewline $($global:translations["RPAMAttPeriodPP"]) -ForegroundColor Yellow
+        Write-Host -NoNewline " $($global:translations["RPAMWhenAvailable"])" -ForegroundColor Green
         Write-Host ""
         Write-Host "     ===============================================================================================================" -ForegroundColor DarkYellow
         Write-Host -NoNewline "     > " -ForegroundColor Cyan
-        Write-Host -NoNewline "Instalação, Desinstalação e Ativação" -ForegroundColor Yellow
-        Write-Host -NoNewline " (Automática, Rápida e Segura)" -ForegroundColor Green
+        Write-Host -NoNewline $($global:translations["RPAMInstUnistActv"]) -ForegroundColor Yellow
+        Write-Host -NoNewline " $($global:translations["RPAMAutoRapidSecure"])" -ForegroundColor Green
         Write-Host ""
         Write-Host -NoNewline "     - " -ForegroundColor Cyan
-        Write-Host -NoNewline "Quantidade de Downloads e Visualizações:" -ForegroundColor Yellow
-        Write-Host -NoNewline " Limitada (3)" -ForegroundColor Green
+        Write-Host -NoNewline "$($global:translations["RPAMNumberDownloadsViews"]):" -ForegroundColor Yellow
+        Write-Host -NoNewline " $($global:translations["RPAMLimited"])" -ForegroundColor Green
         Write-Host ""
         Write-Host -NoNewline "     - " -ForegroundColor Cyan
-        Write-Host -NoNewline "Tutoriais em vídeo ou imagens auto explicativas" -ForegroundColor Yellow
+        Write-Host -NoNewline "$($global:translations["RPAMTutoVidImgExp"])" -ForegroundColor Yellow
         Write-Host ""
         Write-Host "     ===============================================================================================================" -ForegroundColor DarkYellow
         Write-Host -NoNewline "     > " -ForegroundColor Cyan                                                                   
-        Write-Host -NoNewline "Suporte Prioritário" -ForegroundColor Yellow
+        Write-Host -NoNewline $($global:translations["RPAMPrioritySupport"]) -ForegroundColor Yellow
         Write-Host ""
         Write-Host -NoNewline "     - " -ForegroundColor Cyan
         Write-Host -NoNewline "1x " -ForegroundColor Magenta
-        Write-Host -NoNewline "Assistência Remota" -ForegroundColor Yellow
-        Write-Host -NoNewline " (GRÁTIS)" -ForegroundColor Green
+        Write-Host -NoNewline $($global:translations["RPAMRemoteAssist"]) -ForegroundColor Yellow
+        Write-Host -NoNewline " $($global:translations["RPAMGT"])" -ForegroundColor Green
         Write-Host ""
         Write-Host "     ===============================================================================================================" -ForegroundColor DarkYellow
         Write-Host -NoNewline "     > " -ForegroundColor Cyan                                                                   
-        Write-Host -NoNewline "Garantia em todos os produtos" -ForegroundColor Yellow
+        Write-Host -NoNewline "$($global:translations["RPAMGuaranteeProducts"])" -ForegroundColor Yellow
         Write-Host ""
         Write-Host -NoNewline "     - " -ForegroundColor Cyan
-        Write-Host -NoNewline "Substituição, renovação ou reembolso" -ForegroundColor Yellow
-        Write-Host -NoNewline " (Quando atendido os requisitos)" -ForegroundColor Green
+        Write-Host -NoNewline $($global:translations["RPAMReplacementRenewal"]) -ForegroundColor Yellow
+        Write-Host -NoNewline " $($global:translations["RPAMRequirementsAttended"])" -ForegroundColor Green
         Write-Host ""
         Write-Host "     ===============================================================================================================" -ForegroundColor DarkYellow
         Write-Host -NoNewline "     > " -ForegroundColor Cyan                                                                   
-        Write-Host -NoNewline "Sorteio e Descontos" -ForegroundColor Yellow
+        Write-Host -NoNewline "$($global:translations["RPAMRaffleDiscounts"])" -ForegroundColor Yellow
         Write-Host ""
         Write-Host -NoNewline "     - " -ForegroundColor Cyan
-        Write-Host -NoNewline "Combos e Ofertas Especiais" -ForegroundColor Yellow
+        Write-Host -NoNewline $($global:translations["RPAMSpecialOffers"]) -ForegroundColor Yellow
         Write-Host ""
         Write-Host "     ===============================================================================================================" -ForegroundColor DarkYellow
         Write-Host ""
-        Write-Host -NoNewline "     VALORES" -ForegroundColor Cyan 
+        Write-Host -NoNewline "     $($global:translations["RPAMValues"])" -ForegroundColor Cyan 
         Write-Host -NoNewline " | " -ForegroundColor Cyan 
-        Write-Host -NoNewline "PLANO ASSINATURA: $opcao_mensagem" -ForegroundColor Yellow
+        Write-Host -NoNewline "$($global:translations["RPAMSubscriptionPlan"]): $opcao_mensagem" -ForegroundColor Yellow
         Write-Host -NoNewline " | " -ForegroundColor Cyan 
         Write-Host ""
         Write-Host ""
         Write-Host "     ===============================================================================================================" -ForegroundColor DarkYellow
         Write-Host -NoNewline "     * " -ForegroundColor Cyan
-        Write-Host -NoNewline "Diário" -ForegroundColor Yellow
-        Write-Host -NoNewline " (15 Dias):" -ForegroundColor Magenta
+        Write-Host -NoNewline $($global:translations["RPAMDaily"]) -ForegroundColor Yellow
+        Write-Host -NoNewline " $($global:translations["RPAMTimeDays"]):" -ForegroundColor Magenta
         Write-Host -NoNewline " 10,00" -ForegroundColor Green
         Write-Host -NoNewline " (QTDV:3)" -ForegroundColor Cyan
         Write-Host ""
         Write-Host -NoNewline "     * " -ForegroundColor Cyan
-        Write-Host -NoNewline "Mensal:" -ForegroundColor Yellow
+        Write-Host -NoNewline "$($global:translations["RPAMMonthly"]):" -ForegroundColor Yellow
         Write-Host -NoNewline " 15,00" -ForegroundColor Green
         Write-Host -NoNewline " (QTDV:6)" -ForegroundColor Cyan
         Write-Host ""
         Write-Host -NoNewline "     * " -ForegroundColor Cyan
-        Write-Host -NoNewline "Trimestral:" -ForegroundColor Yellow
+        Write-Host -NoNewline "$($global:translations["RPAMQuarterly"]):" -ForegroundColor Yellow
         Write-Host -NoNewline " 28,00" -ForegroundColor Green
         Write-Host -NoNewline " (QTDV:8)" -ForegroundColor Cyan
         Write-Host ""
         Write-Host -NoNewline "     * " -ForegroundColor Cyan
-        Write-Host -NoNewline "Semestral:" -ForegroundColor Yellow
+        Write-Host -NoNewline "$($global:translations["RPAMBiannual"]):" -ForegroundColor Yellow
         Write-Host -NoNewline " 37,00" -ForegroundColor Green
         Write-Host -NoNewline " (QTDV:10)" -ForegroundColor Cyan
         Write-Host ""
         Write-Host -NoNewline "     * " -ForegroundColor Cyan
-        Write-Host -NoNewline "Anual:" -ForegroundColor Yellow
+        Write-Host -NoNewline "$($global:translations["RPAMAnnual"]):" -ForegroundColor Yellow
         Write-Host -NoNewline " 48,00" -ForegroundColor Green
         Write-Host -NoNewline " (QTDV:15)" -ForegroundColor Cyan
         Write-Host ""
         Write-Host -NoNewline "     * " -ForegroundColor Cyan
-        Write-Host -NoNewline "Vitalício:" -ForegroundColor Yellow
+        Write-Host -NoNewline "$($global:translations["RPAMLifeTime"]):" -ForegroundColor Yellow
         Write-Host -NoNewline " 65,00" -ForegroundColor Green
         Write-Host -NoNewline " (QTDV:25)" -ForegroundColor Cyan
         Write-Host ""
         Write-Host "     ===============================================================================================================" -ForegroundColor DarkYellow
     } elseif ($url -and $opcao_mensagem -eq "GRUPO VIP") {
+
         Start-Process $url
+
         cls
+
+        # Tradução Dinâmica:
+        $opcao_mensagem = Translate-Text -Text $opcao_mensagem -TargetLanguage $idiomaSelecionado
+
+        $fixedWidthMenuRenewPlan = 120  # Largura total da linha
+
+        # Frase a ser centralizada
+        $menuRenewPlanTexto = $($global:translations["RPAMRenewPlanMenu"])
+        $menuRenewPlanTextoLength = $menuRenewPlanTexto.Length
+
+        # Calcula o número de espaços necessários para centralizar
+        $spacesNeededMenuRenewPlan = [Math]::Max(([Math]::Floor(($fixedWidthMenuRenewPlan - $menuRenewPlanTextoLength) / 2)), 0)
+        $spacesMenuRenewPlan = " " * $spacesNeededMenuRenewPlan
+
         Write-Host ""
         Write-Host "     ================================================================================================================" -ForegroundColor Green
-        Write-Host "                                              MENU DE RENOVAÇÃO DO PLANO                                             " -ForegroundColor Cyan
+        Write-Host "$spacesMenuRenewPlan$menuRenewPlanTexto" -ForegroundColor Cyan
         Write-Host "     ================================================================================================================" -ForegroundColor Green
-        Write-Host ""
-        Write-Host -NoNewline "     BENEFÍCIOS" -ForegroundColor Cyan 
+	    Write-Host ""
+        Write-Host -NoNewline "     $($global:translations["RPAMBenefits"])" -ForegroundColor Cyan 
         Write-Host -NoNewline " | " -ForegroundColor Cyan 
-        Write-Host -NoNewline "PLANO ASSINATURA: $opcao_mensagem" -ForegroundColor Yellow
+        Write-Host -NoNewline "$($global:translations["RPAMSubscriptionPlan"]): $opcao_mensagem" -ForegroundColor Yellow
         Write-Host -NoNewline " | " -ForegroundColor Cyan 
         Write-Host ""
         Write-Host ""
         Write-Host "     ===============================================================================================================" -ForegroundColor DarkYellow
         Write-Host -NoNewline "     > " -ForegroundColor Cyan   
-        Write-Host -NoNewline "[Todos]" -ForegroundColor Magenta                                                               
-        Write-Host -NoNewline " Softwares e Licenças" -ForegroundColor Yellow
-        Write-Host -NoNewline " [Método de Ativação: Pré-Ativado]" -ForegroundColor Green
+        Write-Host -NoNewline $($global:translations["RPAMAllN1"]) -ForegroundColor Magenta                                                               
+        Write-Host -NoNewline " $($global:translations["RPAMSANDL"])" -ForegroundColor Yellow
+        Write-Host -NoNewline " $($global:translations["RPAMActivationMethodPA"])" -ForegroundColor Green
         Write-Host ""
         Write-Host -NoNewline "     > " -ForegroundColor Cyan
-        Write-Host -NoNewline "[Todas]" -ForegroundColor Magenta 
-        Write-Host -NoNewline " Contas Streaming" -ForegroundColor Yellow
-        Write-Host -NoNewline " [Método de Ativação: Cookies]" -ForegroundColor Green
+        Write-Host -NoNewline $($global:translations["RPAMALLN2"]) -ForegroundColor Magenta 
+        Write-Host -NoNewline " $($global:translations["RPAMStreamingAccounts"])" -ForegroundColor Yellow
+        Write-Host -NoNewline " $($global:translations["RPAMActivationMethodCookies"])" -ForegroundColor Green
         Write-Host ""
         Write-Host -NoNewline "     - " -ForegroundColor Cyan
-        Write-Host -NoNewline "Atualizações Periódicas e Vitalícias" -ForegroundColor Yellow
-        Write-Host -NoNewline " (Quando Disponível)" -ForegroundColor Green
+        Write-Host -NoNewline $($global:translations["RPAMAttPeriodLT"]) -ForegroundColor Yellow
+        Write-Host -NoNewline " $($global:translations["RPAMWhenAvailable"])" -ForegroundColor Green
         Write-Host ""
         Write-Host "     ===============================================================================================================" -ForegroundColor DarkYellow
         Write-Host -NoNewline "     > " -ForegroundColor Cyan
-        Write-Host -NoNewline "Instalação, Desinstalação e Ativação" -ForegroundColor Yellow
-        Write-Host -NoNewline " (Automática, Rápida e Segura)" -ForegroundColor Green
+        Write-Host -NoNewline $($global:translations["RPAMInstUnistActv"]) -ForegroundColor Yellow
+        Write-Host -NoNewline " $($global:translations["RPAMAutoRapidSecure"])" -ForegroundColor Green
         Write-Host ""
         Write-Host -NoNewline "     - " -ForegroundColor Cyan
-        Write-Host -NoNewline "Quantidade de Downloads e Visualizações:" -ForegroundColor Yellow
-        Write-Host -NoNewline " (Ilimitada)" -ForegroundColor Green
+        Write-Host -NoNewline "$($global:translations["RPAMNumberDownloadsViews"]):" -ForegroundColor Yellow
+        Write-Host -NoNewline " $($global:translations["RPAMUnlimited"])" -ForegroundColor Green
         Write-Host ""
         Write-Host -NoNewline "     - " -ForegroundColor Cyan
-        Write-Host -NoNewline "Tutoriais em vídeo ou imagens auto explicativas" -ForegroundColor Yellow
+        Write-Host -NoNewline $($global:translations["RPAMTutoVidImgExp"]) -ForegroundColor Yellow
         Write-Host ""
         Write-Host "     ===============================================================================================================" -ForegroundColor DarkYellow
         Write-Host -NoNewline "     > " -ForegroundColor Cyan                                                                   
-        Write-Host -NoNewline "Suporte Prioritário" -ForegroundColor Yellow
+        Write-Host -NoNewline $($global:translations["RPAMPrioritySupport"]) -ForegroundColor Yellow
         Write-Host ""
         Write-Host -NoNewline "     - " -ForegroundColor Cyan
         Write-Host -NoNewline "2x " -ForegroundColor Magenta
-        Write-Host -NoNewline "Assistência Remota" -ForegroundColor Yellow
-        Write-Host -NoNewline " (GRÁTIS)" -ForegroundColor Green
+        Write-Host -NoNewline $($global:translations["RPAMRemoteAssist"]) -ForegroundColor Yellow
+        Write-Host -NoNewline " $($global:translations["RPAMGT"])" -ForegroundColor Green
         Write-Host ""
         Write-Host "     ===============================================================================================================" -ForegroundColor DarkYellow
         Write-Host -NoNewline "     > " -ForegroundColor Cyan                                                                   
-        Write-Host -NoNewline "Garantia em todos os produtos" -ForegroundColor Yellow
+        Write-Host -NoNewline $($global:translations["RPAMGuaranteeProducts"]) -ForegroundColor Yellow
         Write-Host ""
         Write-Host -NoNewline "     - " -ForegroundColor Cyan
-        Write-Host -NoNewline "Substituição, renovação ou reembolso" -ForegroundColor Yellow
-        Write-Host -NoNewline " (Quando atendido os requisitos)" -ForegroundColor Green
+        Write-Host -NoNewline $($global:translations["RPAMReplacementRenewal"]) -ForegroundColor Yellow
+        Write-Host -NoNewline " $($global:translations["RPAMRequirementsAttended"])" -ForegroundColor Green
         Write-Host ""
         Write-Host "     ===============================================================================================================" -ForegroundColor DarkYellow
         Write-Host -NoNewline "     > " -ForegroundColor Cyan                                                                   
-        Write-Host -NoNewline "Sorteio e Descontos" -ForegroundColor Yellow
+        Write-Host -NoNewline $($global:translations["RPAMRaffleDiscounts"]) -ForegroundColor Yellow
         Write-Host ""
         Write-Host -NoNewline "     - " -ForegroundColor Cyan
-        Write-Host -NoNewline "Combos e Ofertas Especiais" -ForegroundColor Yellow
+        Write-Host -NoNewline $($global:translations["RPAMSpecialOffers"]) -ForegroundColor Yellow
         Write-Host ""
         Write-Host "     ===============================================================================================================" -ForegroundColor DarkYellow
         Write-Host ""
-        Write-Host -NoNewline "     VALORES" -ForegroundColor Cyan
+        Write-Host -NoNewline "     $($global:translations["RPAMValues"])" -ForegroundColor Cyan
         Write-Host -NoNewline " | " -ForegroundColor Cyan 
-        Write-Host -NoNewline "PLANO ASSINATURA: $opcao_mensagem" -ForegroundColor Yellow
+        Write-Host -NoNewline "$($global:translations["RPAMSubscriptionPlan"]): $opcao_mensagem" -ForegroundColor Yellow
         Write-Host -NoNewline " | " -ForegroundColor Cyan 
         Write-Host ""
         Write-Host ""
         Write-Host "     ===============================================================================================================" -ForegroundColor DarkYellow
         Write-Host -NoNewline "     * " -ForegroundColor Cyan
-        Write-Host -NoNewline "Mensal:" -ForegroundColor Yellow
+        Write-Host -NoNewline "$($global:translations["RPAMMonthly"]):" -ForegroundColor Yellow
         Write-Host -NoNewline " 25,00" -ForegroundColor Green
-        Write-Host -NoNewline " (QTDV:ILIMITADO)" -ForegroundColor Cyan
+        Write-Host -NoNewline " $($global:translations["RPAMQTDVUnlimited"])" -ForegroundColor Cyan
         Write-Host ""
         Write-Host -NoNewline "     * " -ForegroundColor Cyan
-        Write-Host -NoNewline "Trimestral:" -ForegroundColor Yellow
+        Write-Host -NoNewline "$($global:translations["RPAMQuarterly"]):" -ForegroundColor Yellow
         Write-Host -NoNewline " 48,00" -ForegroundColor Green
-        Write-Host -NoNewline " (QTDV:ILIMITADO)" -ForegroundColor Cyan
+        Write-Host -NoNewline " $($global:translations["RPAMQTDVUnlimited"])" -ForegroundColor Cyan
         Write-Host ""
         Write-Host -NoNewline "     * " -ForegroundColor Cyan
-        Write-Host -NoNewline "Semestral:" -ForegroundColor Yellow
+        Write-Host -NoNewline "$($global:translations["RPAMBiannual"]):" -ForegroundColor Yellow
         Write-Host -NoNewline " 75,00" -ForegroundColor Green
-        Write-Host -NoNewline " (QTDV:ILIMITADO)" -ForegroundColor Cyan
+        Write-Host -NoNewline " $($global:translations["RPAMQTDVUnlimited"])" -ForegroundColor Cyan
         Write-Host ""
         Write-Host -NoNewline "     * " -ForegroundColor Cyan
-        Write-Host -NoNewline "Anual:" -ForegroundColor Yellow
+        Write-Host -NoNewline "$($global:translations["RPAMAnnual"]):" -ForegroundColor Yellow
         Write-Host -NoNewline " 100,00" -ForegroundColor Green
-        Write-Host -NoNewline " (QTDV:ILIMITADO)" -ForegroundColor Cyan
+        Write-Host -NoNewline " $($global:translations["RPAMQTDVUnlimited"])" -ForegroundColor Cyan
         Write-Host ""
         Write-Host -NoNewline "     * " -ForegroundColor Cyan
-        Write-Host -NoNewline "Vitalício:" -ForegroundColor Yellow
+        Write-Host -NoNewline "$($global:translations["RPAMLifeTime"]):" -ForegroundColor Yellow
         Write-Host -NoNewline " 150,00" -ForegroundColor Green
-        Write-Host -NoNewline " (QTDV:ILIMITADO)" -ForegroundColor Cyan
+        Write-Host -NoNewline " $($global:translations["RPAMQTDVUnlimited"])" -ForegroundColor Cyan
         Write-Host ""
         Write-Host "     ===============================================================================================================" -ForegroundColor DarkYellow
     } elseif ($url -and $opcao_mensagem -eq "DOWNLOAD E VISUALIZAÇÕES") {
         Start-Process $url
         cls
+
+         # Tradução Dinâmica:
+        $opcao_mensagem = Translate-Text -Text $opcao_mensagem -TargetLanguage $idiomaSelecionado
+
+        $fixedWidthMenuRenewPlan = 120  # Largura total da linha
+
+        # Frase a ser centralizada
+        $menuRenewPlanTexto = $($global:translations["RPAMRenewPlanMenu"])
+        $menuRenewPlanTextoLength = $menuRenewPlanTexto.Length
+
+        # Calcula o número de espaços necessários para centralizar
+        $spacesNeededMenuRenewPlan = [Math]::Max(([Math]::Floor(($fixedWidthMenuRenewPlan - $menuRenewPlanTextoLength) / 2)), 0)
+        $spacesMenuRenewPlan = " " * $spacesNeededMenuRenewPlan
+
         Write-Host ""
         Write-Host "     ================================================================================================================" -ForegroundColor Green
-        Write-Host "                                              MENU DE RENOVAÇÃO DO PLANO                                             " -ForegroundColor Cyan
+        Write-Host "$spacesMenuRenewPlan$menuRenewPlanTexto" -ForegroundColor Cyan
         Write-Host "     ================================================================================================================" -ForegroundColor Green
-        Write-Host ""
-        Write-Host -NoNewline "     VALORES" -ForegroundColor Cyan
+	    Write-Host ""
+        Write-Host -NoNewline "     $($global:translations["RPAMValues"])" -ForegroundColor Cyan
         Write-Host -NoNewline " | " -ForegroundColor Cyan 
-        Write-Host -NoNewline "CHAVES DE ACESSO: $opcao_mensagem" -ForegroundColor Yellow
+        Write-Host -NoNewline "$($global:translations["RPAMAccessKeys"]): $opcao_mensagem" -ForegroundColor Yellow
         Write-Host -NoNewline " | " -ForegroundColor Cyan 
         Write-Host ""
         Write-Host ""
@@ -833,25 +3214,25 @@ function MostrarCabecalhoRenovacao{
         Write-Host -NoNewline "     * " -ForegroundColor Cyan
         Write-Host -NoNewline "QTDV:" -ForegroundColor Yellow
         Write-Host -NoNewline " 3" -ForegroundColor Cyan
-        Write-Host -NoNewline " Preço:" -ForegroundColor Yellow
+        Write-Host -NoNewline " $($global:translations["RPAMPrice"]):" -ForegroundColor Yellow
         Write-Host -NoNewline " 5,00" -ForegroundColor Cyan
         Write-Host ""
         Write-Host -NoNewline "     * " -ForegroundColor Cyan
         Write-Host -NoNewline "QTDV:" -ForegroundColor Yellow
         Write-Host -NoNewline " 6" -ForegroundColor Cyan
-        Write-Host -NoNewline " Preço:" -ForegroundColor Yellow
+        Write-Host -NoNewline " $($global:translations["RPAMPrice"]):" -ForegroundColor Yellow
         Write-Host -NoNewline " 8,00" -ForegroundColor Cyan
         Write-Host ""
         Write-Host -NoNewline "     * " -ForegroundColor Cyan
         Write-Host -NoNewline "QTDV:" -ForegroundColor Yellow
         Write-Host -NoNewline " 8" -ForegroundColor Cyan
-        Write-Host -NoNewline " Preço:" -ForegroundColor Yellow
+        Write-Host -NoNewline " $($global:translations["RPAMPrice"]):" -ForegroundColor Yellow
         Write-Host -NoNewline " 10,00" -ForegroundColor Cyan
         Write-Host ""
         Write-Host -NoNewline "     * " -ForegroundColor Cyan
         Write-Host -NoNewline "QTDV:" -ForegroundColor Yellow
         Write-Host -NoNewline " 10" -ForegroundColor Cyan
-        Write-Host -NoNewline " Preço:" -ForegroundColor Yellow
+        Write-Host -NoNewline " $($global:translations["RPAMPrice"]):" -ForegroundColor Yellow
         Write-Host -NoNewline " 15,00" -ForegroundColor Cyan
         Write-Host ""
         Write-Host "     ===============================================================================================================" -ForegroundColor DarkYellow        
@@ -860,11 +3241,22 @@ function MostrarCabecalhoRenovacao{
         if ($url -and $opcao_mensagem -eq "PRODUTO RENOVAÇÃO") { 
             Start-Process $url 
             cls
+
+            $fixedWidthMenuRenewPlan = 120  # Largura total da linha
+
+            # Frase a ser centralizada
+            $menuRenewPlanTexto = $($global:translations["RPAMRenewPlanMenu"])
+            $menuRenewPlanTextoLength = $menuRenewPlanTexto.Length
+
+            # Calcula o número de espaços necessários para centralizar
+            $spacesNeededMenuRenewPlan = [Math]::Max(([Math]::Floor(($fixedWidthMenuRenewPlan - $menuRenewPlanTextoLength) / 2)), 0)
+            $spacesMenuRenewPlan = " " * $spacesNeededMenuRenewPlan
+
             Write-Host ""
             Write-Host "     ================================================================================================================" -ForegroundColor Green
-            Write-Host "                                              MENU DE RENOVAÇÃO DO PLANO                                             " -ForegroundColor Cyan
+            Write-Host "$spacesMenuRenewPlan$menuRenewPlanTexto" -ForegroundColor Cyan
             Write-Host "     ================================================================================================================" -ForegroundColor Green
-            Write-Host ""
+	        Write-Host ""
             Write-Host "     ================================================================================================================" -ForegroundColor Gray
             Write-Host ""
             Write-Host "      $mensagemproduto" -ForegroundColor Yellow
@@ -873,11 +3265,21 @@ function MostrarCabecalhoRenovacao{
             Write-Host "     ================================================================================================================" -ForegroundColor Gray
         } else {
             cls
+            $fixedWidthMenuRenewPlan = 120  # Largura total da linha
+
+            # Frase a ser centralizada
+            $menuRenewPlanTexto = $($global:translations["RPAMRenewPlanMenu"])
+            $menuRenewPlanTextoLength = $menuRenewPlanTexto.Length
+
+            # Calcula o número de espaços necessários para centralizar
+            $spacesNeededMenuRenewPlan = [Math]::Max(([Math]::Floor(($fixedWidthMenuRenewPlan - $menuRenewPlanTextoLength) / 2)), 0)
+            $spacesMenuRenewPlan = " " * $spacesNeededMenuRenewPlan
+
             Write-Host ""
             Write-Host "     ================================================================================================================" -ForegroundColor Green
-            Write-Host "                                              MENU DE RENOVAÇÃO DO PLANO                                             " -ForegroundColor Cyan
+            Write-Host "$spacesMenuRenewPlan$menuRenewPlanTexto" -ForegroundColor Cyan
             Write-Host "     ================================================================================================================" -ForegroundColor Green
-            Write-Host ""
+	        Write-Host ""
             Write-Host "     ================================================================================================================" -ForegroundColor Gray
             Write-Host ""
             Write-Host "      $mensagemplano" -ForegroundColor Yellow
@@ -905,6 +3307,8 @@ function MostrarMenuRenovacao {
         [switch]$silent
     )
 
+    Update-Title-WindowMenu -menuKey "RPAMRenewPlanMenu"  # Atualiza o título para o menu principal
+
     Write-Host " "
 
     if (-not $silent) {
@@ -914,29 +3318,29 @@ function MostrarMenuRenovacao {
             Write-Host "     ================================================================================================================" -ForegroundColor Green
             Write-Host ""
             Write-Host -NoNewline "     [1] - "  -ForegroundColor Yellow
-            Write-Host "Renovar Plano Assinatura $($produtoctdigitalDisponivel['nome_produto']) $($produtoctdigitalDisponivel['duracao_plano'])" -ForegroundColor White
+            Write-Host "$($global:translations["DORenewPlanMenuOption"]) $($produtoctdigitalDisponivel['nome_produto']) $($produtoctdigitalDisponivel['duracao_plano'])" -ForegroundColor White
             Write-Host -NoNewline "     [2] - "  -ForegroundColor Yellow
-            Write-Host "Renovar Assinatura Grupo VIP" -ForegroundColor White
+            Write-Host $($global:translations["DORenewPlanVIPGroupMenuOption"]) -ForegroundColor White
             Write-Host -NoNewline "     [3] - "  -ForegroundColor Yellow
-            Write-Host "Renovar Assinatura Grupo Membro" -ForegroundColor White
+            Write-Host $($global:translations["DORenewPlanMemberGroupMenuOption"]) -ForegroundColor White
             Write-Host -NoNewline "     [4] - "  -ForegroundColor Yellow
-            Write-Host "Renovar Chaves de Acesso" -ForegroundColor White
+            Write-Host $($global:translations["DORenewPlanKeyAccessMenuOption"]) -ForegroundColor White
             Write-Host ""
-            Write-Host -NoNewline "     [D] - "  -ForegroundColor Red
-            Write-Host "Deslogar" -ForegroundColor Gray
-            Write-Host -NoNewline "     [V] - "  -ForegroundColor Cyan
-            Write-Host "Voltar" -ForegroundColor Gray
+            if ($idiomaSelecionado -eq "pt") { Write-Host -NoNewline "     [D] - "  -ForegroundColor Red } elseif ($idiomaSelecionado -eq "en") { Write-Host -NoNewline "     [L] - "  -ForegroundColor Red } elseif ($idiomaSelecionado -eq "es") { Write-Host -NoNewline "     [C] - "  -ForegroundColor Red }
+            Write-Host $($global:translations["DOLogoutMenuOption"]) -ForegroundColor Gray
+            if ($idiomaSelecionado -eq "pt") { Write-Host -NoNewline "     [V] - "  -ForegroundColor Cyan } elseif ($idiomaSelecionado -eq "en") { Write-Host -NoNewline "     [B] - "  -ForegroundColor Cyan } elseif ($idiomaSelecionado -eq "es") { Write-Host -NoNewline "     [V] - "  -ForegroundColor Cyan }
+            Write-Host $($global:translations["DOGoBackMenuOption"]) -ForegroundColor Gray
             Write-Host -NoNewline "     [M] - "  -ForegroundColor Yellow
-            Write-Host "Menu Principal" -ForegroundColor Gray
+            Write-Host $($global:translations["DOMainMenuOption"]) -ForegroundColor Gray
             Write-Host ""
             Write-Host "     ================================================================================================================" -ForegroundColor Green
             
             Write-Host ""
 
-            $opcao_renovacao = Read-Host "Digite o número ou letra de sua opção escolhida"
-
+            $opcao_renovacao = Read-Host $($global:translations["RPAMChoiceOptionRenewalSelected"])
+            
             if ($opcao_renovacao -eq '1') {
-                MostrarCabecalhoRenovacao -opcao_mensagem "PRODUTO RENOVAÇÃO" -mensagemproduto "O seu Plano de Assinatura $($produtoctdigitalDisponivel['nome_produto']) $($produtoctdigitalDisponivel['duracao_plano']) chegou ao fim." -url "https://wa.me/5561974039456?text=Pretendo%20renovar%20e/ou%20assinar%20plano%20de%20assinatura%20$($produtoctdigitalDisponivel['nome_produto'])%20$($produtoctdigitalDisponivel['duracao_plano'])" 
+                MostrarCabecalhoRenovacao -opcao_mensagem "PRODUTO RENOVAÇÃO" -mensagemproduto "$($global:translations["RPAMMessageOptionLinkRenewalSelectedN1"]) $($produtoctdigitalDisponivel['nome_produto']) $($produtoctdigitalDisponivel['duracao_plano']) $($global:translations["RPAMMessageOptionLinkRenewalSelectedN2"])" -url "https://wa.me/5561974039456?text=Pretendo%20renovar%20e/ou%20assinar%20plano%20de%20assinatura%20$($produtoctdigitalDisponivel['nome_produto'])%20$($produtoctdigitalDisponivel['duracao_plano'])" 
                 MostrarMenuRenovacao -UsuarioAtual $UsuarioAtual -SenhaAtual $SenhaAtual -CategoriaEscolhida $CategoriaEscolhida -ProdutoSelecionado $ProdutoSelecionado -TipoPlanoConta $TipoPlanoConta -produtosctdigitalDisponiveis $produtosctdigitalDisponiveis 
             } elseif ($opcao_renovacao -eq '2') {
                 MostrarCabecalhoRenovacao -opcao_mensagem "GRUPO VIP" -url "https://wa.me/5561974039456?text=Pretendo%20renovar%20e/ou%20assinar%20plano%20de%20assinatura%20GRUPO%20VIP"
@@ -947,15 +3351,15 @@ function MostrarMenuRenovacao {
             } elseif ($opcao_renovacao -eq '4') {
                 MostrarCabecalhoRenovacao -opcao_mensagem "DOWNLOAD E VISUALIZAÇÕES" -url "https://wa.me/5561974039456?text=Pretendo%20renovar%20e/ou%20comprar%20chaves%20de%20acesso"
                 MostrarMenuRenovacao -UsuarioAtual $UsuarioAtual -SenhaAtual $SenhaAtual -CategoriaEscolhida $CategoriaEscolhida -ProdutoSelecionado $ProdutoSelecionado -TipoPlanoConta $TipoPlanoConta -produtosctdigitalDisponiveis $produtosctdigitalDisponiveis
-            } elseif ($opcao_renovacao -eq "D") {
-                Fazer-Login
-            } elseif ($opcao_renovacao -eq "V") {
+            } elseif (($idiomaSelecionado -eq "pt" -and $opcao_renovacao -eq "D") -or ($idiomaSelecionado -eq "en" -and $opcao_renovacao -eq "L") -or ($idiomaSelecionado -eq "es" -and $opcao_renovacao -eq "C")) {
+                Fazer-Login -LoginStatus $false
+            } elseif (($idiomaSelecionado -eq "pt" -and $opcao_renovacao-eq "V") -or ($idiomaSelecionado -eq "en" -and $opcao_renovacao -eq "B") -or ($idiomaSelecionado -eq "es" -and $opcao_renovacao -eq "V")) {
                 Show-Produtos-Metodos -UsuarioAtual $UsuarioAtual -SenhaAtual $SenhaAtual -CategoriaEscolhida $CategoriaEscolhida -ProdutoSelecionado $ProdutoSelecionado -TipoPlanoConta $TipoPlanoConta -DataAtual $DataAtual -DataTermino $DataTermino -ProdutosMetodoLiberado $ProdutosMetodoLiberado
             } elseif ($opcao_renovacao -eq "M") {
-                Show-Menu
+                Show-Menu -LoginStatus $true -UsuarioAtual $usuario_atual -SenhaAtual $senha_atual -TipoPlanoConta $plano_conta_atual
             } else {
                 Write-Host ""
-                Write-Host "Opção inválida. Por favor, digite um número ou letra que seja válido." -ForegroundColor Red
+                Write-Host $($global:translations["DOInvalidOptionN1"]) -ForegroundColor Red
                 Write-Host ""
             
                 Start-Sleep -Seconds 3
@@ -971,41 +3375,41 @@ function MostrarMenuRenovacao {
             Write-Host "     ================================================================================================================" -ForegroundColor Green
             Write-Host ""
             Write-Host -NoNewline "     [1] - "  -ForegroundColor Yellow
-            Write-Host "Renovar Assinatura Grupo VIP" -ForegroundColor White
+            Write-Host $($global:translations["DORenewPlanVIPGroupMenuOption"]) -ForegroundColor White
             Write-Host -NoNewline "     [2] - "  -ForegroundColor Yellow
-            Write-Host "Renovar Assinatura Grupo Membro" -ForegroundColor White
+            Write-Host $($global:translations["DORenewPlanMemberGroupMenuOption"]) -ForegroundColor White
             Write-Host -NoNewline "     [3] - "  -ForegroundColor Yellow
-            Write-Host "Renovar Chaves de Acesso" -ForegroundColor White
+            Write-Host $($global:translations["DORenewPlanKeyAccessMenuOption"]) -ForegroundColor White
             Write-Host " "
-            Write-Host -NoNewline "     [D] - "  -ForegroundColor Red
-            Write-Host "Deslogar" -ForegroundColor Gray
-            Write-Host -NoNewline "     [V] - "  -ForegroundColor Cyan
-            Write-Host "Voltar" -ForegroundColor Gray
+            if ($idiomaSelecionado -eq "pt") { Write-Host -NoNewline "     [D] - "  -ForegroundColor Red } elseif ($idiomaSelecionado -eq "en") { Write-Host -NoNewline "     [L] - "  -ForegroundColor Red } elseif ($idiomaSelecionado -eq "es") { Write-Host -NoNewline "     [C] - "  -ForegroundColor Red }
+            Write-Host $($global:translations["DOLogoutMenuOption"]) -ForegroundColor Gray
+            if ($idiomaSelecionado -eq "pt") { Write-Host -NoNewline "     [V] - "  -ForegroundColor Cyan } elseif ($idiomaSelecionado -eq "en") { Write-Host -NoNewline "     [B] - "  -ForegroundColor Cyan } elseif ($idiomaSelecionado -eq "es") { Write-Host -NoNewline "     [V] - "  -ForegroundColor Cyan }
+            Write-Host $($global:translations["DOGoBackMenuOption"]) -ForegroundColor Gray
             Write-Host -NoNewline "     [M] - "  -ForegroundColor Yellow
-            Write-Host "Menu Principal" -ForegroundColor Gray 
+            Write-Host $($global:translations["DOMainMenuOption"]) -ForegroundColor Gray 
             Write-Host ""
             Write-Host "     ================================================================================================================" -ForegroundColor Green 
         } else {
             Write-Host "     ================================================================================================================" -ForegroundColor Green
             Write-Host ""
             Write-Host -NoNewline "     [1] - "  -ForegroundColor Yellow
-            Write-Host "Renovar Assinatura Grupo VIP" -ForegroundColor White
+            Write-Host $($global:translations["DORenewPlanVIPGroupMenuOption"]) -ForegroundColor White
             Write-Host -NoNewline "     [2] - "  -ForegroundColor Yellow
-            Write-Host "Renovar Assinatura Grupo Membro" -ForegroundColor White
+            Write-Host $($global:translations["DORenewPlanMemberGroupMenuOption"]) -ForegroundColor White
             Write-Host -NoNewline "     [3] - "  -ForegroundColor Yellow
-            Write-Host "Renovar Chaves de Acesso" -ForegroundColor White
+            Write-Host $($global:translations["DORenewPlanKeyAccessMenuOption"]) -ForegroundColor White
             Write-Host " "
-            Write-Host -NoNewline "     [D] - "  -ForegroundColor Red
-            Write-Host "Deslogar" -ForegroundColor Gray
+            if ($idiomaSelecionado -eq "pt") { Write-Host -NoNewline "     [D] - "  -ForegroundColor Red } elseif ($idiomaSelecionado -eq "en") { Write-Host -NoNewline "     [L] - "  -ForegroundColor Red } elseif ($idiomaSelecionado -eq "es") { Write-Host -NoNewline "     [C] - "  -ForegroundColor Red }
+            Write-Host $($global:translations["DOLogoutMenuOption"]) -ForegroundColor Gray
             Write-Host -NoNewline "     [M] - "  -ForegroundColor Yellow
-            Write-Host "Menu Principal" -ForegroundColor Gray 
+            Write-Host $($global:translations["DOMainMenuOption"]) -ForegroundColor Gray 
             Write-Host ""
             Write-Host "     ================================================================================================================" -ForegroundColor Green 
         }
         
         Write-Host ""
 
-        $opcao_renovacao = Read-Host "Digite o número ou letra de sua opção escolhida"
+        $opcao_renovacao = Read-Host $($global:translations["RPAMChoiceOptionRenewalSelected"])
         
         if ($opcao_renovacao -eq '1') {
             MostrarCabecalhoRenovacao -opcao_mensagem "GRUPO VIP" -url "https://wa.me/5561974039456?text=Pretendo%20renovar%20e/ou%20assinar%20plano%20de%20assinatura%20GRUPO%20VIP"
@@ -1016,16 +3420,16 @@ function MostrarMenuRenovacao {
         } elseif ($opcao_renovacao -eq '3') {
             MostrarCabecalhoRenovacao -opcao_mensagem "DOWNLOAD E VISUALIZAÇÕES" -url "https://wa.me/5561974039456?text=Pretendo%20renovar%20e/ou%20comprar%20chaves%20de%20acesso"
             MostrarMenuRenovacao -silent -produtosComMetodoEspecifico $produtosComMetodoEspecifico
-        } elseif ($opcao_renovacao -eq "D") {
-            Fazer-Login
-        } elseif ($opcao_renovacao -eq "V" -and $produtosComMetodoEspecifico) {
+        } elseif (($idiomaSelecionado -eq "pt" -and $opcao_renovacao-eq "D") -or ($idiomaSelecionado -eq "en" -and $opcao_renovacao -eq "L") -or ($idiomaSelecionado -eq "es" -and $opcao_renovacao -eq "C")) {
+            Fazer-Login -LoginStatus $false
+        } elseif (($idiomaSelecionado -eq "pt" -and $produtosComMetodoEspecifico -and $opcao_renovacao-eq "V") -or ($idiomaSelecionado -eq "en" -and $produtosComMetodoEspecifico -and $opcao_renovacao -eq "B") -or ($idiomaSelecionado -eq "es" -and $produtosComMetodoEspecifico -and $opcao_renovacao -eq "V")) {
             Show-Menu-Produto
         } elseif ($opcao_renovacao -eq "M") {
-            Show-Menu
+            Show-Menu -LoginStatus $true -UsuarioAtual $usuario_atual -SenhaAtual $senha_atual -TipoPlanoConta $plano_conta_atual
         } else {
         
             Write-Host ""
-            Write-Host "Opção inválida. Por favor, digite um número ou letra que seja válido." -ForegroundColor Red
+            Write-Host $($global:translations["DOInvalidOptionN1"]) -ForegroundColor Red
             Write-Host ""
 
             Start-Sleep -Seconds 3
@@ -1037,15 +3441,15 @@ function MostrarMenuRenovacao {
     
 }
 
-
 function Show-Menu-Produto {
-
+    
     param (
         [string]$UsuarioAtual,
         [string]$SenhaAtual,
         [string]$TipoPlanoConta
     )
     
+    Update-Title-WindowMenu -menuKey "SPMSelectProductMenu" # Atualiza o título para o menu principal
 
     # Variáveis para armazenar as informações do usuário
     $usuario_info = $null
@@ -1055,13 +3459,13 @@ function Show-Menu-Produto {
             # Obter o conteúdo do arquivo
             $conteudo = Invoke-RestMethod -Uri $url -ErrorAction Stop
         } catch {
-            Write-Host "Erro ao acessar a URL: $url" -ForegroundColor Red
+            Write-Host "     $($global:translations["DMAAlertMessageAccessContentURLNotFound"]): $url" -ForegroundColor Red
             continue
         }
         
         # Verificar se o conteúdo está vazio
         if ([string]::IsNullOrWhiteSpace($conteudo)) {
-            Write-Host "Conteúdo da URL $url está vazio ou não pôde ser obtido." -ForegroundColor Yellow
+            Write-Host "     $($global:translations["DMAAlertMessageGetContentURLNotFound"]): $url" -ForegroundColor Red
             continue
         }
 
@@ -1227,7 +3631,7 @@ function Show-Menu-Produto {
                                         # Obter o conteúdo do arquivo
                                         $conteudoProdutoDisponivel = Invoke-RestMethod -Uri $url_ProdutoDisponivel -ErrorAction Stop
                                     } catch {
-                                        Write-Host "Erro ao acessar a URL: $url_ProdutoDisponivel" -ForegroundColor Red
+                                        Write-Host "$($global:translations["DMAAlertMessageAccessContentURLNotFound"]): $url_ProdutoDisponivel" -ForegroundColor Red
                                         continue
                                     }
 
@@ -1258,11 +3662,15 @@ function Show-Menu-Produto {
                                                 
                                             }
 
+
                                         }
                                     }
                                 }
                             }
                         }
+
+                        # Carrega a linguagem de tradução / configuração atual
+                        $idiomaSelecionado = $global:language = Get-LanguageConfig
 
                         # Chamar a função para obter todas as categorias e produtos
                         $todasCategoriasProdutos = Get-Todas-Categorias-Produtos 
@@ -1272,25 +3680,43 @@ function Show-Menu-Produto {
 
                         $duracaoPlano = $products[0]["duracao_plano"]
 
+
                         function Show-Menu-Detalhes-Produto {
 
                             param (
                                 [string]$detalheslogin_senhadisplay = "***-***-***"
                             )
 
+                            # Traduções do Menu de Detalhes do Produto
+
+                            $returnDuracaoPlanoUsuarioTranslate = Translate-Text -Text $($usuario_info["duracao_plano"]) -TargetLanguage $idiomaSelecionado
+                            $returnStatusPagamentoTranslate = Translate-Text -Text $($usuario_info["status_pagamento"]) -TargetLanguage $idiomaSelecionado
+                            $returnDiasRestantesTranslate = Translate-Text -Text $dias_restantes -TargetLanguage $idiomaSelecionado
+
                             cls
+
+                            $fixedWidthMenuSelectProduct = 120  # Largura total da linha
+
+                            # Frase a ser centralizada
+                            $menuSelectProductTexto = $($global:translations["SPMSelectProductMenu"])
+                            $menuSelectProductTextoLength = $menuSelectProductTexto.Length
+
+                            # Calcula o número de espaços necessários para centralizar
+                            $spacesNeededMenuSelectProduct = [Math]::Max(([Math]::Floor(($fixedWidthMenuSelectProduct - $menuSelectProductTextoLength) / 2)), 0)
+                            $spacesMenuSelectProduct = " " * $spacesNeededMenuSelectProduct
+
                             Write-Host ""
-                            Write-Host "     ===============================================================================================================" -ForegroundColor Green
-                            Write-Host "                                               MENU DE SELEÇÃO DO PRODUTO                                           " -ForegroundColor Cyan
-                            Write-Host "     ===============================================================================================================" -ForegroundColor Green
-                            Write-Host ""
+                            Write-Host "     ================================================================================================================" -ForegroundColor Green
+                            Write-Host "$spacesMenuSelectProduct$menuSelectProductTexto" -ForegroundColor Cyan
+                            Write-Host "     ================================================================================================================" -ForegroundColor Green
+	                        Write-Host ""
 
                             Show-Menu-Detalhes-Login -UsuarioAtual $usuario_info["usuario"] -SenhaAtual $usuario_info["senha"] -TipoPlanoConta $usuario_info["tipo_plano"] -detalheslogin_senhadisplay $detalheslogin_senhadisplay -qtdvTotal $qtdvValues["qtdv_valor_atual"] -qtdvUtilizado $qtdvValues["qtdv_valor_utilizado"] -silent
                             
                             Write-Host ""
                             Write-Host "     ===============================================================================================================" -ForegroundColor Green
                             Write-Host ""
-                            Write-Host "      DETALHES DA CONTA: " -ForegroundColor Cyan
+                            Write-Host "      $($global:translations["SPMDetailstAccount"]): " -ForegroundColor Cyan
                             Write-Host ""
                             foreach ($categoria in $todasCategorias) {
 
@@ -1303,62 +3729,62 @@ function Show-Menu-Produto {
                                 
                             }
                             
-                            Write-Host -NoNewline "      QTD TOTAL CATEGORIAS DISPONÍVEIS: "
+                            Write-Host -NoNewline "      $($global:translations["SPMTotalQtdCategories"]): "
                             Write-Host "$total_categorias_disponiveis" -ForegroundColor Yellow
-                            Write-Host -NoNewline "      QTD TOTAL PRODUTOS DISPONÍVEIS: "
+                            Write-Host -NoNewline "      $($global:translations["SPMTotalQtdProducts"]): "
                             Write-Host "$total_quantidade_disponivel" -ForegroundColor Yellow
                             Write-Host ""
                                 if ($usuario_info["tipo_plano"] -eq "Membro") {
                                     Write-Host -NoNewline "      1 - " -ForegroundColor Green
-                                    Write-Host "PLANO ASSINATURA:" -ForegroundColor Yellow
+                                    Write-Host "$($global:translations["SPMSubscriptionPlan"]):" -ForegroundColor Yellow
                                     Write-Host ""
-                                    Write-Host -NoNewline "      DURAÇÃO PLANO: "
-                                    Write-Host "$($usuario_info["duracao_plano"])" -ForegroundColor Yellow
-                                    Write-Host -NoNewline "      DATA INÍCIO: "
+                                    Write-Host -NoNewline "      $($global:translations["SPMPlanDuration"]): "
+                                    Write-Host "$returnDuracaoPlanoUsuarioTranslate" -ForegroundColor Blue 
+                                    Write-Host -NoNewline "      $($global:translations["SPMStartDate"]): "
                                     Write-Host "$($usuario_info["data_inicio"])" -ForegroundColor Yellow
-                                    Write-Host -NoNewline "      DATA FIM: "
+                                    Write-Host -NoNewline "      $($global:translations["SPMEndDate"]): "
                                     Write-Host "$($usuario_info["data_termino"])" -ForegroundColor Yellow
                                     if ($data_atual -gt $data_termino -and -not $produtosComMetodoEspecifico) {
-                                        Write-Host -NoNewline "      DIAS RESTANTES: "
-                                        Write-Host "Nenhum" -ForegroundColor Red
-                                        Write-Host -NoNewline "      STATUS PAGAMENTO: "
-                                        Write-Host "Pendente" -ForegroundColor Red 
+                                        Write-Host -NoNewline "      $($global:translations["SPMRemainingDays"]): "
+                                        Write-Host $($global:translations["SPMDLANothing"]) -ForegroundColor Red
+                                        Write-Host -NoNewline "      $($global:translations["SPMPaymentStatus"]): "
+                                        Write-Host $($global:translations["SPMDLAPending"]) -ForegroundColor Red 
                                     } elseif ($data_atual -gt $data_termino -and $produtosComMetodoEspecifico) {
-                                        Write-Host -NoNewline "      DIAS RESTANTES: "
-                                        Write-Host "Nenhum" -ForegroundColor Red
-                                        Write-Host -NoNewline "      STATUS PAGAMENTO: "
-                                        Write-Host "Pendente" -ForegroundColor Red 
+                                        Write-Host -NoNewline "      $($global:translations["SPMRemainingDays"]): "
+                                        Write-Host $($global:translations["SPMDLANothing"]) -ForegroundColor Red
+                                        Write-Host -NoNewline "      $($global:translations["SPMPaymentStatus"]): "
+                                        Write-Host $($global:translations["SPMDLAPending"]) -ForegroundColor Red 
                                     } else {
-                                        Write-Host -NoNewline "      DIAS RESTANTES: "
-                                        Write-Host "$dias_restantes" -ForegroundColor Red
-                                        Write-Host -NoNewline "      STATUS PAGAMENTO: "
-                                        Write-Host "$($usuario_info["status_pagamento"])" -ForegroundColor Green
+                                        Write-Host -NoNewline "      $($global:translations["SPMRemainingDays"]): "
+                                        if($dias_restantes -eq 0 ) { Write-Host "$($global:translations["SPMDLALastDay"])" -ForegroundColor Red } else { Write-Host "$returnDiasRestantesTranslate" -ForegroundColor Blue }
+                                        Write-Host -NoNewline "      $($global:translations["SPMPaymentStatus"]): "
+                                        Write-Host "$returnStatusPagamentoTranslate" -ForegroundColor Green
                                     }
                                 } else {
                                     Write-Host -NoNewline "      1 - " -ForegroundColor Green
-                                    Write-Host "PLANO ASSINATURA:" -ForegroundColor Yellow
+                                    Write-Host "$($global:translations["SPMSubscriptionPlan"]):" -ForegroundColor Yellow
                                     Write-Host ""
-                                    Write-Host -NoNewline "      DURAÇÃO PLANO: "
-                                    Write-Host "$($usuario_info["duracao_plano"])" -ForegroundColor Yellow
-                                    Write-Host -NoNewline "      DATA INÍCIO: "
+                                    Write-Host -NoNewline "      $($global:translations["SPMPlanDuration"]): "
+                                    Write-Host "$returnDuracaoPlanoUsuarioTranslate" -ForegroundColor Blue
+                                    Write-Host -NoNewline "      $($global:translations["SPMStartDate"]): "
                                     Write-Host "$($usuario_info["data_inicio"])" -ForegroundColor Yellow
-                                    Write-Host -NoNewline "      DATA FIM: "
+                                    Write-Host -NoNewline "      $($global:translations["SPMEndDate"]): "
                                     Write-Host "$($usuario_info["data_termino"])" -ForegroundColor Yellow
                                     if ($data_atual -gt $data_termino -and -not $produtosComMetodoEspecifico) {
-                                        Write-Host -NoNewline "      DIAS RESTANTES: "
-                                        Write-Host "Nenhum" -ForegroundColor Red
-                                        Write-Host -NoNewline "      STATUS PAGAMENTO: "
-                                        Write-Host "Pendente" -ForegroundColor Red 
+                                        Write-Host -NoNewline "      $($global:translations["SPMRemainingDays"]): "
+                                        Write-Host $($global:translations["SPMDLANothing"]) -ForegroundColor Red 
+                                        Write-Host -NoNewline "      $($global:translations["SPMPaymentStatus"]): "
+                                        Write-Host $($global:translations["SPMDLAPending"]) -ForegroundColor Red 
                                     } elseif ($data_atual -gt $data_termino -and $produtosComMetodoEspecifico) {
-                                        Write-Host -NoNewline "      DIAS RESTANTES: "
-                                        Write-Host "Nenhum" -ForegroundColor Red
-                                        Write-Host -NoNewline "      STATUS PAGAMENTO: "
-                                        Write-Host "Pendente" -ForegroundColor Red 
+                                        Write-Host -NoNewline "      $($global:translations["SPMRemainingDays"]): "
+                                        Write-Host $($global:translations["SPMDLANothing"]) -ForegroundColor Red 
+                                        Write-Host -NoNewline "      $($global:translations["SPMPaymentStatus"]): "
+                                        Write-Host $($global:translations["SPMDLAPending"]) -ForegroundColor Red 
                                     } else {
-                                        Write-Host -NoNewline "      DIAS RESTANTES: "
-                                        if($dias_restantes -eq 0 ) { Write-Host "Último Dia" -ForegroundColor Red } else { Write-Host "$dias_restantes" -ForegroundColor Red }
-                                        Write-Host -NoNewline "      STATUS PAGAMENTO: "
-                                        Write-Host "$($usuario_info["status_pagamento"])" -ForegroundColor Green
+                                        Write-Host -NoNewline "      $($global:translations["SPMRemainingDays"]): "
+                                        if($dias_restantes -eq 0 ) { Write-Host "$($global:translations["SPMDLALastDay"])" -ForegroundColor Red } else { Write-Host "$returnDiasRestantesTranslate" -ForegroundColor Red }
+                                        Write-Host -NoNewline "      $($global:translations["SPMPaymentStatus"]): "
+                                        Write-Host "$returnStatusPagamentoTranslate" -ForegroundColor Green 
                                     }
                                 }
 
@@ -1379,11 +3805,13 @@ function Show-Menu-Produto {
                                 $quantidade_total = $todasCategoriasProdutos[$categoria] | Select-Object -Unique
                                 $quantidade_total_produtos = $quantidade_total.Count
 
+                                $returnCategoriaTranslate = Translate-Text -Text $categoria -TargetLanguage $idiomaSelecionado
+
                                 # Definir cores com base na disponibilidade de produtos
                                 if ($quantidade_disponivel -gt 0) {
-                                    Write-Host "     [$contador] - $categoria ($quantidade_disponivel/$quantidade_total_produtos)" -ForegroundColor Yellow
+                                    Write-Host "     [$contador] - $returnCategoriaTranslate ($quantidade_disponivel/$quantidade_total_produtos)" -ForegroundColor Yellow
                                 } else {
-                                    Write-Host "     [$contador] - $categoria ($quantidade_disponivel/$quantidade_total_produtos)" -ForegroundColor DarkGray
+                                    Write-Host "     [$contador] - $returnCategoriaTranslate ($quantidade_disponivel/$quantidade_total_produtos)" -ForegroundColor DarkGray
                                 }
                         
                                 $contador++
@@ -1392,20 +3820,20 @@ function Show-Menu-Produto {
                             if ($data_atual -gt $data_termino -and -not $produtosComMetodoEspecifico) {
                                 Write-Host ""
                                 Write-Host -NoNewline "     [R] - "  -ForegroundColor Green
-                                Write-Host "Renovar Plano Assinatura" -ForegroundColor Gray
+                                Write-Host $($global:translations["DORenewPlanMenuOption"]) -ForegroundColor Gray
                             } elseif ($data_atual -gt $data_termino -and $produtosComMetodoEspecifico) {
                                 Write-Host ""
                                 Write-Host -NoNewline "     [R] - "  -ForegroundColor Green
-                                Write-Host "Renovar Plano Assinatura" -ForegroundColor Gray
+                                Write-Host $($global:translations["DORenewPlanMenuOption"]) -ForegroundColor Gray
                             } else {
                                 Write-Host ""
                             }
-                            Write-Host -NoNewline "     [C] - "  -ForegroundColor Blue
-                            Write-Host "Visualizar Senha da Conta" -ForegroundColor Gray
-                            Write-Host -NoNewline "     [D] - "  -ForegroundColor Red
-                            Write-Host "Deslogar" -ForegroundColor Gray
+                            if ($idiomaSelecionado -eq "pt") { Write-Host -NoNewline "     [C] - "  -ForegroundColor Blue } elseif ($idiomaSelecionado -eq "en") { Write-Host -NoNewline "     [V] - "  -ForegroundColor Blue } elseif ($idiomaSelecionado -eq "es") { Write-Host -NoNewline "     [S] - "  -ForegroundColor Blue }
+                            Write-Host $($global:translations["DOViewAccountMenuOption"]) -ForegroundColor Gray
+                            if ($idiomaSelecionado -eq "pt") { Write-Host -NoNewline "     [D] - "  -ForegroundColor Red } elseif ($idiomaSelecionado -eq "en") { Write-Host -NoNewline "     [L] - "  -ForegroundColor Red } elseif ($idiomaSelecionado -eq "es") { Write-Host -NoNewline "     [C] - "  -ForegroundColor Red }
+                            Write-Host $($global:translations["DOLogoutMenuOption"]) -ForegroundColor Gray
                             Write-Host -NoNewline "     [M] - "  -ForegroundColor Cyan
-                            Write-Host "Menu Principal" -ForegroundColor Gray
+                            Write-Host $($global:translations["DOMainMenuOption"]) -ForegroundColor Gray
                             Write-Host ""
                             Write-Host "     ===============================================================================================================" -ForegroundColor Green
                             Write-Host ""
@@ -1415,38 +3843,44 @@ function Show-Menu-Produto {
                         # Exibe o menu de detalhes do produto
                         Show-Menu-Detalhes-Produto
 
-                        $opcao_categoria = Read-Host "Selecione a letra ou número de sua categoria disponível"
+                        $opcao_categoria = Read-Host $($global:translations["SPMChoiceOptionCategorieMenu"])
 
                         # Verificar se a opção é válida
                         $selecionadoValido = $false
             
-                        if ($opcao_categoria -eq "C") {
+                        if (($idiomaSelecionado -eq "pt" -and $opcao_categoria -eq "C") -or ($idiomaSelecionado -eq "en" -and $opcao_categoria -eq "V") -or ($idiomaSelecionado -eq "es" -and $opcao_categoria -eq "S")) {
 
                             $detalheslogin_senhadisplay = $usuario_info["senha"]
                             Show-Menu-Detalhes-Produto -detalheslogin_senhadisplay $detalheslogin_senhadisplay
                             Start-Sleep -Seconds 3
                             $selecionadoValido = $false
                            
-                        } elseif ($opcao_categoria -eq "D") {
-                            Fazer-Login
+                        } elseif (($idiomaSelecionado -eq "pt" -and $opcao_categoria -eq "D") -or ($idiomaSelecionado -eq "en" -and $opcao_categoria -eq "L") -or ($idiomaSelecionado -eq "es" -and $opcao_categoria -eq "C")) {
+                            Fazer-Login -LoginStatus $false
                         } elseif ($opcao_categoria -eq "M") {
-                            Show-Menu
+                            Show-Menu -LoginStatus $true -UsuarioAtual $usuario_atual -SenhaAtual $senha_atual -TipoPlanoConta $plano_conta_atual
                         } elseif ($opcao_categoria -eq "R" -and $data_atual -gt $data_termino -and $produtosComMetodoEspecifico) {
                             MostrarCabecalhoRenovacao
                             MostrarMenuRenovacao -silent -produtosComMetodoEspecifico $produtosComMetodoEspecifico
                         } elseif ($opcao_categoria -match '^\d+$' -and [int]$opcao_categoria -le $todasCategorias.Count) {
                             # Chamar a função Mostrar-Detalhes-Produto com o programa selecionado como parâmetro
                             $categoria_escolhida = $todasCategorias[[int]$opcao_categoria - 1]
+
+                            $returnCategoriaEscolhidaTranslate = Translate-Text -Text $categoria_escolhida -TargetLanguage $idiomaSelecionado
+
                             Write-Host ""
-                            Write-Host "Você selecionou a categoria: $categoria_escolhida" -ForegroundColor Green
+                            Write-Host "$($global:translations["SPMSelectedYouCategory"]): $returnCategoriaEscolhidaTranslate" -ForegroundColor Green
                             Write-Host ""
                             Show-Produtos-Categoria -UsuarioAtual $usuario_atual -SenhaAtual $senha_atual -CategoriaEscolhida $categoria_escolhida -CategoriasDisponiveis $categoriasDisponiveis -TipoPlanoConta $usuario_info["tipo_plano"] -DataAtual $data_atual -DataTermino $data_termino -ProdutosMetodoLiberado $produtosComMetodoEspecifico
                             # Show-Detail-Produto -CategoriaEscolhida $categoria_escolhida -ProdutosDisponiveis $categorias[$categoria_escolhida] -UsuarioAtual $usuario_atual
                         } else {
 
                             Write-Host ""
-                            Write-Host "Opção inválida. Por favor, digite um número ou letra que seja válido." -ForegroundColor Red
+                            Write-Host $($global:translations["DOInvalidOptionN1"]) -ForegroundColor Red
                             Write-Host ""
+                            
+                            Start-Sleep -Seconds 3
+
                             $selecionadoValido = $false
                             # Se nenhuma opção válida for selecionada, mostra o menu atual novamente
                             # Show-Menu-Produto
@@ -1456,7 +3890,7 @@ function Show-Menu-Produto {
 
             } else {
 
-                Write-Host "Usuário não encontrado." -ForegroundColor Red
+                Write-Host $($global:translations["DMAAlertMessageUserNotFound"]) -ForegroundColor Red
             
             }
           
@@ -1476,7 +3910,7 @@ function Get-Todas-Categorias-Produtos {
             # Obter o conteúdo do arquivo
             $conteudo = Invoke-RestMethod -Uri $url_produto -ErrorAction Stop
         } catch {
-            Write-Host "Erro ao acessar a URL: $url_produto" -ForegroundColor Red
+            Write-Host "     $($global:translations["DMAAlertMessageAccessContentURLNotFound"]): $url_produto" -ForegroundColor Red
             continue
         }
 
@@ -1524,7 +3958,7 @@ function Get-Todas-Categorias {
             # Obter o conteúdo do arquivo
             $conteudo = Invoke-RestMethod -Uri $url_produto -ErrorAction Stop
         } catch {
-            Write-Host "Erro ao acessar a URL: $url_produto" -ForegroundColor Red
+            Write-Host "     $($global:translations["DMAAlertMessageAccessContentURLNotFound"]): $url_produto" -ForegroundColor Red
             continue
         }
 
@@ -1565,32 +3999,47 @@ function Show-Produtos-Categoria {
         [hashtable[]]$ProdutosMetodoLiberado
     )
 
+    Update-Title-WindowMenu -menuKey "SPCMSelectProductCategoryMenu" -menuExt $CategoriaEscolhida # Atualiza o título para o menu principal
+
     $produtosDisponiveis = $CategoriasDisponiveis[$CategoriaEscolhida] | Sort-Object
 
     # Obter todos os produtos da categoria dos links externos
     $urlsProdutos = Get-Todos-Produtos
 
     $todosProdutosCategoria = @()
+
     foreach ($url in $urlsProdutos) {
         try {
             $conteudo = Invoke-RestMethod -Uri $url -ErrorAction Stop
             $produtos = $conteudo -split "`n"
             foreach ($produto in $produtos) {
                 $campos = $produto -split "\|"
-                if ($campos[1] -eq $CategoriaEscolhida ) {
-                    $todosProdutosCategoria += $campos[2]
+                if ($campos[1] -eq $CategoriaEscolhida) {
+                    $todosProdutosCategoria += $campos[2].Trim()
                 }
             }
         } catch {
-            Write-Host "Erro ao acessar a URL: $url" -ForegroundColor Red
+            Write-Host "$($global:translations["DMAAlertMessageAccessContentURLNotFound"]): $url" -ForegroundColor Red
         }
     }
 
     # Remover produtos disponíveis da lista de todos os produtos
     $produtosNaoDisponiveis = $todosProdutosCategoria | Sort-Object | Select-Object -Unique |  Where-Object { $_ -notin $produtosDisponiveis }
 
+
+    # Correção de Ajuste # 1 (Erro)
+    
+    # Erro
+    # $todosProdutos = $produtosDisponiveis + $produtosNaoDisponiveis
+    
     # Combinar os produtos disponíveis e não disponíveis em uma lista única
-    $todosProdutos = $produtosDisponiveis + $produtosNaoDisponiveis
+    $todosProdutos = @()
+
+    $todosProdutos += $produtosDisponiveis
+    $todosProdutos += $produtosNaoDisponiveis
+
+    # Remover itens vazios (caso existam)
+    $todosProdutos = $todosProdutos | Where-Object { $_ -ne "" }
 
     do {
 
@@ -1614,11 +4063,23 @@ function Show-Produtos-Categoria {
             }
 
             cls
+
+            $fixedWidthMenuSelectProductCategory = 120  # Largura total da linha
+
+            # Frase a ser centralizada
+            $menuSelectProductCategoryTexto = $($global:translations["SPCMSelectProductCategoryMenu"])
+            $menuSelectProductCategoryTextoLength = $menuSelectProductCategoryTexto.Length
+
+            # Calcula o número de espaços necessários para centralizar
+            $spacesNeededMenuSelectProductCategory = [Math]::Max(([Math]::Floor(($fixedWidthMenuSelectProductCategory - $menuSelectProductCategoryTextoLength) / 2)), 0)
+            $spacesMenuSelectProductCategory = " " * $spacesNeededMenuSelectProductCategory
+
             Write-Host ""
-            Write-Host "     ===============================================================================================================" -ForegroundColor Green
-            Write-Host "                                           MENU DE SELEÇÃO DO PRODUTO CATEGORIA                                     " -ForegroundColor Cyan
-            Write-Host "     ===============================================================================================================" -ForegroundColor Green
             Write-Host ""
+            Write-Host "     ================================================================================================================" -ForegroundColor Green
+            Write-Host "$spacesMenuSelectProductCategory$menuSelectProductCategoryTexto" -ForegroundColor Cyan
+            Write-Host "     ================================================================================================================" -ForegroundColor Green
+	        Write-Host ""
                                            
             Show-Menu-Detalhes-Login -UsuarioAtual $UsuarioAtual -SenhaAtual $SenhaAtual -TipoPlanoConta $TipoPlanoConta -detalheslogin_senhadisplay $detalheslogin_senhadisplay -qtdvTotal $qtdvValues["qtdv_valor_atual"] -qtdvUtilizado $qtdvValues["qtdv_valor_utilizado"]
             
@@ -1629,14 +4090,15 @@ function Show-Produtos-Categoria {
             Write-Host ""
             Write-Host "     ===============================================================================================================" -ForegroundColor Green
             Write-Host ""
-            Write-Host "      DETALHES DE PRODUTOS: " -ForegroundColor Cyan
+            Write-Host "      $($global:translations["SPCMDetailsProducts"]): " -ForegroundColor Cyan
             Write-Host ""
-                    Write-Host -NoNewline "      CATEGORIA SELECIONADA: "
+                    Write-Host -NoNewline "      $($global:translations["SPCMSelectCategory"]): "
                     #$nomeCategoria = $CategoriaEscolhida.ToUpper()
-                    Write-Host "$CategoriaEscolhida" -ForegroundColor Yellow
-                    Write-Host -NoNewline "      QTD PRODUTOS DISPONÍVEIS: "
+                    $returnCategoriaEscolhidaTranslate = Translate-Text -Text $CategoriaEscolhida -TargetLanguage $idiomaSelecionado
+                    Write-Host "$returnCategoriaEscolhidaTranslate" -ForegroundColor Yellow
+                    Write-Host -NoNewline "      $($global:translations["SPCMTotalAvailableProducts"]): "
                     Write-Host "$quantidade_produtos_disponiveis" -ForegroundColor Yellow
-                    Write-Host -NoNewline "      QTD TOTAL DE PRODUTOS: "
+                    Write-Host -NoNewline "      $($global:translations["SPCMTotalProducts"]): "
                     Write-Host "$quantidade_produtos_total" -ForegroundColor Yellow
             Write-Host ""
             Write-Host "     ===============================================================================================================" -ForegroundColor Green
@@ -1653,14 +4115,14 @@ function Show-Produtos-Categoria {
                 $contador++
             }
             Write-Host " "
-            Write-Host -NoNewline "     [C] - "  -ForegroundColor Blue
-            Write-Host "Visualizar Senha da Conta" -ForegroundColor Gray
-            Write-Host -NoNewline "     [D] - "  -ForegroundColor Red
-            Write-Host "Deslogar" -ForegroundColor Gray
-            Write-Host -NoNewline "     [V] - "  -ForegroundColor Cyan
-            Write-Host "Voltar" -ForegroundColor Gray
+            if ($idiomaSelecionado -eq "pt") { Write-Host -NoNewline "     [C] - "  -ForegroundColor Blue } elseif ($idiomaSelecionado -eq "en") { Write-Host -NoNewline "     [V] - "  -ForegroundColor Blue } elseif ($idiomaSelecionado -eq "es") { Write-Host -NoNewline "     [S] - "  -ForegroundColor Blue }
+            Write-Host $($global:translations["DOViewAccountMenuOption"]) -ForegroundColor Gray
+            if ($idiomaSelecionado -eq "pt") { Write-Host -NoNewline "     [D] - "  -ForegroundColor Red } elseif ($idiomaSelecionado -eq "en") { Write-Host -NoNewline "     [L] - "  -ForegroundColor Red } elseif ($idiomaSelecionado -eq "es") { Write-Host -NoNewline "     [C] - "  -ForegroundColor Red }
+            Write-Host $($global:translations["DOLogoutMenuOption"]) -ForegroundColor Gray
+            if ($idiomaSelecionado -eq "pt") { Write-Host -NoNewline "     [V] - "  -ForegroundColor Cyan } elseif ($idiomaSelecionado -eq "en") { Write-Host -NoNewline "     [B] - "  -ForegroundColor Cyan } elseif ($idiomaSelecionado -eq "es") { Write-Host -NoNewline "     [V] - "  -ForegroundColor Cyan }
+            Write-Host $($global:translations["DOGoBackMenuOption"]) -ForegroundColor Gray
             Write-Host -NoNewline "     [M] - "  -ForegroundColor Yellow
-            Write-Host "Menu Principal" -ForegroundColor Gray
+            Write-Host $($global:translations["DOMainMenuOption"]) -ForegroundColor Gray
             Write-Host ""
             Write-Host "     ===============================================================================================================" -ForegroundColor Green
             Write-Host ""
@@ -1670,7 +4132,7 @@ function Show-Produtos-Categoria {
         Show-Menu-Produtos-Disponiveis
 
         # Ler a seleção do usuário
-        $opcao_produto = Read-Host "Selecione a letra ou número do seu produto disponível"
+        $opcao_produto = Read-Host $($global:translations["SPCMChoiceOptionProductAvailable"])
         
         # Verificar se a opção é válida
         $selecionadoValido = $false
@@ -1680,32 +4142,35 @@ function Show-Produtos-Categoria {
             $produtoSelecionado = $todosProdutos[$opcao_produto - 1]
             if ($produtosDisponiveis -contains $produtoSelecionado) {
                 Write-Host ""
-                Write-Host "Você selecionou o produto: $produtoSelecionado" -ForegroundColor Green
+                Write-Host "$($global:translations["SPCMSelectedYouProduct"]): $produtoSelecionado" -ForegroundColor Green
                 Write-Host ""
                 # Aqui você pode adicionar a lógica para manipular a seleção do produto disponível
                 Show-Produtos-Metodos -UsuarioAtual $usuario_atual -SenhaAtual $senha_atual -CategoriaEscolhida $CategoriaEscolhida -ProdutoSelecionado $produtoSelecionado -TipoPlanoConta $TipoPlanoConta -DataAtual $DataAtual -DataTermino $DataTermino -ProdutosMetodoLiberado $ProdutosMetodoLiberado
                 $selecionadoValido = $true
             } else {
                 Write-Host ""
-                Write-Host "Produto não disponível para seleção." -ForegroundColor Red
+                Write-Host $($global:translations["SPCMProductNotFound"]) -ForegroundColor Red
+                Write-Host ""
                 Start-Sleep -Seconds 1
                 $selecionadoValido = $false
             }
-        } elseif ($opcao_produto -eq "C") {
+        } elseif (($idiomaSelecionado -eq "pt" -and $opcao_produto-eq "C") -or ($idiomaSelecionado -eq "en" -and $opcao_produto -eq "V") -or ($idiomaSelecionado -eq "es" -and $opcao_produto -eq "S")) {
             $detalheslogin_senhadisplay = $SenhaAtual
             Show-Menu-Produtos-Disponiveis -detalheslogin_senhadisplay $detalheslogin_senhadisplay
             Start-Sleep -Seconds 3
             $selecionadoValido = $false
-        } elseif ($opcao_produto -eq "D") {
-            Fazer-Login
-        } elseif ($opcao_produto -eq "V") {
+        } elseif (($idiomaSelecionado -eq "pt" -and $opcao_produto-eq "D") -or ($idiomaSelecionado -eq "en" -and $opcao_produto -eq "L") -or ($idiomaSelecionado -eq "es" -and $opcao_produto -eq "C")) {
+            Fazer-Login -LoginStatus $false
+        } elseif (($idiomaSelecionado -eq "pt" -and $opcao_produto-eq "V") -or ($idiomaSelecionado -eq "en" -and $opcao_produto -eq "B") -or ($idiomaSelecionado -eq "es" -and $opcao_produto -eq "V")) {
             Show-Menu-Produto
         } elseif ($opcao_produto -eq "M") {
-            Show-Menu
+            Show-Menu -LoginStatus $true -UsuarioAtual $usuario_atual -SenhaAtual $senha_atual -TipoPlanoConta $plano_conta_atual
         } else {
             Write-Host ""
-            Write-Host "Opção inválida. Por favor, digite um número ou letra que seja válido." -ForegroundColor Red
+            Write-Host $($global:translations["DOInvalidOptionN1"]) -ForegroundColor Red
             Write-Host ""
+
+            Start-Sleep -Seconds 3
             $selecionadoValido = $false
         }
 
@@ -1725,6 +4190,8 @@ function Show-Produtos-Metodos {
         [DateTime]$DataTermino,
         [hashtable[]]$ProdutosMetodoLiberado
     )
+    
+    Update-Title-WindowMenu -menuKey "SMPMSelectMethodsProductMenu" -menuExt $ProdutoSelecionado # Atualiza o título para o menu principal
 
     do {
 
@@ -1739,13 +4206,13 @@ function Show-Produtos-Metodos {
                 # Obter o conteúdo do arquivo
                 $conteudo = Invoke-RestMethod -Uri $url -ErrorAction Stop
             } catch {
-                Write-Host "Erro ao acessar a URL: $url" -ForegroundColor Red
+                Write-Host "     $($global:translations["DMAAlertMessageAccessContentURLNotFound"]): $url" -ForegroundColor Red
                 continue
             }
         
             # Verificar se o conteúdo está vazio
             if ([string]::IsNullOrWhiteSpace($conteudo)) {
-                Write-Host "Conteúdo da URL $url está vazio ou não pôde ser obtido." -ForegroundColor Yellow
+                Write-Host "     $($global:translations["DMAAlertMessageGetContentURLNotFound"]): $url" -ForegroundColor Red
                 continue
             }
 
@@ -1829,7 +4296,7 @@ function Show-Produtos-Metodos {
                                     # Obter o conteúdo do arquivo
                                     $conteudoProdutoDisponivel = Invoke-RestMethod -Uri $urlsProduto -ErrorAction Stop
                                 } catch {
-                                    Write-Host "Erro ao acessar a URL: $urlsProduto" -ForegroundColor Red
+                                    Write-Host "$($global:translations["DMAAlertMessageAccessContentURLNotFound"]): $urlsProduto" -ForegroundColor Red
                                     continue
                                 }
 
@@ -1909,7 +4376,7 @@ function Show-Produtos-Metodos {
 
                 } else {
 
-                    Write-Host "Usuário não encontrado." -ForegroundColor Red
+                    Write-Host $($global:translations["DMAAlertMessageUserNotFound"]) -ForegroundColor Red
             
                 }
 
@@ -1933,26 +4400,38 @@ function Show-Produtos-Metodos {
                     }
 
                     cls
+                   
+                    $fixedWidthMenuSelectMethodsProduct = 120  # Largura total da linha
+
+                    # Frase a ser centralizada
+                    $menuSelectMethodsProductTexto = $($global:translations["SMPMSelectMethodsProductMenu"])
+                    $menuSelectMethodsProductTextoLength = $menuSelectMethodsProductTexto.Length
+
+                    # Calcula o número de espaços necessários para centralizar
+                    $spacesNeededMenuSelectMethodsProduct = [Math]::Max(([Math]::Floor(($fixedWidthMenuSelectMethodsProduct - $menuSelectMethodsProductTextoLength) / 2)), 0)
+                    $spacesMenuSelectMethodsProduct = " " * $spacesNeededMenuSelectMethodsProduct
+
                     Write-Host ""
-                    Write-Host "     ===============================================================================================================" -ForegroundColor Green
-                    Write-Host "                                              MENU DE SELEÇÃO MÉTODOS PRODUTO                                       " -ForegroundColor Cyan
-                    Write-Host "     ===============================================================================================================" -ForegroundColor Green
-                    Write-Host ""
+                    Write-Host "     ================================================================================================================" -ForegroundColor Green
+                    Write-Host "$spacesMenuSelectMethodsProduct$menuSelectMethodsProductTexto" -ForegroundColor Cyan
+                    Write-Host "     ================================================================================================================" -ForegroundColor Green
+	                Write-Host ""
                     
                     Show-Menu-Detalhes-Login -UsuarioAtual $UsuarioAtual -SenhaAtual $SenhaAtual -TipoPlanoConta $TipoPlanoConta -detalheslogin_senhadisplay $detalheslogin_senhadisplay -qtdvTotal $qtdvValues["qtdv_valor_atual"] -qtdvUtilizado $qtdvValues["qtdv_valor_utilizado"]
                     
                     Write-Host ""
                     Write-Host "     ===============================================================================================================" -ForegroundColor Green
                     Write-Host ""
-                    Write-Host "      DETALHES MÉTODO DE ATIVAÇÃO: " -ForegroundColor Cyan
+                    Write-Host "      $($global:translations["SMPMDetailsMethodActivate"]): " -ForegroundColor Cyan
                     Write-Host ""
-                            Write-Host -NoNewline "      CATEGORIA SELECIONADA: "
-                            Write-Host "$CategoriaEscolhida" -ForegroundColor Yellow
-                            Write-Host -NoNewline "      PRODUTO SELECIONADO: "
+                            Write-Host -NoNewline "      $($global:translations["SMPMSelectedCategory"]): "
+                            $returnCategoriaEscolhidaTranslate = Translate-Text -Text $CategoriaEscolhida -TargetLanguage $idiomaSelecionado
+                            Write-Host "$returnCategoriaEscolhidaTranslate" -ForegroundColor Yellow
+                            Write-Host -NoNewline "      $($global:translations["SMPMSelectedProduct"]): "
                             Write-Host "$ProdutoSelecionado" -ForegroundColor Yellow
-                            Write-Host -NoNewline "      QTD MÉTODOS DISPONÍVEIS: "
+                            Write-Host -NoNewline "      $($global:translations["SMPMQtdAvailableMethods"]): "
                             Write-Host "$quantidade_metodos_disponiveis" -ForegroundColor Yellow
-                            Write-Host -NoNewline "      QTD TOTAL MÉTODOS: "
+                            Write-Host -NoNewline "      $($global:translations["SMPMTotalQtdMethods"]): "
                             Write-Host "$quantidade_metodos_total" -ForegroundColor Yellow
                     Write-Host ""
                     Write-Host "     ===============================================================================================================" -ForegroundColor Green
@@ -1964,12 +4443,14 @@ function Show-Produtos-Metodos {
                     foreach ($metodo_categoria in $todosMetodos[$categoria_escolhida]) {
                         
                         $produtos_metodos_disponiveis = if ($metodosDisponiveis.ContainsKey($metodo_categoria)) { $metodosDisponiveis[$metodo_categoria] } else { @() }
+                        
+                        $returnMetodoCategoriaTranslate = Translate-Text -Text $metodo_categoria -TargetLanguage $idiomaSelecionado
 
                         # Definir cores com base na disponibilidade dos métodos
                         if ($produtos_metodos_disponiveis -gt 1) {
-                            Write-Host "     [$contador] - $metodo_categoria" -ForegroundColor Yellow
+                            Write-Host "     [$contador] - $returnMetodoCategoriaTranslate" -ForegroundColor Yellow
                         } else {
-                            Write-Host "     [$contador] - $metodo_categoria" -ForegroundColor DarkGray
+                            Write-Host "     [$contador] - $returnMetodoCategoriaTranslate" -ForegroundColor DarkGray
                         }
 
                         $contador++
@@ -1977,14 +4458,14 @@ function Show-Produtos-Metodos {
                     }
 
                     Write-Host ""
-                    Write-Host -NoNewline "     [C] - "  -ForegroundColor Blue
-                    Write-Host "Visualizar Senha da Conta" -ForegroundColor Gray
-                    Write-Host -NoNewline "     [D] - "  -ForegroundColor Red
-                    Write-Host "Deslogar" -ForegroundColor Gray
-                    Write-Host -NoNewline "     [V] - "  -ForegroundColor Cyan
-                    Write-Host "Voltar" -ForegroundColor Gray
+                    if ($idiomaSelecionado -eq "pt") { Write-Host -NoNewline "     [C] - "  -ForegroundColor Blue } elseif ($idiomaSelecionado -eq "en") { Write-Host -NoNewline "     [V] - "  -ForegroundColor Blue } elseif ($idiomaSelecionado -eq "es") { Write-Host -NoNewline "     [S] - "  -ForegroundColor Blue }
+                    Write-Host $($global:translations["DOViewAccountMenuOption"]) -ForegroundColor Gray
+                    if ($idiomaSelecionado -eq "pt") { Write-Host -NoNewline "     [D] - "  -ForegroundColor Red } elseif ($idiomaSelecionado -eq "en") { Write-Host -NoNewline "     [L] - "  -ForegroundColor Red } elseif ($idiomaSelecionado -eq "es") { Write-Host -NoNewline "     [C] - "  -ForegroundColor Red }
+                    Write-Host $($global:translations["DOLogoutMenuOption"]) -ForegroundColor Gray
+                    if ($idiomaSelecionado -eq "pt") { Write-Host -NoNewline "     [V] - "  -ForegroundColor Cyan } elseif ($idiomaSelecionado -eq "en") { Write-Host -NoNewline "     [B] - "  -ForegroundColor Cyan } elseif ($idiomaSelecionado -eq "es") { Write-Host -NoNewline "     [V] - "  -ForegroundColor Cyan }
+                    Write-Host $($global:translations["DOGoBackMenuOption"]) -ForegroundColor Gray
                     Write-Host -NoNewline "     [M] - "  -ForegroundColor Yellow
-                    Write-Host "Menu Principal" -ForegroundColor Gray
+                    Write-Host $($global:translations["DOMainMenuOption"]) -ForegroundColor Gray
                     Write-Host ""
                     Write-Host "     ===============================================================================================================" -ForegroundColor Green
                     Write-Host ""
@@ -1994,7 +4475,7 @@ function Show-Produtos-Metodos {
                 # Exibe o menu de detalhes de metodos dos produtos
                 Show-Menu-Metodos-Produtos
 
-                $opcao_metodo = Read-Host "Selecione a letra ou número do método disponível para seu $ProdutoSelecionado"
+                $opcao_metodo = Read-Host "$($global:translations["SMPMChoiceOptionMethodsProductMenu"]) $ProdutoSelecionado"
                 
                 # Verificar se a opção é válida
                 $selecionadoValido = $false
@@ -2002,38 +4483,42 @@ function Show-Produtos-Metodos {
                 if ($opcao_metodo -match '^\d+$' -and [int]$opcao_metodo -ge 1 -and [int]$opcao_metodo -le $todosMetodos[$categoria_escolhida].Count) {
                     # Chamar a função Mostrar-Detalhes-Produto com o produto selecionado como parâmetro
                     $metodo_escolhido = $todosMetodos[$categoria_escolhida][$opcao_metodo - 1]
+
+                    $returnMetodoEscolhidoTranslate = Translate-Text -Text $metodo_escolhido -TargetLanguage $idiomaSelecionado
+
                     if ($metodosDisponiveis.Keys -contains $metodo_escolhido) {
                         Write-Host ""
-                        Write-Host "Você selecionou o método: $metodo_escolhido" -ForegroundColor Green 
+                        Write-Host "$($global:translations["SMPMSelectedYouMethod"]): $returnMetodoEscolhidoTranslate" -ForegroundColor Green 
                         Write-Host ""
                         # Aqui você pode adicionar a lógica para manipular a seleção do produto disponível
                         Show-Detail-Produto-Geral -UsuarioAtual $usuario_atual -SenhaAtual $senha_atual -CategoriaEscolhida $CategoriaEscolhida -ProdutoSelecionado $produtoSelecionado -MetodoSelecionado $metodo_escolhido -TipoPlanoConta $TipoPlanoConta -DataAtual $DataAtual -DataTermino $DataTermino -ProdutosMetodoLiberado $ProdutosMetodoLiberado
                         $selecionadoValido = $true 
                     } else {
                         Write-Host ""
-                        Write-Host "Método não disponível para o seu $ProdutoSelecionado" -ForegroundColor Red
+                        Write-Host "$($global:translations["SMPMMethodNotFound"]) $ProdutoSelecionado" -ForegroundColor Red
                         Write-Host ""
                         Start-Sleep -Seconds 1
                         $selecionadoValido = $false
                         # Se nenhuma opção válida for selecionada, mostra o menu atual novamente
                     }
-                } elseif ($opcao_metodo -eq "C") {
+                } elseif (($idiomaSelecionado -eq "pt" -and $opcao_metodo -eq "C") -or ($idiomaSelecionado -eq "en" -and $opcao_metodo -eq "V") -or ($idiomaSelecionado -eq "es" -and $opcao_metodo -eq "S")) {
                     
                     $detalheslogin_senhadisplay = $usuario_info["senha"]
                     Show-Menu-Metodos-Produtos -detalheslogin_senhadisplay $detalheslogin_senhadisplay
                     Start-Sleep -Seconds 3
                     $selecionadoValido = $false
 
-                } elseif ($opcao_metodo -eq "D") {
-                    Fazer-Login
-                } elseif ($opcao_metodo -eq "V") {
+                } elseif (($idiomaSelecionado -eq "pt" -and $opcao_metodo -eq "D") -or ($idiomaSelecionado -eq "en" -and $opcao_metodo -eq "L") -or ($idiomaSelecionado -eq "es" -and $opcao_metodo -eq "C")) {
+                    Fazer-Login -LoginStatus $false
+                } elseif (($idiomaSelecionado -eq "pt" -and $opcao_metodo -eq "V") -or ($idiomaSelecionado -eq "en" -and $opcao_metodo -eq "B") -or ($idiomaSelecionado -eq "es" -and $opcao_metodo -eq "V")) {
                     Show-Produtos-Categoria -UsuarioAtual $usuario_atual -SenhaAtual $senha_atual -CategoriaEscolhida $categoria_escolhida -CategoriasDisponiveis $categoriasDisponiveis -TipoPlanoConta $usuario_info["tipo_plano"] -DataAtual $DataAtual -DataTermino $DataTermino -ProdutosMetodoLiberado $ProdutosMetodoLiberado
                 } elseif ($opcao_metodo -eq "M") {
-                    Show-Menu
+                    Show-Menu -LoginStatus $true -UsuarioAtual $usuario_atual -SenhaAtual $senha_atual -TipoPlanoConta $plano_conta_atual
                 } else {
                     Write-Host ""
-                    Write-Host "Opção inválida. Por favor, digite um número válido." -ForegroundColor Red
+                    Write-Host $($global:translations["DOInvalidOptionN1"]) -ForegroundColor Red
                     Write-Host ""
+                    Start-Sleep -Seconds 3
                     $selecionadoValido = $false
                     # Se nenhuma opção válida for selecionada, mostra o menu atual novamente
                     # Show-Produtos-Metodos -UsuarioAtual $usuario_atual -SenhaAtual $senha_atual -ProdutoSelecionado $produtoSelecionado
@@ -2062,7 +4547,7 @@ function Get-Todos-Metodos {
             # Obter o conteúdo do arquivo
             $conteudo = Invoke-RestMethod -Uri $url_metodo -ErrorAction Stop
         } catch {
-            Write-Host "Erro ao acessar a URL: $url_metodo" -ForegroundColor Red
+            Write-Host "     $($global:translations["DMAAlertMessageAccessContentURLNotFound"]): $url_metodo" -ForegroundColor Red
             continue
         }
 
@@ -2114,6 +4599,8 @@ function Show-Detail-Produto-Geral {
         [hashtable[]]$ProdutosMetodoLiberado
     )
 
+    Update-Title-WindowMenu -menuKey "DPMDetailsProductsMenu" -menuExt $ProdutoSelecionado # Atualiza o título para o menu principal
+
     do {
 
         # URLs para obter todos os usuarios nas urls
@@ -2139,7 +4626,7 @@ function Show-Detail-Produto-Geral {
                 # Obter o conteúdo do arquivo
                 $conteudo_produto = Invoke-RestMethod -Uri $url -ErrorAction Stop
             } catch {
-                Write-Host "Erro ao acessar a URL: $url" -ForegroundColor Red
+                Write-Host "     $($global:translations["DMAAlertMessageAccessContentURLNotFound"]): $url" -ForegroundColor Red
                 continue
             }
             
@@ -2477,7 +4964,7 @@ function Show-Detail-Produto-Geral {
                 # Obter o conteúdo do arquivo
                 $conteudo_usuario = Invoke-RestMethod -Uri $url -ErrorAction Stop
             } catch {
-                Write-Host "Erro ao acessar a URL: $url" -ForegroundColor Red
+                Write-Host "     $($global:translations["DMAAlertMessageAccessContentURLNotFound"]): $url" -ForegroundColor Red
                 continue
             }
         
@@ -2573,6 +5060,7 @@ function Show-Detail-Produto-Geral {
 
                             # Adicionar o produto diretamente à lista de produtos disponíveis
                             $produtosctdigitalDisponiveis = @{
+                                
                                 "nome_produto" = $nome_produto
                                 "categoria_produto" = $categoria_produto
                                 "metodo_ativacao_produto" = $metodo_ativacao_produto
@@ -2604,7 +5092,7 @@ function Show-Detail-Produto-Geral {
                                     if ($null -ne $produto_scriptmodding_softwares_info) { $produto_scriptmodding_softwares_info["metodo_ativacao"] }
                                 ) | Where-Object { $_ -ne $null } | Select-Object -First 1
                                 
-                                $produtosctdigitalDisponiveis = @{
+                                $produtosctdigitalDisponiveis = @{ # Altera aqui
                                     "nome_produto" = "$nome_produto_scriptmodding_vip_disponivel"
                                     "categoria_produto" = "$categoria_produto_scriptmodding_vip_disponivel"
                                     "metodo_ativacao_produto" = "$metodo_ativacao_produto_scriptmodding_vip_disponivel"
@@ -2636,7 +5124,7 @@ function Show-Detail-Produto-Geral {
                                     if ($null -ne $produto_digital_vpns_info) { $produto_digital_vpns_info["metodo_ativacao"] }
                                 ) | Where-Object { $_ -ne $null } | Select-Object -First 1
 
-                                $produtosctdigitalDisponiveis = @{
+                                $produtosctdigitalDisponiveis = @{ 
                                     "nome_produto" = "$nome_produto_streaming_vpn_vip_disponivel"
                                     "categoria_produto" = "$categoria_produto_streaming_vpn_vip_disponivel"
                                     "metodo_ativacao_produto" = "$metodo_ativacao_produto_streaming_vpn_vip_disponivel"
@@ -2663,7 +5151,7 @@ function Show-Detail-Produto-Geral {
                     if ($produtosctdigitalDisponiveis -ne $null -and $produtosctdigitalDisponiveis.Count -gt 0) {
 
                         foreach ($produtoctdigitalDisponivel in $produtosctdigitalDisponiveis) {
-                           # resolver esse erro!
+                           # resolver esse erro! # Altera aqui
                            if ($produtoctdigitalDisponivel["data_termino_ctdigital"] -ne "Nenhum" -and $data_atual_ctdigital -gt $data_termino_ctdigital) {
 
                                 MostrarCabecalhoRenovacao
@@ -2674,7 +5162,7 @@ function Show-Detail-Produto-Geral {
                                 # Pré-Ativado (Softwares e Licenças) e Chave/Serial (Softwares e Licenças) 
                           
                                 # - Detalhes Produto
-                        
+
                                 $produtoctdigital_qtd_installdisp_simult = @(
                                     if ($null -ne $produto_scriptmodding_softwares_info) { $produto_scriptmodding_softwares_info["qtd_installdisp_simult"] }
                                 ) | Where-Object { $_ -ne $null } | Select-Object -First 1
@@ -2744,7 +5232,7 @@ function Show-Detail-Produto-Geral {
                                     if ($null -ne $produto_digital_softwares_info) { $produto_digital_softwares_info["qtd_acessusuarios_simult"] }
                                     if ($null -ne $produto_chaveserial_softwares_info) { $produto_chaveserial_softwares_info["qtd_acessusuarios_simult"] }
                                 ) | Where-Object { $_ -ne $null } | Select-Object -First 1
-                        
+
                                 # - Dados de Acesso
 
                                 $produtoctdigital_usuario = @(
@@ -2863,7 +5351,7 @@ function Show-Detail-Produto-Geral {
                                     if ($null -ne $produto_digital_streaming_info) { $produto_digital_streaming_info["instrucoes_usoativacao"] }
                                     if ($null -ne $produto_digital_vpns_info) { $produto_digital_vpns_info["instrucoes_usoativacao"] }
                                 ) | Where-Object { $_ -ne $null } | Select-Object -First 1
-                        
+
                                 # - Dados de Acesso
 
                                 $produtoctdigital_usuarioassinatura = @(
@@ -2918,7 +5406,6 @@ function Show-Detail-Produto-Geral {
                                     if ($null -ne $produto_digital_vpns_info) { $produto_digital_vpns_info["link_imagemprintconta"] }
                                 ) | Where-Object { $_ -ne $null } | Select-Object -First 1
 
-                        
                                 if($produtoctdigital_tempoesperaentrega -ne "Nenhum" -or 
                                 ($produtoctdigital_tempoesperaentrega -eq "Nenhum" -and $produtoctdigital_statusdisponibilidade -eq "Pendente") -or 
                                 $produtoctdigital_statusdisponibilidade -eq "Pendente"){
@@ -2938,7 +5425,7 @@ function Show-Detail-Produto-Geral {
 
                                             # Retorna um TimeSpan padrão de 30 minutos em caso de formato inválido
                                             Write-Host ""
-                                            Write-Host "     Formato de tempo inválido e nenhum estado salvo encontrado. Usando valor padrão de 30 minutos." -ForegroundColor Yellow
+                                            Write-Host "     $($global:translations["DTDFomartTimeInvalid"])" -ForegroundColor Yellow
                                             Write-Host ""
                                             Start-Sleep -Seconds 5
                                             return [timespan]::FromMinutes(30)
@@ -3026,13 +5513,24 @@ function Show-Detail-Produto-Geral {
                                             }
                                         }
 
-                                        # Função para mostrar o cabeçalho
                                         function MostrarCabecalhoTemporizador {
+                                            # Função para mostrar o cabeçalho
+
+                                            $fixedWidthMenuDetailsProducts = 120  # Largura total da linha
+
+                                            # Frase a ser centralizada
+                                            $menuDetailsProductsTexto = $($global:translations["DPMDetailsProductsMenu"])
+                                            $menuDetailsProductsTextoLength = $menuDetailsProductsTexto.Length
+
+                                            # Calcula o número de espaços necessários para centralizar
+                                            $spacesNeededMenuDetailsProducts = [Math]::Max(([Math]::Floor(($fixedWidthMenuDetailsProducts - $menuDetailsProductsTextoLength) / 2)), 0)
+                                            $spacesMenuDetailsProducts = " " * $spacesNeededMenuDetailsProducts
+
                                             Write-Host ""
                                             Write-Host "     ================================================================================================================" -ForegroundColor Green
-                                            Write-Host "                                               MENU DE DETALHES DO PRODUTO                                           " -ForegroundColor Cyan
+                                            Write-Host "$spacesMenuDetailsProducts$menuDetailsProductsTexto" -ForegroundColor Cyan
                                             Write-Host "     ================================================================================================================" -ForegroundColor Green
-                                            Write-Host ""
+	                                        Write-Host ""
                                         }
 
                                         # Função para mostrar o menu
@@ -3040,7 +5538,7 @@ function Show-Detail-Produto-Geral {
 
                                             $nome_produto = $ProdutoSelecionado.ToUpper()
                                             $produtoctdigital_statusdisplay = if ($produtoctdigital_statusdisponibilidade -eq "Entregue") {
-                                                                                    "Pendente"
+                                                                                    "Entre"
                                                                               } else {
                                                                                     "$produtoctdigital_statusdisponibilidade"
                                                                               }
@@ -3048,26 +5546,26 @@ function Show-Detail-Produto-Geral {
                                             Write-Host ""
                                             Write-Host ""
                                             Write-Host "     ================================================================================================================" -ForegroundColor Green
-                                            Write-Host "      DETALHES DA ENTREGA DO $nome_produto" -ForegroundColor Cyan  
+                                            Write-Host "      $($global:translations["DTDDeliveryDetails"]) $nome_produto" -ForegroundColor Cyan  
                                             Write-Host ""  
-                                            Write-Host -NoNewline "      TEMPO ESPERA ENTREGA: "  -ForegroundColor White
+                                            Write-Host -NoNewline "      $($global:translations["DTDDeliveryWaiting"]): "  -ForegroundColor White
                                             Write-Host "$produtoctdigital_tempoesperaentrega_timespan" -ForegroundColor Yellow
-                                            Write-Host -NoNewline "      STATUS DISPONIBILIDADE: "  -ForegroundColor White
+                                            Write-Host -NoNewline "      $($global:translations["DTDAvailabilityStatus"]): "  -ForegroundColor White
                                             Write-Host "$produtoctdigital_statusdisplay" -ForegroundColor Yellow
-                                            Write-Host -NoNewline "      DISPONIBILIDADE PRODUTO: "  -ForegroundColor White
+                                            Write-Host -NoNewline "      $($global:translations["DTDProductAvailability"]): "  -ForegroundColor White
                                             Write-Host "$produtoctdigital_disponibilidadeproduto" -ForegroundColor Yellow
                                             Write-Host "     ================================================================================================================" -ForegroundColor Green
                                             Write-Host ""
-                                            Write-Host -NoNewline "     [D] - "  -ForegroundColor Red
-                                            Write-Host "Deslogar" -ForegroundColor Gray
-                                            Write-Host -NoNewline "     [V] - "  -ForegroundColor Cyan
-                                            Write-Host "Voltar" -ForegroundColor Gray
+                                            if ($idiomaSelecionado -eq "pt") { Write-Host -NoNewline "     [D] - "  -ForegroundColor Red } elseif ($idiomaSelecionado -eq "en") { Write-Host -NoNewline "     [L] - "  -ForegroundColor Red } elseif ($idiomaSelecionado -eq "es") { Write-Host -NoNewline "     [C] - "  -ForegroundColor Red }
+                                            Write-Host $($global:translations["DOLogoutMenuOption"]) -ForegroundColor Gray
+                                            if ($idiomaSelecionado -eq "pt") { Write-Host -NoNewline "     [V] - "  -ForegroundColor Cyan } elseif ($idiomaSelecionado -eq "en") { Write-Host -NoNewline "     [B] - "  -ForegroundColor Cyan } elseif ($idiomaSelecionado -eq "es") { Write-Host -NoNewline "     [V] - "  -ForegroundColor Cyan }
+                                            Write-Host $($global:translations["DOGoBackMenuOption"]) -ForegroundColor Gray
                                             Write-Host -NoNewline "     [M] - "  -ForegroundColor Yellow
-                                            Write-Host "Menu Principal" -ForegroundColor Gray
+                                            Write-Host $($global:translations["DOMainMenuOption"]) -ForegroundColor Gray
                                             Write-Host ""
                                             Write-Host "     ================================================================================================================" -ForegroundColor Green
                                             Write-Host ""
-                                            Write-Host "Pressione a tecla de sua opção desejada:" -ForegroundColor White
+                                            Write-Host "$($global:translations["DOInvalidOptionN1"]):" -ForegroundColor White
                                         }
 
                                         # Função principal para mostrar o tempo restante
@@ -3079,15 +5577,15 @@ function Show-Detail-Produto-Geral {
                                             $minutos_restantes = $tempo_restante.Minutes
                                             $segundos_restantes = $tempo_restante.Seconds
 
-                                            Write-Host -NoNewline "      TEMPO RESTANTE PARA ENTREGA: "  -ForegroundColor White
+                                            Write-Host -NoNewline "      $($global:translations["DTDTimeLeftDelivery"]): "  -ForegroundColor White
                                             Write-Host -NoNewline "$horas_restantes" -ForegroundColor White
-                                            Write-Host -NoNewline " Horas" -ForegroundColor Yellow
+                                            Write-Host -NoNewline " $($global:translations["DTDHoursTiming"])" -ForegroundColor Yellow
                                             Write-Host -NoNewline " /" -ForegroundColor Cyan
                                             Write-Host -NoNewline " $minutos_restantes" -ForegroundColor White
-                                            Write-Host -NoNewline " Minutos" -ForegroundColor Yellow
+                                            Write-Host -NoNewline " $($global:translations["DTDMinutesTiming"])" -ForegroundColor Yellow
                                             Write-Host -NoNewline " /" -ForegroundColor Cyan
                                             Write-Host -NoNewline " $segundos_restantes" -ForegroundColor White
-                                            Write-Host -NoNewline " Segundos" -ForegroundColor Yellow
+                                            Write-Host -NoNewline " $($global:translations["DTDSecondsTiming"])" -ForegroundColor Yellow
                                             Write-Host ""
                                         }
 
@@ -3122,19 +5620,58 @@ function Show-Detail-Produto-Geral {
 
                                                 if ($Host.UI.RawUI.KeyAvailable) {
                                                     $input = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown").Character
-                                                    switch ($input) {
-                                                        'D' {
-                                                            Fazer-Login
+
+                                                    if ($idiomaSelecionado -eq "pt") {
+                                                        
+                                                        switch ($input) {
+                                                            'D' {
+                                                                Fazer-Login -LoginStatus $false
+                                                            }
+                                                            'V' {
+                                                                Show-Produtos-Metodos -UsuarioAtual $usuario_atual -SenhaAtual $senha_atual -CategoriaEscolhida $CategoriaEscolhida -ProdutoSelecionado $produtoSelecionado -TipoPlanoConta $TipoPlanoConta -DataAtual $DataAtual -DataTermino $DataTermino -ProdutosMetodoLiberado $ProdutosMetodoLiberado
+                                                            }
+                                                            'M' {
+                                                                Show-Menu -LoginStatus $true -UsuarioAtual $usuario_atual -SenhaAtual $senha_atual -TipoPlanoConta $plano_conta_atual
+                                                            }
+                                                            default {
+                                                                Write-Host $($global:translations["DOInvalidOptionN1"])
+                                                            }
                                                         }
-                                                        'V' {
-                                                            Show-Produtos-Metodos -UsuarioAtual $usuario_atual -SenhaAtual $senha_atual -CategoriaEscolhida $CategoriaEscolhida -ProdutoSelecionado $produtoSelecionado -TipoPlanoConta $TipoPlanoConta -DataAtual $DataAtual -DataTermino $DataTermino -ProdutosMetodoLiberado $ProdutosMetodoLiberado
+
+                                                    } elseif ($idiomaSelecionado -eq "en") {
+
+                                                        switch ($input) { 
+                                                            'L' {
+                                                                Fazer-Login -LoginStatus $false
+                                                            }
+                                                            'B' {
+                                                                Show-Produtos-Metodos -UsuarioAtual $usuario_atual -SenhaAtual $senha_atual -CategoriaEscolhida $CategoriaEscolhida -ProdutoSelecionado $produtoSelecionado -TipoPlanoConta $TipoPlanoConta -DataAtual $DataAtual -DataTermino $DataTermino -ProdutosMetodoLiberado $ProdutosMetodoLiberado
+                                                            }
+                                                            'M' {
+                                                                Show-Menu -LoginStatus $true -UsuarioAtual $usuario_atual -SenhaAtual $senha_atual -TipoPlanoConta $plano_conta_atual
+                                                            }
+                                                            default {
+                                                                Write-Host $($global:translations["DOInvalidOptionN1"])
+                                                            }
                                                         }
-                                                        'M' {
-                                                            Show-Menu
+
+                                                    } elseif ($idiomaSelecionado -eq "es") {
+                                                    
+                                                        switch ($input) { 
+                                                            'C' {
+                                                                Fazer-Login -LoginStatus $false
+                                                            }
+                                                            'V' {
+                                                                Show-Produtos-Metodos -UsuarioAtual $usuario_atual -SenhaAtual $senha_atual -CategoriaEscolhida $CategoriaEscolhida -ProdutoSelecionado $produtoSelecionado -TipoPlanoConta $TipoPlanoConta -DataAtual $DataAtual -DataTermino $DataTermino -ProdutosMetodoLiberado $ProdutosMetodoLiberado
+                                                            }
+                                                            'M' {
+                                                                Show-Menu -LoginStatus $true -UsuarioAtual $usuario_atual -SenhaAtual $senha_atual -TipoPlanoConta $plano_conta_atual
+                                                            }
+                                                            default {
+                                                                Write-Host $($global:translations["DOInvalidOptionN1"])
+                                                            }
                                                         }
-                                                        default {
-                                                            Write-Host "Opção inválida."
-                                                        }
+
                                                     }
                                                 }
 
@@ -3153,14 +5690,14 @@ function Show-Detail-Produto-Geral {
                                                 Clear-Host
                                                 MostrarCabecalhoTemporizador
                                                 Write-Host ""
-                                                Write-Host "      O prazo do tempo de entrega chegou ao fim!"  -ForegroundColor Green
+                                                Write-Host "      $($global:translations["DTDEndDeliveryTime"])"  -ForegroundColor Green
                                                 Write-Host ""
                                                 Write-Host -NoNewline "       * " -ForegroundColor Cyan
-                                                Write-Host "Volte e selecione novamente o método de ativação do seu $ProdutoSelecionado." -ForegroundColor Yellow
+                                                Write-Host "$($global:translations["DTDBackSelectMethodActivated"]) $ProdutoSelecionado ." -ForegroundColor Yellow
                                                 Write-Host -NoNewline "       * " -ForegroundColor Cyan
-                                                Write-Host "Ou faça o login em sua conta novamente." -ForegroundColor Yellow
+                                                Write-Host "$($global:translations["DTDTryLoginAccount"])." -ForegroundColor Yellow
                                                 Write-Host ""
-                                                Write-Host "      O temporizador pode reiniciar, se o produto ainda não estiver disponível para entrega."  -ForegroundColor Red
+                                                Write-Host "      $($global:translations["DTDProductRebootTiming"])"  -ForegroundColor Red
                                                 # Mostrar o menu abaixo do temporizador
                                                 MostrarMenuTemporizador
 
@@ -3169,22 +5706,63 @@ function Show-Detail-Produto-Geral {
 
                                                     if ($Host.UI.RawUI.KeyAvailable) {
                                                         $input = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown").Character
-                                                        switch ($input) {
-                                                            'D' {
-                                                                Fazer-Login
+                                                        if ($idiomaSelecionado -eq "pt") {
+
+                                                            switch ($input) {
+                                                                'D' {
+                                                                    Fazer-Login -LoginStatus $false
                                                 
-                                                            }
-                                                            'V' {
-                                                                Show-Produtos-Metodos -UsuarioAtual $usuario_atual -SenhaAtual $senha_atual -CategoriaEscolhida $CategoriaEscolhida -ProdutoSelecionado $produtoSelecionado -TipoPlanoConta $TipoPlanoConta -DataAtual $DataAtual -DataTermino $DataTermino -ProdutosMetodoLiberado $ProdutosMetodoLiberado
+                                                                }
+                                                                'V' {
+                                                                    Show-Produtos-Metodos -UsuarioAtual $usuario_atual -SenhaAtual $senha_atual -CategoriaEscolhida $CategoriaEscolhida -ProdutoSelecionado $produtoSelecionado -TipoPlanoConta $TipoPlanoConta -DataAtual $DataAtual -DataTermino $DataTermino -ProdutosMetodoLiberado $ProdutosMetodoLiberado
                                                 
-                                                            }
-                                                            'M' {
-                                                                Show-Menu
+                                                                }
+                                                                'M' {
+                                                                    Show-Menu -LoginStatus $true -UsuarioAtual $usuario_atual -SenhaAtual $senha_atual -TipoPlanoConta $plano_conta_atual
                                                 
+                                                                }
+                                                                default {
+                                                                    Write-Host $($global:translations["DOInvalidOptionN1"])
+                                                                }
                                                             }
-                                                            default {
-                                                                Write-Host "Opção inválida."
+
+                                                        } elseif ($idiomaSelecionado -eq "en") {
+
+                                                            switch ($input) {
+                                                                'L' {
+                                                                    Fazer-Login -LoginStatus $false
+                                                
+                                                                }
+                                                                'B' {
+                                                                    Show-Produtos-Metodos -UsuarioAtual $usuario_atual -SenhaAtual $senha_atual -CategoriaEscolhida $CategoriaEscolhida -ProdutoSelecionado $produtoSelecionado -TipoPlanoConta $TipoPlanoConta -DataAtual $DataAtual -DataTermino $DataTermino -ProdutosMetodoLiberado $ProdutosMetodoLiberado
+                                                
+                                                                }
+                                                                'M' {
+                                                                    Show-Menu -LoginStatus $true -UsuarioAtual $usuario_atual -SenhaAtual $senha_atual -TipoPlanoConta $plano_conta_atual
+                                                
+                                                                }
+                                                                default {
+                                                                    Write-Host $($global:translations["DOInvalidOptionN1"])
+                                                                }
                                                             }
+
+                                                        } elseif ($idiomaSelecionado -eq "es") {
+                                                    
+                                                            switch ($input) { 
+                                                                'C' {
+                                                                    Fazer-Login -LoginStatus $false
+                                                                }
+                                                                'V' {
+                                                                    Show-Produtos-Metodos -UsuarioAtual $usuario_atual -SenhaAtual $senha_atual -CategoriaEscolhida $CategoriaEscolhida -ProdutoSelecionado $produtoSelecionado -TipoPlanoConta $TipoPlanoConta -DataAtual $DataAtual -DataTermino $DataTermino -ProdutosMetodoLiberado $ProdutosMetodoLiberado
+                                                                }
+                                                                'M' {
+                                                                    Show-Menu -LoginStatus $true -UsuarioAtual $usuario_atual -SenhaAtual $senha_atual -TipoPlanoConta $plano_conta_atual
+                                                                }
+                                                                default {
+                                                                    Write-Host $($global:translations["DOInvalidOptionN1"])
+                                                                }
+                                                            }
+
                                                         }
                                                     }
                                                 }
@@ -3196,8 +5774,8 @@ function Show-Detail-Produto-Geral {
 
                                     } catch {
                                         Write-Host ""
-                                        Write-Host "     Ocorreu um erro: $_" -ForegroundColor Red
-                                        Write-Host "     Por favor, tente novamente." -ForegroundColor Yellow
+                                        Write-Host "     $($global:translations["DTDErrorOccurred"]): $_" -ForegroundColor Red
+                                        Write-Host "     $($global:translations["DTDPleaseTryAgain"])" -ForegroundColor Yellow
                                         Write-Host ""
                                     }
                                 } elseif($produtoctdigital_tempoesperaentrega -eq "Nenhum" -and $produtoctdigital_statusdisponibilidade -eq "Entregue") {
@@ -3325,18 +5903,21 @@ function Show-Detail-Produto-Geral {
                                         param (
                                             [string]$qtdvIndividualTotal,
                                             [switch]$silent
-                                        )
+                                        ) 
+                                        
+                                        $qtdvIndividualTotal_produto_translate = Translate-Text -Text $qtdvIndividualTotal -TargetLanguage $idiomaSelecionado
 
                                         if(-not $silent) {
                                             
-                                            Write-Host -NoNewline "      QTD DOWNLOAD E VISUALIZAÇÕES: "
+                                            Write-Host -NoNewline "      $($global:translations["VTIMQTDV"]): " 
                                             
                                             if ($qtdvIndividualTotal -eq "Ilimitado") {
-                                                Write-Host "$qtdvIndividualTotal" -ForegroundColor Cyan
+                                                
+                                                Write-Host "$qtdvIndividualTotal_produto_translate" -ForegroundColor Cyan
                                             } elseif($qtdvIndividualTotal -ne 0) {
-                                                Write-Host "$qtdvIndividualTotal" -ForegroundColor Yellow
+                                                Write-Host "$qtdvIndividualTotal_produto_translate" -ForegroundColor Yellow
                                             } else {
-                                                Write-Host "Nenhum" -ForegroundColor Red
+                                                Write-Host $($global:translations["VTIMNothing"]) -ForegroundColor Red 
                                             }
 
                                         }
@@ -3398,6 +5979,33 @@ function Show-Detail-Produto-Geral {
                                         }
                                     }
 
+                                    # Traduções para o menu
+                                    
+                                    $produtoctdigital_beneficios = Translate-Text -Text $produtoctdigital_beneficios -TargetLanguage $idiomaSelecionado
+                                    $produtoctdigital_regrasuso = Translate-Text -Text $produtoctdigital_regrasuso -TargetLanguage $idiomaSelecionado
+                                    $produtoctdigital_instrucoes_usoativacao = Translate-Text -Text $produtoctdigital_instrucoes_usoativacao -TargetLanguage $idiomaSelecionado
+
+                                    $categoria_produto_translate = Translate-Text -Text $($produtoctdigitalDisponivel['categoria_produto']) -TargetLanguage $idiomaSelecionado
+                                    $metodo_produto_translate = Translate-Text -Text $($produtoctdigitalDisponivel['metodo_ativacao_produto']) -TargetLanguage $idiomaSelecionado
+                                    $capacidadearmazenamento_produto_translate = Translate-Text -Text $produtoctdigital_capacidade_armazenamento -TargetLanguage $idiomaSelecionado
+                                    $compatdispositivos_produto_translate = Translate-Text -Text $produtoctdigital_compatibilidade_dispositivos -TargetLanguage $idiomaSelecionado
+                                    $statuspagamento_produto_translate = Translate-Text -Text $($produtoctdigitalDisponivel['status_pagamento']) -TargetLanguage $idiomaSelecionado
+                                    $diasgarantiasuporte_produto_translate = Translate-Text -Text $produtoctdigital_dias_garantia_suporte -TargetLanguage $idiomaSelecionado
+                                    $statuspagamento_produto_translate = Translate-Text -Text $($produtoctdigitalDisponivel['status_pagamento']) -TargetLanguage $idiomaSelecionado
+                                    $statusrenovacao_produto_translate = Translate-Text -Text $produtoctdigital_status_renovacao -TargetLanguage $idiomaSelecionado
+                                    $tempoesperaentrega_produto_translate = Translate-Text -Text $produtoctdigital_tempoesperaentrega -TargetLanguage $idiomaSelecionado
+                                    $statusdisponibilidade_produto_translate = Translate-Text -Text $produtoctdigital_statusdisponibilidade -TargetLanguage $idiomaSelecionado
+                                    $disponibilidadeproduto_produto_translate = Translate-Text -Text $produtoctdigital_disponibilidadeproduto -TargetLanguage $idiomaSelecionado
+                                    $duracaoplano_produto_translate = Translate-Text -Text $($produtoctdigitalDisponivel['duracao_plano']) -TargetLanguage $idiomaSelecionado
+                                    $datainicio_produto_translate = Translate-Text -Text $($produtoctdigitalDisponivel['data_inicio_ctdigital']) -TargetLanguage $idiomaSelecionado
+                                    $datatermino_produto_translate = Translate-Text -Text $($produtoctdigitalDisponivel['data_termino_ctdigital']) -TargetLanguage $idiomaSelecionado
+                                    $diasrestantes_produto_translate = Translate-Text -Text $($produtoctdigitalDisponivel['dias_restantes_ctdigital']) -TargetLanguage $idiomaSelecionado
+                                    $produtoctdigital_telapinlock = Translate-Text -Text "$produtoctdigital_telapinlock" -TargetLanguage $idiomaSelecionado
+                                    $produtoctdigital_chavekey = Translate-Text -Text "$produtoctdigital_chavekey" -TargetLanguage $idiomaSelecionado
+                                    $produtoctdigital_usuario = Translate-Text -Text "$produtoctdigital_usuario" -TargetLanguage $idiomaSelecionado
+                                    $produtoctdigital_tipo_conta = Translate-Text -Text $produtoctdigital_tipo_conta -TargetLanguage $idiomaSelecionado
+                                    # if ($idiomaSelecionado -eq "en" -and $produtoctdigital_tipo_conta -eq "Privada" ) { $produtoctdigital_tipo_conta = "Privado"; $produtoctdigital_tipo_conta = Translate-Text -Text $produtoctdigital_tipo_conta -TargetLanguage $idiomaSelecionado }
+
                                     $beneficios_array = $produtoctdigital_beneficios -split ":"
                                     $regrasuso_array = $produtoctdigital_regrasuso -split ":"
                                     $instrucoes_usoativacao_array = $produtoctdigital_instrucoes_usoativacao -split ":"
@@ -3418,167 +6026,201 @@ function Show-Detail-Produto-Geral {
                                         )
 
                                         cls
+
+                                        $fixedWidthMenuDetailsProducts = 120  # Largura total da linha
+
+                                        # Frase a ser centralizada
+                                        $menuDetailsProductsTexto = $($global:translations["DPMDetailsProductsMenu"])
+                                        $menuDetailsProductsTextoLength = $menuDetailsProductsTexto.Length
+
+                                        # Calcula o número de espaços necessários para centralizar
+                                        $spacesNeededMenuDetailsProducts = [Math]::Max(([Math]::Floor(($fixedWidthMenuDetailsProducts - $menuDetailsProductsTextoLength) / 2)), 0)
+                                        $spacesMenuDetailsProducts = " " * $spacesNeededMenuDetailsProducts
+
                                         Write-Host ""
                                         Write-Host "     ================================================================================================================" -ForegroundColor Green
-                                        Write-Host "                                               MENU DE DETALHES DO PRODUTO                                           " -ForegroundColor Cyan
+                                        Write-Host "$spacesMenuDetailsProducts$menuDetailsProductsTexto" -ForegroundColor Cyan
                                         Write-Host "     ================================================================================================================" -ForegroundColor Green
+	                                    Write-Host ""
+                                        Write-Host "      $($global:translations["DPMDetailsProductTitle"]): " -ForegroundColor Cyan
                                         Write-Host ""
-                                        Write-Host "      DETALHES DO PRODUTO: " -ForegroundColor Cyan
-                                        Write-Host ""
-                                        Write-Host -NoNewline "      NOME DO PRODUTO: "
+                                        Write-Host -NoNewline "      $($global:translations["DPMNameProduct"]): "
                                         Write-Host "$($produtoctdigitalDisponivel['nome_produto'])" -ForegroundColor Yellow
-                                        Write-Host -NoNewline "      CATEGORIA DO PRODUTO: "
-                                        Write-Host "$($produtoctdigitalDisponivel['categoria_produto'])" -ForegroundColor Yellow
-                                        Write-Host -NoNewline "      MÉTODO DE ATIVAÇÃO: "
-                                        Write-Host "$($produtoctdigitalDisponivel['metodo_ativacao_produto'])" -ForegroundColor Yellow
+                                        Write-Host -NoNewline "      $($global:translations["DPMCategoryProduct"]): "
+                                        Write-Host "$categoria_produto_translate" -ForegroundColor Yellow
+                                        Write-Host -NoNewline "      $($global:translations["DPMMethodActivateProduct"]): "
+                                        Write-Host "$metodo_produto_translate" -ForegroundColor Yellow
                                         if ($CategoriaEscolhida -eq "Streaming") {
-                                            Write-Host -NoNewline "      TIPO CONTA: "
+                                            Write-Host -NoNewline "      $($global:translations["DPMTypeAccount"]): "
                                             Write-Host "$produtoctdigital_tipo_conta" -ForegroundColor Yellow
-                                            Write-Host -NoNewline "      QUANTIDADE DE TELAS: "
+                                            Write-Host -NoNewline "      $($global:translations["DPMQTDScreen"]): "
                                             Write-Host "$produtoctdigital_qtd_telas" -ForegroundColor Yellow
-                                            Write-Host -NoNewline "      QTD ACESSO DISP. SIMULTÂNEOS: "
+                                            Write-Host -NoNewline "      $($global:translations["DPMQTDAccessDispSimult"]): "
                                             Write-Host "$produtoctdigital_qtd_acessdisp_simult" -ForegroundColor Yellow
                                         } elseif($CategoriaEscolhida -eq "Softwares e Licenças" -and $MetodoSelecionado -eq "Conta Digital") {
-                                            Write-Host -NoNewline "      TIPO CONTA: "
+                                            Write-Host -NoNewline "      $($global:translations["DPMTypeAccount"]): "
                                             Write-Host "$produtoctdigital_tipo_conta" -ForegroundColor Yellow
-                                            Write-Host -NoNewline "      ANO PRODUTO: "
+                                            Write-Host -NoNewline "      $($global:translations["DPMYearProduct"]): "
                                             Write-Host "$produtoctdigital_ano_produto" -ForegroundColor Yellow
-                                            Write-Host -NoNewline "      VERSÃO ATUAL: "
+                                            Write-Host -NoNewline "      $($global:translations["DPMCurrentVersion"]): "
                                             Write-Host "$produtoctdigital_versao_atual" -ForegroundColor Yellow
-                                            Write-Host -NoNewline "      VERSÃO DISPONÍVEL: "
+                                            Write-Host -NoNewline "      $($global:translations["DPMAvailableVersion"]): "
                                             Write-Host "$produtoctdigital_versao_disponivel" -ForegroundColor Yellow
-                                            Write-Host -NoNewline "      SISTEMA OPERACIONAL: "
+                                            Write-Host -NoNewline "      $($global:translations["DPMOperatingSytem"]): "
                                             Write-Host "$produtoctdigital_sistema_operacional" -ForegroundColor Yellow
-                                            Write-Host -NoNewline "      CAPACIDADE ARMAZENAMENTO: "
-                                            Write-Host "$produtoctdigital_capacidade_armazenamento" -ForegroundColor Yellow
-                                            Write-Host -NoNewline "      QTD ACESSO USUÁRIOS SIMULTÂNEOS: "
+                                            Write-Host -NoNewline "      $($global:translations["DPMStorageCapacity"]): "
+                                            Write-Host "$capacidadearmazenamento_produto_translate" -ForegroundColor Yellow
+                                            Write-Host -NoNewline "      $($global:translations["DPMQTDUsersAccessSimult"]): "
                                             Write-Host "$produtoctdigital_qtd_acessusuarios_simult" -ForegroundColor Yellow
-                                            Write-Host -NoNewline "      QTD ACESSO DISP. SIMULTÂNEOS: "
+                                            Write-Host -NoNewline "      $($global:translations["DPMQTDDispAccessSimult"]): "
                                             Write-Host "$produtoctdigital_qtd_acessdisp_simult" -ForegroundColor Yellow
                                         } elseif($CategoriaEscolhida -eq "Softwares e Licenças" -and $MetodoSelecionado -eq "Chave/Serial") {
-                                            Write-Host -NoNewline "      TIPO CONTA: "
+                                            Write-Host -NoNewline "      $($global:translations["DPMTypeAccount"]): "
                                             Write-Host "$produtoctdigital_tipo_conta" -ForegroundColor Yellow
-                                            Write-Host -NoNewline "      ANO PRODUTO: "
+                                            Write-Host -NoNewline "      $($global:translations["DPMYearProduct"]): "
                                             Write-Host "$produtoctdigital_ano_produto" -ForegroundColor Yellow
-                                            Write-Host -NoNewline "      VERSÃO ATUAL: "
+                                            Write-Host -NoNewline "      $($global:translations["DPMCurrentVersion"]): "
                                             Write-Host "$produtoctdigital_versao_atual" -ForegroundColor Yellow
-                                            Write-Host -NoNewline "      VERSÃO DISPONÍVEL: "
+                                            Write-Host -NoNewline "      $($global:translations["DPMAvailableVersion"]): "
                                             Write-Host "$produtoctdigital_versao_disponivel" -ForegroundColor Yellow
-                                            Write-Host -NoNewline "      SISTEMA OPERACIONAL: "
+                                            Write-Host -NoNewline "      $($global:translations["DPMOperatingSytem"]): "
                                             Write-Host "$produtoctdigital_sistema_operacional" -ForegroundColor Yellow
-                                            Write-Host -NoNewline "      CAPACIDADE ARMAZENAMENTO: "
-                                            Write-Host "$produtoctdigital_capacidade_armazenamento" -ForegroundColor Yellow
-                                            Write-Host -NoNewline "      QTD ACESSO USUÁRIOS SIMULTÂNEOS: "
+                                            Write-Host -NoNewline "      $($global:translations["DPMStorageCapacity"]): "
+                                            Write-Host "$capacidadearmazenamento_produto_translate" -ForegroundColor Yellow
+                                            Write-Host -NoNewline "      $($global:translations["DPMQTDUsersAccessSimult"]): "
                                             Write-Host "$produtoctdigital_qtd_acessusuarios_simult" -ForegroundColor Yellow
                                         } elseif($CategoriaEscolhida -eq "Softwares e Licenças" -and $MetodoSelecionado -eq "Pré-Ativado") {
-                                            Write-Host -NoNewline "      ANO PRODUTO: "
+                                            Write-Host -NoNewline "      $($global:translations["DPMYearProduct"]): "
                                             Write-Host "$produtoctdigital_ano_produto" -ForegroundColor Yellow
-                                            Write-Host -NoNewline "      VERSÃO ATUAL: "
+                                            Write-Host -NoNewline "      $($global:translations["DPMCurrentVersion"]): "
                                             Write-Host "$produtoctdigital_versao_atual" -ForegroundColor Yellow
-                                            Write-Host -NoNewline "      VERSÃO DISPONÍVEL: "
+                                            Write-Host -NoNewline "      $($global:translations["DPMAvailableVersion"]): "
                                             Write-Host "$produtoctdigital_versao_disponivel" -ForegroundColor Yellow
-                                            Write-Host -NoNewline "      SISTEMA OPERACIONAL: "
+                                            Write-Host -NoNewline "      $($global:translations["DPMOperatingSytem"]): "
                                             Write-Host "$produtoctdigital_sistema_operacional" -ForegroundColor Yellow
-                                            Write-Host -NoNewline "      QTD INSTALAÇÕES DISP. SIMULTÂNEOS: "
+                                            Write-Host -NoNewline "      $($global:translations["DPMQTDInstDispSimult"]): "
                                             Write-Host "$produtoctdigital_qtd_installdisp_simult" -ForegroundColor Yellow
-                                            Write-Host -NoNewline "      QTD ACESSO DISP. SIMULTÂNEOS: "
+                                            Write-Host -NoNewline "      $($global:translations["DPMQTDDispAccessSimult"]): "
                                             Write-Host "$produtoctdigital_qtd_acessdisp_simult" -ForegroundColor Yellow
                                         } elseif($CategoriaEscolhida -eq "VPNs") {
-                                            Write-Host -NoNewline "      TIPO CONTA: "
+                                            Write-Host -NoNewline "      $($global:translations["DPMTypeAccount"]): "
                                             Write-Host "$produtoctdigital_tipo_conta" -ForegroundColor Yellow
-                                            Write-Host -NoNewline "      SISTEMA OPERACIONAL: "
+                                            Write-Host -NoNewline "      $($global:translations["DPMOperatingSytem"]): "
                                             Write-Host "$produtoctdigital_sistema_operacional" -ForegroundColor Yellow
-                                            Write-Host -NoNewline "      QTD ACESSO USUÁRIOS SIMULTÂNEOS: "
+                                            Write-Host -NoNewline "      $($global:translations["DPMQTDUsersAccessSimult"]): "
                                             Write-Host "$produtoctdigital_qtd_acessusuarios_simult" -ForegroundColor Yellow
-                                            Write-Host -NoNewline "      QTD ACESSO DISP. SIMULTÂNEOS: "
+                                            Write-Host -NoNewline "      $($global:translations["DPMQTDDispAccessSimult"]): "
                                             Write-Host "$produtoctdigital_qtd_acessdisp_simult" -ForegroundColor Yellow
                                         }
-                                        Write-Host -NoNewline "      COMPATIBILIDADE DISPOSITIVOS: "
-                                        Write-Host "$produtoctdigital_compatibilidade_dispositivos" -ForegroundColor Yellow
+                                        Write-Host -NoNewline "      $($global:translations["DPMDeviceCompatibility"]): "
+                                        Write-Host "$compatdispositivos_produto_translate" -ForegroundColor Yellow
                                         if ($CategoriaEscolhida -eq "Softwares e Licenças" -and $MetodoSelecionado -eq "Pré-Ativado") {
-                                            Write-Host -NoNewline "      DURAÇÃO GARANTIA SUPORTE: "
+                                            Write-Host -NoNewline "      $($global:translations["DPMSupportDuration"]): "
                                             Write-Host "$produtoctdigital_duracao_garantia_suporte" -ForegroundColor Yellow
-                                            Write-Host -NoNewline "      STATUS PAGAMENTO: "
-                                            Write-Host "$($produtoctdigitalDisponivel['status_pagamento'])" -ForegroundColor Yellow
-                                            Write-Host -NoNewline "      STATUS ATUALIZAÇÃO/RENOVAÇÃO: "
+                                            Write-Host -NoNewline "      $($global:translations["DPMPaymentStatus"]): "
+                                            Write-Host "$statuspagamento_produto_translate" -ForegroundColor Yellow
+                                            Write-Host -NoNewline "      $($global:translations["DPMUpdateRenewalStatus"]): "
                                             Write-Host "$produtoctdigital_status_atualizacao_renovacao" -ForegroundColor Yellow
                                             # Write-Host "$($produtoctdigitalDisponivel['qtdv_produto'])" -ForegroundColor Yellow
                                             Update-QTDVIndividualMenu -qtdvIndividualTotal $qtdvIndividualValues["qtdv_valor_atual"]
                                         } else {
-                                            Write-Host -NoNewline "      DIAS GARANTIA SUPORTE: "
-                                            Write-Host "$produtoctdigital_dias_garantia_suporte" -ForegroundColor Yellow
-                                            Write-Host -NoNewline "      STATUS PAGAMENTO: "
-                                            Write-Host "$($produtoctdigitalDisponivel['status_pagamento'])" -ForegroundColor Yellow
-                                            Write-Host -NoNewline "      STATUS RENOVAÇÃO: "
-                                            Write-Host "$produtoctdigital_status_renovacao" -ForegroundColor Yellow
+                                            Write-Host -NoNewline "      $($global:translations["DPMDaysSupport"]): "
+                                            Write-Host "$diasgarantiasuporte_produto_translate" -ForegroundColor Yellow
+                                            Write-Host -NoNewline "      $($global:translations["DPMPaymentStatus"]): "
+                                            if($($produtoctdigitalDisponivel['status_pagamento']) -eq "Pendente") {
+                                                Write-Host "$statuspagamento_produto_translate" -ForegroundColor Red
+                                            } else {
+                                                Write-Host "$statuspagamento_produto_translate" -ForegroundColor Green
+                                            }
+                                            Write-Host -NoNewline "      $($global:translations["DPMRenewalStatus"]): "
+                                            if($produtoctdigital_status_renovacao -eq "Aprovado") {
+                                                Write-Host "$statusrenovacao_produto_translate" -ForegroundColor Green
+                                            } else {
+                                                Write-Host "$statusrenovacao_produto_translate" -ForegroundColor Red
+                                            }
                                             # Write-Host "$($produtoctdigitalDisponivel['qtdv_produto'])" -ForegroundColor Yellow
                                             Update-QTDVIndividualMenu -qtdvIndividualTotal $qtdvIndividualValues["qtdv_valor_atual"]
                                         }
                                         Write-Host ""
-                                        Write-Host "      DETALHES DE ENTREGA: " -ForegroundColor Cyan
+                                        Write-Host "      $($global:translations["DPMEDeliveryDetails"]): " -ForegroundColor Cyan
                                         Write-Host ""
-                                        Write-Host -NoNewline "      PRAZO DE ENTREGA DO PRODUTO: "
-                                        Write-Host "$produtoctdigital_tempoesperaentrega" -ForegroundColor Yellow
-                                        Write-Host -NoNewline "      STATUS DE ENTREGA DO PRODUTO: "
-                                        Write-Host "$produtoctdigital_statusdisponibilidade" -ForegroundColor Yellow
-                                        Write-Host -NoNewline "      STATUS DE DISPONIBILIDADE DO PRODUTO: "
-                                        Write-Host "$produtoctdigital_disponibilidadeproduto" -ForegroundColor Yellow
+                                        Write-Host -NoNewline "      $($global:translations["DPMEProductDeliveryTime"]): "
+                                        if ($produtoctdigital_tempoesperaentrega -eq "Nenhum") {
+                                            Write-Host "$tempoesperaentrega_produto_translate" -ForegroundColor Red  
+                                        } else {
+                                            Write-Host "$tempoesperaentrega_produto_translate" -ForegroundColor Yellow
+                                        }
+                                        Write-Host -NoNewline "      $($global:translations["DPMEProductDeliveryStatus"]): "
+                                        if ($produtoctdigital_statusdisponibilidade -eq "Entregue") {
+                                            Write-Host "$statusdisponibilidade_produto_translate" -ForegroundColor Green
+                                        } else {
+                                            Write-Host "$statusdisponibilidade_produto_translate" -ForegroundColor Yellow
+                                        }
+                                        Write-Host -NoNewline "      $($global:translations["DPMEProductAvailabilityStatus"]): "
+                                        if ($produtoctdigital_disponibilidadeproduto -eq "Online") {
+                                            Write-Host "$disponibilidadeproduto_produto_translate" -ForegroundColor Green
+                                        } else {
+                                            Write-Host "$disponibilidadeproduto_produto_translate" -ForegroundColor Yellow
+                                        }
                                         if ($MetodoSelecionado -eq "Conta Digital" -or $MetodoSelecionado -eq "Chave/Serial" -or $MetodoSelecionado -eq "Pré-Ativado") {
                                             Write-Host ""
                                             Write-Host "     ===============================================================================================================" -ForegroundColor Magenta
                                             if ($($produtoctdigitalDisponivel['duracao_plano']) -eq "Vitalício"){
-                                                Write-Host -NoNewline "      DURAÇÃO DO PLANO: "
-                                                Write-Host "$($produtoctdigitalDisponivel['duracao_plano'])" -ForegroundColor Cyan
+                                                Write-Host -NoNewline "      $($global:translations["DPMEPlanDurantion"]): "
+                                                Write-Host "$duracaoplano_produto_translate" -ForegroundColor Cyan
                                             } else {
-                                                Write-Host -NoNewline "      DURAÇÃO DO PLANO: "
-                                                Write-Host "$($produtoctdigitalDisponivel['duracao_plano'])" -ForegroundColor Yellow
+                                                Write-Host -NoNewline "      $($global:translations["DPMEPlanDurantion"]): "
+                                                Write-Host "$duracaoplano_produto_translate" -ForegroundColor Blue
                                             } 
                                             if ($($produtoctdigitalDisponivel['data_inicio_ctdigital']) -eq "Nenhum"){
-                                                Write-Host -NoNewline "      DATA DE INÍCIO: "
-                                                Write-Host "$($produtoctdigitalDisponivel['data_inicio_ctdigital'])" -ForegroundColor Red
+                                                Write-Host -NoNewline "      $($global:translations["DPMEStartDeliveryDate"]): "
+                                                Write-Host "$datainicio_produto_translate" -ForegroundColor Red
                                             } else {
-                                                Write-Host -NoNewline "      DATA DE INÍCIO: "
+                                                Write-Host -NoNewline "      $($global:translations["DPMEStartDeliveryDate"]): "
                                                 Write-Host "$($produtoctdigitalDisponivel['data_inicio_ctdigital'])" -ForegroundColor Yellow
                                             } 
                                             if ($($produtoctdigitalDisponivel['data_termino_ctdigital']) -eq "Nenhum"){
-                                                Write-Host -NoNewline "      DATA FINAL: "
-                                                Write-Host "$($produtoctdigitalDisponivel['data_termino_ctdigital'])" -ForegroundColor Red
+                                                Write-Host -NoNewline "      $($global:translations["DPMEEndDeliveryDate"]): "
+                                                Write-Host "$datatermino_produto_translate" -ForegroundColor Red
                                             } else {
-                                                Write-Host -NoNewline "      DATA FINAL: "
+                                                Write-Host -NoNewline "      $($global:translations["DPMEEndDeliveryDate"]): "
                                                 Write-Host "$($produtoctdigitalDisponivel['data_termino_ctdigital'])" -ForegroundColor Yellow
                                             } 
                                             if ($($produtoctdigitalDisponivel['dias_restantes_ctdigital']) -eq "Nenhum" -or $($produtoctdigitalDisponivel['dias_restantes_ctdigital']) -eq "Último Dia"){
-                                                Write-Host -NoNewline "      DIAS RESTANTES: "
-                                                Write-Host "$($produtoctdigitalDisponivel['dias_restantes_ctdigital'])" -ForegroundColor Red
+                                                Write-Host -NoNewline "      $($global:translations["DPMERemainingDeliveryDays"]): "
+                                                Write-Host "$diasrestantes_produto_translate" -ForegroundColor Red
                                             } elseif ($($produtoctdigitalDisponivel['dias_restantes_ctdigital']) -eq "Vitalício") {
-                                                Write-Host -NoNewline "      DIAS RESTANTES: "
-                                                Write-Host "$($produtoctdigitalDisponivel['dias_restantes_ctdigital'])" -ForegroundColor Cyan
+                                                Write-Host -NoNewline "      $($global:translations["DPMERemainingDeliveryDays"]): "
+                                                Write-Host "$diasrestantes_produto_translate" -ForegroundColor Cyan
                                             } else {
-                                                Write-Host -NoNewline "      DIAS RESTANTES: "
-                                                Write-Host "$($produtoctdigitalDisponivel['dias_restantes_ctdigital'])" -ForegroundColor Yellow
+                                                Write-Host -NoNewline "      $($global:translations["DPMERemainingDeliveryDays"]): "
+                                                Write-Host "$($produtoctdigitalDisponivel['dias_restantes_ctdigital'])" -ForegroundColor Blue
                                             } 
                                             Write-Host "     ===============================================================================================================" -ForegroundColor Magenta
                                             Write-Host ""
                                         } else {
                                             Write-Host ""
                                         }
-                                        Write-Host "      BENEFÍCIOS DO PLANO: " -ForegroundColor Cyan
+                                        Write-Host "      $($global:translations["DPMRIBPlanBenefitsTitle"]): " -ForegroundColor Cyan
                                         Write-Host ""
                                         foreach ($beneficio in $beneficios_array) {
-                                            Write-Host -NoNewline "      $contadorbeneficios"
-                                            Write-Host ": $beneficio" -ForegroundColor Yellow
+
+                                            $beneficio_produto = $beneficio.Trim()
+
+                                            Write-Host -NoNewline "      $($contadorbeneficios):"
+                                            Write-Host " $beneficio_produto" -ForegroundColor Yellow
                                             $contadorbeneficios++
                                         }
                                         if($MetodoSelecionado -eq "Conta Digital"){
                                             Write-Host ""
-                                            Write-Host "      DADOS DE ACESSO: " -ForegroundColor Cyan
+                                            Write-Host "      $($global:translations["DPMDAAccessDataTitle"]): " -ForegroundColor Cyan
                                             Write-Host ""
-                                            Write-Host -NoNewline "      USUÁRIO/E-MAIL: "
+                                            Write-Host -NoNewline "      $($global:translations["DPMDAUserAndEmail"]): "
                                             Write-Host "$produtoctdigital_usuariodisplay" -ForegroundColor $revelarDadosAcessoColor
-                                            Write-Host -NoNewline "      SENHA: "
+                                            Write-Host -NoNewline "      $($global:translations["DPMDAPassAccessData"]): "
                                             Write-Host "$produtoctdigital_senhadisplay" -ForegroundColor $revelarDadosAcessoColor
                                             if ($CategoriaEscolhida -eq "Streaming" -and $produtoctdigital_qtdtelas -ne "Compartilhada" -and $produtoctdigital_qtdtelas -ne "Completa") {
-                                                Write-Host -NoNewline "      TELA PIN LOCK: "
+                                                Write-Host -NoNewline "      $($global:translations["DPMDAPinLockAccessDataScreen"]): "
                                                 Write-Host "$produtoctdigital_telapinlockdisplay" -ForegroundColor $revelarDadosAcessoColor
                                                 Write-Host ""
                                             } else {
@@ -3586,9 +6228,9 @@ function Show-Detail-Produto-Geral {
                                             }
                                         } elseif ($MetodoSelecionado -eq "Chave/Serial") {
                                             Write-Host ""
-                                            Write-Host "      DADOS DE ACESSO: " -ForegroundColor Cyan
+                                            Write-Host "      $($global:translations["DPMDAAccessDataTitle"]): " -ForegroundColor Cyan
                                             Write-Host ""
-                                            Write-Host -NoNewline "      USUÁRIO/E-MAIL: "
+                                            Write-Host -NoNewline "      $($global:translations["DPMDAUserAndEmail"]): "
                                             if ($produtoctdigital_usuariodisplay -ne "xxxx-xxxx-xxxx") {
                                                 
                                                 # Verifica se há mais de uma chavekey (presença de vírgula)
@@ -3629,9 +6271,9 @@ function Show-Detail-Produto-Geral {
                                             }
                                             
 
-                                            Write-Host -NoNewline "      SENHA: "
+                                            Write-Host -NoNewline "      $($global:translations["DPMDAPassAccessData"]): "
                                             Write-Host "$produtoctdigital_senhadisplay" -ForegroundColor $revelarDadosAcessoColor
-                                            Write-Host -NoNewline "      CHAVE KEYS: "
+                                            Write-Host -NoNewline "      $($global:translations["DPMDAKeysAccessDataKey"]): "
                                             if ($produtoctdigital_chavekeysdisplay -ne "xxxx-xxxx-xxxx") {
                                                 
                                                 # Verifica se há mais de uma chavekey (presença de vírgula)
@@ -3666,7 +6308,7 @@ function Show-Detail-Produto-Geral {
                                                 }
 
                                                 Write-Host ""
-                                                Write-Host -NoNewline "      QTD CHAVES: "
+                                                Write-Host -NoNewline "      $($global:translations["DPMDAQTDKeysAccessData"]): "
                                                 Write-Host "$numero_de_chaves" -ForegroundColor Yellow
 
                                             } else {
@@ -3682,19 +6324,22 @@ function Show-Detail-Produto-Geral {
                                         if ($CategoriaEscolhida -eq "Softwares e Licenças" -and $MetodoSelecionado -eq "Pré-Ativado") {
                                             Write-Host ""
                                         } else {
-                                            Write-Host "      REGRAS DE USO: " -ForegroundColor Cyan
+                                            Write-Host "      $($global:translations["DPMRIBRulesUse"]): " -ForegroundColor Cyan
                                             Write-Host ""
                                             foreach ($regrauso in $regrasuso_array) {
-                                                Write-Host -NoNewline "      $contadorregras"
-                                                Write-Host ": $regrauso" -ForegroundColor Yellow
+
+                                                $regra = $regrauso.Trim()
+                                                Write-Host -NoNewline "      $($contadorregras):"
+                                                Write-Host " $regra" -ForegroundColor Yellow
                                                 $contadorregras++
                                             }
                                             Write-Host ""
-                                            Write-Host -NoNewline "      Atenção: " -ForegroundColor Red
-                                            Write-Host "Qualquer violação das regras revogará o acesso à conta e não emitiremos nenhum reembolso." -ForegroundColor Yellow
+                                            Write-Host -NoNewline "      $($global:translations["DPMRIBPleaseNote"]): " -ForegroundColor Red
+                                            Write-Host $($global:translations["DPMRIBAnyViolationAnnunce"]) -ForegroundColor Yellow
                                             Write-Host ""
                                         }
-                                        if($instrucoes_usoativacao_array[0] -ne "Nenhum" -and $instrucoes_usoativacao_array[1] -ne "Nenhum"){
+                                        if($CategoriaEscolhida -eq "Softwares e Licenças" -and $MetodoSelecionado -eq "Chave/Serial" -and 
+                                        $instrucoes_usoativacao_array[0] -ne "Nenhum" -and $instrucoes_usoativacao_array[1] -ne "Nenhum"){
                                             
                                             $stepsAtvToCheck = $null
 
@@ -3707,9 +6352,9 @@ function Show-Detail-Produto-Geral {
                                             }
 
 
-                                            Write-Host "      INSTRUÇÃO DE USO: " -ForegroundColor Cyan
+                                            Write-Host "      $($global:translations["DPMRIBInstructionsUse"]): " -ForegroundColor Cyan
                                             Write-Host ""
-                                            Write-Host -NoNewline "      PROCESSO DE ATIVAÇÃO: "
+                                            Write-Host -NoNewline "      $($global:translations["DPMRIBActivationProcess"]): "
                                             Write-Host "$($stepsAtvToCheck["processo_ativacao"])" -ForegroundColor Yellow
                                             Write-Host ""
 
@@ -3717,12 +6362,15 @@ function Show-Detail-Produto-Geral {
                                         
                                             $contador_passo_atv = 1
 
-                                            Write-Host "      PASSOS PARA ATIVAÇÃO: "
+                                            Write-Host "      $($global:translations["DPMRIBStepsForActivation"]): "
                                             foreach ($linha_passo_atv in $linhas_passo_atv) {
-                                                if ($linha_passo_atv.Trim() -ne "") {
+
+                                                $passo_atv = $linha_passo_atv.Trim()
+
+                                                if ($passo_atv -ne "") {
                                                     Write-Host ""
-                                                    Write-Host -NoNewline "      $($contador_passo_atv)"
-                                                    Write-Host -NoNewline ": $linha_passo_atv." -ForegroundColor Yellow
+                                                    Write-Host -NoNewline "      $($contador_passo_atv):"
+                                                    Write-Host -NoNewline " $passo_atv." -ForegroundColor Yellow
                                                     $contador_passo_atv++
                                                 }
 
@@ -3738,7 +6386,8 @@ function Show-Detail-Produto-Geral {
                                         Write-Host ""
                                         if ($CategoriaEscolhida -eq "Streaming" -or $CategoriaEscolhida -eq "VPNs" -and $MetodoSelecionado -eq "Conta Digital" -or $MetodoSelecionado -eq "Conta Digital - Pública" -or $MetodoSelecionado -eq "Conta Digital - Cookies") {
                                             Write-Host -NoNewline "     [1] - "  -ForegroundColor Yellow
-                                            Write-Host -NoNewline "Visualizar Dados de Login e/ou Tela"
+                                            Write-Host -NoNewline $($global:translations["DPMSODPViewLoginDataScreenN1"]) -ForegroundColor Magenta
+                                            Write-Host -NoNewline " $($global:translations["DPMSODPViewLoginDataScreenN2"])" -ForegroundColor White
                                             if($TipoPlanoConta -ne 'VIP') {
                                                 Write-Host -NoNewline " / " -ForegroundColor Yellow
                                                 Write-Host -NoNewline "(" -ForegroundColor Cyan
@@ -3748,16 +6397,17 @@ function Show-Detail-Produto-Geral {
                                             }  
                                             Write-Host ""  
                                             Write-Host -NoNewline "     [2] - "  -ForegroundColor Yellow
-                                            Write-Host "Acessar Link do Código de Acesso"
+                                            Write-Host $($global:translations["DPMSODPAccessCodeLink"])
                                             Write-Host -NoNewline "     [3] - "  -ForegroundColor Yellow
-                                            Write-Host "Acessar Conta $ProdutoSelecionado" 
+                                            Write-Host "$($global:translations["DPMSODPAccessAccount"]) $ProdutoSelecionado" 
                                             Write-Host -NoNewline "     [4] - "  -ForegroundColor Yellow
-                                            Write-Host "Tutorial de Utilização" 
+                                            Write-Host $($global:translations["DPMSODPUsageTutorial"]) 
                                             Write-Host -NoNewline "     [5] - "  -ForegroundColor Yellow
-                                            Write-Host "Print de Verificação Conta" 
+                                            Write-Host $($global:translations["DPMSODPAccountVerificationPrint"]) 
                                         } elseif ($CategoriaEscolhida -eq "Softwares e Licenças" -and $MetodoSelecionado -eq "Conta Digital") {
                                             Write-Host -NoNewline "     [1] - "  -ForegroundColor Yellow
-                                            Write-Host -NoNewline "Visualizar Dados de Login e/ou Tela"
+                                            Write-Host -NoNewline $($global:translations["DPMSODPViewLoginDataScreenN1"]) -ForegroundColor Magenta
+                                            Write-Host -NoNewline " $($global:translations["DPMSODPViewLoginDataScreenN2"])" -ForegroundColor White
                                             if($TipoPlanoConta -ne 'VIP') {
                                                 Write-Host -NoNewline " / " -ForegroundColor Yellow
                                                 Write-Host -NoNewline "(" -ForegroundColor Cyan
@@ -3767,26 +6417,27 @@ function Show-Detail-Produto-Geral {
                                             }
                                             Write-Host ""  
                                             Write-Host -NoNewline "     [2] - "  -ForegroundColor Yellow
-                                            Write-Host -NoNewline "Instalar " -ForegroundColor Green
+                                            Write-Host -NoNewline "$($global:translations["DPMSODPSelectOptionInstallN1"]) " -ForegroundColor Green
                                             Write-Host -NoNewline "$ProdutoSelecionado" -ForegroundColor Yellow
                                             Write-Host " ($produtoctdigital_ano_produto/$produtoctdigital_versao_disponivel)" -ForegroundColor Cyan
                                             Write-Host -NoNewline "     [3] - "  -ForegroundColor Yellow
-                                            Write-Host -NoNewline "Desinstalar " -ForegroundColor Red
+                                            Write-Host -NoNewline "$($global:translations["DPMSODPSelectOptionUninstallN2"]) " -ForegroundColor Red
                                             Write-Host -NoNewline "$ProdutoSelecionado" -ForegroundColor Yellow
                                             Write-Host -NoNewline " ($produtoctdigital_ano_produto/$produtoctdigital_versao_disponivel)" -ForegroundColor Cyan
-                                            Write-Host -NoNewline " (DESINSTALAÇÃO SIMPLES/COMPLETA)" -ForegroundColor Gray
+                                            Write-Host -NoNewline " $($global:translations["DPMSODPSimpleCompleteUninstallationN1"])" -ForegroundColor Gray
                                             Write-Host ""
                                             Write-Host -NoNewline "     [4] - "  -ForegroundColor Yellow
-                                            Write-Host "Acessar Link do Código de Acesso"
+                                            Write-Host $($global:translations["DPMSODPAccessCodeLink"])
                                             Write-Host -NoNewline "     [5] - "  -ForegroundColor Yellow
-                                            Write-Host "Acessar Conta $ProdutoSelecionado" 
+                                            Write-Host "$($global:translations["DPMSODPAccessAccount"]) $ProdutoSelecionado" 
                                             Write-Host -NoNewline "     [6] - "  -ForegroundColor Yellow
-                                            Write-Host "Tutorial de Utilização" 
+                                            Write-Host $($global:translations["DPMSODPUsageTutorial"]) 
                                             Write-Host -NoNewline "     [7] - "  -ForegroundColor Yellow
-                                            Write-Host "Print de Verificação Conta" 
+                                            Write-Host $($global:translations["DPMSODPAccountVerificationPrint"]) 
                                         } elseif ($CategoriaEscolhida -eq "Softwares e Licenças" -and $MetodoSelecionado -eq "Chave/Serial") {
                                             Write-Host -NoNewline "     [1] - "  -ForegroundColor Yellow
-                                            Write-Host -NoNewline "Visualizar Chave Keys e/ou Dados de Login"
+                                            Write-Host -NoNewline $($global:translations["DPMSODPViewKeysLoginDataN1"]) -ForegroundColor Magenta
+                                            Write-Host -NoNewline " $($global:translations["DPMSODPViewKeysLoginDataN2"])" -ForegroundColor White
                                             if($TipoPlanoConta -ne 'VIP') {
                                                 Write-Host -NoNewline " / " -ForegroundColor Yellow
                                                 Write-Host -NoNewline "(" -ForegroundColor Cyan
@@ -3796,24 +6447,24 @@ function Show-Detail-Produto-Geral {
                                             }
                                             Write-Host ""
                                             Write-Host -NoNewline "     [2] - "  -ForegroundColor Yellow
-                                            Write-Host -NoNewline "Instalar " -ForegroundColor Green
+                                            Write-Host -NoNewline "$($global:translations["DPMSODPSelectOptionInstallN1"]) " -ForegroundColor Green
                                             Write-Host -NoNewline "$ProdutoSelecionado" -ForegroundColor Yellow
                                             Write-Host " ($produtoctdigital_ano_produto/$produtoctdigital_versao_disponivel)" -ForegroundColor Cyan
                                             Write-Host -NoNewline "     [3] - "  -ForegroundColor Yellow
-                                            Write-Host -NoNewline "Desinstalar " -ForegroundColor Red
+                                            Write-Host -NoNewline "$($global:translations["DPMSODPSelectOptionUninstallN2"]) " -ForegroundColor Red
                                             Write-Host -NoNewline "$ProdutoSelecionado" -ForegroundColor Yellow
                                             Write-Host -NoNewline " ($produtoctdigital_ano_produto/$produtoctdigital_versao_disponivel)" -ForegroundColor Cyan
-                                            Write-Host -NoNewline " (DESINSTALAÇÃO SIMPLES/COMPLETA)" -ForegroundColor Gray
+                                            Write-Host -NoNewline " $($global:translations["DPMSODPSimpleCompleteUninstallationN1"])" -ForegroundColor Gray
                                             Write-Host ""
                                             Write-Host -NoNewline "     [4] - "  -ForegroundColor Yellow
-                                            Write-Host "Tutorial de Ativação" 
+                                            Write-Host $($global:translations["DPMSODPActivationTutorial"]) 
                                             Write-Host -NoNewline "     [5] - "  -ForegroundColor Yellow
-                                            Write-Host "Print de Verificação Ativação" 
+                                            Write-Host $($global:translations["DPMSODPActivationVerificationPrint"]) 
                                         } elseif ($CategoriaEscolhida -eq "Softwares e Licenças" -and $MetodoSelecionado -eq "Pré-Ativado") {
                                             Write-Host -NoNewline "     [1] - " -ForegroundColor Yellow
-                                            Write-Host "Instalar" -NoNewline -ForegroundColor Green
-                                            Write-Host " e " -NoNewline -ForegroundColor Yellow
-                                            Write-Host "Ativar " -NoNewline -ForegroundColor Magenta
+                                            Write-Host $($global:translations["DPMSODPSelectOptionInstallN1"]) -NoNewline -ForegroundColor Green
+                                            Write-Host " $($global:translations["DPMSODPSimpleCompleteUninstallationN2"]) " -NoNewline -ForegroundColor Yellow
+                                            Write-Host "$($global:translations["DPMSODPSimpleCompleteUninstallationN3"]) " -NoNewline -ForegroundColor Magenta
                                             Write-Host -NoNewline "$ProdutoSelecionado" -ForegroundColor Yellow
                                             Write-Host -NoNewline " ($produtoctdigital_ano_produto/$produtoctdigital_versao_disponivel)" -ForegroundColor Cyan
                                             if($TipoPlanoConta -ne 'VIP') {
@@ -3825,11 +6476,11 @@ function Show-Detail-Produto-Geral {
                                             }
                                             Write-Host ""
                                             Write-Host -NoNewline "     [2] - "  -ForegroundColor Yellow
-                                            Write-Host -NoNewline "Instalar " -ForegroundColor Green
+                                            Write-Host -NoNewline "$($global:translations["DPMSODPSelectOptionInstallN1"]) " -ForegroundColor Green
                                             Write-Host -NoNewline "$ProdutoSelecionado" -ForegroundColor Yellow
                                             Write-Host " ($produtoctdigital_ano_produto/$produtoctdigital_versao_disponivel)" -ForegroundColor Cyan
                                             Write-Host -NoNewline "     [3] - " -ForegroundColor Yellow
-                                            Write-Host "Ativar " -NoNewline -ForegroundColor Magenta
+                                            Write-Host "$($global:translations["DPMSODPSimpleCompleteUninstallationN3"]) " -NoNewline -ForegroundColor Magenta
                                             Write-Host -NoNewline "$ProdutoSelecionado" -ForegroundColor Yellow
                                             Write-Host -NoNewline " ($produtoctdigital_ano_produto/$produtoctdigital_versao_disponivel)" -ForegroundColor Cyan
                                             if($TipoPlanoConta -ne 'VIP') {
@@ -3841,25 +6492,25 @@ function Show-Detail-Produto-Geral {
                                             }
                                             Write-Host ""
                                             Write-Host -NoNewline "     [4] - "  -ForegroundColor Yellow
-                                            Write-Host -NoNewline "Desinstalar " -ForegroundColor Red
+                                            Write-Host -NoNewline "$($global:translations["DPMSODPSelectOptionUninstallN2"]) " -ForegroundColor Red
                                             Write-Host -NoNewline "$ProdutoSelecionado" -ForegroundColor Yellow
                                             Write-Host -NoNewline " ($produtoctdigital_ano_produto/$produtoctdigital_versao_disponivel)" -ForegroundColor Cyan
-                                            Write-Host -NoNewline " (DESINSTALAÇÃO SIMPLES/COMPLETA)" -ForegroundColor Gray
+                                            Write-Host -NoNewline " $($global:translations["DPMSODPSimpleCompleteUninstallationN1"])" -ForegroundColor Gray
                                             Write-Host ""
                                             Write-Host -NoNewline "     [5] - "  -ForegroundColor Yellow
-                                            Write-Host "Tutorial de Ativação" 
+                                            Write-Host $($global:translations["DPMSODPActivationTutorial"]) 
                                             Write-Host -NoNewline "     [6] - "  -ForegroundColor Yellow
-                                            Write-Host "Print de Verificação Ativação" 
+                                            Write-Host $($global:translations["DPMSODPActivationVerificationPrint"]) 
                                         }
                                         Write-Host ""
-                                        Write-Host -NoNewline "     [D] - "  -ForegroundColor Red
-                                        Write-Host "Deslogar" -ForegroundColor Gray
-                                        Write-Host -NoNewline "     [V] - "  -ForegroundColor Cyan
-                                        Write-Host "Voltar" -ForegroundColor Gray
+                                        if ($idiomaSelecionado -eq "pt") { Write-Host -NoNewline "     [D] - "  -ForegroundColor Red } elseif ($idiomaSelecionado -eq "en") { Write-Host -NoNewline "     [L] - "  -ForegroundColor Red } elseif ($idiomaSelecionado -eq "es") { Write-Host -NoNewline "     [C] - "  -ForegroundColor Red }
+                                        Write-Host $($global:translations["DOLogoutMenuOption"]) -ForegroundColor Gray
+                                        if ($idiomaSelecionado -eq "pt") { Write-Host -NoNewline "     [V] - "  -ForegroundColor Cyan } elseif ($idiomaSelecionado -eq "en") { Write-Host -NoNewline "     [B] - "  -ForegroundColor Cyan } elseif ($idiomaSelecionado -eq "es") { Write-Host -NoNewline "     [V] - "  -ForegroundColor Cyan }
+                                        Write-Host $($global:translations["DOGoBackMenuOption"]) -ForegroundColor Gray
                                         Write-Host -NoNewline "     [M] - "  -ForegroundColor Yellow
-                                        Write-Host "Menu Principal" -ForegroundColor Gray
+                                        Write-Host $($global:translations["DOMainMenuOption"]) -ForegroundColor Gray
                                         Write-Host ""
-                                         Write-Host "     ===============================================================================================================" -ForegroundColor Green
+                                        Write-Host "     ===============================================================================================================" -ForegroundColor Green
                                         Write-Host ""
                                     }
 
@@ -3876,29 +6527,29 @@ function Show-Detail-Produto-Geral {
                                             Write-Host "     ================================================================================================================" -ForegroundColor Green
                                             Write-Host ""
                                             
-                                            Write-Host -NoNewline "`r     Etapa de" -ForegroundColor White
-                                            Write-Host -NoNewline " '$etapa' " -ForegroundColor Cyan
-                                            Write-Host -NoNewline "do " -ForegroundColor White
-                                            Write-Host -NoNewline "'$nome_produto'" -ForegroundColor Magenta
-                                            Write-Host -NoNewline " esta sendo encerrada..." -ForegroundColor Red
+                                            Write-Host -NoNewline "`r     $($global:translations["DPMCTClosingTimeEndN1"])" -ForegroundColor White
+                                            Write-Host -NoNewline " '$etapa' " -ForegroundColor Magenta
+                                            Write-Host -NoNewline "$($global:translations["DPMCTStepProcedureN45EIA"]) " -ForegroundColor White
+                                            Write-Host -NoNewline "'$nome_produto'" -ForegroundColor Cyan
+                                            Write-Host -NoNewline " $($global:translations["DPMCTClosingTimeEndN2"])" -ForegroundColor Red
 
                                             Write-Host ""
                                             Write-Host ""
                                             
                                             for ($i = $segundos; $i -ge 1; $i--) {
-                                                Write-Host -NoNewline "`r     Voltando ao" -ForegroundColor White
-                                                Write-Host -NoNewline " 'MENU DE DETALHES DO PRODUTO' " -ForegroundColor Cyan
-                                                Write-Host -NoNewline "em: $i segundos..." -ForegroundColor Yellow
+                                                Write-Host -NoNewline "`r     $($global:translations["DPMCTClosingTimeEndN3"])" -ForegroundColor White
+                                                Write-Host -NoNewline " $($global:translations["DPMCTStepProcedureN4MDP"]) " -ForegroundColor Cyan
+                                                Write-Host -NoNewline "$($global:translations["DPMCTClosingTimeEndN4"]): $i $($global:translations["DPMCTClosingTimeEndN5"])" -ForegroundColor Yellow
                                                 Start-Sleep -Seconds 1
                                             }
 
                                         } else {
                                             for ($i = $segundos; $i -ge 1; $i--) {
-                                                Write-Host -NoNewline "`r     Ocultando dados de acesso em: $i segundos..." -ForegroundColor Yellow
+                                                Write-Host -NoNewline "`r     $($global:translations["DPMCTHidingAccessDataN1"]): $i $($global:translations["DPMCTClosingTimeEndN5"])" -ForegroundColor Yellow
                                                 Start-Sleep -Seconds 1
                                             }
 
-                                            Write-Host "`r     Dados de acesso ocultados.                    " -ForegroundColor Green
+                                            Write-Host "`r     $($global:translations["DPMCTHidingAccessDataN3"])                    " -ForegroundColor Green
                                         }
                                     }
 
@@ -3910,35 +6561,35 @@ function Show-Detail-Produto-Geral {
                                         
                                         switch ("$CategoriaEscolhida|$MetodoSelecionado") {
                                             "Streaming|Conta Digital" {
-                                                $opcao_produto_streamingvpns = Read-Host "Selecione sua opção no menu"
+                                                $opcao_produto_streamingvpns = Read-Host $($global:translations["DOQuestionSelectOption"])
                                             }
                                             "Streaming|Conta Digital - Pública" {
-                                                $opcao_produto_streamingvpns = Read-Host "Selecione sua opção no menu"
+                                                $opcao_produto_streamingvpns = Read-Host $($global:translations["DOQuestionSelectOption"])
                                             }
                                             "Streaming|Conta Digital - Cookies" {
-                                                $opcao_produto_streamingvpns = Read-Host "Selecione sua opção no menu"
+                                                $opcao_produto_streamingvpns = Read-Host $($global:translations["DOQuestionSelectOption"])
                                             }
                                             "VPNs|Conta Digital" {
-                                                $opcao_produto_streamingvpns = Read-Host "Selecione sua opção no menu"
+                                                $opcao_produto_streamingvpns = Read-Host $($global:translations["DOQuestionSelectOption"])
                                             }
                                             "VPNs|Conta Digital - Pública" {
-                                                $opcao_produto_streamingvpns = Read-Host "Selecione sua opção no menu"
+                                                $opcao_produto_streamingvpns = Read-Host $($global:translations["DOQuestionSelectOption"])
                                             }
                                             "VPNs|Conta Digital - Cookies" {
-                                                $opcao_produto_streamingvpns = Read-Host "Selecione sua opção no menu"
+                                                $opcao_produto_streamingvpns = Read-Host $($global:translations["DOQuestionSelectOption"])
                                             }
                                             "Softwares e Licenças|Conta Digital" {
-                                                $opcao_produto_softwarelicenca_contadigital = Read-Host "Selecione sua opção no menu"
+                                                $opcao_produto_softwarelicenca_contadigital = Read-Host $($global:translations["DOQuestionSelectOption"])
                                             }
                                             "Softwares e Licenças|Chave/Serial" {
-                                                $opcao_produto_softwarelicenca_chaveserial = Read-Host "Selecione sua opção no menu"
+                                                $opcao_produto_softwarelicenca_chaveserial = Read-Host $($global:translations["DOQuestionSelectOption"])
                                             }
                                             "Softwares e Licenças|Pré-Ativado" {
-                                                $opcao_produto_softwarelicenca_scriptmodding = Read-Host "Selecione sua opção no menu"
+                                                $opcao_produto_softwarelicenca_scriptmodding = Read-Host $($global:translations["DOQuestionSelectOption"])
                                             }
                                             default {
                                                 Write-Host ""
-                                                Write-Host "Categoria não escolhida ou não encontrada." -ForegroundColor Red
+                                                Write-Host $($global:translations["DPMSODPMMANothingCategoryNoSelection"]) -ForegroundColor Red
                                                 Write-Host ""
                                             }
                                         }
@@ -3995,7 +6646,7 @@ function Show-Detail-Produto-Geral {
                     
                                                     } else {
                                                         Write-Host ""
-                                                        Write-Host "Você não tem mais QTD Download e Visualizações, disponível para seu $ProdutoSelecionado" -ForegroundColor Red
+                                                        Write-Host "$($global:translations["DPMSODPMMANothingQTDVAvailable"]) $ProdutoSelecionado" -ForegroundColor Red
                                                         Write-Host ""
                                                         Start-Sleep -Seconds 5
 
@@ -4047,17 +6698,33 @@ function Show-Detail-Produto-Geral {
                                                 $produtoctdigital_chavekeysdisplay = "$resultado_chavekeys"
                                                 
                                                 if ($TipoPlanoConta -eq "VIP") {
-                                                
+                       
                                                     Show-Process-Produto -UsuarioAtual $usuario_atual -ProdutoSelecionado $ProdutoSelecionado -TipoPlanoConta $TipoPlanoConta -VersaoDisponivel $produtoctdigital_versao_disponivel -MetodoSelecionado $MetodoSelecionado -ProcessosProduto $produtoctdigital_processos_produto -LinksProduto $produtoctdigital_links_produto -LocalizacaoProduto $produtoctdigital_localizacao_produto -InstrucoesAtivacaoProduto $produtoctdigital_instrucoes_usoativacao -EtapaProcesso "Visualizacao"
                                                     
                                                     # Contagem regressiva de 15 segundos antes de voltar ao menu de detalhes do produto
-                                                    ContagemRegressiva -segundos 15 -etapa "VISUALIZAÇÃO" -nome_produto $ProdutoSelecionado
+                                                    ContagemRegressiva -segundos 15 -etapa $($global:translations["DPMCTStepProcedureN4N5"]) -nome_produto $ProdutoSelecionado
 
                                                     # Mostra os dados reais apenas se a opção 1 for selecionada
                                                     $mostrarDadosReais = $true
                                                     ExibirMenuProduto -produtoctdigital_usuariodisplay $produtoctdigital_usuariodisplay -produtoctdigital_senhadisplay $produtoctdigital_senhadisplay -produtoctdigital_chavekeysdisplay $produtoctdigital_chavekeysdisplay -revelarDadosAcessoColor Green
                                                 
                                                 } else {
+
+                                                    Write-Host ""
+                                                    Write-Host -NoNewline $($global:translations["DPMCTStepProcedureN3"]) -ForegroundColor Yellow
+                                                    Write-Host -NoNewline " '" -ForegroundColor Yellow 
+                                                    Write-Host -NoNewline $($global:translations["DPMCTStepProcedureN41EIA"]) -ForegroundColor Yellow 
+                                                    Write-Host -NoNewline " $($global:translations["DPMCTStepProcedureN4N5"])" -ForegroundColor Magenta 
+                                                    Write-Host -NoNewline "' " -ForegroundColor Yellow
+                                                    Write-Host -NoNewline "$($global:translations["DPMCTStepProcedureN45EIA"])" -ForegroundColor Yellow
+                                                    Write-Host -NoNewline " '$ProdutoSelecionado'." -ForegroundColor Cyan
+                                                    Write-Host ""
+                                                    Write-Host -NoNewline $($global:translations["DPMCTStepProcedureN1"]) -ForegroundColor Yellow
+                                                    Write-Host -NoNewline " '5 $($global:translations["DPMCTHidingAccessDataN2"])' " -ForegroundColor Green
+                                                    Write-Host -NoNewline $($global:translations["DPMCTStepProcedureN2"]) -ForegroundColor Yellow
+                                                    Write-Host ""  
+                                                    
+                                                    Start-Sleep -Seconds 5
                                                     
                                                     $qtdvValuesAtualizado = QTDV-Individual-Select-MenuOption -option "1" -qtdvIndividualValues $qtdvIndividualValues
 
@@ -4182,11 +6849,23 @@ function Show-Detail-Produto-Geral {
                                                             $pasta_atv_program = $($pathsToCheck["pasta_ativacao"]) 
                                                             $processo_ativacao_program = $stepsAtvToCheck["processo_ativacao"].Contains('Pré-instalação')
 
-                                                            # Criar o diretório de pasta_atv_program se não existir
-                		                                    if (-not (Test-Path $pasta_program) -and -not (Test-Path $pasta_atv_program)) {
-                                                                New-Item -ItemType Directory -Path $pasta_program | Out-Null
-                    			                                New-Item -ItemType Directory -Path $pasta_atv_program | Out-Null
-                	                                        }
+                                                            # Criar o diretório de $pasta_program e pasta_atv_program se não existir
+
+                                                            # Verificar se ambos os caminhos são iguais
+                                                            if ($pasta_program -eq $pasta_atv_program) {
+                                                                # Se os caminhos forem iguais, verificar se o diretório já existe, e se não existir, criar o diretório
+                                                                if (-not (Test-Path $pasta_program)) {
+                                                                    New-Item -ItemType Directory -Path $pasta_program | Out-Null
+                                                                }
+                                                            } else {
+                                                                # Se os caminhos forem diferentes, verificar e criar cada diretório individualmente
+                                                                if (-not (Test-Path $pasta_program)) {
+                                                                    New-Item -ItemType Directory -Path $pasta_program | Out-Null
+                                                                }
+                                                                if (-not (Test-Path $pasta_atv_program)) {
+                                                                    New-Item -ItemType Directory -Path $pasta_atv_program | Out-Null
+                                                                }
+                                                            }
 
                                                             # Verifica se o diretório existe e se contém arquivos ou subpastas
                                                             $pasta_program_not_empty = (Test-Path $pasta_program) -and (Get-ChildItem $pasta_program | Where-Object { $_ } )
@@ -4201,7 +6880,7 @@ function Show-Detail-Produto-Geral {
 
                                                             # Verifica se o processo está em execução
                                                             $processo_atv = Get-Process -Name $nome_processo_atv -ErrorAction SilentlyContinue 
-                                                                
+                                                            
                                                             if (($pasta_program_not_empty -and $pasta_atv_program_not_empty) -and ($file_arquivo_atv -or $processo_atv)) {
 
                                                                 # Converter o array em uma string separada por nova linha, se desejado
@@ -4211,8 +6890,24 @@ function Show-Detail-Produto-Geral {
                                                                 $produtoctdigital_chavekeysdisplay = "$resultado_chavekeys"
                                                    
                                                             } else {
-                                                                    
-                                                                if ((Test-Path $pasta_program) -and (Test-Path $pasta_atv_program)) { Remove-Item $pasta_program -Recurse -Force ; Remove-Item $pasta_atv_program -Recurse -Force }
+
+                                                                # Remover o diretório de $pasta_program e pasta_atv_program se não existir
+
+                                                                # Verificar se ambos os caminhos são iguais
+                                                                if ($pasta_program -eq $pasta_atv_program) {
+                                                                    # Se os caminhos forem iguais, verificar se o diretório já existe, e se não existir, remover o diretório
+                                                                    if ((Test-Path $pasta_program)) {
+                                                                        Remove-Item $pasta_program -Recurse -Force
+                                                                    }
+                                                                } else {
+                                                                    # Se os caminhos forem diferentes, verificar e remover cada diretório individualmente
+                                                                    if ((Test-Path $pasta_program)) {
+                                                                        Remove-Item $pasta_program -Recurse -Force
+                                                                    }
+                                                                    if ((Test-Path $pasta_atv_program)) {
+                                                                        Remove-Item $pasta_atv_program -Recurse -Force
+                                                                    }
+                                                                }
 
                                                                 # Converter o array em uma string separada por nova linha, se desejado
                                                                 $produtoctdigital_usuariodisplay = "$resultado_dadosusuario"
@@ -4223,7 +6918,7 @@ function Show-Detail-Produto-Geral {
                                                                 Show-Process-Produto -UsuarioAtual $usuario_atual -ProdutoSelecionado $ProdutoSelecionado -TipoPlanoConta $TipoPlanoConta -VersaoDisponivel $produtoctdigital_versao_disponivel -MetodoSelecionado $MetodoSelecionado -ProcessosProduto $produtoctdigital_processos_produto -LinksProduto $produtoctdigital_links_produto -LocalizacaoProduto $produtoctdigital_localizacao_produto -InstrucoesAtivacaoProduto $produtoctdigital_instrucoes_usoativacao -EtapaProcesso "Visualizacao"
                                                     
                                                                 # Contagem regressiva de 15 segundos antes de voltar ao menu de detalhes do produto
-                                                                ContagemRegressiva -segundos 15 -etapa "VISUALIZAÇÃO" -nome_produto $ProdutoSelecionado
+                                                                ContagemRegressiva -segundos 15 -etapa $($global:translations["DPMCTStepProcedureN4N5"]) -nome_produto $ProdutoSelecionado
 
                                                             }        
                                                                                                                                                              
@@ -4263,7 +6958,7 @@ function Show-Detail-Produto-Geral {
                                                     } else {
                                                     
                                                         Write-Host ""
-                                                        Write-Host "Você não tem mais QTD Download e Visualizações, disponível para seu $ProdutoSelecionado" -ForegroundColor Red
+                                                        Write-Host "$($global:translations["DPMSODPMMANothingQTDVAvailable"]) $ProdutoSelecionado" -ForegroundColor Red
                                                         Write-Host ""
                                                         Start-Sleep -Seconds 5
 
@@ -4279,19 +6974,19 @@ function Show-Detail-Produto-Geral {
                                                 if ($TipoPlanoConta -eq "VIP") {
                                                     
                                                     Write-Host ""
-                                                    Write-Host -NoNewline "Iniciando a" -ForegroundColor Yellow
+                                                    Write-Host -NoNewline $($global:translations["DPMCTStepProcedureN3"]) -ForegroundColor Yellow
                                                     Write-Host -NoNewline " '" -ForegroundColor Yellow 
-                                                    Write-Host -NoNewline "ETAPA DE" -ForegroundColor Yellow 
-                                                    Write-Host -NoNewline " INSTALAÇÃO" -ForegroundColor Green 
-                                                    Write-Host -NoNewline " E" -ForegroundColor Yellow
-                                                    Write-Host -NoNewline " ATIVAÇÃO" -ForegroundColor Magenta 
+                                                    Write-Host -NoNewline $($global:translations["DPMCTStepProcedureN41EIA"]) -ForegroundColor Yellow 
+                                                    Write-Host -NoNewline " $($global:translations["DPMCTStepProcedureN42EIA"])" -ForegroundColor Green 
+                                                    Write-Host -NoNewline " $($global:translations["DPMCTStepProcedureN43EIA"])" -ForegroundColor Yellow
+                                                    Write-Host -NoNewline " $($global:translations["DPMCTStepProcedureN44EIA"])" -ForegroundColor Magenta 
                                                     Write-Host -NoNewline "' " -ForegroundColor Yellow
-                                                    Write-Host -NoNewline "do" -ForegroundColor Yellow
+                                                    Write-Host -NoNewline "$($global:translations["DPMCTStepProcedureN45EIA"])" -ForegroundColor Yellow
                                                     Write-Host -NoNewline " '$ProdutoSelecionado'." -ForegroundColor Cyan
                                                     Write-Host ""
-                                                    Write-Host -NoNewline "Aguarde" -ForegroundColor Yellow
-                                                    Write-Host -NoNewline " '5 segundos' " -ForegroundColor Green
-                                                    Write-Host -NoNewline "para dar início ao procedimento..." -ForegroundColor Yellow
+                                                    Write-Host -NoNewline $($global:translations["DPMCTStepProcedureN1"]) -ForegroundColor Yellow
+                                                    Write-Host -NoNewline " '5 $($global:translations["DPMCTHidingAccessDataN2"])' " -ForegroundColor Green
+                                                    Write-Host -NoNewline $($global:translations["DPMCTStepProcedureN2"]) -ForegroundColor Yellow
                                                     Write-Host ""  
                                                     
                                                     Start-Sleep -Seconds 5
@@ -4299,7 +6994,7 @@ function Show-Detail-Produto-Geral {
                                                     Show-Process-Produto -UsuarioAtual $usuario_atual -ProdutoSelecionado $ProdutoSelecionado -TipoPlanoConta $TipoPlanoConta -VersaoDisponivel $produtoctdigital_versao_disponivel -MetodoSelecionado $MetodoSelecionado -ProcessosProduto $produtoctdigital_processos_produto -LinksProduto $produtoctdigital_links_produto -LocalizacaoProduto $produtoctdigital_localizacao_produto -InstrucoesAtivacaoProduto $produtoctdigital_instrucoes_usoativacao -EtapaProcesso "Instalacao/Ativação"
                                                     
                                                     # Contagem regressiva de 15 segundos antes de voltar ao menu de detalhes do produto
-                                                    ContagemRegressiva -segundos 15 -etapa "INSTALAÇAO E ATIVAÇÃO" -nome_produto $ProdutoSelecionado
+                                                    ContagemRegressiva -segundos 15 -etapa $($global:translations["DPMCTStepProcedureN4N3"]) -nome_produto $ProdutoSelecionado
 
                                                     ExibirMenuProduto
 
@@ -4316,19 +7011,19 @@ function Show-Detail-Produto-Geral {
                                                         Update-QTDVInMenu -qtdvTotal $($totalValues.qtdv_valor_atual) -qtdvUtilizado $($totalValues.qtdv_valor_utilizado) -silent
                                                         
                                                         Write-Host ""
-                                                        Write-Host -NoNewline "Iniciando a" -ForegroundColor Yellow
+                                                        Write-Host -NoNewline $($global:translations["DPMCTStepProcedureN3"]) -ForegroundColor Yellow
                                                         Write-Host -NoNewline " '" -ForegroundColor Yellow 
-                                                        Write-Host -NoNewline "ETAPA DE" -ForegroundColor Yellow 
-                                                        Write-Host -NoNewline " INSTALAÇÃO" -ForegroundColor Green 
-                                                        Write-Host -NoNewline " E" -ForegroundColor Yellow
-                                                        Write-Host -NoNewline " ATIVAÇÃO" -ForegroundColor Magenta 
+                                                        Write-Host -NoNewline $($global:translations["DPMCTClosingTimeEndN1"]) -ForegroundColor Yellow 
+                                                        Write-Host -NoNewline " $($global:translations["DPMCTStepProcedureN4N1"])" -ForegroundColor Green 
+                                                        Write-Host -NoNewline " $($global:translations["DPMCTStepProcedureN43EIA"])" -ForegroundColor Yellow
+                                                        Write-Host -NoNewline " $($global:translations["DPMCTStepProcedureN44EIA"])" -ForegroundColor Magenta 
                                                         Write-Host -NoNewline "' " -ForegroundColor Yellow
-                                                        Write-Host -NoNewline "do" -ForegroundColor Yellow
+                                                        Write-Host -NoNewline $($global:translations["DPMCTStepProcedureN45EIA"]) -ForegroundColor Yellow
                                                         Write-Host -NoNewline " '$ProdutoSelecionado'." -ForegroundColor Cyan
                                                         Write-Host ""
-                                                        Write-Host -NoNewline "Aguarde" -ForegroundColor Yellow
-                                                        Write-Host -NoNewline " '5 segundos' " -ForegroundColor Green
-                                                        Write-Host -NoNewline "para dar início ao procedimento..." -ForegroundColor Yellow
+                                                        Write-Host -NoNewline $($global:translations["DPMCTStepProcedureN1"]) -ForegroundColor Yellow
+                                                        Write-Host -NoNewline " '5 $($global:translations["DPMCTHidingAccessDataN2"])' " -ForegroundColor Green
+                                                        Write-Host -NoNewline "$($global:translations["DPMCTStepProcedureN2"])..." -ForegroundColor Yellow
                                                         Write-Host "" 
                                                         
                                                         Start-Sleep -Seconds 5 
@@ -4336,14 +7031,14 @@ function Show-Detail-Produto-Geral {
                                                         Show-Process-Produto -UsuarioAtual $usuario_atual -ProdutoSelecionado $ProdutoSelecionado -TipoPlanoConta $TipoPlanoConta -VersaoDisponivel $produtoctdigital_versao_disponivel -MetodoSelecionado $MetodoSelecionado -ProcessosProduto $produtoctdigital_processos_produto -LinksProduto $produtoctdigital_links_produto -LocalizacaoProduto $produtoctdigital_localizacao_produto -InstrucoesAtivacaoProduto $produtoctdigital_instrucoes_usoativacao -EtapaProcesso "Instalacao/Ativação"
                                                     
                                                         # Contagem regressiva de 15 segundos antes de voltar ao menu de detalhes do produto
-                                                        ContagemRegressiva -segundos 15 -etapa "INSTALAÇAO E ATIVAÇÃO" -nome_produto $ProdutoSelecionado
+                                                        ContagemRegressiva -segundos 15 -etapa $($global:translations["DPMCTStepProcedureN4N3"]) -nome_produto $ProdutoSelecionado
 
                                                         ExibirMenuProduto
                     
                                                     } else {
                                                     
                                                         Write-Host ""
-                                                        Write-Host "Você não tem mais QTD Download e Visualizações, disponível para seu $ProdutoSelecionado" -ForegroundColor Red
+                                                        Write-Host "$($global:translations["DPMSODPMMANothingQTDVAvailable"]) $ProdutoSelecionado" -ForegroundColor Red
                                                         Write-Host ""
 
                                                         Start-Sleep -Seconds 5
@@ -4356,7 +7051,7 @@ function Show-Detail-Produto-Geral {
                                             } else {
                                                 
                                                 Write-Host ""
-                                                Write-Host "O $ProdutoSelecionado não possui dados de acesso." -ForegroundColor Red
+                                                Write-Host "$ProdutoSelecionado $($global:translations["DPMSODPMMANothingDataAccess"])" -ForegroundColor Red
                                                 Write-Host ""
 
                                                 Start-Sleep -Seconds 5
@@ -4372,36 +7067,36 @@ function Show-Detail-Produto-Geral {
                                             if ($MetodoSelecionado -eq "Chave/Serial") {
                                                     
                                                 Write-Host ""
-                                                Write-Host -NoNewline "Iniciando a" -ForegroundColor Yellow
-                                                Write-Host -NoNewline " 'ETAPA DE INSTALAÇÃO' " -ForegroundColor Green
-                                                Write-Host -NoNewline "do" -ForegroundColor Yellow
+                                                Write-Host -NoNewline $($global:translations["DPMCTStepProcedureN3"]) -ForegroundColor Yellow
+                                                Write-Host -NoNewline " $($global:translations["DPMCTStepProcedureN4EI"]) " -ForegroundColor Green
+                                                Write-Host -NoNewline $($global:translations["DPMCTStepProcedureN45EIA"]) -ForegroundColor Yellow
                                                 Write-Host -NoNewline " '$ProdutoSelecionado'. " -ForegroundColor Cyan
                                                 Write-Host ""
-                                                Write-Host -NoNewline "Aguarde" -ForegroundColor Yellow
-                                                Write-Host -NoNewline " '5 segundos' " -ForegroundColor Green
-                                                Write-Host -NoNewline "para dar início ao procedimento..." -ForegroundColor Yellow
+                                                Write-Host -NoNewline $($global:translations["DPMCTStepProcedureN1"]) -ForegroundColor Yellow
+                                                Write-Host -NoNewline " '5 $($global:translations["DPMCTHidingAccessDataN2"])' " -ForegroundColor Green
+                                                Write-Host -NoNewline $($global:translations["DPMCTStepProcedureN2"]) -ForegroundColor Yellow
                                                 Write-Host ""
 
                                                 Start-Sleep -Seconds 5
-
+                 
                                                 Show-Process-Produto -UsuarioAtual $usuario_atual -ProdutoSelecionado $ProdutoSelecionado -TipoPlanoConta $TipoPlanoConta -VersaoDisponivel $produtoctdigital_versao_disponivel -MetodoSelecionado $MetodoSelecionado -ProcessosProduto $produtoctdigital_processos_produto -LinksProduto $produtoctdigital_links_produto -LocalizacaoProduto $produtoctdigital_localizacao_produto -InstrucoesAtivacaoProduto $produtoctdigital_instrucoes_usoativacao -EtapaProcesso "Instalacao"
                                                     
                                                 # Contagem regressiva de 15 segundos antes de voltar ao menu de detalhes do produto
-                                                ContagemRegressiva -segundos 15 -etapa "INSTALAÇAO" -nome_produto $ProdutoSelecionado
+                                                ContagemRegressiva -segundos 15 -etapa $($global:translations["DPMCTStepProcedureN4N1"]) -nome_produto $ProdutoSelecionado
 
                                                 ExibirMenuProduto
 
                                             } elseif ($MetodoSelecionado -eq "Pré-Ativado") {
 
                                                 Write-Host ""
-                                                Write-Host -NoNewline "Iniciando a" -ForegroundColor Yellow
-                                                Write-Host -NoNewline " 'ETAPA DE INSTALAÇÃO' " -ForegroundColor Green
-                                                Write-Host -NoNewline "do" -ForegroundColor Yellow
+                                                Write-Host -NoNewline $($global:translations["DPMCTStepProcedureN3"]) -ForegroundColor Yellow
+                                                Write-Host -NoNewline " $($global:translations["DPMCTStepProcedureN4EI"]) " -ForegroundColor Green
+                                                Write-Host -NoNewline $($global:translations["DPMCTStepProcedureN45EIA"]) -ForegroundColor Yellow
                                                 Write-Host -NoNewline " '$ProdutoSelecionado'. " -ForegroundColor Cyan
                                                 Write-Host ""
-                                                Write-Host -NoNewline "Aguarde" -ForegroundColor Yellow
-                                                Write-Host -NoNewline " '5 segundos' " -ForegroundColor Green
-                                                Write-Host -NoNewline "para dar início ao procedimento..." -ForegroundColor Yellow
+                                                Write-Host -NoNewline $($global:translations["DPMCTStepProcedureN1"]) -ForegroundColor Yellow
+                                                Write-Host -NoNewline " '5 $($global:translations["DPMCTHidingAccessDataN2"])' " -ForegroundColor Green
+                                                Write-Host -NoNewline $($global:translations["DPMCTStepProcedureN2"]) -ForegroundColor Yellow
                                                 Write-Host "" 
 
                                                 Start-Sleep -Seconds 5
@@ -4409,14 +7104,14 @@ function Show-Detail-Produto-Geral {
                                                 Show-Process-Produto -UsuarioAtual $usuario_atual -ProdutoSelecionado $ProdutoSelecionado -TipoPlanoConta $TipoPlanoConta -VersaoDisponivel $produtoctdigital_versao_disponivel -MetodoSelecionado $MetodoSelecionado -ProcessosProduto $produtoctdigital_processos_produto -LinksProduto $produtoctdigital_links_produto -LocalizacaoProduto $produtoctdigital_localizacao_produto -InstrucoesAtivacaoProduto $produtoctdigital_instrucoes_usoativacao -EtapaProcesso "Instalacao"
                                                     
                                                 # Contagem regressiva de 15 segundos antes de voltar ao menu de detalhes do produto
-                                                ContagemRegressiva -segundos 15 -etapa "INSTALAÇAO" -nome_produto $ProdutoSelecionado
+                                                ContagemRegressiva -segundos 15 -etapa $($global:translations["DPMCTStepProcedureN42EIA"]) -nome_produto $ProdutoSelecionado
 
                                                 ExibirMenuProduto
 
                                             } else {
 
                                                 Write-Host ""
-                                                Write-Host "O $ProdutoSelecionado não possui dados de acesso." -ForegroundColor Red
+                                                Write-Host "$ProdutoSelecionado $($global:translations["DPMSODPMMANothingDataAccess"])" -ForegroundColor Red
                                                 Write-Host ""
                                                 Start-Sleep -Seconds 5
 
@@ -4430,22 +7125,22 @@ function Show-Detail-Produto-Geral {
                                             if ($TipoPlanoConta -eq "VIP") {
                                                 
                                                 Write-Host ""
-                                                Write-Host -NoNewline "Iniciando a" -ForegroundColor Yellow
-                                                Write-Host -NoNewline " 'ETAPA DE ATIVAÇÃO' " -ForegroundColor Magenta 
-                                                Write-Host -NoNewline "do" -ForegroundColor Yellow
+                                                Write-Host -NoNewline $($global:translations["DPMCTStepProcedureN3"]) -ForegroundColor Yellow
+                                                Write-Host -NoNewline " $($global:translations["DPMCTStepProcedureN4EA"]) " -ForegroundColor Magenta 
+                                                Write-Host -NoNewline $($global:translations["DPMCTStepProcedureN45EIA"]) -ForegroundColor Yellow
                                                 Write-Host -NoNewline " '$ProdutoSelecionado'. " -ForegroundColor Cyan
                                                 Write-Host ""
-                                                Write-Host -NoNewline "Aguarde" -ForegroundColor Yellow
-                                                Write-Host -NoNewline " '5 segundos' " -ForegroundColor Green
-                                                Write-Host -NoNewline "para dar início ao procedimento..." -ForegroundColor Yellow
+                                                Write-Host -NoNewline $($global:translations["DPMCTStepProcedureN1"]) -ForegroundColor Yellow
+                                                Write-Host -NoNewline " '5 $($global:translations["DPMCTHidingAccessDataN2"])' " -ForegroundColor Green
+                                                Write-Host -NoNewline "$($global:translations["DPMCTStepProcedureN2"])" -ForegroundColor Yellow
                                                 Write-Host "" 
 
-                                                Start-Sleep -Seconds 5
+                                                Start-Sleep -Seconds
 
                                                 Show-Process-Produto -UsuarioAtual $usuario_atual -ProdutoSelecionado $ProdutoSelecionado -TipoPlanoConta $TipoPlanoConta -VersaoDisponivel $produtoctdigital_versao_disponivel -MetodoSelecionado $MetodoSelecionado -ProcessosProduto $produtoctdigital_processos_produto -LinksProduto $produtoctdigital_links_produto -LocalizacaoProduto $produtoctdigital_localizacao_produto -InstrucoesAtivacaoProduto $produtoctdigital_instrucoes_usoativacao -EtapaProcesso "Ativacao"
                                                     
                                                 # Contagem regressiva de 15 segundos antes de voltar ao menu de detalhes do produto
-                                                ContagemRegressiva -segundos 15 -etapa "ATIVAÇÃO" -nome_produto $ProdutoSelecionado
+                                                ContagemRegressiva -segundos 15 -etapa $($global:translations["5DPMCTStepProcedureN4N2"]) -nome_produto $ProdutoSelecionado
 
                                                 ExibirMenuProduto
                                             
@@ -4462,14 +7157,14 @@ function Show-Detail-Produto-Geral {
                                                     Update-QTDVInMenu -qtdvTotal $($totalValues.qtdv_valor_atual) -qtdvUtilizado $($totalValues.qtdv_valor_utilizado) -silent
                                                     
                                                     Write-Host ""
-                                                    Write-Host -NoNewline "Iniciando a" -ForegroundColor Yellow
-                                                    Write-Host -NoNewline " 'ETAPA DE ATIVAÇÃO' " -ForegroundColor Magenta 
-                                                    Write-Host -NoNewline "do" -ForegroundColor Yellow
+                                                    Write-Host -NoNewline $($global:translations["DPMCTStepProcedureN3"]) -ForegroundColor Yellow
+                                                    Write-Host -NoNewline " $($global:translations["DPMCTStepProcedureN4EA"]) " -ForegroundColor Magenta 
+                                                    Write-Host -NoNewline $($global:translations["DPMCTStepProcedureN45EIA"]) -ForegroundColor Yellow
                                                     Write-Host -NoNewline " '$ProdutoSelecionado'. " -ForegroundColor Cyan
                                                     Write-Host ""
-                                                    Write-Host -NoNewline "Aguarde" -ForegroundColor Yellow
-                                                    Write-Host -NoNewline " '5 segundos' " -ForegroundColor Green
-                                                    Write-Host -NoNewline "para dar início ao procedimento..." -ForegroundColor Yellow
+                                                    Write-Host -NoNewline $($global:translations["DPMCTStepProcedureN1"]) -ForegroundColor Yellow
+                                                    Write-Host -NoNewline " '5 $($global:translations["DPMCTHidingAccessDataN2"])' " -ForegroundColor Green
+                                                    Write-Host -NoNewline $($global:translations["DPMCTStepProcedureN2"]) -ForegroundColor Yellow
                                                     Write-Host "" 
 
                                                     Start-Sleep -Seconds 5
@@ -4477,14 +7172,14 @@ function Show-Detail-Produto-Geral {
                                                     Show-Process-Produto -UsuarioAtual $usuario_atual -ProdutoSelecionado $ProdutoSelecionado -TipoPlanoConta $TipoPlanoConta -VersaoDisponivel $produtoctdigital_versao_disponivel -MetodoSelecionado $MetodoSelecionado -ProcessosProduto $produtoctdigital_processos_produto -LinksProduto $produtoctdigital_links_produto -LocalizacaoProduto $produtoctdigital_localizacao_produto -InstrucoesAtivacaoProduto $produtoctdigital_instrucoes_usoativacao -EtapaProcesso "Ativacao"
 
                                                     # Contagem regressiva de 5 segundos antes de ocultar os dados
-                                                    ContagemRegressiva -segundos 15 -etapa "ATIVAÇÃO" -nome_produto $ProdutoSelecionado
-
+                                                    ContagemRegressiva -segundos 15 -etapa $($global:translations["5DPMCTStepProcedureN4N2"]) -nome_produto $ProdutoSelecionado
+                              
                                                     ExibirMenuProduto
 
                                                 } else {
 
                                                     Write-Host ""
-                                                    Write-Host "Você não tem mais QTD Download e Visualizações, disponível para seu $ProdutoSelecionado" -ForegroundColor Red
+                                                    Write-Host "$($global:translations["DPMSODPMMANothingQTDVAvailable"]) $ProdutoSelecionado" -ForegroundColor Red
                                                     Write-Host ""
 
                                                     Start-Sleep -Seconds 5
@@ -4501,14 +7196,14 @@ function Show-Detail-Produto-Geral {
                                             if ($MetodoSelecionado -eq "Chave/Serial") {
                                                 
                                                 Write-Host ""
-                                                Write-Host -NoNewline "Iniciando a" -ForegroundColor Yellow
-                                                Write-Host -NoNewline " 'ETAPA DE DESINSTALAÇÃO' " -ForegroundColor Red
-                                                Write-Host -NoNewline "do" -ForegroundColor Yellow
+                                                Write-Host -NoNewline $($global:translations["DPMCTStepProcedureN3"]) -ForegroundColor Yellow
+                                                Write-Host -NoNewline " $($global:translations["DPMCTStepProcedureN4ED"]) " -ForegroundColor Red
+                                                Write-Host -NoNewline $($global:translations["DPMCTStepProcedureN45EIA"]) -ForegroundColor Yellow
                                                 Write-Host -NoNewline " '$ProdutoSelecionado'. " -ForegroundColor Cyan
                                                 Write-Host ""
-                                                Write-Host -NoNewline "Aguarde" -ForegroundColor Yellow
-                                                Write-Host -NoNewline " '5 segundos' " -ForegroundColor Green
-                                                Write-Host -NoNewline "para dar início ao procedimento..." -ForegroundColor Yellow
+                                                Write-Host -NoNewline $($global:translations["DPMCTStepProcedureN1"]) -ForegroundColor Yellow
+                                                Write-Host -NoNewline " '5 $($global:translations["DPMCTHidingAccessDataN2"])' " -ForegroundColor Green
+                                                Write-Host -NoNewline $($global:translations["DPMCTStepProcedureN2"]) -ForegroundColor Yellow
                                                 Write-Host "" 
 
                                                 Start-Sleep -Seconds 5
@@ -4516,21 +7211,21 @@ function Show-Detail-Produto-Geral {
                                                 Show-Process-Produto -UsuarioAtual $usuario_atual -ProdutoSelecionado $ProdutoSelecionado -TipoPlanoConta $TipoPlanoConta -VersaoDisponivel $produtoctdigital_versao_disponivel -MetodoSelecionado $MetodoSelecionado -ProcessosProduto $produtoctdigital_processos_produto -LinksProduto $produtoctdigital_links_produto -LocalizacaoProduto $produtoctdigital_localizacao_produto -InstrucoesAtivacaoProduto $produtoctdigital_instrucoes_usoativacao -EtapaProcesso "Desinstalacao"
                                                     
                                                 # Contagem regressiva de 15 segundos antes de voltar ao menu de detalhes do produto
-                                                ContagemRegressiva -segundos 15 -etapa "DESINSTALAÇÃO" -nome_produto $ProdutoSelecionado
+                                                ContagemRegressiva -segundos 15 -etapa $($global:translations["DPMCTStepProcedureN4N4"]) -nome_produto $ProdutoSelecionado
 
                                                 ExibirMenuProduto
 
                                             } elseif ($MetodoSelecionado -eq "Pré-Ativado") {
                                                 
                                                 Write-Host ""
-                                                Write-Host -NoNewline "Iniciando a" -ForegroundColor Yellow
-                                                Write-Host -NoNewline " 'ETAPA DE DESINSTALAÇÃO' " -ForegroundColor Red
-                                                Write-Host -NoNewline "do" -ForegroundColor Yellow
+                                                Write-Host -NoNewline $($global:translations["DPMCTStepProcedureN3"]) -ForegroundColor Yellow
+                                                Write-Host -NoNewline " $($global:translations["DPMCTStepProcedureN4ED"]) " -ForegroundColor Red
+                                                Write-Host -NoNewline $($global:translations["DPMCTStepProcedureN45EIA"]) -ForegroundColor Yellow
                                                 Write-Host -NoNewline " '$ProdutoSelecionado'. " -ForegroundColor Cyan
                                                 Write-Host ""
-                                                Write-Host -NoNewline "Aguarde" -ForegroundColor Yellow
-                                                Write-Host -NoNewline " '5 segundos' " -ForegroundColor Green
-                                                Write-Host -NoNewline "para dar início ao procedimento..." -ForegroundColor Yellow
+                                                Write-Host -NoNewline $($global:translations["DPMCTStepProcedureN1"]) -ForegroundColor Yellow
+                                                Write-Host -NoNewline " '5 $($global:translations["DPMCTHidingAccessDataN2"])' " -ForegroundColor Green
+                                                Write-Host -NoNewline $($global:translations["DPMCTStepProcedureN2"]) -ForegroundColor Yellow
                                                 Write-Host "" 
 
                                                 Start-Sleep -Seconds 5
@@ -4545,7 +7240,7 @@ function Show-Detail-Produto-Geral {
                                             } else {
 
                                                 Write-Host ""
-                                                Write-Host "O $ProdutoSelecionado não possui dados de acesso." -ForegroundColor Red
+                                                Write-Host "$ProdutoSelecionado $($global:translations["DPMSODPMMANothingDataAccess"])" -ForegroundColor Red
                                                 Write-Host ""
                                                 Start-Sleep -Seconds 5
 
@@ -4561,7 +7256,7 @@ function Show-Detail-Produto-Geral {
                                                 ExibirMenuProduto
                                             } else {
                                                 Write-Host ""
-                                                Write-Host "O $ProdutoSelecionado não possui um link de código de ativação." -ForegroundColor Red
+                                                Write-Host "$ProdutoSelecionado $($global:translations["DPMSODPMMANothingLinkCodeActivate"])" -ForegroundColor Red
                                                 Write-Host ""
                                                 Start-Sleep -Seconds 5
 
@@ -4578,7 +7273,7 @@ function Show-Detail-Produto-Geral {
                                             } else {
                                                 
                                                 Write-Host ""
-                                                Write-Host "O $ProdutoSelecionado não possui um link de acesso ao login de sua conta." -ForegroundColor Red
+                                                Write-Host "$ProdutoSelecionado $($global:translations["DPMSODPMMANothingLinkAccessLogin"])" -ForegroundColor Red
                                                 Write-Host ""
                                                 Start-Sleep -Seconds 5
 
@@ -4597,7 +7292,7 @@ function Show-Detail-Produto-Geral {
                                                     ExibirMenuProduto
                                                 } else {
                                                     Write-Host ""
-                                                    Write-Host "O $ProdutoSelecionado não possui um link de tutorial de ativação do seu produto." -ForegroundColor Red
+                                                    Write-Host "$ProdutoSelecionado $($global:translations["DPMSODPMMANothingLinkTutorialActivate"])" -ForegroundColor Red
                                                     Write-Host ""
                                                     Start-Sleep -Seconds 5
 
@@ -4611,7 +7306,7 @@ function Show-Detail-Produto-Geral {
                                                     ExibirMenuProduto
                                                 } else {
                                                     Write-Host ""
-                                                    Write-Host "O $ProdutoSelecionado não possui um link de tutorial de utilização de conta." -ForegroundColor Red
+                                                    Write-Host "$ProdutoSelecionado $($global:translations["DPMSODPMMANothingLinkTutorialUse"])" -ForegroundColor Red
                                                     Write-Host ""
                                                     Start-Sleep -Seconds 5
 
@@ -4629,23 +7324,26 @@ function Show-Detail-Produto-Geral {
                                                 ExibirMenuProduto
                                             } else {
                                                 Write-Host ""
-                                                Write-Host "O $ProdutoSelecionado não possui um link de print verificação de sua conta." -ForegroundColor Red
+                                                Write-Host "$ProdutoSelecionado $($global:translations["DPMSODPMMANothingLinkPrintVerification"])" -ForegroundColor Red
                                                 Write-Host ""
                                                 Start-Sleep -Seconds 5
 
                                                 ExibirMenuProduto
                                             }
 
-                                        } elseif ($opcoes_default_menu -contains "D" -or $opcoes_default_menu -eq "D") {
-                                            Fazer-Login
-                                        } elseif ($opcoes_default_menu -contains "V" -or $opcoes_default_menu -eq "V") {
+                                        # Correção de Ajuste # 3 (Erro)
+                                        # tirei o $opcoes_default_menu -contains e deixei apenas -eq
+
+                                        } elseif (($idiomaSelecionado -eq "pt" -and $opcoes_default_menu -eq "D") -or ($idiomaSelecionado -eq "en" -and $opcoes_default_menu -eq "L") -or ($idiomaSelecionado -eq "es" -and $opcoes_default_menu -eq "C")) {
+                                            Fazer-Login -LoginStatus $false
+                                        } elseif (($idiomaSelecionado -eq "pt" -and $opcoes_default_menu -eq "V") -or ($idiomaSelecionado -eq "en" -and $opcoes_default_menu -eq "B") -or ($idiomaSelecionado -eq "es" -and $opcoes_default_menu -eq "V")) {
                                             Show-Produtos-Metodos -UsuarioAtual $usuario_atual -SenhaAtual $senha_atual -CategoriaEscolhida $CategoriaEscolhida -ProdutoSelecionado $produtoSelecionado -TipoPlanoConta $TipoPlanoConta -DataAtual $DataAtual -DataTermino $DataTermino -ProdutosMetodoLiberado $ProdutosMetodoLiberado
                                         } elseif ($opcoes_default_menu -contains "M" -or $opcoes_default_menu -eq "M") {
-                                            Show-Menu
+                                            Show-Menu -LoginStatus $true -UsuarioAtual $usuario_atual -SenhaAtual $senha_atual -TipoPlanoConta $plano_conta_atual
                                         } else {
                                             
                                             Write-Host ""
-                                            Write-Host "Opção inválida. Por favor, digite um número ou letra que seja válido." -ForegroundColor Red
+                                            Write-Host $($global:translations["DOInvalidOptionN1"]) -ForegroundColor Red
                                             Write-Host ""
                                             Start-Sleep -Seconds 3
 
@@ -4659,23 +7357,22 @@ function Show-Detail-Produto-Geral {
 
                                 } else {
                                     Write-Host ""
-                                    Write-Host "     Condição não atendida. Verifique os valores de 'tempo_espera_entrega' e 'status_disponibilidade_entrega'."
+                                    Write-Host "     $($global:translations["DPMSODPMMANotMetCondition"]) 'tempo_espera_entrega' e 'status_disponibilidade_entrega'."
                                     Write-Host ""
-
                                 }
 
                             }
 
                         }  
                     } else {
-                        Write-Host "O produto dessa categoria não disponível em sua conta!" -ForegroundColor Red
+                        Write-Host $($global:translations["DPMSODPMMAProductNotAvailableAccount"]) -ForegroundColor Red
                         Write-Host ""
 
                         Start-Sleep -Seconds 3
                         Show-Produtos-Metodos -UsuarioAtual $usuario_atual -SenhaAtual $senha_atual -CategoriaEscolhida $CategoriaEscolhida -ProdutoSelecionado $produtoSelecionado -TipoPlanoConta $TipoPlanoConta -DataAtual $DataAtual -DataTermino $DataTermino -ProdutosMetodoLiberado $ProdutosMetodoLiberado
                     }
                 } else {
-                    Write-Host "     Usuário não encontrado." -ForegroundColor Red
+                    Write-Host "     $($global:translations["DMAAlertMessageUserNotFound"])" -ForegroundColor Red
                     Write-Host "" 
 
                     Start-Sleep -Seconds 3
@@ -4687,7 +7384,6 @@ function Show-Detail-Produto-Geral {
 
     } while ($true)
 }
-
 
 function Show-Process-Produto {
 
@@ -4703,6 +7399,11 @@ function Show-Process-Produto {
         [string]$InstrucoesAtivacaoProduto,
         [string]$EtapaProcesso
     )
+
+    # Update-Title-WindowMenu -menuKey $($global:translations["DPMDetailsProductsMenu"]) # Atualiza o título para o menu principal
+
+    # Carrega a linguagem de tradução / configuração atual
+    $idiomaSelecionado = $global:language = Get-LanguageConfig
     
     $usuario_atual = $UsuarioAtual
     $nome_programa = $ProdutoSelecionado
@@ -4862,7 +7563,7 @@ function Show-Process-Produto {
         $fixedWidthEtapaInstalacao = 120  # Largura total da linha
 
         # Frase a ser centralizada
-        $etapaInstalacaoTexto = "ETAPA DE INSTALAÇÃO DO $($produto_formatado)"
+        $etapaInstalacaoTexto = "$($global:translations["PPMISStepInstall"]) $($produto_formatado)"
         $etapaInstalacaoTextoLength = $etapaInstalacaoTexto.Length
 
         # Calcula o número de espaços necessários para centralizar
@@ -4996,20 +7697,19 @@ function Show-Process-Produto {
                     Write-Host ""
                     Write-Host "     ================================================================================================================" -ForegroundColor Cyan
                     Write-Host ""
-                    Write-Host -NoNewline "      Você precisa ter instalado no seu computador, o" -ForegroundColor Yellow
+                    Write-Host -NoNewline "      $($global:translations["PPMVISNeedInstalledYourComputer"])" -ForegroundColor Yellow
                     Write-Host -NoNewline " '$nome_programa $versao_disponivel' " -ForegroundColor Cyan
                     Write-Host ""  
-                    Write-Host ""      
-                    Write-Host -NoNewline "      Para que os" -ForegroundColor Yellow
-                    Write-Host -NoNewline " 'Dados de Acesso' " -ForegroundColor Magenta
-                    Write-Host -NoNewline "disponível para visualização seja compatível e efetiva na sua ativação." -ForegroundColor Yellow
+                    Write-Host -NoNewline "      $($global:translations["PPMVISSoNeedInstalled"])" -ForegroundColor Yellow
+                    Write-Host -NoNewline " $($global:translations["PPMVISLoginDetails"]) " -ForegroundColor Cyan
+                    Write-Host -NoNewline "$($global:translations["PPMVISAvailableViewingCompatible"])" -ForegroundColor Yellow
                     Write-Host ""
-                    Write-Host -NoNewline "      O programa" -ForegroundColor Yellow
+                    Write-Host -NoNewline "      $($global:translations["PPMISTheProgram"])" -ForegroundColor Yellow
                     Write-Host -NoNewline " '$nome_programa $versao_disponivel' " -ForegroundColor Cyan
-                    Write-Host -NoNewline "já está instalado em seu computador." -ForegroundColor Yellow
+                    Write-Host -NoNewline "$($global:translations["PPMISInstalledYourComputer"])" -ForegroundColor Yellow
                     Write-Host ""
                     Write-Host ""
-                    Write-Host "      Processo de instalação do $nome_programa cancelado." -ForegroundColor Red
+                    Write-Host "      $($global:translations["PPMISInstalledProcessInstall"]) $nome_programa $($global:translations["PPMISInstalledCancell"])" -ForegroundColor Red
                     Write-Host ""
 
                 } else {
@@ -5017,12 +7717,12 @@ function Show-Process-Produto {
                     Write-Host ""
                     Write-Host "     ================================================================================================================" -ForegroundColor Cyan
                     Write-Host ""
-                    Write-Host -NoNewline "      O programa" -ForegroundColor Yellow
+                    Write-Host -NoNewline "      $($global:translations["PPMISTheProgram"])" -ForegroundColor Yellow
                     Write-Host -NoNewline " '$nome_programa $versao_disponivel' " -ForegroundColor Cyan
-                    Write-Host -NoNewline "já está instalado em seu computador." -ForegroundColor Yellow
+                    Write-Host -NoNewline "$($global:translations["PPMISInstalledYourComputer"])" -ForegroundColor Yellow
                     Write-Host ""
                     Write-Host ""
-                    Write-Host "      Processo de instalação do $nome_programa cancelado." -ForegroundColor Red
+                    Write-Host "      $($global:translations["PPMISInstalledProcessInstall"]) $nome_programa $($global:translations["PPMISInstalledCancell"])" -ForegroundColor Red
                     Write-Host ""
 
                 }
@@ -5036,19 +7736,20 @@ function Show-Process-Produto {
                     Write-Host ""
                     Write-Host "     ================================================================================================================" -ForegroundColor Cyan
                     Write-Host ""
-                    Write-Host -NoNewline "      Você precisa ter instalado no seu computador, o" -ForegroundColor Yellow
+                    Write-Host -NoNewline "      $($global:translations["PPMVISNeedInstalledYourComputer"])" -ForegroundColor Yellow
                     Write-Host -NoNewline " '$nome_programa $versao_disponivel' " -ForegroundColor Cyan
-                    Write-Host -NoNewline "para que a" -ForegroundColor Yellow
-                    Write-Host -NoNewline " 'Chave/Serial' " -ForegroundColor Magenta
-                    Write-Host -NoNewline "disponível para visualização seja compatível e efetiva na sua ativação." -ForegroundColor Yellow
                     Write-Host ""
-                    Write-Host -NoNewline "      O programa" -ForegroundColor Yellow
+                    Write-Host -NoNewline "      $($global:translations["PPMVISSoNeedInstalled"])" -ForegroundColor Yellow
+                    Write-Host -NoNewline " $($global:translations["PPMVISLoginDetails"]) " -ForegroundColor Cyan
+                    Write-Host -NoNewline "$($global:translations["PPMVISAvailableViewingCompatible"])" -ForegroundColor Yellow
+                    Write-Host ""
+                    Write-Host -NoNewline "      $($global:translations["PPMISTheProgram"])" -ForegroundColor Yellow
                     Write-Host -NoNewline " '$nome_programa $programVersionAnterior' " -ForegroundColor Cyan
-                    Write-Host -NoNewline "já está instalado em seu computador." -ForegroundColor Yellow
+                    Write-Host -NoNewline "$($global:translations["PPMISInstalledYourComputer"])" -ForegroundColor Yellow
                     Write-Host ""
-                    Write-Host "      Processo de instalação do $nome_programa cancelado." -ForegroundColor Red
+                    Write-Host "      $($global:translations["PPMISInstalledProcessInstall"]) $nome_programa $($global:translations["PPMISInstalledCancell"])" -ForegroundColor Red
                     Write-Host ""
-                    Write-Host -NoNewline "      Desinstale a versão anterior e desatualizada do" -ForegroundColor Yellow
+                    Write-Host -NoNewline "      $($global:translations["PPMVISUninstallVersionPrevious"])" -ForegroundColor Yellow
                     Write-Host -NoNewline " '$nome_programa' " -ForegroundColor Cyan
                     Write-Host ""
 
@@ -5057,17 +7758,17 @@ function Show-Process-Produto {
                     Write-Host ""
                     Write-Host "     ================================================================================================================" -ForegroundColor Cyan
                     Write-Host ""
-                    Write-Host -NoNewline "      O programa" -ForegroundColor Yellow
+                    Write-Host -NoNewline "      $($global:translations["PPMISTheProgram"])" -ForegroundColor Yellow
                     Write-Host -NoNewline " '$nome_programa $programVersionAnterior' " -ForegroundColor Cyan
-                    Write-Host -NoNewline "já está instalado em seu computador." -ForegroundColor Yellow
+                    Write-Host -NoNewline "$($global:translations["PPMISInstalledYourComputer"])" -ForegroundColor Yellow
                     Write-Host ""
-                    Write-Host -NoNewline "      Desinstale a versão anterior do" -ForegroundColor Yellow
+                    Write-Host -NoNewline "      $($global:translations["PPMISUninstalledVersionLast"])" -ForegroundColor Yellow
                     Write-Host -NoNewline " '$nome_programa' " -ForegroundColor Cyan
-                    Write-Host -NoNewline "e instale a versão atual" -ForegroundColor Yellow
+                    Write-Host -NoNewline "$($global:translations["PPMISInstalledVersionCurrent"])" -ForegroundColor Yellow
                     Write-Host -NoNewline " '$versao_disponivel'." -ForegroundColor Cyan
                     Write-Host ""
                     Write-Host ""
-                    Write-Host "      Processo de instalação do $nome_programa cancelado." -ForegroundColor Red
+                    Write-Host "      $($global:translations["PPMISInstalledProcessInstall"]) $nome_programa $($global:translations["PPMISInstalledCancell"])" -ForegroundColor Red
                     Write-Host ""
 
                 }
@@ -5091,10 +7792,10 @@ function Show-Process-Produto {
                 Write-Host ""
                 Write-Host "     ================================================================================================================" -ForegroundColor Red
                 Write-Host ""
-                Write-Host -NoNewline "      Os processos $($processNames -join ', ') estão em execução." -ForegroundColor Yellow
-                Write-Host -NoNewline " Fechando os processos para iniciar a instalação do" -ForegroundColor Red
+                Write-Host -NoNewline "      $($global:translations["PPMISTheProcess"]) $($processNames -join ', ') $($global:translations["PPMISIsExecuted"])" -ForegroundColor Yellow
+                Write-Host -NoNewline " $($global:translations["PPMISClosingProcessStartInstall"])" -ForegroundColor Red
                 Write-Host -NoNewline " '$nome_programa $versao_disponivel' " -ForegroundColor Cyan
-                Write-Host -NoNewline "em seu computador." -ForegroundColor Red
+                Write-Host -NoNewline "$($global:translations["PPMISYourComputer"])" -ForegroundColor Red
                 Write-Host ""
                 Write-Host ""
                            
@@ -5104,16 +7805,16 @@ function Show-Process-Produto {
                 Write-Host ""
                 Write-Host "     ================================================================================================================" -ForegroundColor Green
                 Write-Host ""
-                Write-Host -NoNewline "      Preparando seu dispositvo para dar início á etapa de instalação do" -ForegroundColor Yellow
+                Write-Host -NoNewline "      $($global:translations["PPMISPreparingDispStartInstall"])" -ForegroundColor Yellow
                 Write-Host -NoNewline " '$nome_programa $versao_disponivel' " -ForegroundColor Cyan
-                Write-Host -NoNewline "em seu computador." -ForegroundColor Yellow
+                Write-Host -NoNewline "$($global:translations["PPMISYourComputer"])" -ForegroundColor Yellow
                 Write-Host ""
                 Write-Host ""
             }
             
-            $opcao_instalacao = Read-Host "      Deseja instalar o $nome_programa no seu computador? (S/N)"
+            $opcao_instalacao = Read-Host "      $($global:translations["PPMISWishInstallQuestion"]) $nome_programa $($global:translations["PPMISYourComputerInstallQuestion"])"
 
-            if ($opcao_instalacao -eq 's') {                              
+            if (($idiomaSelecionado -eq "pt" -and $opcao_instalacao -eq "S") -or ($idiomaSelecionado -eq "en" -and $opcao_instalacao -eq "Y") -or ($idiomaSelecionado -eq "es" -and $opcao_instalacao -eq "S")) {                              
 
                 # Definir a URL do arquivo e o destino
                 $nome_file_destino = ($nome_programa -replace '\s', '').ToLower()
@@ -5145,8 +7846,8 @@ function Show-Process-Produto {
                         Write-Host ""
                         Write-Host "     ================================================================================================================" -ForegroundColor Red       
                         Write-Host ""
-                        Write-Host "      Os processos $($processNames -join ', ') estão em execução." -ForegroundColor Yellow
-                        Write-Host "      Fechando os processos para iniciar a instalação..." -ForegroundColor Green
+                        Write-Host "      $($global:translations["PPMISTheProcess"]) $($processNames -join ', ') $($global:translations["PPMISIsExecuted"])" -ForegroundColor Yellow
+                        Write-Host "      $($global:translations["PPMISClosingProcessStartInstall"])" -ForegroundColor Green
                             
                         $processNames = $processesRunning | ForEach-Object { $_.Name }
 
@@ -5165,18 +7866,18 @@ function Show-Process-Produto {
                             # Inicia o processo de instação
                             
                             Write-Host ""
-                            Write-Host -NoNewline "      Instalação oficial de" -ForegroundColor Yellow
+                            Write-Host -NoNewline "      $($global:translations["PPMISOfficialOfInstall"])" -ForegroundColor Yellow
                             Write-Host -NoNewline " '$nome_programa' " -ForegroundColor Cyan
-                            Write-Host -NoNewline "iniciada..." -ForegroundColor Yellow
+                            Write-Host -NoNewline "$($global:translations["PPMISStartingStep"])" -ForegroundColor Yellow
                             Write-Host ""
-                            Write-Host "      Abrindo o instalador de $nome_programa..."   -ForegroundColor Green
+                            Write-Host "      $($global:translations["PPMISOpeningInstall"]) $nome_programa..."   -ForegroundColor Green
                             
                             Start-Sleep -Seconds 5
                             
                             Write-Host ""
-                            Write-Host -NoNewline "      Aguardando o processo de instalação do" -ForegroundColor Yellow
+                            Write-Host -NoNewline "      $($global:translations["PPPMISWaitProcessInstall"])" -ForegroundColor Yellow
                             Write-Host -NoNewline " '$nome_programa' " -ForegroundColor Cyan
-                            Write-Host -NoNewline "terminar..." -ForegroundColor Yellow
+                            Write-Host -NoNewline "$($global:translations["PPMISFinishingStep"])" -ForegroundColor Yellow
                             Write-Host ""
 
                             if ($url -like "*lc.cx*" -or $url -like "*abrir.link*"){
@@ -5222,8 +7923,8 @@ function Show-Process-Produto {
                                 } else {
 
                                     Write-Host ""
-                                    Write-Host "      Setup de instalação do $nome_programa não encontrado..." -ForegroundColor Yellow
-                                    Write-Host "      Falha na instalação do $nome_programa..." -ForegroundColor Red
+                                    Write-Host "      $($global:translations["PPMISSetupInstallOf"]) $nome_programa $($global:translations["PPMISNotFoundN1"])" -ForegroundColor Yellow
+                                    Write-Host "      $($global:translations["PPMISFailInstallOf"]) $nome_programa..." -ForegroundColor Red
                                     Write-Host ""
                                 }
 
@@ -5237,14 +7938,14 @@ function Show-Process-Produto {
                             }
                                 
                             Write-Host ""
-                            Write-Host "      Confirme se o $nome_programa foi instalado, e verifique se tudo ocorreu bem." -ForegroundColor Yellow
+                            Write-Host "      $($global:translations["PPMISConfirmedOf"]) $nome_programa $($global:translations["PPMISInstallAndVerify"])" -ForegroundColor Yellow
                             Write-Host ""
                             
-                            $instalacao_completa = Read-Host "      Deseja verificar a instalação do $nome_programa ? (S/N)"
+                            $instalacao_completa = Read-Host "      $($global:translations["PPMISVerifyToInstall"]) $nome_programa ? $($global:translations["PPMUSYesOrNot"])"
                             
                             Write-Host ""
 
-                            if($instalacao_completa -eq 's' -or $instalacao_completa -eq 'n'){
+                            if(($idiomaSelecionado -eq "pt" -and $instalacao_completa -eq "S" -or $instalacao_completa -eq "N") -or ($idiomaSelecionado -eq "en" -and $instalacao_completa -eq "Y" -or $instalacao_completa -eq "N") -or ($idiomaSelecionado -eq "es" -and $instalacao_completa -eq "S" -or $instalacao_completa -eq "N")){
 
                                 # ! Antes verifica que existe uma subpasta na pasta principal do programa.
 
@@ -5268,13 +7969,13 @@ function Show-Process-Produto {
                                 # Verifica se a pasta ainda existe
                                 if (((Test-Path $progam_folder) -and $subfoldersProgramFolder.Count -ge 1 -and $filesInSubProgramFolder.Count -gt 2) -or ((Test-Path $progam_folder) -and $filesInProgramFolder.Count -ge 4)) {
                                                 
-                                    Write-Host "      Instalação de $nome_programa foi concluída com sucesso." -ForegroundColor Green
+                                    Write-Host "      $($global:translations["PPMISInstallOf"]) $nome_programa $($global:translations["PPMISInstallSuccefullFinish"])" -ForegroundColor Green
                                     Write-Host ""
                                                 
                                     # Remove o setup de instalação
                                     Remove-Item $destino -Force
 
-                                    $opcao_verficar_instalacao = Read-Host "      Deseja iniciar o $nome_programa para confirmar sua instalação? (S/N)"
+                                    $opcao_verficar_instalacao = Read-Host "      $($global:translations["PPMISStartingOf"]) $nome_programa $($global:translations["PPMISConfirmYourInstall"])"
                                         
                                     Write-Host ""
                                                     
@@ -5287,7 +7988,7 @@ function Show-Process-Produto {
                                         Stop-Process -Id $process.Id -Force
                                     }
 
-                                    if ($opcao_verficar_instalacao -eq 's') {
+                                    if (($idiomaSelecionado -eq "pt" -and $opcao_verficar_instalacao -eq "S") -or ($idiomaSelecionado -eq "en" -and $opcao_verficar_instalacao -eq "Y") -or ($idiomaSelecionado -eq "es" -and $opcao_verficar_instalacao -eq "S")) {
 
                                         if (Test-Path $progam_folder) {
 
@@ -5296,9 +7997,9 @@ function Show-Process-Produto {
                                             Start-Sleep -Seconds 10
 
                                             Write-Host ""
-                                            Write-Host -NoNewline "      Aguardando o processo do" -ForegroundColor Yellow
+                                            Write-Host -NoNewline "      $($global:translations["PPMISWaitingProcess"])" -ForegroundColor Yellow
                                             Write-Host -NoNewline " '$nome_programa' " -ForegroundColor Cyan
-                                            Write-Host -NoNewline "ser finalizado..." -ForegroundColor Yellow
+                                            Write-Host -NoNewline "$($global:translations["PPMISOfFinishing"])" -ForegroundColor Yellow
                                             Write-Host ""
 
                                             function showAfterStartProgram {
@@ -5307,11 +8008,13 @@ function Show-Process-Produto {
 
                                                     #Stop-Process -Id $process.Id
                                                     
-                                                    Write-Host "      Processo de instalação finalizado." -ForegroundColor Yellow
+                                                    Write-Host "      $($global:translations["PPMISProcessInsallFinishing"])" -ForegroundColor Yellow
                                                     Write-Host ""
-                                                    Write-Host -NoNewline "      Inicie a etapa de" -ForegroundColor Yellow 
-                                                    Write-Host -NoNewline " 'VISUALIZAÇÃO' " -ForegroundColor Magenta
-                                                    Write-Host -NoNewline "para visualizar os dados de acesso do seu" -ForegroundColor Yellow
+                                                    Write-Host -NoNewline "      $($global:translations["PPMISStartingStepOff"])" -ForegroundColor Yellow 
+                                                    Write-Host -NoNewline " $($global:translations["PPMVISStepView"]) " -ForegroundColor Magenta
+                                                    Write-Host -NoNewline "$($global:translations["PPMVISToViewThe"])" -ForegroundColor Yellow
+                                                    Write-Host -NoNewline " $($global:translations["PPMVISLoginDetails"]) " -ForegroundColor Cyan
+                                                    Write-Host -NoNewline "$($global:translations["PPMVISOfYou"])" -ForegroundColor Yellow
                                                     Write-Host -NoNewline " '$nome_program'." -ForegroundColor Cyan
                                                     Write-Host ""
                                                     Write-Host ""
@@ -5322,11 +8025,11 @@ function Show-Process-Produto {
 
                                                     #Stop-Process -Id $process.Id
                                                     
-                                                    Write-Host "      Processo de instalação finalizado." -ForegroundColor Yellow
+                                                    Write-Host "      $($global:translations["PPMISProcessInsallFinishing"])" -ForegroundColor Yellow
                                                     Write-Host ""
-                                                    Write-Host -NoNewline "      Inicie a etapa de" -ForegroundColor Yellow 
-                                                    Write-Host -NoNewline " 'ATIVAÇÃO' " -ForegroundColor Magenta
-                                                    Write-Host -NoNewline "para ativar seu" -ForegroundColor Yellow
+                                                    Write-Host -NoNewline "      $($global:translations["PPMISStartingStepOff"])" -ForegroundColor Yellow 
+                                                    Write-Host -NoNewline " $($global:translations["PPMISActivateStep"]) " -ForegroundColor Magenta
+                                                    Write-Host -NoNewline "$($global:translations["PPMISActivateYour"])" -ForegroundColor Yellow
                                                     Write-Host -NoNewline " '$nome_programa'" -ForegroundColor Cyan
                                                     Write-Host ""
                                                     Write-Host ""
@@ -5356,9 +8059,9 @@ function Show-Process-Produto {
                                                         
                                                 } else {
                                                     Write-Host ""
-                                                    Write-Host -NoNewline "      Processo do" -ForegroundColor Red
+                                                    Write-Host -NoNewline "      $($global:translations["PPMISProcessOf"])" -ForegroundColor Red
                                                     Write-Host -NoNewline " '$nome_programa' " -ForegroundColor Cyan
-                                                    Write-Host -NoNewline "não encontrado, ou não está em execução." -ForegroundColor Red
+                                                    Write-Host -NoNewline "$($global:translations["PPMISNotFoundOrNotExecute"])" -ForegroundColor Red
                                                     Write-Host ""
                                                     Write-Host ""
 
@@ -5368,7 +8071,7 @@ function Show-Process-Produto {
                                         
                                         } else {
                                             Write-Host ""
-                                            Write-Host "      A instalação falhou ou não foi concluída corretamente." -ForegroundColor Red
+                                            Write-Host "      $($global:translations["PPMISInstallFailedOrNotDone"])" -ForegroundColor Red
                                             Write-Host ""
 
                                             if ( $EtapaInstAtv ) { Start-Sleep -Seconds 5 }
@@ -5377,11 +8080,13 @@ function Show-Process-Produto {
 
                                         if ($MetodoSelecionado -eq "Chave/Serial") {
 
-                                            Write-Host "      Processo de instalação finalizado." -ForegroundColor Yellow
+                                            Write-Host "      $($global:translations["PPMISProcessInsallFinishing"])" -ForegroundColor Yellow
                                             Write-Host ""
-                                            Write-Host -NoNewline "      Inicie a etapa de" -ForegroundColor Yellow 
-                                            Write-Host -NoNewline " 'VISUALIZAÇÃO' " -ForegroundColor Magenta
-                                            Write-Host -NoNewline "para visualizar os dados de acesso do seu" -ForegroundColor Yellow
+                                            Write-Host -NoNewline "      $($global:translations["PPMISStartingStepOff"])" -ForegroundColor Yellow 
+                                            Write-Host -NoNewline " $($global:translations["PPMVISStepView"]) " -ForegroundColor Magenta
+                                            Write-Host -NoNewline "$($global:translations["PPMVISToViewThe"])" -ForegroundColor Yellow
+                                            Write-Host -NoNewline " $($global:translations["PPMVISLoginDetails"]) " -ForegroundColor Cyan
+                                            Write-Host -NoNewline "$($global:translations["PPMVISOfYou"])" -ForegroundColor Yellow
                                             Write-Host -NoNewline " '$nome_program'." -ForegroundColor Cyan
                                             Write-Host ""
                                             Write-Host ""
@@ -5390,11 +8095,11 @@ function Show-Process-Produto {
 
                                         } else {
 
-                                            Write-Host "      Processo de instalação finalizado." -ForegroundColor Yellow
+                                            Write-Host "      $($global:translations["PPMISProcessInsallFinishing"])" -ForegroundColor Yellow
                                             Write-Host ""
-                                            Write-Host -NoNewline "      Inicie a etapa de" -ForegroundColor Yellow 
-                                            Write-Host -NoNewline " 'ATIVAÇÃO' " -ForegroundColor Magenta
-                                            Write-Host -NoNewline "para ativar seu" -ForegroundColor Yellow
+                                            Write-Host -NoNewline "      $($global:translations["PPMISStartingStepOff"])" -ForegroundColor Yellow 
+                                            Write-Host -NoNewline " $($global:translations["PPMISActivateStep"]) " -ForegroundColor Magenta
+                                            Write-Host -NoNewline "$($global:translations["PPMISActivateYour"])" -ForegroundColor Yellow
                                             Write-Host -NoNewline " '$nome_programa'" -ForegroundColor Cyan
                                             Write-Host ""
                                             Write-Host ""
@@ -5408,10 +8113,10 @@ function Show-Process-Produto {
 
                                 } else {
 
-                                    Write-Host "      A instalação falhou ou não foi concluída corretamente." -ForegroundColor Red
-                                    write-Host -NoNewline "      Algum processo não permitido está em execução, ou o" -ForegroundColor Yellow
+                                    Write-Host "      $($global:translations["PPMISInstallFailedOrNotDone"])" -ForegroundColor Red
+                                    write-Host -NoNewline "      $($global:translations["PPMISProcessNotAllowedExecute"])" -ForegroundColor Yellow
                                     Write-Host -NoNewline " '$nome_programa' " -ForegroundColor Cyan
-                                    Write-Host -NoNewline "já estava instalado no seu computador." -ForegroundColor Yellow
+                                    Write-Host -NoNewline "$($global:translations["PPMISWasAlreadyInstallYourComputer"])" -ForegroundColor Yellow
                                     Write-Host ""
                                     Write-Host ""
 
@@ -5426,11 +8131,13 @@ function Show-Process-Produto {
                                 
                                 if ($MetodoSelecionado -eq "Chave/Serial") {
 
-                                    Write-Host "      Processo de instalação finalizado." -ForegroundColor Yellow
+                                    Write-Host "      $($global:translations["PPMISProcessInsallFinishing"])" -ForegroundColor Yellow
                                     Write-Host ""
-                                    Write-Host -NoNewline "      Inicie a etapa de" -ForegroundColor Yellow 
-                                    Write-Host -NoNewline " 'VISUALIZAÇÃO' " -ForegroundColor Magenta
-                                    Write-Host -NoNewline "para visualizar os dados de acesso do seu" -ForegroundColor Yellow
+                                    Write-Host -NoNewline "      $($global:translations["PPMISStartingStepOff"])" -ForegroundColor Yellow 
+                                    Write-Host -NoNewline " $($global:translations["PPMVISStepView"]) " -ForegroundColor Magenta
+                                    Write-Host -NoNewline "$($global:translations["PPMVISToViewThe"])" -ForegroundColor Yellow
+                                    Write-Host -NoNewline " $($global:translations["PPMVISLoginDetails"]) " -ForegroundColor Cyan
+                                    Write-Host -NoNewline "$($global:translations["PPMVISOfYou"])" -ForegroundColor Yellow
                                     Write-Host -NoNewline " '$nome_program'." -ForegroundColor Cyan
                                     Write-Host ""
                                     Write-Host ""
@@ -5439,11 +8146,11 @@ function Show-Process-Produto {
 
                                 } else {
 
-                                    Write-Host "      Processo de instalação finalizado." -ForegroundColor Yellow 
+                                    Write-Host "      $($global:translations["PPMISProcessInsallFinishing"])" -ForegroundColor Yellow 
                                     Write-Host ""
-                                    Write-Host -NoNewline "      Inicie a etapa de" -ForegroundColor Yellow 
-                                    Write-Host -NoNewline " 'ATIVAÇÃO' " -ForegroundColor Magenta
-                                    Write-Host -NoNewline "para ativar seu" -ForegroundColor Yellow
+                                    Write-Host -NoNewline "      $($global:translations["PPMISStartingStepOff"])" -ForegroundColor Yellow 
+                                    Write-Host -NoNewline " $($global:translations["PPMISActivateStep"]) " -ForegroundColor Magenta
+                                    Write-Host -NoNewline "$($global:translations["PPMISActivateYour"])" -ForegroundColor Yellow
                                     Write-Host -NoNewline " '$nome_programa'" -ForegroundColor Cyan
                                     Write-Host ""
                                     Write-Host ""
@@ -5463,15 +8170,15 @@ function Show-Process-Produto {
 
                             Write-Host ""
                             Write-Host ""
-                            Write-Host -NoNewline "      O instalador de" -ForegroundColor Red
+                            Write-Host -NoNewline "      $($global:translations["PPMISTheInstallerOf"])" -ForegroundColor Red
                             Write-Host -NoNewline " '$nome_programa $versao_disponivel' " -ForegroundColor Cyan
-                            Write-Host -NoNewline "não foi encontrado." -ForegroundColor Red
+                            Write-Host -NoNewline "$($global:translations["PPMISNotFoundN2"])" -ForegroundColor Red
                             Write-Host ""
-                            Write-Host -NoNewline "      Baixando o setup oficial de instalação do" -ForegroundColor Yellow
+                            Write-Host -NoNewline "      $($global:translations["PPMISDownOfficialInstall"])" -ForegroundColor Yellow
                             Write-Host -NoNewline " '$nome_programa $versao_disponivel'." -ForegroundColor Cyan
                             Write-Host ""
                             Write-Host ""
-                            Write-Host "      Aguarde alguns minutos..." -ForegroundColor Green
+                            Write-Host "      $($global:translations["PPMISWaitingMinutes"])" -ForegroundColor Green
                             Write-Host ""
 
                             # Baixar o arquivo
@@ -5484,12 +8191,12 @@ function Show-Process-Produto {
                                 $response = Invoke-WebRequest -Uri "$url" -OutFile "$destino" -ErrorAction Stop 
 
                                 Write-Host ""
-                                Write-Host "      $nome_programa baixado com sucesso...." -ForegroundColor Green
+                                Write-Host "      $nome_programa $($global:translations["PPMISDownloadSuccefull"])" -ForegroundColor Green
                                 Write-Host ""
                                
                             } catch {
                                 Write-Host ""
-                                Write-Host "      Erro ao baixar o $nome_programa" -ForegroundColor Red
+                                Write-Host "      $($global:translations["PPMISErrorInDownload"]) $nome_programa" -ForegroundColor Red
                                 Write-Host ""
                             }
 
@@ -5498,19 +8205,19 @@ function Show-Process-Produto {
                                 # Inicia o processo de instação
                                 
                                 Write-Host ""
-                                Write-Host -NoNewline "      Instalação oficial de" -ForegroundColor Yellow
+                                Write-Host -NoNewline "      $($global:translations["PPMISOfficialOfInstall"])" -ForegroundColor Yellow
                                 Write-Host -NoNewline " '$nome_programa' " -ForegroundColor Cyan
-                                Write-Host -NoNewline "iniciada..." -ForegroundColor Yellow
+                                Write-Host -NoNewline "$($global:translations["PPMISStartingStep"])" -ForegroundColor Yellow
                                 Write-Host ""
                                 Write-Host ""
-                                Write-Host "      Abrindo o instalador de $nome_programa..."   -ForegroundColor Green
+                                Write-Host "      $($global:translations["PPMISOpeningInstall"]) $nome_programa..."   -ForegroundColor Green
                             
                                 Start-Sleep -Seconds 5
                             
                                 Write-Host ""
-                                Write-Host -NoNewline "      Aguardando o processo de instalação do" -ForegroundColor Yellow
+                                Write-Host -NoNewline "      $($global:translations["PPPMISWaitProcessInstall"])" -ForegroundColor Yellow
                                 Write-Host -NoNewline " '$nome_programa' " -ForegroundColor Cyan
-                                Write-Host -NoNewline "terminar..." -ForegroundColor Yellow
+                                Write-Host -NoNewline "$($global:translations["PPMISFinishingStep"])" -ForegroundColor Yellow
                                 Write-Host ""
                                 Write-Host ""
 
@@ -5570,8 +8277,8 @@ function Show-Process-Produto {
 
                                             } else {
                                                 Write-Host ""
-                                                Write-Host "      Setup de instalação do $nome_programa não encontrado..." -ForegroundColor Yellow
-                                                Write-Host "      Falha na instalação do $nome_programa..." -ForegroundColor Red
+                                                Write-Host "      $($global:translations["PPMISSetupInstallOf"]) $nome_programa $($global:translations["PPMISNotFoundN1"])" -ForegroundColor Yellow
+                                                Write-Host "      $($global:translations["PPMISFailInstallOf"]) $nome_programa..." -ForegroundColor Red
                                                 Write-Host ""
                                             }
                                         }
@@ -5614,8 +8321,8 @@ function Show-Process-Produto {
                                 
                                         } else {
                                             Write-Host ""
-                                            Write-Host "      Setup de instalação do $nome_programa não encontrado..." -ForegroundColor Yellow
-                                            Write-Host "      Falha na instalação do $nome_programa..." -ForegroundColor Red
+                                            Write-Host "      $($global:translations["PPMISSetupInstallOf"]) $nome_programa $($global:translations["PPMISNotFoundN1"])" -ForegroundColor Yellow
+                                            Write-Host "      $($global:translations["PPMISFailInstallOf"]) $nome_programa..." -ForegroundColor Red
                                             Write-Host ""
                                         }
                                     }
@@ -5633,18 +8340,18 @@ function Show-Process-Produto {
                                 }
 
                                 if($MetodoSelecionado -eq "Chave/Serial" -and $stepsAtvToCheck["processo_ativacao"].Contains('Pré-instalação')) {
-                                    
+
                                     # Remove o setup de instalação
                                     Remove-Item $destino -Recurse -Force
-                                    
+
                                     Write-Host ""
-                                    Write-Host "      Processo de instalação foi inicializado com suceso!" -ForegroundColor Yellow
+                                    Write-Host "      $($global:translations["PPMVASInstallationProcessSuccessStarted"])" -ForegroundColor Yellow
                                     Write-Host ""
-                                    Write-Host -NoNewline "      Inicie a etapa de" -ForegroundColor Yellow 
-                                    Write-Host -NoNewline " 'VISUALIZAÇÃO' " -ForegroundColor Magenta
-                                    Write-Host -NoNewline "para visualizar" -ForegroundColor Yellow
-                                    Write-Host -NoNewline " 'Chave Keys e/ou Dados de Login' " -ForegroundColor Cyan
-                                    Write-Host -NoNewline "do seu" -ForegroundColor Yellow
+                                    Write-Host -NoNewline "      $($global:translations["PPMISStartingStepOff"])" -ForegroundColor Yellow 
+                                    Write-Host -NoNewline " $($global:translations["PPMVISStepView"]) " -ForegroundColor Magenta
+                                    Write-Host -NoNewline "$($global:translations["PPMVISToViewThe"])" -ForegroundColor Yellow
+                                    Write-Host -NoNewline " $($global:translations["PPMVISLoginDetails"]) " -ForegroundColor Cyan
+                                    Write-Host -NoNewline "$($global:translations["PPMVISOfYou"])" -ForegroundColor Yellow
                                     Write-Host -NoNewline " '$nome_programa'." -ForegroundColor Cyan
                                     Write-Host ""
                                     Write-Host ""
@@ -5658,14 +8365,14 @@ function Show-Process-Produto {
                                     # Incia e depois Remove o setup do instalador do programa, e aguarda sua conclusão.
                                 
                                     Write-Host ""
-                                    Write-Host "      Confirme se o $nome_programa foi instalado, e verifique se tudo ocorreu bem." -ForegroundColor Yellow
+                                    Write-Host "      $($global:translations["PPMISConfirmedOf"]) $nome_programa $($global:translations["PPMISInstallAndVerify"])" -ForegroundColor Yellow
                                     Write-Host ""
                             
-                                    $instalacao_completa = Read-Host "      Deseja verificar a instalação do $nome_programa ? (S/N)"
+                                    $instalacao_completa = Read-Host "      $($global:translations["PPMISVerifyToInstall"]) $nome_programa ? $($global:translations["PPMUSYesOrNot"])"
                             
                                     Write-Host ""
 
-                                    if($instalacao_completa -eq 's' -or $instalacao_completa -eq 'n'){
+                                    if(($idiomaSelecionado -eq "pt" -and $instalacao_completa -eq "S" -or $instalacao_completa -eq "N") -or ($idiomaSelecionado -eq "en" -and $instalacao_completa -eq "Y" -or $instalacao_completa -eq "N") -or ($idiomaSelecionado -eq "es" -and $instalacao_completa -eq "S" -or $instalacao_completa -eq "N")){
 
                                         # ! Antes verifica que existe uma subpasta na pasta principal do programa.
 
@@ -5686,11 +8393,10 @@ function Show-Process-Produto {
                                             }     
                                         } 
 
-
                                         # Verifica se a pasta ainda existe
                                         if (((Test-Path $progam_folder) -and $subfoldersProgramFolder.Count -ge 1 -and $filesInSubProgramFolder.Count -gt 2) -or ((Test-Path $progam_folder) -and $filesInProgramFolder.Count -ge 4)) {
                                                 
-                                            Write-Host "      Instalação de $nome_programa foi concluída com sucesso." -ForegroundColor Green
+                                            Write-Host "      $($global:translations["PPMISInstallOf"]) $nome_programa $($global:translations["PPMISInstallSuccefullFinish"])" -ForegroundColor Green
                                             Write-Host ""
                                         
                                             #$setupPath = Join-Path $local_default $setupEncontrado.Name
@@ -5701,7 +8407,7 @@ function Show-Process-Produto {
                                             Remove-Item $destino -Recurse -Force
                                             # Remove-Item "$setupPath" -Recurse -Force
 
-                                            $opcao_verficar_instalacao = Read-Host "      Deseja iniciar o $nome_programa para confirmar sua instalação? (S/N)"
+                                            $opcao_verficar_instalacao = Read-Host "      $($global:translations["PPMISStartingOf"]) $nome_programa $($global:translations["PPMISConfirmYourInstall"])"
                                         
                                             Write-Host ""
                                                     
@@ -5714,7 +8420,7 @@ function Show-Process-Produto {
                                                 Stop-Process -Id $process.Id -Force
                                             }
 
-                                            if ($opcao_verficar_instalacao -eq 's') {
+                                            if (($idiomaSelecionado -eq "pt" -and $opcao_verficar_instalacao -eq "S") -or ($idiomaSelecionado -eq "en" -and $opcao_verficar_instalacao -eq "Y") -or ($idiomaSelecionado -eq "es" -and $opcao_verficar_instalacao -eq "S")) {
                                                 if (Test-Path $progam_folder) {
 
                                                     Start-Process -FilePath $program_exe -PassThru
@@ -5722,9 +8428,9 @@ function Show-Process-Produto {
                                                     Start-Sleep -Seconds 10
 
                                                     Write-Host ""
-                                                    Write-Host -NoNewline "      Aguardando o processo do" -ForegroundColor Yellow
+                                                    Write-Host -NoNewline "      $($global:translations["PPMISWaitingProcess"])" -ForegroundColor Yellow
                                                     Write-Host -NoNewline " '$nome_programa' " -ForegroundColor Cyan
-                                                    Write-Host -NoNewline "ser finalizado..." -ForegroundColor Yellow
+                                                    Write-Host -NoNewline "$($global:translations["PPMISOfFinishing"])" -ForegroundColor Yellow
                                                     Write-Host ""
 
                                                     function showAfterStartProgram {
@@ -5733,13 +8439,13 @@ function Show-Process-Produto {
                                                         
                                                             #Stop-Process -Id $process.Id
 
-                                                            Write-Host "      Processo de instalação finalizado." -ForegroundColor Yellow
+                                                            Write-Host "      $($global:translations["PPMISProcessInsallFinishing"])" -ForegroundColor Yellow
                                                             Write-Host ""
-                                                            Write-Host -NoNewline "      Inicie a etapa de" -ForegroundColor Yellow 
-                                                            Write-Host -NoNewline " 'VISUALIZAÇÃO' " -ForegroundColor Magenta
-                                                            Write-Host -NoNewline "para visualizar" -ForegroundColor Yellow
-                                                            Write-Host -NoNewline " 'Chave Keys e/ou Dados de Login' " -ForegroundColor Cyan
-                                                            Write-Host -NoNewline "do seu" -ForegroundColor Yellow
+                                                            Write-Host -NoNewline "      $($global:translations["PPMISStartingStepOff"])" -ForegroundColor Yellow 
+                                                            Write-Host -NoNewline " $($global:translations["PPMVISStepView"]) " -ForegroundColor Magenta
+                                                            Write-Host -NoNewline "$($global:translations["PPMVISToViewThe"])" -ForegroundColor Yellow
+                                                            Write-Host -NoNewline " $($global:translations["PPMVISLoginDetails"]) " -ForegroundColor Cyan
+                                                            Write-Host -NoNewline "$($global:translations["PPMVISOfYou"])" -ForegroundColor Yellow
                                                             Write-Host -NoNewline " '$nome_programa'." -ForegroundColor Cyan
                                                             Write-Host ""
                                                             Write-Host ""
@@ -5750,11 +8456,11 @@ function Show-Process-Produto {
                                                          
                                                             #Stop-Process -Id $process.Id
 
-                                                            Write-Host "      Processo de instalação finalizado." -ForegroundColor Yellow 
+                                                            Write-Host "      $($global:translations["PPMISProcessInsallFinishing"])" -ForegroundColor Yellow 
                                                             Write-Host ""
-                                                            Write-Host -NoNewline "      Inicie a etapa de" -ForegroundColor Yellow 
-                                                            Write-Host -NoNewline " 'ATIVAÇÃO' " -ForegroundColor Magenta
-                                                            Write-Host -NoNewline "para ativar seu" -ForegroundColor Yellow
+                                                            Write-Host -NoNewline "      $($global:translations["PPMISStartingStepOff"])" -ForegroundColor Yellow 
+                                                            Write-Host -NoNewline " $($global:translations["PPMISActivateStep"]) " -ForegroundColor Magenta
+                                                            Write-Host -NoNewline "$($global:translations["PPMISActivateYour"])" -ForegroundColor Yellow
                                                             Write-Host -NoNewline " '$nome_programa'" -ForegroundColor Cyan
                                                             Write-Host ""
                                                             Write-Host ""
@@ -5784,9 +8490,9 @@ function Show-Process-Produto {
                                                         
                                                         } else {
                                                             Write-Host ""
-                                                            Write-Host -NoNewline "      Processo do" -ForegroundColor Red
+                                                            Write-Host -NoNewline "      $($global:translations["PPMISProcessOf"])" -ForegroundColor Red
                                                             Write-Host -NoNewline " '$nome_programa' " -ForegroundColor Cyan
-                                                            Write-Host -NoNewline "não encontrado, ou não está em execução." -ForegroundColor Red
+                                                            Write-Host -NoNewline "$($global:translations["PPMISNotFoundOrNotExecute"])" -ForegroundColor Red
                                                             Write-Host ""
                                                             Write-Host ""
 
@@ -5797,7 +8503,7 @@ function Show-Process-Produto {
                                                 } else {
 
                                                     Write-Host ""
-                                                    Write-Host "      A instalação falhou ou não foi concluída corretamente." -ForegroundColor Red
+                                                    Write-Host "      $($global:translations["PPMISInstallFailedOrNotDone"])" -ForegroundColor Red
                                                     Write-Host ""
 
                                                     if ( $EtapaInstAtv ) { Start-Sleep -Seconds 5 }
@@ -5807,13 +8513,13 @@ function Show-Process-Produto {
 
                                                 if ($MetodoSelecionado -eq "Chave/Serial") {
 
-                                                    Write-Host "      Processo de instalação finalizado." -ForegroundColor Yellow
+                                                    Write-Host "      $($global:translations["PPMISProcessInsallFinishing"])" -ForegroundColor Yellow
                                                     Write-Host ""
-                                                    Write-Host -NoNewline "      Inicie a etapa de" -ForegroundColor Yellow 
-                                                    Write-Host -NoNewline " 'VISUALIZAÇÃO' " -ForegroundColor Magenta
-                                                    Write-Host -NoNewline "para visualizar" -ForegroundColor Yellow
-                                                    Write-Host -NoNewline " 'Chave Keys e/ou Dados de Login' " -ForegroundColor Cyan
-                                                    Write-Host -NoNewline "do seu" -ForegroundColor Yellow
+                                                    Write-Host -NoNewline "      $($global:translations["PPMISStartingStepOff"])" -ForegroundColor Yellow 
+                                                    Write-Host -NoNewline " $($global:translations["PPMVISStepView"]) " -ForegroundColor Magenta
+                                                    Write-Host -NoNewline "$($global:translations["PPMVISToViewThe"])" -ForegroundColor Yellow
+                                                    Write-Host -NoNewline " $($global:translations["PPMVISLoginDetails"]) " -ForegroundColor Cyan
+                                                    Write-Host -NoNewline "$($global:translations["PPMVISOfYou"])" -ForegroundColor Yellow
                                                     Write-Host -NoNewline " '$nome_programa'." -ForegroundColor Cyan
                                                     Write-Host ""
                                                     Write-Host ""
@@ -5823,11 +8529,11 @@ function Show-Process-Produto {
 
                                                 } else {
 
-                                                    Write-Host "      Processo de instalação finalizado." -ForegroundColor Yellow 
+                                                    Write-Host "      $($global:translations["PPMISProcessInsallFinishing"])" -ForegroundColor Yellow 
                                                     Write-Host ""
-                                                    Write-Host -NoNewline "      Inicie a etapa de" -ForegroundColor Yellow 
-                                                    Write-Host -NoNewline " 'ATIVAÇÃO' " -ForegroundColor Magenta
-                                                    Write-Host -NoNewline "para ativar seu" -ForegroundColor Yellow
+                                                    Write-Host -NoNewline "      $($global:translations["PPMISStartingStepOff"])" -ForegroundColor Yellow 
+                                                    Write-Host -NoNewline " $($global:translations["PPMISActivateStep"]) " -ForegroundColor Magenta
+                                                    Write-Host -NoNewline "$($global:translations["PPMISActivateYour"])" -ForegroundColor Yellow
                                                     Write-Host -NoNewline " '$nome_programa'" -ForegroundColor Cyan
                                                     Write-Host ""
                                                     Write-Host ""
@@ -5841,10 +8547,10 @@ function Show-Process-Produto {
                                             }
 
                                         } else {
-                                            Write-Host "      A instalação falhou ou não foi concluída corretamente." -ForegroundColor Red
-                                            write-Host -NoNewline "      Algum processo não permitido está em execução, ou o" -ForegroundColor Yellow
+                                            Write-Host "      $($global:translations["PPMISInstallFailedOrNotDone"])" -ForegroundColor Red
+                                            write-Host -NoNewline "      $($global:translations["PPMISProcessNotAllowedExecute"])" -ForegroundColor Yellow
                                             Write-Host -NoNewline " '$nome_programa' " -ForegroundColor Cyan
-                                            Write-Host -NoNewline "já estava instalado no seu computador." -ForegroundColor Yellow
+                                            Write-Host -NoNewline "$($global:translations["PPMISWasAlreadyInstallYourComputer"])" -ForegroundColor Yellow
                                             Write-Host ""
                                             Write-Host ""
 
@@ -5860,13 +8566,13 @@ function Show-Process-Produto {
 
                                         if ($MetodoSelecionado -eq "Chave/Serial") {
 
-                                            Write-Host "      Processo de instalação finalizado." -ForegroundColor Yellow
+                                            Write-Host "      $($global:translations["PPMISProcessInsallFinishing"])" -ForegroundColor Yellow
                                             Write-Host ""
-                                            Write-Host -NoNewline "      Inicie a etapa de" -ForegroundColor Yellow 
-                                            Write-Host -NoNewline " 'VISUALIZAÇÃO' " -ForegroundColor Magenta
-                                            Write-Host -NoNewline "para visualizar" -ForegroundColor Yellow
-                                            Write-Host -NoNewline " 'Chave Keys e/ou Dados de Login' " -ForegroundColor Cyan
-                                            Write-Host -NoNewline "do seu" -ForegroundColor Yellow
+                                            Write-Host -NoNewline "      $($global:translations["PPMISStartingStepOff"])" -ForegroundColor Yellow 
+                                            Write-Host -NoNewline " $($global:translations["PPMVISStepView"]) " -ForegroundColor Magenta
+                                            Write-Host -NoNewline "$($global:translations["PPMVISToViewThe"])" -ForegroundColor Yellow
+                                            Write-Host -NoNewline " $($global:translations["PPMVISLoginDetails"]) " -ForegroundColor Cyan
+                                            Write-Host -NoNewline "$($global:translations["PPMVISOfYou"])" -ForegroundColor Yellow
                                             Write-Host -NoNewline " '$nome_programa'." -ForegroundColor Cyan
                                             Write-Host ""
                                             Write-Host ""
@@ -5875,11 +8581,11 @@ function Show-Process-Produto {
 
                                         } else {
 
-                                            Write-Host "      Processo de instalação finalizado." -ForegroundColor Yellow 
+                                            Write-Host "      $($global:translations["PPMISProcessInsallFinishing"])" -ForegroundColor Yellow 
                                             Write-Host ""
-                                            Write-Host -NoNewline "      Inicie a etapa de" -ForegroundColor Yellow 
-                                            Write-Host -NoNewline " 'ATIVAÇÃO' " -ForegroundColor Magenta
-                                            Write-Host -NoNewline "para ativar seu" -ForegroundColor Yellow
+                                            Write-Host -NoNewline "      $($global:translations["PPMISStartingStepOff"])" -ForegroundColor Yellow 
+                                            Write-Host -NoNewline " $($global:translations["PPMISActivateStep"]) " -ForegroundColor Magenta
+                                            Write-Host -NoNewline "$($global:translations["PPMISActivateYour"])" -ForegroundColor Yellow
                                             Write-Host -NoNewline " '$nome_programa'" -ForegroundColor Cyan
                                             Write-Host ""
                                             Write-Host ""
@@ -5897,7 +8603,7 @@ function Show-Process-Produto {
                             } else {
 
                                 Write-Host ""
-                                Write-Host "      O instalador de $nome_programa $versao_disponivel não foi encontrado." -ForegroundColor Red
+                                Write-Host "      $($global:translations["PPMISTheInstallerOf"]) $nome_programa $versao_disponivel $($global:translations["PPMISNotFoundN2"])" -ForegroundColor Red
                                 Write-Host ""
 
                                 Set-MpPreference -SubmitSamplesConsent 1
@@ -5912,7 +8618,7 @@ function Show-Process-Produto {
                 } catch {
 
                     Write-Host ""
-                    Write-Host "      Erro ao baixar o arquivo: $_" -ForegroundColor Red
+                    Write-Host "      $($global:translations["PPMISErrorInFileDownload"]): $_" -ForegroundColor Red
                     Write-Host ""
 
                     Set-MpPreference -SubmitSamplesConsent 1
@@ -5921,7 +8627,7 @@ function Show-Process-Produto {
                 }
             } else {
                 Write-Host ""
-                Write-Host "      Instalação cancelada." -ForegroundColor Red
+                Write-Host "      $($global:translations["PPMISInstallCancelled"])" -ForegroundColor Red
                 Write-Host ""
 
                 Set-MpPreference -SubmitSamplesConsent 1
@@ -5971,25 +8677,25 @@ function Show-Process-Produto {
 
                     Write-Host "     ================================================================================================================" -ForegroundColor Green
                     Write-Host -NoNewline "     * 1 - " -ForegroundColor Cyan                                                                   
-                    Write-Host -NoNewline "Encerrando processos necessários para ativação..." -ForegroundColor Yellow
+                    Write-Host -NoNewline "$($global:translations["PPMASLAPRequiredProcessActivation"])" -ForegroundColor Yellow
                     Write-Host -NoNewline " [10%]" -ForegroundColor Green
 
                 } else {
                     Write-Host "     ================================================================================================================" -ForegroundColor Green
                     Write-Host -NoNewline "     * 1 - " -ForegroundColor Cyan                                                                   
-                    Write-Host -NoNewline "Processos conflitantes já encerrados e dispositivo pronto para ativação..." -ForegroundColor Yellow
+                    Write-Host -NoNewline "$($global:translations["PPMASLAPConflitProcessClosed"])" -ForegroundColor Yellow
                     Write-Host -NoNewline " [10%]" -ForegroundColor Green
                 }
             
                 Write-Host ""
                 Write-Host "     ================================================================================================================" -ForegroundColor DarkYellow
                 Write-Host -NoNewline "     * 2 - " -ForegroundColor Cyan
-                Write-Host -NoNewline "Verificação dos requisitos necessários do dispositivo para iniciar ativação..." -ForegroundColor Yellow
+                Write-Host -NoNewline "$($global:translations["PPMASLAPCheckingDeviceRequirements"])" -ForegroundColor Yellow
                 Write-Host -NoNewline " [20%]" -ForegroundColor Green
                 Write-Host ""
                 Write-Host "     ================================================================================================================" -ForegroundColor DarkYellow
                 Write-Host -NoNewline "     * 3 - " -ForegroundColor Cyan
-                Write-Host -NoNewline "Analizando a estrutura de chaveamento exigida pelo $nome_programa..." -ForegroundColor Yellow
+                Write-Host -NoNewline "$($global:translations["PPMASLAPAnalyzingStructure"]) $nome_programa..." -ForegroundColor Yellow
                 Write-Host -NoNewline " [30%]" -ForegroundColor Green
             }
 
@@ -6016,17 +8722,17 @@ function Show-Process-Produto {
                     Write-Host ""
                     Write-Host "     ================================================================================================================" -ForegroundColor DarkYellow
                     Write-Host -NoNewline "     * 4 - " -ForegroundColor Cyan                                                                   
-                    Write-Host -NoNewline "Gerando e verificando chaveamento no dispositivo..." -ForegroundColor Yellow
+                    Write-Host -NoNewline "$($global:translations["PPMASLAPGeneratingAndVerify"])" -ForegroundColor Yellow
                     Write-Host -NoNewline " [40%]" -ForegroundColor Green
                     Write-Host ""
                     Write-Host "     ================================================================================================================" -ForegroundColor DarkYellow
                     Write-Host -NoNewline "     * 5 - " -ForegroundColor Cyan
-                    Write-Host -NoNewline "Reformulando e estabelecendo conexão com novo registro do windows relacionado ao $nome_programa..." -ForegroundColor Yellow
+                    Write-Host -NoNewline "$($global:translations["PPMASLAPReformulatingAndEstablishing"]) $nome_programa..." -ForegroundColor Yellow
                     Write-Host -NoNewline " [50%]" -ForegroundColor Green
                     Write-Host ""
                     Write-Host "     ================================================================================================================" -ForegroundColor DarkYellow
                     Write-Host -NoNewline "     * 6 - " -ForegroundColor Cyan
-                    Write-Host -NoNewline "Iniciando injeção da dll com desbloqueio do $nome_programa..." -ForegroundColor Yellow
+                    Write-Host -NoNewline "$($global:translations["PPMASLAPStartingDLLInjection"]) $nome_programa..." -ForegroundColor Yellow
                     Write-Host -NoNewline " [60%]" -ForegroundColor Green
                 }                                    
 
@@ -6034,18 +8740,18 @@ function Show-Process-Produto {
 
                 Write-Host ""
                 Write-Host ""
-                Write-Host "      WinRAR não está instalado ou não está no caminho original de instalação." -ForegroundColor Red
-                Write-Host "      Aguarde enquanto preparamos o ambiente de ajustes e instalação...." -ForegroundColor Yellow
+                Write-Host "      $($global:translations["PPMASWPWinrarNothingInstall"])" -ForegroundColor Red
+                Write-Host "      $($global:translations["PPMASWPWaitEnvironmentInstall"])" -ForegroundColor Yellow
                 Write-Host ""
                                     
                 if (-Not (Get-Command choco -ErrorAction SilentlyContinue)) {
                                         
-                    Write-Host "      Chocolatey não está instalado. Instalando Chocolatey..." -ForegroundColor Green
+                    Write-Host "      $($global:translations["PPMASWPNothingInstallChoco"])" -ForegroundColor Green
                                         
                     # Instalar Chocolatey
                     Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor [System.Net.SecurityProtocolType]::Tls12; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
                                         
-                    Write-Host "      Instalando WinRAR..." -ForegroundColor Green
+                    Write-Host "      $($global:translations["PPMASWPInstallingWinrar"])" -ForegroundColor Green
                     Write-Host ""
 
                     # Instalar WinRAR usando Chocolatey
@@ -6061,7 +8767,7 @@ function Show-Process-Produto {
                         # Comando para extrair o arquivo usando WinRAR
                         $senha = "dropsoftbr"  # Substitua pela senha real do arquivo RAR
                         $arguments = "x -y `"$destino`" `"$extracao`" -p$senha"
-                        Start-Process -FilePath $winrarPath -ArgumentList $arguments -Wait
+                        Start-Process -FilePath $winrarPath -ArgumentList $arguments -Wait -WindowStyle Hidden
 
                         if ($MetodoSelecionado -eq "Chave/Serial") {
                             Write-Host ""
@@ -6069,32 +8775,32 @@ function Show-Process-Produto {
                             Write-Host ""
                             Write-Host "     ================================================================================================================" -ForegroundColor DarkYellow
                             Write-Host -NoNewline "     * 4 - " -ForegroundColor Cyan                                                                   
-                            Write-Host -NoNewline "Gerando e verificando chaveamento no dispositivo..." -ForegroundColor Yellow
+                            Write-Host -NoNewline "$($global:translations["PPMASLAPGeneratingAndVerify"])" -ForegroundColor Yellow
                             Write-Host -NoNewline " [40%]" -ForegroundColor Green
                             Write-Host ""
                             Write-Host "     ================================================================================================================" -ForegroundColor DarkYellow
                             Write-Host -NoNewline "     * 5 - " -ForegroundColor Cyan
-                            Write-Host -NoNewline "Reformulando e estabelecendo conexão com novo registro do windows relacionado ao $nome_programa..." -ForegroundColor Yellow
+                            Write-Host -NoNewline "$($global:translations["PPMASLAPReformulatingAndEstablishing"]) $nome_programa..." -ForegroundColor Yellow
                             Write-Host -NoNewline " [50%]" -ForegroundColor Green
                             Write-Host ""
                             Write-Host "     ================================================================================================================" -ForegroundColor DarkYellow
                             Write-Host -NoNewline "     * 6 - " -ForegroundColor Cyan
-                            Write-Host -NoNewline "Iniciando injeção da dll com desbloqueio do $nome_programa..." -ForegroundColor Yellow
+                            Write-Host -NoNewline "$($global:translations["PPMASLAPStartingDLLInjection"]) $nome_programa..." -ForegroundColor Yellow
                             Write-Host -NoNewline " [60%]" -ForegroundColor Green
                         }
 
                     } else {
 
                         Write-Host ""
-                        Write-Host "      O WinRAR não está instalado ou não está no caminho original de instalação." -ForegroundColor Red
-                        Write-Host "      Houve algum problema durante a instalaçao do WinRAR no seu computador...." -ForegroundColor Yellow
+                        Write-Host "      $($global:translations["PPMASWPWinrarNothingInstall"])" -ForegroundColor Red
+                        Write-Host "      $($global:translations["PPMASWPErrorDuringWinrarInstall"])" -ForegroundColor Yellow
                         Write-Host ""
 
                     }
 
                 } else {
 
-                    Write-Host "      Instalando WinRAR..." -ForegroundColor Green
+                    Write-Host "      $($global:translations["PPMASWPInstallingWinrar"])" -ForegroundColor Green
                     Write-Host ""
                                         
                     # Instalar WinRAR usando Chocolatey
@@ -6118,25 +8824,25 @@ function Show-Process-Produto {
                             Write-Host ""
                             Write-Host "     ================================================================================================================" -ForegroundColor DarkYellow
                             Write-Host -NoNewline "     * 4 - " -ForegroundColor Cyan                                                                   
-                            Write-Host -NoNewline "Gerando e verificando chaveamento no dispositivo..." -ForegroundColor Yellow
+                            Write-Host -NoNewline "$($global:translations["PPMASLAPGeneratingAndVerify"])" -ForegroundColor Yellow
                             Write-Host -NoNewline " [40%]" -ForegroundColor Green
                             Write-Host ""
                             Write-Host "     ================================================================================================================" -ForegroundColor DarkYellow
                             Write-Host -NoNewline "     * 5 - " -ForegroundColor Cyan
-                            Write-Host -NoNewline "Reformulando e estabelecendo conexão com novo registro do windows relacionado ao $nome_programa..." -ForegroundColor Yellow
+                            Write-Host -NoNewline "$($global:translations["PPMASLAPReformulatingAndEstablishing"]) $nome_programa..." -ForegroundColor Yellow
                             Write-Host -NoNewline " [50%]" -ForegroundColor Green
                             Write-Host ""
                             Write-Host "     ================================================================================================================" -ForegroundColor DarkYellow
                             Write-Host -NoNewline "     * 6 - " -ForegroundColor Cyan
-                            Write-Host -NoNewline "Iniciando injeção da dll com desbloqueio do $nome_programa..." -ForegroundColor Yellow
+                            Write-Host -NoNewline "$($global:translations["PPMASLAPStartingDLLInjection"]) $nome_programa..." -ForegroundColor Yellow
                             Write-Host -NoNewline " [60%]" -ForegroundColor Green
                         }
 
                     } else {
 
                         Write-Host ""
-                        Write-Host "      O WinRAR não está instalado ou não está no caminho original de instalação." -ForegroundColor Red
-                        Write-Host "      Houve algum problema durante a instalaçao do WinRAR no seu computador...." -ForegroundColor Yellow
+                        Write-Host "      $($global:translations["PPMASWPWinrarNothingInstall"])" -ForegroundColor Red
+                        Write-Host "      $($global:translations["PPMASWPErrorDuringWinrarInstall"])" -ForegroundColor Yellow
                         Write-Host ""
 
                         if ( $EtapaInstAtv ) { Start-Sleep -Seconds 5 }
@@ -6261,7 +8967,7 @@ function Show-Process-Produto {
             $fixedWidthEtapaDisponibilizacao = 120  # Largura total da linha
 
             # Frase a ser centralizada
-            $etapaDisponibilizacaoTexto = "ETAPA DE DISPONIBILIZAÇÃO DA KEY DO $($produto_formatado)"
+            $etapaDisponibilizacaoTexto = "$($global:translations["PPMVASStageAccessDataViewMenu"]) $($produto_formatado)"
             $etapaDisponibilizacaoTextoLength = $etapaDisponibilizacaoTexto.Length
 
             # Calcula o número de espaços necessários para centralizar
@@ -6276,7 +8982,7 @@ function Show-Process-Produto {
             $fixedWidthEtapaAtivacao = 120  # Largura total da linha
 
             # Frase a ser centralizada
-            $etapaAtivacaoTexto = "ETAPA DE ATIVAÇÃO DO $($produto_formatado)"
+            $etapaAtivacaoTexto = "$($global:translations["PPMASStepActivationOf"]) $($produto_formatado)"
             $etapaAtivacaoTextoLength = $etapaAtivacaoTexto.Length
 
             # Calcula o número de espaços necessários para centralizar
@@ -6369,16 +9075,11 @@ function Show-Process-Produto {
                         if ($MetodoSelecionado -eq "Chave/Serial") {
 
                             if ($stepsAtvToCheck["processo_ativacao"].Contains('Pré-instalação')) {
-                                
+
                                 Write-Host ""
                                 Write-Host "     ================================================================================================================" -ForegroundColor Green
                                 Write-Host ""
-                                Write-Host -NoNewline "      Chave key do" -ForegroundColor Yellow
-                                Write-Host -NoNewline " '$nome_programa' '$versao_disponivel' " -ForegroundColor Cyan
-                                Write-Host -NoNewline "'habilitada' " -ForegroundColor Green 
-                                Write-Host -NoNewline "para visualização." -ForegroundColor Yellow 
-                                Write-Host ""
-                                Write-Host "      Iniciando processo inicial de disponibilização da chave key do '$nome_programa'..." -ForegroundColor Green
+                                Write-Host "      $($global:translations["PPMASCurrentVersionActivateAvailable"])" -ForegroundColor Yellow
                                 Write-Host ""
                             
                             } else {
@@ -6386,19 +9087,11 @@ function Show-Process-Produto {
                                 Write-Host ""
                                 Write-Host "     ================================================================================================================" -ForegroundColor Green
                                 Write-Host ""
-                                Write-Host "      A versão do programa atualmente instalado é igual a versão disponível para ativação." -ForegroundColor Yellow
+                                Write-Host "      $($global:translations["PPMASCurrentVersionActivateAvailable"])" -ForegroundColor Yellow
                                 Write-Host ""
-                                Write-Host -NoNewline "      O programa" -ForegroundColor Yellow
+                                Write-Host -NoNewline "      $($global:translations["PPMISTheProgram"])" -ForegroundColor Yellow
                                 Write-Host -NoNewline " '$nome_programa $versao_disponivel' " -ForegroundColor Cyan
-                                Write-Host -NoNewline "já está instalado no seu computador." -ForegroundColor Yellow
-                                Write-Host ""
-                                Write-Host ""
-                                Write-Host -NoNewline "      Chave key do" -ForegroundColor Yellow
-                                Write-Host -NoNewline " '$nome_programa' '$versao_disponivel' " -ForegroundColor Cyan
-                                Write-Host -NoNewline "'habilitada' " -ForegroundColor Green 
-                                Write-Host -NoNewline "para visualização." -ForegroundColor Yellow 
-                                Write-Host ""
-                                Write-Host "      Iniciando processo inicial de disponibilização da chave key do '$nome_programa'..." -ForegroundColor Green
+                                Write-Host -NoNewline "$($global:translations["PPMISInstalledYourComputer"])" -ForegroundColor Yellow
                                 Write-Host ""
 
                             }
@@ -6407,13 +9100,13 @@ function Show-Process-Produto {
                             Write-Host ""
                             Write-Host "     ================================================================================================================" -ForegroundColor Green
                             Write-Host ""
-                            Write-Host "      A versão do programa atualmente instalado é igual a versão disponível para ativação." -ForegroundColor Yellow
+                            Write-Host "      $($global:translations["PPMASCurrentVersionActivateAvailable"])" -ForegroundColor Yellow
                             Write-Host ""
-                            Write-Host -NoNewline "      O programa" -ForegroundColor Yellow
+                            Write-Host -NoNewline "      $($global:translations["PPMISTheProgram"])" -ForegroundColor Yellow
                             Write-Host -NoNewline " '$nome_programa $versao_disponivel' " -ForegroundColor Cyan
-                            Write-Host -NoNewline "já está instalado no seu computador." -ForegroundColor Yellow
+                            Write-Host -NoNewline "$($global:translations["PPMISInstalledYourComputer"])" -ForegroundColor Yellow
                             Write-Host ""
-                            Write-Host "      Iniciando processo inicial de ativação do '$nome_programa'..." -ForegroundColor Green
+                            Write-Host "      $($global:translations["PPMASStartingProcessActivate"]) '$nome_programa'..." -ForegroundColor Green
                             Write-Host ""
                         }
                                         
@@ -6456,35 +9149,37 @@ function Show-Process-Produto {
                                     
                                     if ($MetodoSelecionado -eq "Chave/Serial") {
                                         Write-Host ""
-                                        Write-Host -NoNewline "      'Etapa de Disponibilização da Chave Key' " -ForegroundColor Magenta
-                                        Write-Host -NoNewline "do" -ForegroundColor Yellow
-                                        Write-Host -NoNewline " '$nome_programa $versao_disponivel' " -ForegroundColor Cyan
-                                        Write-Host -NoNewline "iniciada com sucesso.... " -ForegroundColor Green
+                                        Write-Host -NoNewline "      $($global:translations["PPMVASStartingThe"])" -ForegroundColor Yellow
+                                        Write-Host -NoNewline " $($global:translations["PPMVASStageAccessDataViewInMenu"]) " -ForegroundColor Magenta
+                                        Write-Host -NoNewline "$($global:translations["PPMVASOf"])" -ForegroundColor Yellow
+                                        Write-Host -NoNewline " '$nome_programa $versao_disponivel'. " -ForegroundColor Cyan
                                         Write-Host ""
+                                        Write-Host ""
+                                        Write-Host "      $($global:translations["PPMVASWaitSeconds"])" -ForegroundColor Green
                                         Write-Host ""
                                     } else {
                                         Write-Host ""
-                                        Write-Host -NoNewline "      'Etapa de Ativação' " -ForegroundColor Magenta
-                                        Write-Host -NoNewline "do" -ForegroundColor Yellow
+                                        Write-Host -NoNewline "      $($global:translations["PPMASStepOfActivate"]) " -ForegroundColor Magenta
+                                        Write-Host -NoNewline "$($global:translations["PPMASOf"])" -ForegroundColor Yellow
                                         Write-Host -NoNewline " '$nome_programa $versao_disponivel' " -ForegroundColor Cyan
-                                        Write-Host -NoNewline "iniciada com sucesso...." -ForegroundColor Green
+                                        Write-Host -NoNewline "$($global:translations["PPMASStartWithSuccess"])" -ForegroundColor Green
                                         Write-Host ""
                                         Write-Host ""
                                     }
                                 } catch {
                                     if ($MetodoSelecionado -eq "Chave/Serial") {
                                         Write-Host ""
-                                        Write-Host -NoNewline "      Erro conflitante ao iniciar a" -ForegroundColor Red
-                                        Write-Host -NoNewline " 'Etapa de Disponibilização da Chave Key' " -ForegroundColor Magenta
-                                        Write-Host -NoNewline "do" -ForegroundColor Red
-                                        Write-Host -NoNewline " '$nome_programa $versao_disponivel'." -ForegroundColor Cyan
+                                        Write-Host -NoNewline "      $($global:translations["PPMVASConflictingErrorStarting"])" -ForegroundColor Red
+                                        Write-Host -NoNewline " $($global:translations["PPMVASStageAccessDataViewInMenu"]) " -ForegroundColor Yellow
+                                        Write-Host -NoNewline "$($global:translations["PPMVASOf"])" -ForegroundColor Red
+                                        Write-Host -NoNewline " '$nome_programa $versao_disponivel' " -ForegroundColor Yellow
                                         Write-Host ""
                                         Write-Host ""
                                     } else {
                                         Write-Host ""
-                                        Write-Host -NoNewline "      Erro conflitante ao iniciar a" -ForegroundColor Red
-                                        Write-Host -NoNewline " 'Etapa de Ativação' " -ForegroundColor Magenta
-                                        Write-Host -NoNewline "do" -ForegroundColor Red
+                                        Write-Host -NoNewline "      $($global:translations["PPMASConflitErrorInStart"])" -ForegroundColor Red
+                                        Write-Host -NoNewline " $($global:translations["PPMASStepOfActivate"]) " -ForegroundColor Magenta
+                                        Write-Host -NoNewline "$($global:translations["PPMASOf"])" -ForegroundColor Red
                                         Write-Host -NoNewline " '$nome_programa $versao_disponivel'." -ForegroundColor Cyan
                                         Write-Host ""
                                         Write-Host ""
@@ -6497,7 +9192,7 @@ function Show-Process-Produto {
 
                                 } else {
                                     Write-Host ""
-                                    Write-Host "      Falha ao baixar o arquivo." -ForegroundColor Red
+                                    Write-Host "      $($global:translations["PPMASDownloadFailFile"])" -ForegroundColor Red
                                     Write-Host ""
 
                                     if ( $EtapaInstAtv ) { Start-Sleep -Seconds 5 }
@@ -6527,9 +9222,9 @@ function Show-Process-Produto {
  
                                 Write-Host "" 
                                 Write-Host ""
-                                Write-Host "     !Erro Fatal!" -ForegroundColor Red         
-                                Write-Host "     Os processos $($processNames -join ', ') estão em execução." -ForegroundColor Cyan
-                                Write-Host "     Finalizando os processos, reinicie novamente a opção selecionada, para continuar com o processo de ativação do $nome_programa." -ForegroundColor Green
+                                Write-Host "     $($global:translations["PPMASFatalError"])" -ForegroundColor Red         
+                                Write-Host "     $($global:translations["PPMISTheProcess"]) $($processNames -join ', ') $($global:translations["PPMISIsExecuted"])" -ForegroundColor Cyan
+                                Write-Host "     $($global:translations["PPMASFinishingProcessAndRestart"]) $nome_programa." -ForegroundColor Green
                                 Write-Host ""
 
                                 if ( $EtapaInstAtv ) { Start-Sleep -Seconds 5 }
@@ -6629,7 +9324,7 @@ function Show-Process-Produto {
                                             } else {
 
                                                 Write-Host ""
-                                                Write-Host "      Nenhum arquivo .exe sfx de ativação foi encontrado no diretório." -ForegroundColor Red
+                                                Write-Host "      $($global:translations["PPMASNothingExeSFXFileFound"])" -ForegroundColor Red
                                                 Write-Host ""
                                             }
                                         
@@ -6656,17 +9351,49 @@ function Show-Process-Produto {
                                     }
                                      
                                     if ($MetodoSelecionado -eq "Chave/Serial") {
-                                        
-                                        Write-Host -NoNewline "      Aguarde..., Enquanto disponibilizamos os" -ForegroundColor Yellow
-                                        Write-Host -NoNewline " 'Dados de Acesso' " -ForegroundColor Magenta
-                                        Write-Host -NoNewline "do seu" -ForegroundColor Yellow
-                                        Write-Host -NoNewline " '$nome_programa'. " -ForegroundColor Cyan
+
+                                        Write-Host -NoNewline "      # " -ForegroundColor Green
+                                        Write-Host "$($global:translations["PPMVASVerificationProcessInitial"]):" -ForegroundColor Cyan
+                                        Write-Host ""
+                                        Write-Host -NoNewline "      > " -ForegroundColor Green
+                                        Write-Host -NoNewline  "$($global:translations["PPMVASPreviousStepsPrerequisites"]) " -ForegroundColor Yellow
+                                        Write-Host -NoNewline  "$($global:translations["PPMVASWereSuccessCompleted"])" -ForegroundColor Green
+                                        Start-Sleep -Seconds 5 
+                                        Write-Host ""
+                                        Write-Host -NoNewline "      > " -ForegroundColor Green
+                                        Write-Host -NoNewline  "$($global:translations["PPMVASWaitSeconds"]) " -ForegroundColor Green
+                                        Write-Host -NoNewline  "$($global:translations["PPMVASWhileThe"])" -ForegroundColor Yellow
+                                        Write-Host -NoNewline  " $($global:translations["PPMVISLoginDetails"])" -ForegroundColor Cyan
+                                        Write-Host -NoNewline  "$($global:translations["PPMVASBeingCreatedVisualEnabled"])" -ForegroundColor Green
+                                        Start-Sleep -Seconds 10 
+                                        Write-Host ""
+                                        Write-Host -NoNewline "      > " -ForegroundColor Green
+                                        Write-Host -NoNewline  "$($global:translations["PPMVASTheInitialPhrase"])" -ForegroundColor Yellow
+                                        Write-Host -NoNewline  " $($global:translations["PPMVISLoginDetails"]) " -ForegroundColor Cyan
+                                        Write-Host -NoNewline  "$($global:translations["PPMVASOf"])" -ForegroundColor Yellow
+                                        Write-Host -NoNewline  " '$nome_programa $versao_disponivel'" -ForegroundColor Cyan
+                                        Write-Host -NoNewline  "$($global:translations["PPMVASSuccessCreated"])" -ForegroundColor Green
+                                        Start-Sleep -Seconds 2
                                         Write-Host ""
                                         Write-Host ""
-                                        Write-Host -NoNewline "      Os seus" -ForegroundColor Yellow
-                                        Write-Host -NoNewline " 'Dados de Acesso' " -ForegroundColor Magenta
-                                        Write-Host -NoNewline "foram gerados com sucesso!'" -ForegroundColor Green
+                                        Write-Host "     ================================================================================================================" -ForegroundColor Green
                                         Write-Host ""
+                                        Write-Host -NoNewline "      # " -ForegroundColor Green
+                                        Write-Host "$($global:translations["PPMVASAtentionTitle"]): " -ForegroundColor Cyan
+                                        Write-Host ""
+                                        Write-Host -NoNewline  "      $($global:translations["PPMVASYour"])" -ForegroundColor Yellow
+                                        Write-Host -NoNewline  " $($global:translations["PPMVASStepKeysAndLoginData"]) " -ForegroundColor Magenta
+                                        Write-Host -NoNewline  "$($global:translations["PPMVASOf"])" -ForegroundColor Yellow
+                                        Write-Host -NoNewline  " '$nome_programa $versao_disponivel'" -ForegroundColor Cyan
+                                        Write-Host -NoNewline  "$($global:translations["PPMVASWereSuccessEnabled"])" -ForegroundColor Green
+                                        Write-Host ""
+                                        Write-Host -NoNewline "      $($global:translations["PPMVASAvailableForViewingIn"])" -ForegroundColor Yellow
+                                        Write-Host -NoNewline " $($global:translations["PPMVASStepProductDetailsMenu"]) " -ForegroundColor Cyan
+                                        Write-Host -NoNewline "$($global:translations["PPMVASInTheAreaOf"])" -ForegroundColor Yellow
+                                        Write-Host -NoNewline " $($global:translations["PPMVASStepAccessData"]) " -ForegroundColor Cyan
+                                        Write-Host ""
+                                        Write-Host ""
+                                        Write-Host "     ================================================================================================================" -ForegroundColor Green
 
                                         # Opcional: Remover a pasta do arquivo após extração.
                                         # Remove-Item "$destino_atv\$versao_disponivel" -Recurse -Force
@@ -6684,11 +9411,11 @@ function Show-Process-Produto {
 
                                             Write-Host ""   
 
-                                            $opcao_verficar_ativacao = Read-Host "      Deseja iniciar o $nome_programa para inserir os dados de sua chave para ativação? (S/N)"
+                                            $opcao_verficar_ativacao = Read-Host "      $($global:translations["PPMISStartingOf"]) $nome_programa $($global:translations["PPMVASQuestionEnterYourKeyActivation"])"
                                     
                                             Write-Host ""
                                                
-                                            if ($opcao_verficar_ativacao -eq 's') { 
+                                            if (($idiomaSelecionado -eq "pt" -and $opcao_verficar_ativacao -eq "S") -or ($idiomaSelecionado -eq "en" -and $opcao_verficar_ativacao -eq "Y") -or ($idiomaSelecionado -eq "es" -and $opcao_verficar_ativacao -eq "S")) { 
                                             
                                                 if ($metodo_ativacao -eq "Chave/Serial") {
                                                     Start-Process -FilePath $pathsToCheck["exe_produto_open"] -PassThru
@@ -6697,12 +9424,11 @@ function Show-Process-Produto {
                                                 } 
                                             }
 
-                                            Write-Host ""
-
                                         }
-                                        
-                                        Write-Host -NoNewline "      Tutorial simples de " -ForegroundColor Yellow
-                                        Write-Host -NoNewline "'Ativação do $nome_programa':" -ForegroundColor Cyan
+
+                                        Write-Host -NoNewline "      # " -ForegroundColor Green
+                                        Write-Host -NoNewline "$($global:translations["PPMVASSimpleTutorial"]) " -ForegroundColor Yellow
+                                        Write-Host -NoNewline "'$($global:translations["VASActivationOf"]) $nome_programa':" -ForegroundColor Cyan
                                         Write-Host ""
 
                                         Write-Host ""
@@ -6722,9 +9448,9 @@ function Show-Process-Produto {
                                         
                                         Write-Host ""
 
-                                        $opcao_tutorial_ativacao = Read-Host "      Deseja abrir o link com tutorias para ativação de registro de sua chave key? (S/N)"
+                                        $opcao_tutorial_ativacao = Read-Host "      $($global:translations["PPMVASQuestionOpenLinkWithTutorialActivation"])"
                                         
-                                        if ($opcao_tutorial_ativacao -eq 's') {
+                                        if (($idiomaSelecionado -eq "pt" -and $opcao_tutorial_ativacao -eq "S") -or ($idiomaSelecionado -eq "en" -and $opcao_tutorial_ativacao -eq "Y") -or ($idiomaSelecionado -eq "es" -and $opcao_tutorial_ativacao -eq "S")) {
 
                                             $urlPattern = '^(https?|ftp)://[^\s/$.?#].[^\s]*$'
 
@@ -6734,7 +9460,7 @@ function Show-Process-Produto {
                                                 Start-Process $link_tutorial_ativacao_produto
                                             } else {
                                                 Write-Host ""
-                                                Write-Host "      Infelizmente, o $nome_programa não possui um link de tutorial de ativação." -ForegroundColor Red
+                                                Write-Host "      $($global:translations["PPMVAUnfortunatelyDescription"]) $nome_programa $($global:translations["PPMVANotHaveLinkActivation"])" -ForegroundColor Red
                                             }
                                             
                                             Write-Host ""
@@ -6753,17 +9479,17 @@ function Show-Process-Produto {
                                         Write-Host ""
                                         Write-Host "     ================================================================================================================" -ForegroundColor DarkYellow
                                         Write-Host -NoNewline "     * 7 - " -ForegroundColor Cyan                                                                   
-                                        Write-Host -NoNewline "Blindagem da dll com chaveamento no dispositivo..." -ForegroundColor Yellow
+                                        Write-Host -NoNewline "$($global:translations["PPMASLAPDLLShieldingDevice"])" -ForegroundColor Yellow
                                         Write-Host -NoNewline " [70%]" -ForegroundColor Green
                                         Write-Host ""
                                         Write-Host "     ================================================================================================================" -ForegroundColor DarkYellow
                                         Write-Host -NoNewline "     * 8 - " -ForegroundColor Cyan
-                                        Write-Host -NoNewline "Verificando funcionando do $nome_programa e efetivação da ativação..." -ForegroundColor Yellow
+                                        Write-Host -NoNewline "$($global:translations["PPMASLAPCheckingWorking"]) $nome_programa $($global:translations["PPMASLAPImplementActivation"])" -ForegroundColor Yellow
                                         Write-Host -NoNewline " [80%]" -ForegroundColor Green
                                         Write-Host ""
                                         Write-Host "     ================================================================================================================" -ForegroundColor DarkYellow
                                         Write-Host -NoNewline "     * 9 - " -ForegroundColor Cyan
-                                        Write-Host -NoNewline "Concluindo processo de ativação do $nome_programa..." -ForegroundColor Yellow
+                                        Write-Host -NoNewline "$($global:translations["PPMASLAPCompletingActivation"]) $nome_programa..." -ForegroundColor Yellow
                                         Write-Host -NoNewline " [100%]" -ForegroundColor Green
                                         Write-Host ""
                                         Write-Host "     ================================================================================================================" -ForegroundColor Green   
@@ -6776,11 +9502,11 @@ function Show-Process-Produto {
                                                 
                                         Write-Host ""
                                     
-                                        $opcao_verficar_ativacao = Read-Host "      Deseja iniciar o $nome_programa para validar sua ativação? (S/N)"
+                                        $opcao_verficar_ativacao = Read-Host "      $($global:translations["PPMISStartingOf"]) $nome_programa $($global:translations["PPMASValidYourActivate"])"
                                     
                                         Write-Host ""
                                                
-                                        if ($opcao_verficar_ativacao -eq 's') {
+                                        if (($idiomaSelecionado -eq "pt" -and $opcao_verficar_ativacao -eq "S") -or ($idiomaSelecionado -eq "en" -and $opcao_verficar_ativacao -eq "Y") -or ($idiomaSelecionado -eq "es" -and $opcao_verficar_ativacao -eq "S")) {
                                             
                                             Start-Process -FilePath $programPath -PassThru -Wait
 
@@ -6792,7 +9518,7 @@ function Show-Process-Produto {
                                 } catch {
 
                                     Write-Host ""
-                                    Write-Host "      Erro ao mover os arquivos: $_"  -ForegroundColor Red
+                                    Write-Host "      $($global:translations["PPMASErrorToMoveFiles"]): $_"  -ForegroundColor Red
                                     Write-Host ""
 
                                     if ( $EtapaInstAtv ) { Start-Sleep -Seconds 5 }
@@ -6803,7 +9529,7 @@ function Show-Process-Produto {
                         } catch {
 
                             Write-Host ""
-                            Write-Host "      Erro ao baixar o arquivo: $_" -ForegroundColor Red
+                            Write-Host "      $($global:translations["PPMISErrorInFileDownload"]): $_" -ForegroundColor Red
                             Write-Host ""
 
                             if ( $EtapaInstAtv ) { Start-Sleep -Seconds 5 }
@@ -6815,36 +9541,38 @@ function Show-Process-Produto {
                     if ($MetodoSelecionado -eq "Chave/Serial") {
                         
                         Write-Host ""
-                        Write-Host -NoNewline "      Você precisa ter instalado no seu computador, o" -ForegroundColor Yellow
+                        Write-Host -NoNewline "      $($global:translations["PPMVISNeedInstalledYourComputer"])" -ForegroundColor Yellow
                         Write-Host -NoNewline " '$nome_programa $versao_disponivel' " -ForegroundColor Cyan
-                        Write-Host -NoNewline "para que a" -ForegroundColor Yellow
-                        Write-Host -NoNewline " 'Chave/Serial' " -ForegroundColor Magenta
-                        Write-Host -NoNewline "disponível para visualização seja compatível e efetiva na sua ativação." -ForegroundColor Yellow
                         Write-Host ""
-                        Write-Host -NoNewline "      A versão do" -ForegroundColor Red
+                        Write-Host -NoNewline "      $($global:translations["PPMVISSoNeedInstalled"])" -ForegroundColor Yellow
+                        Write-Host -NoNewline " $($global:translations["PPMVISLoginDetails"]) " -ForegroundColor Cyan
+                        Write-Host -NoNewline "$($global:translations["PPMVASAvailableForViewing"])" -ForegroundColor Yellow
+                        Write-Host "      $($global:translations["PPMVASCompatibleEffectiveInActivation"])" -ForegroundColor Yellow
+                        Write-Host "" 
+                        Write-Host -NoNewline "      $($global:translations["PPMASTheVersionOf"])" -ForegroundColor Red
                         Write-Host -NoNewline " '$nome_programa $programVersionAnterior' " -ForegroundColor Cyan
-                        Write-Host -NoNewline "instalado no seu computador, é diferente da" -ForegroundColor Red
+                        Write-Host -NoNewline "$($global:translations["PPMASInstalledYourComputerDiference"])" -ForegroundColor Red
                         Write-Host -NoNewline " '$versao_disponivel' " -ForegroundColor Cyan
-                        Write-Host -NoNewline "disponível para instalação." -ForegroundColor Red
+                        Write-Host -NoNewline "$($global:translations["PPMASAvailableForInstall"])" -ForegroundColor Red
                         Write-Host ""
-                        Write-Host -NoNewline "      Desinstale o" -ForegroundColor Yellow
+                        Write-Host -NoNewline "      $($global:translations["PPMASUninstallThe"])" -ForegroundColor Yellow
                         Write-Host -NoNewline " '$nome_programa $programVersionAnterior' " -ForegroundColor Cyan
-                        Write-Host -NoNewline "atual, e instale a versão compatível de ativação que é:" -ForegroundColor Yellow
+                        Write-Host -NoNewline "$($global:translations["PPMASVersionCompatibleActvation"]):" -ForegroundColor Yellow
                         Write-Host -NoNewline " '$nome_programa $versao_disponivel' " -ForegroundColor Cyan
                         Write-Host ""
                         Write-Host ""
 
                     } else {
                         Write-Host ""
-                        Write-Host -NoNewline "      A versão do" -ForegroundColor Red
+                        Write-Host -NoNewline "      $($global:translations["PPMASTheVersionOf"])" -ForegroundColor Red
                         Write-Host -NoNewline " '$nome_programa $programVersionAnterior' " -ForegroundColor Cyan
-                        Write-Host -NoNewline "instalado no seu computador, é diferente da" -ForegroundColor Red
+                        Write-Host -NoNewline "$($global:translations["PPMASInstalledYourComputerDiference"])" -ForegroundColor Red
                         Write-Host -NoNewline " '$versao_disponivel' " -ForegroundColor Cyan
-                        Write-Host -NoNewline "disponível para instalação." -ForegroundColor Red
+                        Write-Host -NoNewline "$($global:translations["PPMASAvailableForInstall"])" -ForegroundColor Red
                         Write-Host ""
-                        Write-Host -NoNewline "      Desinstale o" -ForegroundColor Yellow
+                        Write-Host -NoNewline "      $($global:translations["PPMASUninstallThe"])" -ForegroundColor Yellow
                         Write-Host -NoNewline " '$nome_programa $programVersionAnterior' " -ForegroundColor Cyan
-                        Write-Host -NoNewline "atual, e instale a versão compatível de ativação que é:" -ForegroundColor Yellow
+                        Write-Host -NoNewline "$($global:translations["PPMASVersionCompatibleActvation"]):" -ForegroundColor Yellow
                         Write-Host -NoNewline " '$nome_programa $versao_disponivel' " -ForegroundColor Cyan
                         Write-Host ""
                         Write-Host ""
@@ -6856,7 +9584,7 @@ function Show-Process-Produto {
             } catch {
                 
                 Write-Host ""
-                Write-Host "      Erro ao obter informações do programa no caminho $programPath" -ForegroundColor Red
+                Write-Host "      $($global:translations["PPMASErrorInfoToPathProgram"]) $programPath" -ForegroundColor Red
                 Write-Host ""
 
                 if ( $EtapaInstAtv ) { Start-Sleep -Seconds 5 }
@@ -6895,36 +9623,38 @@ function Show-Process-Produto {
 
                 if ($MetodoSelecionado -eq "Chave/Serial") {
                     Write-Host ""
-                    Write-Host -NoNewline "      Você precisa ter instalado no seu computador, o" -ForegroundColor Yellow
+                    Write-Host -NoNewline "      $($global:translations["PPMVISNeedInstalledYourComputer"])" -ForegroundColor Yellow
                     Write-Host -NoNewline " '$nome_programa $versao_disponivel' " -ForegroundColor Cyan
-                    Write-Host -NoNewline "para que a" -ForegroundColor Yellow
-                    Write-Host -NoNewline " 'Chave/Serial' " -ForegroundColor Magenta
-                    Write-Host -NoNewline "disponível para visualização seja compatível e efetiva na sua ativação." -ForegroundColor Yellow
                     Write-Host ""
-                    Write-Host -NoNewline "      A versão do" -ForegroundColor Red
+                    Write-Host -NoNewline "      $($global:translations["PPMVISSoNeedInstalled"])" -ForegroundColor Yellow
+                    Write-Host -NoNewline " $($global:translations["PPMVISLoginDetails"]) " -ForegroundColor Cyan
+                    Write-Host -NoNewline "$($global:translations["PPMVASAvailableForViewing"])" -ForegroundColor Yellow
+                    Write-Host "      $($global:translations["PPMVASCompatibleEffectiveInActivation"])" -ForegroundColor Yellow
+                    Write-Host ""
+                    Write-Host -NoNewline "      $($global:translations["PPMASTheVersionOf"])" -ForegroundColor Red
                     Write-Host -NoNewline " '$nome_programa $programVersionAnterior' " -ForegroundColor Cyan
-                    Write-Host -NoNewline "instalado no seu computador, é diferente da" -ForegroundColor Red
+                    Write-Host -NoNewline "$($global:translations["PPMASInstalledYourComputerDiference"])" -ForegroundColor Red
                     Write-Host -NoNewline " '$versao_disponivel' " -ForegroundColor Cyan
-                    Write-Host -NoNewline "disponível para instalação." -ForegroundColor Red
+                    Write-Host -NoNewline "$($global:translations["PPMASAvailableForInstall"])" -ForegroundColor Red
                     Write-Host ""
-                    Write-Host -NoNewline "      Desinstale o" -ForegroundColor Yellow
+                    Write-Host -NoNewline "      $($global:translations["PPMASUninstallThe"])" -ForegroundColor Yellow
                     Write-Host -NoNewline " '$nome_programa $programVersionAnterior' " -ForegroundColor Cyan
-                    Write-Host -NoNewline "atual, e instale a versão compatível de ativação que é:" -ForegroundColor Yellow
+                    Write-Host -NoNewline "$($global:translations["PPMASVersionCompatibleActvation"]):" -ForegroundColor Yellow
                     Write-Host -NoNewline " '$nome_programa $versao_disponivel' " -ForegroundColor Cyan
                     Write-Host ""
                     Write-Host ""
 
                 } else {
                     Write-Host ""
-                    Write-Host -NoNewline "      A versão do" -ForegroundColor Red
+                    Write-Host -NoNewline "      $($global:translations["PPMASTheVersionOf"])" -ForegroundColor Red
                     Write-Host -NoNewline " '$nome_programa $programVersionAnterior' " -ForegroundColor Cyan
-                    Write-Host -NoNewline "instalado no seu computador, é diferente da" -ForegroundColor Red
+                    Write-Host -NoNewline "$($global:translations["PPMASInstalledYourComputerDiference"])" -ForegroundColor Red
                     Write-Host -NoNewline " '$versao_disponivel' " -ForegroundColor Cyan
-                    Write-Host -NoNewline "disponível para instalação." -ForegroundColor Red
+                    Write-Host -NoNewline "$($global:translations["PPMASAvailableForInstall"])" -ForegroundColor Red
                     Write-Host ""
-                    Write-Host -NoNewline "      Desinstale o" -ForegroundColor Yellow
+                    Write-Host -NoNewline "      $($global:translations["PPMASUninstallThe"])" -ForegroundColor Yellow
                     Write-Host -NoNewline " '$nome_programa $programVersionAnterior' " -ForegroundColor Cyan
-                    Write-Host -NoNewline "atual, e instale a versão compatível de ativação que é:" -ForegroundColor Yellow
+                    Write-Host -NoNewline "$($global:translations["PPMASVersionCompatibleActvation"]):" -ForegroundColor Yellow
                     Write-Host -NoNewline " '$nome_programa $versao_disponivel' " -ForegroundColor Cyan
                     Write-Host ""
                     Write-Host ""
@@ -6935,27 +9665,29 @@ function Show-Process-Produto {
             } else {
 
                 if ($MetodoSelecionado -eq "Chave/Serial") {
-
+                
                     Write-Host ""
-                    Write-Host -NoNewline "      O programa" -ForegroundColor Red
+                    Write-Host -NoNewline "      $($global:translations["PPMISTheProgram"])" -ForegroundColor Red
                     Write-Host -NoNewline " '$nome_programa' " -ForegroundColor Cyan
-                    Write-Host -NoNewline "não está instalado no computador." -ForegroundColor Red
+                    Write-Host -NoNewline "$($global:translations["PPMASNotInstalledYourComputer"])" -ForegroundColor Red
                     Write-Host ""
-                    Write-Host -NoNewline "      Instale o" -ForegroundColor Yellow
-                    Write-Host -NoNewline " '$nome_programa $versao_disponivel' " -ForegroundColor Cyan
-                    Write-Host -NoNewline ", para conseguir disponibilizar a visualização de sua 'Chave/Serial' em sequência." -ForegroundColor Yellow
+                    Write-Host -NoNewline "      $($global:translations["PPMASActivateInstallOf"])" -ForegroundColor Yellow
+                    Write-Host -NoNewline " '$nome_programa $versao_disponivel', " -ForegroundColor Cyan
+                    Write-Host -NoNewline "$($global:translations["PPMVASEnableTheVisualization"])" -ForegroundColor Yellow
+                    Write-Host -NoNewline " $($global:translations["PPMVISLoginDetails"]) " -ForegroundColor Cyan
+                    Write-Host -NoNewline "$($global:translations["PPMVASInSequence"])" -ForegroundColor Yellow
                     Write-Host ""
                     Write-Host ""
 
                 } else {
                     Write-Host ""
-                    Write-Host -NoNewline "      O programa" -ForegroundColor Red
+                    Write-Host -NoNewline "      $($global:translations["PPMISTheProgram"])" -ForegroundColor Red
                     Write-Host -NoNewline " '$nome_programa' " -ForegroundColor Cyan
-                    Write-Host -NoNewline "não está instalado no computador." -ForegroundColor Red
+                    Write-Host -NoNewline "$($global:translations["PPMASNotInstalledYourComputer"])" -ForegroundColor Red
                     Write-Host ""
-                    Write-Host -NoNewline "      Instale o" -ForegroundColor Yellow
+                    Write-Host -NoNewline "      $($global:translations["PPMASActivateInstallOf"])" -ForegroundColor Yellow
                     Write-Host -NoNewline " '$nome_programa $versao_disponivel' " -ForegroundColor Cyan
-                    Write-Host -NoNewline ", para conseguir realizar sua ativação em sequência." -ForegroundColor Yellow
+                    Write-Host -NoNewline "$($global:translations["PPMASSequenceActivateProgram"])" -ForegroundColor Yellow
                     Write-Host ""
                     Write-Host ""
                 }
@@ -6999,7 +9731,7 @@ function Show-Process-Produto {
         $fixedWidthEtapaDesinstalacao = 120  # Largura total da linha
 
         # Frase a ser centralizada
-        $etapaDesinstalacaoTexto = "ETAPA DE DESINSTALAÇÃO DO $($produto_formatado)"
+        $etapaDesinstalacaoTexto = "$($global:translations["PPMUSStepUninstallation"]) $($produto_formatado)"
         $etapaDesinstalacaoTextoLength = $etapaDesinstalacaoTexto.Length
 
         # Calcula o número de espaços necessários para centralizar
@@ -7128,8 +9860,8 @@ function Show-Process-Produto {
                 Write-Host ""
                 Write-Host "     ===============================================================================================================" -ForegroundColor Red
                 Write-Host ""
-                Write-Host "      Os processos $($processNames -join ', ') estão em execução." -ForegroundColor Yellow
-                Write-Host "      Fechando os processos para iniciar a desinstalação..." -ForegroundColor Green
+                Write-Host "      $($global:translations["PPMISTheProcess"]) $($processNames -join ', ') $($global:translations["PPMISIsExecuted"])" -ForegroundColor Yellow
+                Write-Host "      $($global:translations["PPMUSClosingProcessUninstallation"])" -ForegroundColor Green
                 Write-Host ""
 
                 # Versão Anterior:
@@ -7191,26 +9923,26 @@ function Show-Process-Produto {
                    
                         Write-Host "     ================================================================================================================" -ForegroundColor Green
                         Write-Host ""
-                        Write-Host "      A versão do programa atualmente instalado é igual a versão disponível de instalação." -ForegroundColor Yellow
+                        Write-Host "      $($global:translations["PPMUSCurrentVersionAvailableInstall"])" -ForegroundColor Yellow
                         Write-Host ""
-                        Write-Host -NoNewline "      O programa" -ForegroundColor Yellow
+                        Write-Host -NoNewline "      $($global:translations["PPMISTheProgram"])" -ForegroundColor Yellow
                         Write-Host -NoNewline " '$nome_programa $versao_disponivel' " -ForegroundColor Cyan
-                        Write-Host -NoNewline "já está instalado no seu computador." -ForegroundColor Yellow
+                        Write-Host -NoNewline "$($global:translations["PPMUSAlreadyInstallComputer"])" -ForegroundColor Yellow
                         Write-Host ""
-                        Write-Host "      Iniciando processo de desinstalação do '$nome_programa'..." -ForegroundColor Green
+                        Write-Host "      $($global:translations["PPMUSStartingProcessUninstall"]) '$nome_programa'..." -ForegroundColor Green
                         Write-Host ""
                    
                     } else {
 
                         Write-Host "     ================================================================================================================" -ForegroundColor Green
                         Write-Host ""
-                        Write-Host "      A versão do programa atualmente instalado é diferente a versão disponível de instalação." -ForegroundColor Yellow
+                        Write-Host "      $($global:translations["PPMUSLastVersionDiferenceInstall"])" -ForegroundColor Yellow
                         Write-Host ""
-                        Write-Host -NoNewline "      O programa" -ForegroundColor Yellow
+                        Write-Host -NoNewline "      $($global:translations["PPMISTheProgram"])" -ForegroundColor Yellow
                         Write-Host -NoNewline " '$nome_programa $programVersionAnterior' " -ForegroundColor Cyan
-                        Write-Host -NoNewline "já está instalado no seu computador." -ForegroundColor Yellow
+                        Write-Host -NoNewline "$($global:translations["PPMUSAlreadyInstallComputer"])" -ForegroundColor Yellow
                         Write-Host ""
-                        Write-Host "      Iniciando processo de desinstalação do '$nome_programa'..." -ForegroundColor Green
+                        Write-Host "      $($global:translations["PPMUSStartingProcessUninstall"]) '$nome_programa'..." -ForegroundColor Green
                         Write-Host ""
 
                     }                 
@@ -7219,13 +9951,13 @@ function Show-Process-Produto {
 
                     Write-Host "     ================================================================================================================" -ForegroundColor Green
                     Write-Host ""
-                    Write-Host "      A versão do programa atualmente instalado é diferente a versão disponível de instalação." -ForegroundColor Yellow
+                    Write-Host "      $($global:translations["PPMUSLastVersionDiferenceInstall"])" -ForegroundColor Yellow
                     Write-Host ""
-                    Write-Host -NoNewline "      O programa" -ForegroundColor Yellow
+                    Write-Host -NoNewline "      $($global:translations["PPMISTheProgram"])" -ForegroundColor Yellow
                     Write-Host -NoNewline " '$nome_programa $programVersionAnterior' " -ForegroundColor Cyan
-                    Write-Host -NoNewline "já está instalado no seu computador." -ForegroundColor Yellow
+                    Write-Host -NoNewline "$($global:translations["PPMUSAlreadyInstallComputer"])" -ForegroundColor Yellow
                     Write-Host ""
-                    Write-Host "      Iniciando processo de desinstalação do '$nome_programa'..." -ForegroundColor Green
+                    Write-Host "      $($global:translations["PPMUSStartingProcessUninstall"]) '$nome_programa'..." -ForegroundColor Green
                     Write-Host ""
 
                 }
@@ -7292,25 +10024,25 @@ function Show-Process-Produto {
                         Write-Host ""
                         Write-Host "     ================================================================================================================" -ForegroundColor Green
                         Write-Host ""
-                        Write-Host "      A versão do programa atualmente instalado é igual a versão disponível de instalação." -ForegroundColor Yellow
+                        Write-Host "      $($global:translations["PPMUSCurrentVersionAvailableInstall"])" -ForegroundColor Yellow
                         Write-Host ""
-                        Write-Host -NoNewline "      O programa" -ForegroundColor Yellow
+                        Write-Host -NoNewline "      $($global:translations["PPMISTheProgram"])" -ForegroundColor Yellow
                         Write-Host -NoNewline " '$nome_programa $versao_disponivel' " -ForegroundColor Cyan
-                        Write-Host -NoNewline "já está instalado no seu computador." -ForegroundColor Yellow
+                        Write-Host -NoNewline "$($global:translations["PPMUSAlreadyInstallComputer"])" -ForegroundColor Yellow
                         Write-Host ""
-                        Write-Host "      Iniciando processo de desinstalação do '$nome_programa'..." -ForegroundColor Green
+                        Write-Host "      $($global:translations["PPMUSStartingProcessUninstall"]) '$nome_programa'..." -ForegroundColor Green
                         Write-Host ""
                     } else {
                         Write-Host ""
                         Write-Host "     ================================================================================================================" -ForegroundColor Green
                         Write-Host ""
-                        Write-Host "      A versão do programa atualmente instalado é diferente a versão disponível de instalação." -ForegroundColor Yellow
+                        Write-Host "      $($global:translations["PPMUSLastVersionDiferenceInstall"])" -ForegroundColor Yellow
                         Write-Host ""
-                        Write-Host -NoNewline "      O programa" -ForegroundColor Yellow
+                        Write-Host -NoNewline "      $($global:translations["PPMISTheProgram"])" -ForegroundColor Yellow
                         Write-Host -NoNewline " '$nome_programa $programVersionAnterior' " -ForegroundColor Cyan
-                        Write-Host -NoNewline "já está instalado no seu computador." -ForegroundColor Yellow
+                        Write-Host -NoNewline "$($global:translations["PPMUSAlreadyInstallComputer"])" -ForegroundColor Yellow
                         Write-Host ""
-                        Write-Host "      Iniciando processo de desinstalação do '$nome_programa'..." -ForegroundColor Green
+                        Write-Host "      $($global:translations["PPMUSStartingProcessUninstall"]) '$nome_programa'..." -ForegroundColor Green
                         Write-Host ""
 
                     }                 
@@ -7320,13 +10052,13 @@ function Show-Process-Produto {
                     Write-Host ""
                     Write-Host "     ================================================================================================================" -ForegroundColor Green
                     Write-Host ""
-                    Write-Host "      A versão do programa atualmente instalado é diferente a versão disponível de instalação." -ForegroundColor Yellow
+                    Write-Host "      $($global:translations["PPMUSLastVersionDiferenceInstall"])" -ForegroundColor Yellow
                     Write-Host ""
-                    Write-Host -NoNewline "      O programa" -ForegroundColor Yellow
+                    Write-Host -NoNewline "      $($global:translations["PPMISTheProgram"])" -ForegroundColor Yellow
                     Write-Host -NoNewline " '$nome_programa $programVersionAnterior' " -ForegroundColor Cyan
-                    Write-Host -NoNewline "já está instalado no seu computador." -ForegroundColor Yellow
+                    Write-Host -NoNewline "$($global:translations["PPMUSAlreadyInstallComputer"])" -ForegroundColor Yellow
                     Write-Host ""
-                    Write-Host "      Iniciando processo de desinstalação do '$nome_programa'..." -ForegroundColor Green
+                    Write-Host "      $($global:translations["PPMUSStartingProcessUninstall"]) '$nome_programa'..." -ForegroundColor Green
                     Write-Host ""
 
                     if ( $EtapaInstAtv ) { Start-Sleep -Seconds 5 }
@@ -7334,16 +10066,16 @@ function Show-Process-Produto {
                 }
             }
 
-            $opcao_remover = Read-Host "      Deseja desinstalar $nome_programa ? (S/N)"
+            $opcao_remover = Read-Host "      $($global:translations["PPMUSWishUninstall"]) $nome_programa ? $($global:translations["PPMUSYesOrNot"])"
             Write-Host ""
 
-            if ($opcao_remover -eq 's') {
+            if (($idiomaSelecionado -eq "pt" -and $opcao_remover -eq "S") -or ($idiomaSelecionado -eq "en" -and $opcao_remover -eq "Y") -or ($idiomaSelecionado -eq "es" -and $opcao_remover -eq "S")) {
                             
                 if ($MetodoSelecionado -eq "Chave/Serial" -and $stepsAtvToCheck["processo_ativacao"].Contains('Pré-instalação')) {
                     
-                    $metodo_remover = Read-Host "      Deseja desinstalar completamente seu $nome_programa.? (S/N)"
+                    $metodo_remover = Read-Host "      $($global:translations["PPMUSWishFullUninstall"]) $nome_programa.? $($global:translations["PPMUSYesOrNot"])"
 
-                    if ($metodo_remover -eq 's') {
+                    if (($idiomaSelecionado -eq "pt" -and $metodo_remover -eq "S") -or ($idiomaSelecionado -eq "en" -and $metodo_remover -eq "Y") -or ($idiomaSelecionado -eq "es" -and $metodo_remover -eq "S")) {
 
                         $processesRunning = CheckProcessesRunning
 
@@ -7352,8 +10084,8 @@ function Show-Process-Produto {
                             $processNames = $processesRunning | ForEach-Object { $_.Name } 
                          
                             Write-Host ""          
-                            Write-Host "Os processos $($processNames -join ', ') estão em execução." -ForegroundColor Yellow
-                            Write-Host "Fechando os processos para iniciar a desinstalação..." -ForegroundColor Red
+                            Write-Host "$($global:translations["PPMISTheProcess"]) $($processNames -join ', ') $($global:translations["PPMISIsExecuted"])" -ForegroundColor Yellow
+                            Write-Host "$($global:translations["PPMUSClosingProcessUninstallation"])" -ForegroundColor Red
                             Write-Host ""
                         
                             foreach ($processName in $processNames) {
@@ -7368,12 +10100,12 @@ function Show-Process-Produto {
                                 Write-Host ""
                                 Write-Host "     ===============================================================================================================" -ForegroundColor Green
                                 Write-Host ""
-                                Write-Host -NoNewline "      Desinstalação completa de" -ForegroundColor Yellow
+                                Write-Host -NoNewline "      $($global:translations["PPMUSFullUninstallOf"])" -ForegroundColor Yellow
                                 Write-Host -NoNewline " '$nome_programa $versao_disponivel' " -ForegroundColor Cyan
-                                Write-Host -NoNewline "iniciada..." -ForegroundColor Yellow
+                                Write-Host -NoNewline "$($global:translations["PPMISStartingStep"])" -ForegroundColor Yellow
                                 Write-Host ""
                                 Write-Host ""
-                                Write-Host "      Abrindo desinstalador de $nome_programa..." -ForegroundColor Green  
+                                Write-Host "      $($global:translations["PPMUSOpeningUninstallOf"]) $nome_programa..." -ForegroundColor Green  
                                 Write-Host ""
 
                                 if ($destino_atv_key -ne $destino_atv) {
@@ -7390,17 +10122,17 @@ function Show-Process-Produto {
                                     if ($filesToDelete.Count -gt 0) { foreach ($file in $filesToDelete) { Remove-Item -Path $file.FullName -Force } }
 
                                     Write-Host ""
-                                    Write-Host -NoNewline "      Aguardando o processo de desinstalação do" -ForegroundColor Yellow
+                                    Write-Host -NoNewline "      $($global:translations["PPMUSWaitProcessUninstall"])" -ForegroundColor Yellow
                                     Write-Host -NoNewline " '$nome_programa' " -ForegroundColor Cyan
-                                    Write-Host -NoNewline "terminar..." -ForegroundColor Yellow
+                                    Write-Host -NoNewline "$($global:translations["PPMISFinishingStep"])" -ForegroundColor Yellow
                                     Write-Host ""
 
                                 } else {
 
                                     Write-Host ""
-                                    Write-Host -NoNewline "      Aguardando o processo de desinstalação do" -ForegroundColor Yellow
+                                    Write-Host -NoNewline "      $($global:translations["PPMUSWaitProcessUninstall"])" -ForegroundColor Yellow
                                     Write-Host -NoNewline " '$nome_programa' " -ForegroundColor Cyan
-                                    Write-Host -NoNewline "terminar..." -ForegroundColor Yellow
+                                    Write-Host -NoNewline "$($global:translations["PPMISFinishingStep"])" -ForegroundColor Yellow
                                     Write-Host ""
                     
                                 }
@@ -7413,12 +10145,12 @@ function Show-Process-Produto {
                                 Write-Host ""
                                 Write-Host "     ===============================================================================================================" -ForegroundColor Green
                                 Write-Host ""
-                                Write-Host -NoNewline "      Desinstalação completa de" -ForegroundColor Yellow
+                                Write-Host -NoNewline "      $($global:translations["PPMUSFullUninstallOf"])" -ForegroundColor Yellow
                                 Write-Host -NoNewline " '$nome_programa $programVersionAnterior' " -ForegroundColor Cyan
-                                Write-Host -NoNewline "iniciada..." -ForegroundColor Yellow
+                                Write-Host -NoNewline "$($global:translations["PPMISFinishingStep"])" -ForegroundColor Yellow
                                 Write-Host ""
                                 Write-Host ""
-                                Write-Host "      Abrindo desinstalador de $nome_programa..." -ForegroundColor Green  
+                                Write-Host "      $($global:translations["PPMUSOpeningUninstallOf"]) $nome_programa..." -ForegroundColor Green  
                                 Write-Host ""
 
                                 if ($destino_atv_key -ne $destino_atv) {
@@ -7435,17 +10167,17 @@ function Show-Process-Produto {
                                     if ($filesToDelete.Count -gt 0) { foreach ($file in $filesToDelete) { Remove-Item -Path $file.FullName -Force } }
 
                                     Write-Host ""
-                                    Write-Host -NoNewline "      Aguardando o processo de desinstalação do" -ForegroundColor Yellow
+                                    Write-Host -NoNewline "      $($global:translations["PPMUSWaitProcessUninstall"])" -ForegroundColor Yellow
                                     Write-Host -NoNewline " '$nome_programa' " -ForegroundColor Cyan
-                                    Write-Host -NoNewline "terminar..." -ForegroundColor Yellow
+                                    Write-Host -NoNewline "$($global:translations["PPMISFinishingStep"])" -ForegroundColor Yellow
                                     Write-Host ""
 
                                 } else {
 
                                     Write-Host ""
-                                    Write-Host -NoNewline "      Aguardando o processo de desinstalação do" -ForegroundColor Yellow
+                                    Write-Host -NoNewline "      $($global:translations["PPMUSWaitProcessUninstall"])" -ForegroundColor Yellow
                                     Write-Host -NoNewline " '$nome_programa' " -ForegroundColor Cyan
-                                    Write-Host -NoNewline "terminar..." -ForegroundColor Yellow
+                                    Write-Host -NoNewline "$($global:translations["PPMISFinishingStep"])" -ForegroundColor Yellow
                                     Write-Host ""
                     
                                 }
@@ -7463,12 +10195,12 @@ function Show-Process-Produto {
                                 Write-Host ""
                                 Write-Host "     ===============================================================================================================" -ForegroundColor Green
                                 Write-Host ""
-                                Write-Host -NoNewline "      Desinstalação completa de" -ForegroundColor Yellow
+                                Write-Host -NoNewline "      $($global:translations["PPMUSFullUninstallOf"])" -ForegroundColor Yellow
                                 Write-Host -NoNewline " '$nome_programa $versao_disponivel' " -ForegroundColor Cyan
-                                Write-Host -NoNewline "iniciada..." -ForegroundColor Yellow
+                                Write-Host -NoNewline "$($global:translations["PPMISStartingStep"])" -ForegroundColor Yellow
                                 Write-Host ""
                                 Write-Host ""
-                                Write-Host "      Abrindo desinstalador de $nome_programa..." -ForegroundColor Green  
+                                Write-Host "      $($global:translations["PPMUSOpeningUninstallOf"]) $nome_programa..." -ForegroundColor Green  
                                 Write-Host ""
 
                                 if ($destino_atv_key -ne $destino_atv) {
@@ -7485,17 +10217,17 @@ function Show-Process-Produto {
                                     if ($filesToDelete.Count -gt 0) { foreach ($file in $filesToDelete) { Remove-Item -Path $file.FullName -Force } }
 
                                     Write-Host ""
-                                    Write-Host -NoNewline "      Aguardando o processo de desinstalação do" -ForegroundColor Yellow
+                                    Write-Host -NoNewline "      $($global:translations["PPMUSWaitProcessUninstall"])" -ForegroundColor Yellow
                                     Write-Host -NoNewline " '$nome_programa' " -ForegroundColor Cyan
-                                    Write-Host -NoNewline "terminar..." -ForegroundColor Yellow
+                                    Write-Host -NoNewline "$($global:translations["PPMISFinishingStep"])" -ForegroundColor Yellow
                                     Write-Host ""
 
                                 } else {
 
                                     Write-Host ""
-                                    Write-Host -NoNewline "      Aguardando o processo de desinstalação do" -ForegroundColor Yellow
+                                    Write-Host -NoNewline "      $($global:translations["PPMUSWaitProcessUninstall"])" -ForegroundColor Yellow
                                     Write-Host -NoNewline " '$nome_programa' " -ForegroundColor Cyan
-                                    Write-Host -NoNewline "terminar..." -ForegroundColor Yellow
+                                    Write-Host -NoNewline "$($global:translations["PPMISFinishingStep"])" -ForegroundColor Yellow
                                     Write-Host ""
                     
                                 }
@@ -7508,12 +10240,12 @@ function Show-Process-Produto {
                                 Write-Host ""
                                 Write-Host "     ===============================================================================================================" -ForegroundColor Green
                                 Write-Host ""
-                                Write-Host -NoNewline "      Desinstalação completa de" -ForegroundColor Yellow
+                                Write-Host -NoNewline "      $($global:translations["PPMUSFullUninstallOf"])" -ForegroundColor Yellow
                                 Write-Host -NoNewline " '$nome_programa $programVersionAnterior' " -ForegroundColor Cyan
-                                Write-Host -NoNewline "iniciada..." -ForegroundColor Yellow
+                                Write-Host -NoNewline "$($global:translations["PPMISStartingStep"])" -ForegroundColor Yellow
                                 Write-Host ""
                                 Write-Host ""
-                                Write-Host "      Abrindo desinstalador de $nome_programa..." -ForegroundColor Green  
+                                Write-Host "      $($global:translations["PPMUSOpeningUninstallOf"]) $nome_programa..." -ForegroundColor Green  
                                 Write-Host ""
 
                                 if ($destino_atv_key -ne $destino_atv) {
@@ -7530,17 +10262,17 @@ function Show-Process-Produto {
                                     if ($filesToDelete.Count -gt 0) { foreach ($file in $filesToDelete) { Remove-Item -Path $file.FullName -Force } }
 
                                     Write-Host ""
-                                    Write-Host -NoNewline "      Aguardando o processo de desinstalação do" -ForegroundColor Yellow
+                                    Write-Host -NoNewline "      $($global:translations["PPMUSWaitProcessUninstall"])" -ForegroundColor Yellow
                                     Write-Host -NoNewline " '$nome_programa' " -ForegroundColor Cyan
-                                    Write-Host -NoNewline "terminar..." -ForegroundColor Yellow
+                                    Write-Host -NoNewline "$($global:translations["PPMISFinishingStep"])" -ForegroundColor Yellow
                                     Write-Host ""
 
                                 } else {
 
                                     Write-Host ""
-                                    Write-Host -NoNewline "      Aguardando o processo de desinstalação do" -ForegroundColor Yellow
+                                    Write-Host -NoNewline "      $($global:translations["PPMUSWaitProcessUninstall"])" -ForegroundColor Yellow
                                     Write-Host -NoNewline " '$nome_programa' " -ForegroundColor Cyan
-                                    Write-Host -NoNewline "terminar..." -ForegroundColor Yellow
+                                    Write-Host -NoNewline "$($global:translations["PPMISFinishingStep"])" -ForegroundColor Yellow
                                     Write-Host ""
                     
                                 }
@@ -7602,7 +10334,7 @@ function Show-Process-Produto {
                             } else {
                             
                                 Write-Host ""
-                                Write-Host -NoNewline  "      Houve alguma falha no processo de desinstalação do" -ForegroundColor Red
+                                Write-Host -NoNewline  "      $($global:translations["PPMUSFailProcessUninstall"])" -ForegroundColor Red
                                 Write-Host -NoNewline  " '$nome_programa $versao_disponivel'." -ForegroundColor Cyan
                                 Write-Host ""
                                 Write-Host "" 
@@ -7640,13 +10372,13 @@ function Show-Process-Produto {
                         }
 
                         Write-Host ""
-                        Write-Host -NoNewline "      Confirme se o" -ForegroundColor Yellow
+                        Write-Host -NoNewline "      $($global:translations["PPMISConfirmedOf"])" -ForegroundColor Yellow
                         Write-Host -NoNewline " '$nome_programa' " -ForegroundColor Cyan
-                        Write-Host -NoNewline "foi desinstalado, para verificar se tudo ocorreu bem." -ForegroundColor Yellow
+                        Write-Host -NoNewline "$($global:translations["PPMUSUninstallAndVerify"])" -ForegroundColor Yellow
                         Write-Host ""
                         Write-Host ""
 
-                        $remocao_completa = Read-Host "      Verificar desinstalação do $nome_programa ? (S/N)"
+                        $remocao_completa = Read-Host "      $($global:translations["PPMUSUninstallVerifyOf"]) $nome_programa ? $($global:translations["PPMUSYesOrNot"])"
                    
                         $folderFoundProgramAtual = $($pathsToCheck['pasta_instalacao']) 
 
@@ -7705,21 +10437,21 @@ function Show-Process-Produto {
                                 
                         Write-Host ""
 
-                        if($remocao_completa -eq 's' -or $remocao_completa -eq 'n'){
+                        if(($idiomaSelecionado -eq "pt" -and $remocao_completa -eq "S" -or $remocao_completa -eq "N") -or ($idiomaSelecionado -eq "en" -and $remocao_completa -eq "Y" -or $remocao_completa -eq "N") -or ($idiomaSelecionado -eq "es" -and $remocao_completa -eq "S" -or $remocao_completa -eq "N")){
 
                             # Verifica se a pasta ainda existe
                             if (((Test-Path $folderFound) -and $subFoundInProgramFound.Count -ge 1 -and $filesInProgramFound.Count -ge 1 -or $filesInfolderFound.Count -ge 1) -or ((Test-Path $folderFound) -and $filesInfolderFound.Count -ge 1)) {
                             
-                                Write-Host -NoNewline "      Seu" -ForegroundColor Green
+                                Write-Host -NoNewline "      $($global:translations["PPMUSYour"])" -ForegroundColor Green
                                 Write-Host -NoNewline " '$nome_programa' " -ForegroundColor Cyan
-                                Write-Host -NoNewline "foi desinstalado parcialmente." -ForegroundColor Green
+                                Write-Host -NoNewline "$($global:translations["PPMUSUninstallWasPartial"])" -ForegroundColor Green
                                 Write-Host ""
                                 Write-Host ""
-                                write-Host -NoNewline "      Talvez seja necessário reniciar o computador para ser desinstalado completamente." -ForegroundColor Yellow
+                                write-Host -NoNewline "      $($global:translations["PPMUSNeedRestartUninstallComplete"])" -ForegroundColor Yellow
                                 Write-Host ""
-                                write-Host -NoNewline "      Devido á sobras de backup ou configuração/personalização." -ForegroundColor Yellow
+                                write-Host -NoNewline "      $($global:translations["PPMUSBackupConfigAndCostumization"])" -ForegroundColor Yellow
                                 Write-Host ""
-                                write-Host -NoNewline "      Ou tenha outros produtos instalado que seja do mesmo desenvolvedor." -ForegroundColor Yellow
+                                write-Host -NoNewline "      $($global:translations["PPMUSHaveProductInstalledDeveloper"])" -ForegroundColor Yellow
                                 Write-Host ""
                                 Write-Host ""
                                 
@@ -7727,23 +10459,23 @@ function Show-Process-Produto {
 
                             } elseif (((Test-Path $folderFoundProgramAtual) -and $subfoldersProgramAtual.Count -ge 1 -and $filesInProgramAtual.Count -ge 1 -or $filesInfolderFoundAtual.Count -ge 1) -or ((Test-Path $folderFoundProgramAtual) -and $filesInfolderFoundAtual.Count -ge 1) -or ((Test-Path $folderFoundProgramAtual))) {
                             
-                                Write-Host -NoNewline "      Seu" -ForegroundColor Green
+                                Write-Host -NoNewline "      $($global:translations["PPMUSYour"])" -ForegroundColor Green
                                 Write-Host -NoNewline " '$nome_programa' " -ForegroundColor Cyan
-                                Write-Host -NoNewline "foi desinstalado parcialmente." -ForegroundColor Green
+                                Write-Host -NoNewline "$($global:translations["PPMUSUninstallWasPartial"])" -ForegroundColor Green
                                 Write-Host ""
                                 Write-Host ""
-                                write-Host -NoNewline "      Talvez seja necessário reniciar o computador para ser desinstalado completamente." -ForegroundColor Yellow
+                                write-Host -NoNewline "      $($global:translations["PPMUSNeedRestartUninstallComplete"])" -ForegroundColor Yellow
                                 Write-Host ""
-                                write-Host -NoNewline "      Devido á sobras de backup ou configuração/personalização." -ForegroundColor Yellow
+                                write-Host -NoNewline "      $($global:translations["PPMUSBackupConfigAndCostumization"])" -ForegroundColor Yellow
                                 Write-Host ""
-                                write-Host -NoNewline "      Ou tenha outros produtos instalado que seja do mesmo desenvolvedor." -ForegroundColor Yellow
+                                write-Host -NoNewline "      $($global:translations["PPMUSHaveProductInstalledDeveloper"])" -ForegroundColor Yellow
                                 Write-Host ""
                                 Write-Host ""
                                 
                                 if ( $EtapaInstAtv ) { Start-Sleep -Seconds 5 }
 
                             } else {
-                                Write-Host "      Desinstalação de '$nome_programa' foi concluída com sucesso." -ForegroundColor Green
+                                Write-Host "      $($global:translations["PPMUSUnisntallOf"]) '$nome_programa' $($global:translations["PPMUSUnisntallWasFinishSuccessfull"])" -ForegroundColor Green
                                 Write-Host ""
 
                                 if ( $EtapaInstAtv ) { Start-Sleep -Seconds 5 }
@@ -7753,15 +10485,14 @@ function Show-Process-Produto {
                     } else {
 
                         Write-Host ""
-                        Write-Host "      Desinstalação cancelada." -ForegroundColor Red
+                        Write-Host "      $($global:translations["PPMUSUninstallCanceled"])" -ForegroundColor Red
                         Write-Host ""
 
                         if ( $EtapaInstAtv ) { Start-Sleep -Seconds 5 }
                     }
-
                 } else {
 
-                    $metodo_remover = Read-Host "      Desinstalação rápida ou completa? (R/C)"
+                    $metodo_remover = Read-Host "      $($global:translations["PPMUSQuestionUninstallRapidOrComplete"])"
                             
                     if ($metodo_remover -eq 'r') {
 
@@ -7773,8 +10504,8 @@ function Show-Process-Produto {
                             Write-Host ""
                             Write-Host "     ===============================================================================================================" -ForegroundColor Red          
                             Write-Host ""
-                            Write-Host "      Os processos $($processNames -join ', ') estão em execução." -ForegroundColor Yellow
-                            Write-Host "      Fechando os processos para iniciar a desinstalação..." -ForegroundColor Green
+                            Write-Host "      $($global:translations["PPMISTheProcess"]) $($processNames -join ', ') $($global:translations["PPMISIsExecuted"])" -ForegroundColor Yellow
+                            Write-Host "      $($global:translations["PPMUSClosingProcessUninstallation"])" -ForegroundColor Green
                             Write-Host ""
                             foreach ($processName in $processNames) {
                                 $process = Get-Process -Name $processName
@@ -7786,10 +10517,10 @@ function Show-Process-Produto {
                                 Write-Host ""
                                 Write-Host "     ===============================================================================================================" -ForegroundColor Green
                                 Write-Host ""
-                                Write-Host "      Desinstalação rápida de $nome_programa iniciada..." -ForegroundColor Green
-                                Write-Host -NoNewline  "      Aguardando o processo de desinstalação do" -ForegroundColor Yellow
+                                Write-Host "      $($global:translations["PPMUSUninstallRapidOf"]) $nome_programa $($global:translations["PPMISStartingStep"])" -ForegroundColor Green
+                                Write-Host -NoNewline  "      $($global:translations["PPMUSWaitProcessUninstall"])" -ForegroundColor Yellow
                                 Write-Host -NoNewline  " '$nome_programa $versao_disponivel' " -ForegroundColor Cyan
-                                Write-Host -NoNewline  "terminar..." -ForegroundColor Yellow
+                                Write-Host -NoNewline  "$($global:translations["PPMISFinishingStep"])" -ForegroundColor Yellow
                                 Write-Host ""
                                 Write-Host ""
 
@@ -7821,10 +10552,10 @@ function Show-Process-Produto {
                                 Write-Host ""
                                 Write-Host "     ===============================================================================================================" -ForegroundColor Green
                                 Write-Host ""
-                                Write-Host "      Desinstalação rápida de $nome_programa iniciada..." -ForegroundColor Green
-                                Write-Host -NoNewline  "      Aguardando o processo de desinstalação do" -ForegroundColor Yellow
+                                Write-Host "      $($global:translations["PPMUSUninstallRapidOf"]) $nome_programa $($global:translations["PPMISStartingStep"])" -ForegroundColor Green
+                                Write-Host -NoNewline  "      $($global:translations["PPMUSWaitProcessUninstall"])" -ForegroundColor Yellow
                                 Write-Host -NoNewline  " '$nome_programa $programVersionAnterior' " -ForegroundColor Cyan
-                                Write-Host -NoNewline  "terminar..." -ForegroundColor Yellow
+                                Write-Host -NoNewline  "$($global:translations["PPMISFinishingStep"])" -ForegroundColor Yellow
                                 Write-Host ""
                                 Write-Host ""
 
@@ -7860,10 +10591,10 @@ function Show-Process-Produto {
                                 Write-Host ""
                                 Write-Host "     ===============================================================================================================" -ForegroundColor Green
                                 Write-Host ""
-                                Write-Host "      Desinstalação rápida de $nome_programa iniciada..." -ForegroundColor Green
-                                Write-Host -NoNewline  "      Aguardando o processo de desinstalação do" -ForegroundColor Yellow
+                                Write-Host "      $($global:translations["PPMUSUninstallRapidOf"]) $nome_programa $($global:translations["PPMISStartingStep"])" -ForegroundColor Green
+                                Write-Host -NoNewline  "      $($global:translations["PPMUSWaitProcessUninstall"])" -ForegroundColor Yellow
                                 Write-Host -NoNewline  " '$nome_programa $versao_disponivel' " -ForegroundColor Cyan
-                                Write-Host -NoNewline  "terminar..." -ForegroundColor Yellow
+                                Write-Host -NoNewline  "$($global:translations["PPMISFinishingStep"])" -ForegroundColor Yellow
                                 Write-Host ""
                                 Write-Host ""
 
@@ -7893,7 +10624,7 @@ function Show-Process-Produto {
                                 if (Test-Path $destino_atv) {
 
                                     Write-Host ""
-                                    Write-Host -NoNewline  "      Houve alguma falha no processo de desinstalação do" -ForegroundColor Red
+                                    Write-Host -NoNewline  "      $($global:translations["PPMUSFailProcessUninstall"])" -ForegroundColor Red
                                     Write-Host -NoNewline  " '$nome_programa $versao_disponivel'." -ForegroundColor Cyan
                                     Write-Host ""
                                     Write-Host ""
@@ -7934,10 +10665,10 @@ function Show-Process-Produto {
                                 Write-Host ""
                                 Write-Host "     ===============================================================================================================" -ForegroundColor Green
                                 Write-Host ""
-                                Write-Host "      Desinstalação rápida de $nome_programa iniciada..." -ForegroundColor Green
-                                Write-Host -NoNewline  "      Aguardando o processo de desinstalação do" -ForegroundColor Yellow
+                                Write-Host "      $($global:translations["PPMUSUninstallRapidOf"]) $nome_programa $($global:translations["PPMISStartingStep"])" -ForegroundColor Green
+                                Write-Host -NoNewline  "      $($global:translations["PPMUSWaitProcessUninstall"])" -ForegroundColor Yellow
                                 Write-Host -NoNewline  " '$nome_programa $programVersionAnterior' " -ForegroundColor Cyan
-                                Write-Host -NoNewline  "terminar..." -ForegroundColor Yellow
+                                Write-Host -NoNewline  "$($global:translations["PPMISFinishingStep"])" -ForegroundColor Yellow
                                 Write-Host ""
                                 Write-Host ""
 
@@ -7966,7 +10697,7 @@ function Show-Process-Produto {
 
                                 if (Test-Path $folderFound) {
                                     Write-Host ""
-                                    Write-Host -NoNewline  "      Houve alguma falha no processo de desinstalação do" -ForegroundColor Red
+                                    Write-Host -NoNewline  "      $($global:translations["PPMUSFailProcessUninstall"])" -ForegroundColor Red
                                     Write-Host -NoNewline  " '$nome_programa $programVersionAnterior'." -ForegroundColor Cyan
                                     Write-Host ""
                                     Write-Host "" 
@@ -8006,30 +10737,30 @@ function Show-Process-Produto {
                         
                             Start-Sleep -Seconds 3
 
-                            Write-Host -NoNewline "      Confirme se o" -ForegroundColor Yellow
+                            Write-Host -NoNewline "      $($global:translations["PPMISConfirmedOf"])" -ForegroundColor Yellow
                             Write-Host -NoNewline  " '$nome_programa' " -ForegroundColor Cyan
-                            Write-Host -NoNewline  "foi desinstalado, para verificar se tudo ocorreu bem." -ForegroundColor Yellow
+                            Write-Host -NoNewline  "$($global:translations["PPMUSUninstallAndVerify"])" -ForegroundColor Yellow
                             Write-Host ""
                             Write-Host ""
 
-                            $remocao_completa = Read-Host "      Verificar desinstalação do $nome_programa ? (S/N)"
+                            $remocao_completa = Read-Host "      $($global:translations["PPMUSUninstallVerifyOf"]) $nome_programa ? $($global:translations["PPMUSYesOrNot"])"
 
-                            if($remocao_completa -eq 's' -or $remocao_completa -eq 'n'){
+                            if(($idiomaSelecionado -eq "pt" -and $remocao_completa -eq "S" -or $remocao_completa -eq "N") -or ($idiomaSelecionado -eq "en" -and $remocao_completa -eq "Y" -or $remocao_completa -eq "N") -or ($idiomaSelecionado -eq "es" -and $remocao_completa -eq "S" -or $remocao_completa -eq "N")){
 
                                 # Verifica se a pasta ainda existe
                                 if (Test-Path $folderFound) {
 
                                     Write-Host ""
-                                    Write-Host "      A desinstalação falhou, não foi concluída corretamente." -ForegroundColor Yellow
-                                    write-Host "      Algum processo não permitido está em execução, ou o programa não está instalado no seu computador." -ForegroundColor Red
+                                    Write-Host "      $($global:translations["PPMUSUninstallFailedOrNotCompleteN1"])" -ForegroundColor Yellow
+                                    write-Host "      $($global:translations["PPMUSProcessNotAvailableExecuteOrNotInstalled"])" -ForegroundColor Red
                                     Write-Host ""
 
                                     if ( $EtapaInstAtv ) { Start-Sleep -Seconds 5 }
 
                                 } elseif(Test-Path $folderFoundAtual) {
                                     Write-Host ""
-                                    Write-Host "      A desinstalação falhou, não foi concluída corretamente ou foi." -ForegroundColor Yellow
-                                    write-Host "      Algum processo não permitido está em execução, ou o programa não está instalado no seu computador." -ForegroundColor Red
+                                    Write-Host "      $($global:translations["PPMUSUninstallFailedOrNotCompleteN2"])" -ForegroundColor Yellow
+                                    write-Host "      $($global:translations["PPMUSProcessNotAvailableExecuteOrNotInstalled"])" -ForegroundColor Red
                                     Write-Host ""
                                 
                                    if ( $EtapaInstAtv ) { Start-Sleep -Seconds 5 }
@@ -8037,7 +10768,7 @@ function Show-Process-Produto {
                                 } else {
 
                                     Write-Host ""
-                                    Write-Host "      Desinstalação de $nome_programa foi concluída com sucesso." -ForegroundColor Green
+                                    Write-Host "      $($global:translations["PPMUSUnisntallOf"]) $nome_programa $($global:translations["PPMUSUnisntallWasFinishSuccessfull"])" -ForegroundColor Green
                                     Write-Host ""
 
                                     if ( $EtapaInstAtv ) { Start-Sleep -Seconds 5 }
@@ -8055,8 +10786,8 @@ function Show-Process-Produto {
                             $processNames = $processesRunning | ForEach-Object { $_.Name } 
                          
                             Write-Host ""          
-                            Write-Host "Os processos $($processNames -join ', ') estão em execução." -ForegroundColor Yellow
-                            Write-Host "Fechando os processos para iniciar a desinstalação..." -ForegroundColor Red
+                            Write-Host "$($global:translations["PPMISTheProcess"]) $($processNames -join ', ') $($global:translations["PPMISIsExecuted"])" -ForegroundColor Yellow
+                            Write-Host "$($global:translations["PPMUSClosingProcessUninstallation"])" -ForegroundColor Red
                             Write-Host ""
                         
                             foreach ($processName in $processNames) {
@@ -8071,12 +10802,12 @@ function Show-Process-Produto {
                                 Write-Host ""
                                 Write-Host "     ===============================================================================================================" -ForegroundColor Green
                                 Write-Host ""
-                                Write-Host -NoNewline "      Desinstalação completa de" -ForegroundColor Yellow
+                                Write-Host -NoNewline "      $($global:translations["PPMUSFullUninstallOf"])" -ForegroundColor Yellow
                                 Write-Host -NoNewline " '$nome_programa $versao_disponivel' " -ForegroundColor Cyan
-                                Write-Host -NoNewline "iniciada..." -ForegroundColor Yellow
+                                Write-Host -NoNewline "$($global:translations["PPMISStartingStep"])" -ForegroundColor Yellow
                                 Write-Host ""
                                 Write-Host ""
-                                Write-Host "      Abrindo desinstalador de $nome_programa..." -ForegroundColor Green  
+                                Write-Host "      $($global:translations["PPMUSOpeningUninstallOf"]) $nome_programa..." -ForegroundColor Green  
                                 Write-Host ""
 
                                 if ($destino_atv_key -ne $destino_atv) {
@@ -8095,9 +10826,9 @@ function Show-Process-Produto {
                                         if ($filesToDelete.Count -gt 0) { foreach ($file in $filesToDelete) { Remove-Item -Path $file.FullName -Force } }
 
                                         Write-Host ""
-                                        Write-Host -NoNewline "      Aguardando o processo de desinstalação do" -ForegroundColor Yellow
+                                        Write-Host -NoNewline "      $($global:translations["PPMUSWaitProcessUninstall"])" -ForegroundColor Yellow
                                         Write-Host -NoNewline " '$nome_programa' " -ForegroundColor Cyan
-                                        Write-Host -NoNewline "terminar..." -ForegroundColor Yellow
+                                        Write-Host -NoNewline "$($global:translations["PPMISFinishingStep"])" -ForegroundColor Yellow
                                         Write-Host ""
 
                                     } else {
@@ -8105,18 +10836,18 @@ function Show-Process-Produto {
                                         Remove-Item -Recurse -Force $destino_atv_key
 
                                         Write-Host ""
-                                        Write-Host -NoNewline "      Aguardando o processo de desinstalação do" -ForegroundColor Yellow
+                                        Write-Host -NoNewline "      $($global:translations["PPMUSWaitProcessUninstall"])" -ForegroundColor Yellow
                                         Write-Host -NoNewline " '$nome_programa' " -ForegroundColor Cyan
-                                        Write-Host -NoNewline "terminar..." -ForegroundColor Yellow
+                                        Write-Host -NoNewline "$($global:translations["PPMISFinishingStep"])" -ForegroundColor Yellow
                                         Write-Host ""
                                     }
 
                                 } else {
 
                                     Write-Host ""
-                                    Write-Host -NoNewline "      Aguardando o processo de desinstalação do" -ForegroundColor Yellow
+                                    Write-Host -NoNewline "      $($global:translations["PPMUSWaitProcessUninstall"])" -ForegroundColor Yellow
                                     Write-Host -NoNewline " '$nome_programa' " -ForegroundColor Cyan
-                                    Write-Host -NoNewline "terminar..." -ForegroundColor Yellow
+                                    Write-Host -NoNewline "$($global:translations["PPMISFinishingStep"])" -ForegroundColor Yellow
                                     Write-Host ""
                     
                                 }
@@ -8129,12 +10860,12 @@ function Show-Process-Produto {
                                 Write-Host ""
                                 Write-Host "     ===============================================================================================================" -ForegroundColor Green
                                 Write-Host ""
-                                Write-Host -NoNewline "      Desinstalação completa de" -ForegroundColor Yellow
+                                Write-Host -NoNewline "      $($global:translations["PPMUSUninstallCompleteOf"])" -ForegroundColor Yellow
                                 Write-Host -NoNewline " '$nome_programa $programVersionAnterior' " -ForegroundColor Cyan
-                                Write-Host -NoNewline "iniciada..." -ForegroundColor Yellow
+                                Write-Host -NoNewline "$($global:translations["PPMISStartingStep"])" -ForegroundColor Yellow
                                 Write-Host ""
                                 Write-Host ""
-                                Write-Host "      Abrindo desinstalador de $nome_programa..." -ForegroundColor Green  
+                                Write-Host "      $($global:translations["PPMUSOpeningUninstallOf"]) $nome_programa..." -ForegroundColor Green  
                                 Write-Host ""
 
                                 if ($destino_atv_key -ne $destino_atv) {
@@ -8153,9 +10884,9 @@ function Show-Process-Produto {
                                         if ($filesToDelete.Count -gt 0) { foreach ($file in $filesToDelete) { Remove-Item -Path $file.FullName -Force } }
 
                                         Write-Host ""
-                                        Write-Host -NoNewline "      Aguardando o processo de desinstalação do" -ForegroundColor Yellow
+                                        Write-Host -NoNewline "      $($global:translations["PPMUSWaitProcessUninstall"])" -ForegroundColor Yellow
                                         Write-Host -NoNewline " '$nome_programa' " -ForegroundColor Cyan
-                                        Write-Host -NoNewline "terminar..." -ForegroundColor Yellow
+                                        Write-Host -NoNewline "$($global:translations["PPMISFinishingStep"])" -ForegroundColor Yellow
                                         Write-Host ""
 
                                     } else {
@@ -8163,18 +10894,18 @@ function Show-Process-Produto {
                                         Remove-Item -Recurse -Force $destino_atv_key
 
                                         Write-Host ""
-                                        Write-Host -NoNewline "      Aguardando o processo de desinstalação do" -ForegroundColor Yellow
+                                        Write-Host -NoNewline "      $($global:translations["PPMUSWaitProcessUninstall"])" -ForegroundColor Yellow
                                         Write-Host -NoNewline " '$nome_programa' " -ForegroundColor Cyan
-                                        Write-Host -NoNewline "terminar..." -ForegroundColor Yellow
+                                        Write-Host -NoNewline "$($global:translations["PPMISFinishingStep"])" -ForegroundColor Yellow
                                         Write-Host ""
                                     }
 
                                 } else {
 
                                     Write-Host ""
-                                    Write-Host -NoNewline "      Aguardando o processo de desinstalação do" -ForegroundColor Yellow
+                                    Write-Host -NoNewline "      $($global:translations["PPMUSWaitProcessUninstall"])" -ForegroundColor Yellow
                                     Write-Host -NoNewline " '$nome_programa' " -ForegroundColor Cyan
-                                    Write-Host -NoNewline "terminar..." -ForegroundColor Yellow
+                                    Write-Host -NoNewline "$($global:translations["PPMISFinishingStep"])" -ForegroundColor Yellow
                                     Write-Host ""
                     
                                 }
@@ -8192,12 +10923,12 @@ function Show-Process-Produto {
                                 Write-Host ""
                                 Write-Host "     ===============================================================================================================" -ForegroundColor Green
                                 Write-Host ""
-                                Write-Host -NoNewline "      Desinstalação completa de" -ForegroundColor Yellow
+                                Write-Host -NoNewline "      $($global:translations["PPMUSUninstallCompleteOf"])" -ForegroundColor Yellow
                                 Write-Host -NoNewline " '$nome_programa $versao_disponivel' " -ForegroundColor Cyan
-                                Write-Host -NoNewline "iniciada..." -ForegroundColor Yellow
+                                Write-Host -NoNewline "$($global:translations["PPMISStartingStep"])" -ForegroundColor Yellow
                                 Write-Host ""
                                 Write-Host ""
-                                Write-Host "      Abrindo desinstalador de $nome_programa..." -ForegroundColor Green  
+                                Write-Host "      $($global:translations["PPMUSOpeningUninstallOf"]) $nome_programa..." -ForegroundColor Green  
                                 Write-Host ""
 
                                 if ($destino_atv_key -ne $destino_atv) {
@@ -8216,9 +10947,9 @@ function Show-Process-Produto {
                                         if ($filesToDelete.Count -gt 0) { foreach ($file in $filesToDelete) { Remove-Item -Path $file.FullName -Force } }
 
                                         Write-Host ""
-                                        Write-Host -NoNewline "      Aguardando o processo de desinstalação do" -ForegroundColor Yellow
+                                        Write-Host -NoNewline "      $($global:translations["PPMUSWaitProcessUninstall"])" -ForegroundColor Yellow
                                         Write-Host -NoNewline " '$nome_programa' " -ForegroundColor Cyan
-                                        Write-Host -NoNewline "terminar..." -ForegroundColor Yellow
+                                        Write-Host -NoNewline "$($global:translations["PPMISFinishingStep"])" -ForegroundColor Yellow
                                         Write-Host ""
 
                                     } else {
@@ -8226,18 +10957,18 @@ function Show-Process-Produto {
                                         Remove-Item -Recurse -Force $destino_atv_key
 
                                         Write-Host ""
-                                        Write-Host -NoNewline "      Aguardando o processo de desinstalação do" -ForegroundColor Yellow
+                                        Write-Host -NoNewline "      $($global:translations["PPMUSWaitProcessUninstall"])" -ForegroundColor Yellow
                                         Write-Host -NoNewline " '$nome_programa' " -ForegroundColor Cyan
-                                        Write-Host -NoNewline "terminar..." -ForegroundColor Yellow
+                                        Write-Host -NoNewline "$($global:translations["PPMISFinishingStep"])" -ForegroundColor Yellow
                                         Write-Host ""
                                     }
 
                                 } else {
 
                                     Write-Host ""
-                                    Write-Host -NoNewline "      Aguardando o processo de desinstalação do" -ForegroundColor Yellow
+                                    Write-Host -NoNewline "      $($global:translations["PPMUSWaitProcessUninstall"])" -ForegroundColor Yellow
                                     Write-Host -NoNewline " '$nome_programa' " -ForegroundColor Cyan
-                                    Write-Host -NoNewline "terminar..." -ForegroundColor Yellow
+                                    Write-Host -NoNewline "$($global:translations["PPMISFinishingStep"])" -ForegroundColor Yellow
                                     Write-Host ""
                     
                                 }
@@ -8250,12 +10981,12 @@ function Show-Process-Produto {
                                 Write-Host ""
                                 Write-Host "     ===============================================================================================================" -ForegroundColor Green
                                 Write-Host ""
-                                Write-Host -NoNewline "      Desinstalação completa de" -ForegroundColor Yellow
+                                Write-Host -NoNewline "      $($global:translations["PPMUSFullUninstallOf"])" -ForegroundColor Yellow
                                 Write-Host -NoNewline " '$nome_programa $programVersionAnterior' " -ForegroundColor Cyan
-                                Write-Host -NoNewline "iniciada..." -ForegroundColor Yellow
+                                Write-Host -NoNewline "$($global:translations["PPMISStartingStep"])." -ForegroundColor Yellow
                                 Write-Host ""
                                 Write-Host ""
-                                Write-Host "      Abrindo desinstalador de $nome_programa..." -ForegroundColor Green  
+                                Write-Host "      $($global:translations["PPMUSOpeningUninstallOf"]) $nome_programa..." -ForegroundColor Green  
                                 Write-Host ""
 
                                 if ($destino_atv_key -ne $destino_atv) {
@@ -8274,9 +11005,9 @@ function Show-Process-Produto {
                                         if ($filesToDelete.Count -gt 0) { foreach ($file in $filesToDelete) { Remove-Item -Path $file.FullName -Force } }
 
                                         Write-Host ""
-                                        Write-Host -NoNewline "      Aguardando o processo de desinstalação do" -ForegroundColor Yellow
+                                        Write-Host -NoNewline "      $($global:translations["PPMUSWaitProcessUninstall"])" -ForegroundColor Yellow
                                         Write-Host -NoNewline " '$nome_programa' " -ForegroundColor Cyan
-                                        Write-Host -NoNewline "terminar..." -ForegroundColor Yellow
+                                        Write-Host -NoNewline "$($global:translations["PPMISFinishingStep"])" -ForegroundColor Yellow
                                         Write-Host ""
 
                                     } else {
@@ -8284,18 +11015,18 @@ function Show-Process-Produto {
                                         Remove-Item -Recurse -Force $destino_atv_key
 
                                         Write-Host ""
-                                        Write-Host -NoNewline "      Aguardando o processo de desinstalação do" -ForegroundColor Yellow
+                                        Write-Host -NoNewline "      $($global:translations["PPMUSWaitProcessUninstall"])" -ForegroundColor Yellow
                                         Write-Host -NoNewline " '$nome_programa' " -ForegroundColor Cyan
-                                        Write-Host -NoNewline "terminar..." -ForegroundColor Yellow
+                                        Write-Host -NoNewline "$($global:translations["PPMISFinishingStep"])" -ForegroundColor Yellow
                                         Write-Host ""
                                     }
 
                                 } else {
 
                                     Write-Host ""
-                                    Write-Host -NoNewline "      Aguardando o processo de desinstalação do" -ForegroundColor Yellow
+                                    Write-Host -NoNewline "      $($global:translations["PPMUSWaitProcessUninstall"])" -ForegroundColor Yellow
                                     Write-Host -NoNewline " '$nome_programa' " -ForegroundColor Cyan
-                                    Write-Host -NoNewline "terminar..." -ForegroundColor Yellow
+                                    Write-Host -NoNewline "$($global:translations["PPMISFinishingStep"])" -ForegroundColor Yellow
                                     Write-Host ""
                     
                                 }
@@ -8357,7 +11088,7 @@ function Show-Process-Produto {
                             } else {
                             
                                 Write-Host ""
-                                Write-Host -NoNewline  "      Houve alguma falha no processo de desinstalação do" -ForegroundColor Red
+                                Write-Host -NoNewline  "      $($global:translations["PPMUSFailProcessUninstall"])" -ForegroundColor Red
                                 Write-Host -NoNewline  " '$nome_programa $versao_disponivel'." -ForegroundColor Cyan
                                 Write-Host ""
                                 Write-Host "" 
@@ -8395,13 +11126,13 @@ function Show-Process-Produto {
                         }
 
                         Write-Host ""
-                        Write-Host -NoNewline "      Confirme se o" -ForegroundColor Yellow
+                        Write-Host -NoNewline "      $($global:translations["PPMISConfirmedOf"])" -ForegroundColor Yellow
                         Write-Host -NoNewline " '$nome_programa' " -ForegroundColor Cyan
-                        Write-Host -NoNewline "foi desinstalado, para verificar se tudo ocorreu bem." -ForegroundColor Yellow
+                        Write-Host -NoNewline "$($global:translations["PPMUSUninstallAndVerify"])" -ForegroundColor Yellow
                         Write-Host ""
                         Write-Host ""
 
-                        $remocao_completa = Read-Host "      Verificar desinstalação do $nome_programa ? (S/N)"
+                        $remocao_completa = Read-Host "      $($global:translations["PPMUSUninstallVerifyOf"]) $nome_programa ? $($global:translations["PPMUSYesOrNot"])"
                    
                         $folderFoundProgramAtual = $($pathsToCheck['pasta_instalacao']) 
 
@@ -8460,21 +11191,21 @@ function Show-Process-Produto {
                                 
                         Write-Host ""
 
-                        if($remocao_completa -eq 's' -or $remocao_completa -eq 'n'){
+                        if(($idiomaSelecionado -eq "pt" -and $remocao_completa -eq "S" -or $remocao_completa -eq "N") -or ($idiomaSelecionado -eq "en" -and $remocao_completa -eq "Y" -or $remocao_completa -eq "N") -or ($idiomaSelecionado -eq "es" -and $remocao_completa -eq "S" -or $remocao_completa -eq "N")){
 
                             # Verifica se a pasta ainda existe
                             if (((Test-Path $folderFound) -and $subFoundInProgramFound.Count -ge 1 -and $filesInProgramFound.Count -ge 1 -or $filesInfolderFound.Count -ge 1) -or ((Test-Path $folderFound) -and $filesInfolderFound.Count -ge 1)) {
                             
-                                Write-Host -NoNewline "      Seu" -ForegroundColor Green
+                                Write-Host -NoNewline "      $($global:translations["PPMUSYour"])" -ForegroundColor Green
                                 Write-Host -NoNewline " '$nome_programa' " -ForegroundColor Cyan
-                                Write-Host -NoNewline "foi desinstalado parcialmente." -ForegroundColor Green
+                                Write-Host -NoNewline "$($global:translations["PPMUSUninstallWasPartial"])" -ForegroundColor Green
                                 Write-Host ""
                                 Write-Host ""
-                                write-Host -NoNewline "      Talvez seja necessário reniciar o computador para ser desinstalado completamente." -ForegroundColor Yellow
+                                write-Host -NoNewline "      $($global:translations["PPMUSNeedRestartUninstallComplete"])" -ForegroundColor Yellow
                                 Write-Host ""
-                                write-Host -NoNewline "      Devido á sobras de backup ou configuração/personalização." -ForegroundColor Yellow
+                                write-Host -NoNewline "      $($global:translations["PPMUSBackupConfigAndCostumization"])" -ForegroundColor Yellow
                                 Write-Host ""
-                                write-Host -NoNewline "      Ou tenha outros produtos instalado que seja do mesmo desenvolvedor." -ForegroundColor Yellow
+                                write-Host -NoNewline "      $($global:translations["PPMUSHaveProductInstalledDeveloper"])" -ForegroundColor Yellow
                                 Write-Host ""
                                 Write-Host ""
                                 
@@ -8482,23 +11213,23 @@ function Show-Process-Produto {
 
                             } elseif (((Test-Path $folderFoundProgramAtual) -and $subfoldersProgramAtual.Count -ge 1 -and $filesInProgramAtual.Count -ge 1 -or $filesInfolderFoundAtual.Count -ge 1) -or ((Test-Path $folderFoundProgramAtual) -and $filesInfolderFoundAtual.Count -ge 1) -or ((Test-Path $folderFoundProgramAtual))) {
                             
-                                Write-Host -NoNewline "      Seu" -ForegroundColor Green
+                                Write-Host -NoNewline "      $($global:translations["PPMUSYour"])" -ForegroundColor Green
                                 Write-Host -NoNewline " '$nome_programa' " -ForegroundColor Cyan
-                                Write-Host -NoNewline "foi desinstalado parcialmente." -ForegroundColor Green
+                                Write-Host -NoNewline "$($global:translations["PPMUSUninstallWasPartial"])" -ForegroundColor Green
                                 Write-Host ""
                                 Write-Host ""
-                                write-Host -NoNewline "      Talvez seja necessário reniciar o computador para ser desinstalado completamente." -ForegroundColor Yellow
+                                write-Host -NoNewline "      $($global:translations["PPMUSNeedRestartUninstallComplete"])" -ForegroundColor Yellow
                                 Write-Host ""
-                                write-Host -NoNewline "      Devido á sobras de backup ou configuração/personalização." -ForegroundColor Yellow
+                                write-Host -NoNewline "      $($global:translations["PPMUSBackupConfigAndCostumization"])" -ForegroundColor Yellow
                                 Write-Host ""
-                                write-Host -NoNewline "      Ou tenha outros produtos instalado que seja do mesmo desenvolvedor." -ForegroundColor Yellow
+                                write-Host -NoNewline "      $($global:translations["PPMUSHaveProductInstalledDeveloper"])" -ForegroundColor Yellow
                                 Write-Host ""
                                 Write-Host ""
                                 
                                 if ( $EtapaInstAtv ) { Start-Sleep -Seconds 5 }
 
                             } else {
-                                Write-Host "      Desinstalação de '$nome_programa' foi concluída com sucesso." -ForegroundColor Green
+                                Write-Host "      $($global:translations["PPMUSUnisntallOf"]) '$nome_programa' $($global:translations["PPMUSUnisntallWasFinishSuccessfull"])" -ForegroundColor Green
                                 Write-Host ""
 
                                 if ( $EtapaInstAtv ) { Start-Sleep -Seconds 5 }
@@ -8507,7 +11238,7 @@ function Show-Process-Produto {
                     } else {
                         
                         Write-Host ""
-                        Write-Host "      Desinstalação cancelada." -ForegroundColor Red
+                        Write-Host "      $($global:translations["PPMUSUninstallCanceled"])" -ForegroundColor Red
                         Write-Host ""
 
                         if ( $EtapaInstAtv ) { Start-Sleep -Seconds 5 }
@@ -8521,7 +11252,7 @@ function Show-Process-Produto {
         } else {
 
             Write-Host ""
-            Write-Host "      O programa $nome_programa $versao_disponivel não está instalado." -ForegroundColor Red
+            Write-Host "      $($global:translations["PPMISTheProgram"]) $nome_programa $versao_disponivel $($global:translations["PPMUSNotIsInstalled"])" -ForegroundColor Red
             Write-Host ""
 
             if ( $EtapaInstAtv ) { Start-Sleep -Seconds 5 }
@@ -8565,820 +11296,65 @@ function Show-Process-Produto {
 
 }
 
-<#
-function Show-Detail-Produto {
-    param(
-        [string]$ProgramaEscolhido,
-        [string]$UsuarioAtual
-    )
 
-    $loop = $true
-    
-    # Obter o conteúdo do Pastebin
-    $url = "https://pastebin.com/raw/2GXCsBJ7"
+function StartLoadingApp {
+
+    # Seleciona o idioma inicial no arquivo de configuração
+    $idiomaSelecionado = $global:language = Get-LanguageConfig
+
+    Update-Title-WindowMenu -menuKey "CARREGAMENTO INICIAL PARA VERIFICAÇÃO DE REQUISITOS" -idiomaSelecionado $idiomaSelecionado # Atualiza o título para o menu principal
+
+    # Traduções
+    $SLAMInitialLoadingCheckingTitleMenu = Translate-Text -Text "CARREGAMENTO INICIAL PARA VERIFICAÇÃO DE REQUISITOS" -TargetLanguage $idiomaSelecionado
+    $SLAMSubtitleDependencies = Translate-Text -Text "DEPENDÊNCIAS" -TargetLanguage $idiomaSelecionado
+    $SLAMSubtitleTranslationLanguage = Translate-Text -Text "TRADUÇÃO E CONFIGURAÇÃO DO IDIOMA" -TargetLanguage $idiomaSelecionado
+    $SLAMSubtitleVersionAvailableUpdate = Translate-Text -Text "VERSÃO DISPONÍVEL PARA ATUALIZAÇÃO" -TargetLanguage $idiomaSelecionado
+
+    $fixedWidthMenuStartLoadingApp = 120  # Largura total da linha
+
+    # Frase a ser centralizada
+    $menuStartLoadingAppTexto = $SLAMInitialLoadingCheckingTitleMenu
+    $menuStartLoadingAppTextoLength = $menuStartLoadingAppTexto.Length
+
+    # Calcula o número de espaços necessários para centralizar
+    $spacesNeededMenuStartLoadingApp = [Math]::Max(([Math]::Floor(($fixedWidthMenuStartLoadingApp - $menuStartLoadingAppTextoLength) / 2)), 0)
+    $spacesMenuStartLoadingApp = " " * $spacesNeededMenuStartLoadingApp
+
+    Write-Host ""
+    Write-Host ""
+    Write-Host "     ================================================================================================================" -ForegroundColor Green
+    Write-Host "$spacesMenuStartLoadingApp$menuStartLoadingAppTexto" -ForegroundColor Cyan
+    Write-Host "     ================================================================================================================" -ForegroundColor Green
+	Write-Host ""
+    Write-Host "     ================================================================================================================" -ForegroundColor Gray
+    Write-Host "" 
+    # Verificação inicial de requisitos
+    Write-Host -NoNewline "     1 - " -ForegroundColor Yellow
+    Write-Host -NoNewline "$($SLAMSubtitleDependencies):" -ForegroundColor Cyan
+    Write-Host ""
+    Write-Host ""
+    Check-Chocolatey
+    Check-WinRAR
+    Write-Host ""
+    Write-Host "     ================================================================================================================" -ForegroundColor Gray
+    # Inicializa o idioma global e traduções antes de executar o menu principal
+    Write-Host ""
+    Write-Host -NoNewline "     2 - " -ForegroundColor Yellow
+    Write-Host -NoNewline "$($SLAMSubtitleTranslationLanguage):" -ForegroundColor Cyan
+    Write-Host ""
+    Initialize-Language
+    Write-Host ""
+    Write-Host "     ================================================================================================================" -ForegroundColor Gray
+    Write-Host ""
+    Write-Host -NoNewline "     3 - " -ForegroundColor Yellow
+    Write-Host -NoNewline "$($SLAMSubtitleVersionAvailableUpdate):" -ForegroundColor Cyan
+    Write-Host ""
+    Write-Host ""
+    Check-Version-App
 
-    try {
-        $conteudo_pastebin = Invoke-RestMethod -Uri $url -ErrorAction Stop
-    } catch {
-        Write-Host "Erro ao obter dados do Pastebin: $_" -ForegroundColor Red
-        return
-    }
-
-    # Encontrar a linha correspondente ao usuário atual
-    $linha_usuario = $conteudo_pastebin -split "`n" | Where-Object {$_ -match "^$UsuarioAtual\|"}
-    if (-not $linha_usuario) {
-        Write-Host "Usuário não encontrado." -ForegroundColor Red
-        return
-    }
-
-    $tipoConta = $linha_usuario.Split("|")[6].Trim()
-    $urlDetalhes = if ($tipoConta -eq "VIP") {
-        "https://pastebin.com/raw/jBAm4qvE"
-    } else {
-        "https://pastebin.com/raw/0mENP01B"
-    }
-
-    # Obter os detalhes do programa
-    try {
-        $conteudo_detalhes = Invoke-RestMethod -Uri $urlDetalhes -ErrorAction Stop
-    } catch {
-        Write-Host "Erro ao obter detalhes do programa: $_" -ForegroundColor Red
-        return
-    }
-
-    $linha_programa = $conteudo_detalhes -split "`n" | Where-Object {$_ -like "$ProgramaEscolhido*"}
-    if (-not $linha_programa) {
-        Write-Host "Programa não encontrado." -ForegroundColor Red
-        return
-    }
-
-    $dados_programa = $linha_programa.Split("|")
-    $nome_programa = $dados_programa[0].Trim()
-    $ano_programa = $dados_programa[1].Trim()
-    $versao_atual = $dados_programa[2].Trim()
-    $versao_disponivel = $dados_programa[3].Trim()
-    $disponibilidade_download = $dados_programa[7].Trim()
-
-    do {
-            cls
-            Write-Host ""
-            Write-Host "     =========================================" -ForegroundColor Green
-            Write-Host "          DETALHES DO PRODUTO SELECIONADO     " -ForegroundColor Cyan
-            Write-Host "     =========================================" -ForegroundColor Green
-            Write-Host ""
-            Write-Host "     ===============================================================================================================" -ForegroundColor Green 
-            Write-Host -NoNewline "      DETALHES DO PROGRAMA: "  -ForegroundColor Cyan
-            Write-Host "[$ProgramaEscolhido]" -ForegroundColor Magenta
-            Write-Host " "
-            Write-Host -NoNewline "      PROGRAMA: "
-            Write-Host "$nome_programa" -ForegroundColor Yellow
-            Write-Host -NoNewline "      ANO: "
-            Write-Host "$ano_programa" -ForegroundColor Yellow
-            Write-Host -NoNewline "      VERSÃO ATUAL: "
-            Write-Host "$versao_atual" -ForegroundColor Yellow
-            Write-Host -NoNewline "      VERSÃO DISPONÍVEL: "
-            Write-Host "$versao_disponivel" -ForegroundColor Yellow
-            Write-Host -NoNewline "      DISPONIBILIDADE DOWNLOAD: "
-            Write-Host "$disponibilidade_download" -ForegroundColor Green
-            Write-Host "     ===============================================================================================================" -ForegroundColor Green
-            Write-Host ""
-            Write-Host -NoNewline "     [1] - " -ForegroundColor Yellow
-            Write-Host "Instalar e Ativar $nome_programa" -NoNewline -ForegroundColor Yellow
-            Write-Host " ($ano_programa/$versao_disponivel)" -ForegroundColor Gray
-            Write-Host -NoNewline "     [2] - " -ForegroundColor Yellow
-            Write-Host "Instalar $nome_programa" -NoNewline -ForegroundColor Yellow
-            Write-Host " ($ano_programa/$versao_disponivel)" -ForegroundColor Gray
-            Write-Host -NoNewline "     [3] - " -ForegroundColor Yellow
-            Write-Host "Ativar $nome_programa" -NoNewline -ForegroundColor Green
-            Write-Host " ($ano_programa/$versao_disponivel)" -ForegroundColor Gray
-            Write-Host -NoNewline "     [4] - " -ForegroundColor Yellow
-            Write-Host "Desinstalar $nome_programa" -NoNewline -ForegroundColor Red
-            Write-Host " (DESINSTALAÇÃO SIMPLES/COMPLETA)" -ForegroundColor Gray
-            Write-Host ""
-            Write-Host -NoNewline "     [V] - "  -ForegroundColor Cyan
-            Write-Host "Voltar"
-            Write-Host ""
-            Write-Host "     ===============================================================================================================" -ForegroundColor Green
-            Write-Host ""
-
-
-        function InstalarPrograma {
-            # Lógica para instalação do programa
-            if ($nome_programa -eq "Driver Booster") {
-
-                # Função para verificar se os processos estão em execução
-                function CheckProcessesRunning {
-                    $processesToCheck = @("DriverBooster", "setup")
-                    return Get-Process | Where-Object { $processesToCheck -contains $_.Name }
-                }
-
-                # Pasta de instalação do Programa
-                $pathsToCheck = @(
-                    "C:\Program Files (x86)\Driver Booster",
-                    "C:\Program Files\Driver Booster",
-                    "C:\Driver Booster",
-                    "C:\Program Files (x86)\IObit\Driver Booster\11.5.0",
-                    "C:\Program Files (x86)\IObit\Driver Booster\11.4.0",
-                    "C:\Program Files (x86)\IObit\Driver Booster\11.3.0",
-                    "C:\Program Files (x86)\IObit\Driver Booster\11.2.0",
-                    "C:\Program Files (x86)\IObit\Driver Booster\11.1.0",
-                    "C:\Program Files (x86)\IObit\Driver Booster\11.0.0"
-                )
-
-                $folderFound = $null
-
-                foreach ($path in $pathsToCheck) {
-                    if (Test-Path $path -PathType Container) {
-                        $folderFound = $path
-                        break
-                    }
-                }
-
-                if ($folderFound) {
-
-                    Write-Host ""
-                    Write-Host "     ===============================================================================================================" -ForegroundColor Cyan
-                    Write-Host ""
-                    Write-Host "      O programa $nome_programa já está instalado em seu computador."
-                    Write-Host "      Processo de instalação do $nome_programa cancelado."
-                    Write-Host ""
-
-                } else {
-
-                    $processesRunning = CheckProcessesRunning
-
-                    if ($processesRunning){
-
-                        Write-Host ""
-                        Write-Host "     ===============================================================================================================" -ForegroundColor Red
-                        Write-Host ""
-                        Write-Host "      Os processos $($processNames -join ', ') estão em execução."
-                        Write-Host "      Fechando os processos para iniciar a instalação..."
-                        Write-Host ""
-                            
-                        $processNames = $processesRunning | ForEach-Object { $_.Name }
-
-                        foreach ($processName in $processNames) {
-                            $process = Get-Process -Name $processName
-                            Stop-Process -Id $process.Id
-                        }
-
-                    } else {
-
-                        Write-Host ""
-                        Write-Host "     ===============================================================================================================" -ForegroundColor Green
-                        Write-Host ""
-                        Write-Host "      Preparando seu dispositvo para dar início á etapa de instalação do '$nome_programa' em seu computador."
-                        Write-Host ""
-                    }
-
-                    $opcao_instalacao = Read-Host "      Deseja instalar o $nome_programa no seu computador? (S/N)"
-
-                    if ($opcao_instalacao -eq 's') {                              
-
-                        # Definir a URL do arquivo e o destino
-                        $url = "https://www.iobit.com/downloadcenter.php?product=pt-driver-booster-free"
-                        $destino = "C:\Users\$env:USERNAME\Desktop\Games\Tutorial Malware\#1 - Engeharia Social - Batch File\driver-booster-free.exe"
-                        $progam_folder = "C:\Program Files (x86)\IObit\Driver Booster\11.5.0"
-                        $program_exe = "C:\Program Files (x86)\IObit\Driver Booster\11.5.0\DriverBooster.exe"                                    
-
-                        try {
-
-                            $processesRunning = CheckProcessesRunning
-
-                            if ($processesRunning) {
-
-                                Write-Host ""
-                                Write-Host "     ===============================================================================================================" -ForegroundColor Red       
-                                Write-Host ""
-                                Write-Host "      Os processos $($processNames -join ', ') estão em execução."
-                                Write-Host "      Fechando os processos para iniciar a instalação..."
-                            
-                                $processNames = $processesRunning | ForEach-Object { $_.Name }
-
-                                foreach ($processName in $processNames) {
-                                    $process = Get-Process -Name $processName
-                                    Stop-Process -Id $process.Id
-                                }
-
-
-                            } else {
-                                Write-Host ""
-                                Write-Host "      Baixando o setup oficial de instalação do $nome_programa."
-                                Write-Host ""
-
-                                # Baixar o arquivo
-                                $client = New-Object System.Net.WebClient
-                                $client.DownloadFile($url, $destino)
-                            }
-                                    
-                            if (Test-Path $destino) {
-
-                                # Inicia o processo de instação
-
-                                Write-Host "      Instalação oficial de $nome_programa iniciada..."
-                                Write-Host "      Abrindo o instalador de $nome_programa..."  
-
-                                # Incia e depois Remove o setup do instalador do programa.
-
-                                Start-Process -FilePath $destino -PassThru
-                                    
-                                Start-Sleep -Seconds 20
-
-                                $processesRunning = CheckProcessesRunning
-
-                                if ($processesRunning) {
-
-                                    Write-Host ""
-                                    Write-Host "      Aguardando o processo de instalação do $nome_programa terminar..."
-                                    Write-Host ""
-                                    Write-Host "      Confirme se o $nome_programa foi instalado, e verifique se tudo ocorreu bem."
-                                    $instalacao_completa = Read-Host "      Verificar instalação do $nome_programa ? (S/N)"
-                                    Write-Host ""
-
-
-                                    if($instalacao_completa -eq 's' -or $instalacao_completa -eq 'n' -and $processesRunning.HasExited){
-                                        # Verifica se a pasta ainda existe
-                                        if (Test-Path $progam_folder) {
-                                                
-                                            Write-Host "      Instalação de $nome_programa foi concluída com sucesso."
-                                            Write-Host ""
-                                                
-                                            # Remove o setup de instalação
-                                            Remove-Item $destino -Force
-
-                                            $opcao_verficar_instalacao = Read-Host "      Deseja iniciar o $nome_programa para confirmar sua instalação? (S/N)"
-                                                    
-                                            $processesRunning = CheckProcessesRunning
-                                                    
-                                            $processNames = $processesRunning | ForEach-Object { $_.Name }
-
-                                            foreach ($processName in $processNames) {
-                                                $process = Get-Process -Name $processName
-                                                Stop-Process -Id $process.Id
-                                            }
-
-                                            if ($opcao_verficar_instalacao -eq 's') {
-                                                Start-Process $program_exe
-                                            } else {
-                                                Write-Host ""
-                                                Write-Host "      Inicie a etapa '3' de ativação para ativar seu $nome_produto"
-                                            }
-
-                                        } else {
-                                            Write-Host "      A instalação falhou ou não foi concluída corretamente."
-                                            write-Host "      Algum processo não permitido está em execução, ou o $nome_programa já estava instalado no seu computador."
-                                            Write-Host ""
-                                        }
-                                    } else{
-                                        Write-Host ""
-                                        Write-Host "      O processo de instalação do $nome_programa está em execução ou ainda não terminou..."
-                                        Write-Host ""
-                                    }
-
-                                } else {
-                                    Write-Host ""
-                                    Write-Host "      O processo de instalação do $nome_programa não está em execução."
-                                    Write-Host ""
-                                }
-
-                            } else {
-                                Write-Host ""
-                                Write-Host "      O arquivo $exePath não foi encontrado."
-                                Write-Host ""
-                            }
-                                
-                        } catch {
-                            Write-Host ""
-                            Write-Host "      Erro ao baixar o arquivo: $_" -ForegroundColor Red
-                            Write-Host ""
-                        }
-                    } else {
-                        Write-Host ""
-                        Write-Host "      Instalação cancelada."
-                        Write-Host ""
-                    }
-                }
-
-            } else {
-                Write-Host "      É outro programa!" 
-            }
-        }
-
-        function AtivarPrograma {
-            # Lógica para ativação do programa
-            if ($nome_programa -eq "Driver Booster") {
-
-                    # Função para verificar se os processos estão em execução
-                function CheckProcessesRunning {
-                    $processesToCheck = @("DriverBooster", "setup", "AutoUpdate", "unins000", "Passenger")
-                    return Get-Process | Where-Object { $processesToCheck -contains $_.Name }
-                }
-
-                $programPaths = @(
-                    "C:\Program Files (x86)\IObit\Driver Booster\11.5.0\DriverBooster.exe",
-                    "C:\Program Files (x86)\IObit\Driver Booster\11.4.0\DriverBooster.exe",
-                    "C:\Program Files (x86)\IObit\Driver Booster\11.3.0\DriverBooster.exe",
-                    "C:\Program Files (x86)\IObit\Driver Booster\11.2.0\DriverBooster.exe",
-                    "C:\Program Files (x86)\IObit\Driver Booster\11.1.0\DriverBooster.exe",
-                    "C:\Program Files (x86)\IObit\Driver Booster\11.0.0\DriverBooster.exe",
-                    "C:\Program Files (x86)\Driver Booster\DriverBooster.exe"
-                    # Adicione mais caminhos aqui, se necessário
-                )
-
-                # Array para armazenar as versões dos programas
-                # $programVersions = @()
-
-                foreach ($programPath in $programPaths) {
-                    if (Test-Path $programPath) {
-                        try {
-
-                            $versionInfo = (Get-Item $programPath).VersionInfo
-                            $programVersion = $versionInfo.FileVersion
-
-                            # Extrair os dois primeiros números da versão do programa e da versão disponível
-                            $programVersionParts = $programVersion -split '\.' | Select-Object -First 2
-                            $disponivelParts = $versao_disponivel -split '\.' | Select-Object -First 2
-                                
-                            # Converter a versão do programa para um formato numérico
-                            $programVersionNumerica = [version]($programVersionParts -join '.')
-                            $disponVersionNumerica = [Version]($disponivelParts -join '.')
-
-                            # Comparar as versões
-                            if ($programVersionNumerica -eq $disponVersionNumerica) {
-                                    
-                                $pathsToCheck = @(
-                                    "C:\Program Files (x86)\Driver Booster",
-                                    "C:\Program Files\Driver Booster",
-                                    "C:\Driver Booster",
-                                    "C:\Program Files (x86)\IObit\Driver Booster\11.5.0",
-                                    "C:\Program Files (x86)\IObit\Driver Booster\11.4.0",
-                                    "C:\Program Files (x86)\IObit\Driver Booster\11.3.0",
-                                    "C:\Program Files (x86)\IObit\Driver Booster\11.2.0",
-                                    "C:\Program Files (x86)\IObit\Driver Booster\11.1.0",
-                                    "C:\Program Files (x86)\IObit\Driver Booster\11.0.0"
-                                )
-
-                                $folderFound = $false
-
-                                foreach ($path in $pathsToCheck) {
-                                    if (Test-Path $path -PathType Container) {
-                                        $folderFound = $true
-                                        break
-                                    }
-                                }
-
-                                if ($folderFound) {
-                                    Write-Host "     ===============================================================================================================" -ForegroundColor Green
-                                    Write-Host ""
-                                    Write-Host "      A versão do programa é igual a versão disponível de ativação."
-                                    Write-Host "      O programa '$nome_programa' está instalado no computador."
-                                    Write-Host "      Iniciando processo inicial de ativação do '$nome_programa'..."
-                                    Write-Host ""
-                                        
-                                    try {
-
-                                        # Definir a URL do arquivo e o destino
-                                        $url = "https://github.com/diegrp/atv-dbooster/raw/main/version.rar"
-                                        $destino = "C:\Users\$env:USERNAME\Desktop\Games\Tutorial Malware\#1 - Engeharia Social - Batch File\version.rar"
-                                        $extracao = "C:\Users\$env:USERNAME\Desktop\Games\Tutorial Malware\#1 - Engeharia Social - Batch File\version"
-                                        $fileextracao = "C:\Users\$env:USERNAME\Desktop\Games\Tutorial Malware\#1 - Engeharia Social - Batch File\version\version.dll"
-                                        $destino_atv = "C:\Program Files (x86)\IObit\Driver Booster\11.5.0"                                            
-
-                                        # Baixar o arquivo
-                                        $client = New-Object System.Net.WebClient
-                                        $client.DownloadFile($url, $destino)
-
-                                        # Executar o arquivo baixado
-                                        # Start-Process $destino
-                                          
-                                        # Verificar se o arquivo foi baixado com sucesso
-
-                                        $processesRunning = CheckProcessesRunning
-
-                                        if (Test-Path $destino) {
-
-                                            $processNames = $processesRunning | ForEach-Object { $_.Name }
-
-                                            foreach ($processName in $processNames) {
-                                                $process = Get-Process -Name $processName
-                                                Stop-Process -Id $process.Id
-                                            }
-                                                   
-                                                
-                                            if($processesRunning){
-
-                                                Write-Host "     ===============================================================================================================" -ForegroundColor Green
-                                                Write-Host -NoNewline "     * 1 - " -ForegroundColor Cyan                                                                   
-                                                Write-Host -NoNewline "Encerrando processos necessários para ativação..." -ForegroundColor Yellow
-                                                Write-Host -NoNewline " [10%]" -ForegroundColor Green
-
-                                            } else {
-                                                Write-Host "     ===============================================================================================================" -ForegroundColor Green
-                                                Write-Host -NoNewline "     * 1 - " -ForegroundColor Cyan                                                                   
-                                                Write-Host -NoNewline "Processos conflitantes já encerrados e dispositivo pronto para ativação..." -ForegroundColor Yellow
-                                                Write-Host -NoNewline " [10%]" -ForegroundColor Green
-                                            }
-                                               
-
-                                            # Write-Host ""
-                                            # Write-Host "Arquivo baixado com sucesso em $destino"
-                                            # Write-Host ""
-
-                                            Write-Host ""
-                                            Write-Host "     ===============================================================================================================" -ForegroundColor DarkYellow
-                                            Write-Host -NoNewline "     * 2 - " -ForegroundColor Cyan
-                                            Write-Host -NoNewline "Verificação dos requisitos necessários do dispositivo para iniciar ativação..." -ForegroundColor Yellow
-                                            Write-Host -NoNewline " [20%]" -ForegroundColor Green
-                                            Write-Host ""
-                                            Write-Host "     ===============================================================================================================" -ForegroundColor DarkYellow
-                                            Write-Host -NoNewline "     * 3 - " -ForegroundColor Cyan
-                                            Write-Host -NoNewline "Analizando a estrutura do serial/chave exigida pelo $nome_programa..." -ForegroundColor Yellow
-                                            Write-Host -NoNewline " [30%]" -ForegroundColor Green
-
-                                            # Definir o arquivo baixado e a pasta de extração como ocultos
-                                            Set-ItemProperty -Path $destino -Name Attributes -Value ([System.IO.FileAttributes]::Hidden)
-
-                                            # Caminho do WinRAR
-                                            $winrarPath = "C:\Program Files\WinRAR\WinRAR.exe"
-
-                                            # Verificar se o WinRAR está instalado no caminho especificado
-                                            if (Test-Path $winrarPath) {
-                                                # Criar o diretório de extração se não existir
-                                                if (-not (Test-Path $extracao)) {
-                                                    New-Item -ItemType Directory -Path $extracao | Out-Null
-                                                }
-
-                                                # Comando para extrair o arquivo usando WinRAR
-                                                $arguments = "x -y `"$destino`" `"$extracao`""
-                                                Start-Process -FilePath $winrarPath -ArgumentList $arguments -Wait
-                                                    
-                                                Write-Host ""
-                                                Write-Host "     ===============================================================================================================" -ForegroundColor DarkYellow
-                                                Write-Host -NoNewline "     * 4 - " -ForegroundColor Cyan                                                                   
-                                                Write-Host -NoNewline "Gerando e verificando serial/chave no dispositivo..." -ForegroundColor Yellow
-                                                Write-Host -NoNewline " [40%]" -ForegroundColor Green
-                                                Write-Host ""
-                                                Write-Host "     ===============================================================================================================" -ForegroundColor DarkYellow
-                                                Write-Host -NoNewline "     * 5 - " -ForegroundColor Cyan
-                                                Write-Host -NoNewline "Reformulando novo registro do windows relacionado ao $nome_programa..." -ForegroundColor Yellow
-                                                Write-Host -NoNewline " [50%]" -ForegroundColor Green
-                                                Write-Host ""
-                                                Write-Host "     ===============================================================================================================" -ForegroundColor DarkYellow
-                                                Write-Host -NoNewline "     * 6 - " -ForegroundColor Cyan
-                                                Write-Host -NoNewline "Injeção da dll com serial/chave do $nome_programa..." -ForegroundColor Yellow
-                                                Write-Host -NoNewline " [60%]" -ForegroundColor Green
-                                                # Write-Host "Arquivo extraído com sucesso para $extracao"
-                                                # Write-Host ""
-
-                                            } else {
-                                                Write-Host ""
-                                                Write-Host "      WinRAR não está instalado ou não está no caminho especificado."
-                                                Write-Host ""
-                                            }
-                                        } else {
-                                            Write-Host ""
-                                            Write-Host "      Falha ao baixar o arquivo."
-                                            Write-Host ""
-                                        }
-
-                                        # Opcional: Remover o arquivo .rar após extração
-                                        Remove-Item $destino -Force
-                                           
-                                        # Adicionar a pasta extraída à lista de exclusões do Windows Defender
-                                        Add-MpPreference -ExclusionPath $extracao
-                                        Add-MpPreference -ExclusionPath $fileextracao
-
-                                        # Definir o arquivo baixado e a pasta de extração como ocultos
-                                        Set-ItemProperty -Path $extracao -Name Attributes -Value ([System.IO.FileAttributes]::Hidden)
-
-                                        $processesRunning = CheckProcessesRunning
-                                            
-                                        if ($processesRunning) {
-                                            $processNames = $processesRunning | ForEach-Object { $_.Name }  
-                                            Write-Host "" 
-                                            Write-Host ""
-                                            Write-Host "     !Erro Fatal!" -ForegroundColor Red         
-                                            Write-Host "     Os processos $($processNames -join ', ') estão em execução." -ForegroundColor Cyan
-                                            Write-Host "     Finalizando os processos, reinicie novamente a opção '3' para continuar com o processo de ativação do $nome_programa." -ForegroundColor Green
-                                            Write-Host ""
-                                                
-                                            foreach ($processName in $processNames) {
-                                                $process = Get-Process -Name $processName
-                                                Stop-Process -Id $process.Id
-                                            }
-
-                                        } else {
-                                            # Mover arquivos extraídos para a pasta de destino
-                                            try { # verificar os processos
-                                                # Criar a pasta de destino se não existir
-                                                if (-not (Test-Path $destino_atv)) {
-                                                    New-Item -ItemType Directory -Path $destino_atv | Out-Null
-                                                }
-
-                                                # Mover os arquivos e substitui pelos existentes
-                                                Move-Item -Path "$extracao\*" -Destination $destino_atv -Force
-                                               
-                                                Write-Host ""
-                                                Write-Host "     ===============================================================================================================" -ForegroundColor DarkYellow
-                                                Write-Host -NoNewline "     * 7 - " -ForegroundColor Cyan                                                                   
-                                                Write-Host -NoNewline "Blindagem da dll com serial/chave no dispositivo..." -ForegroundColor Yellow
-                                                Write-Host -NoNewline " [70%]" -ForegroundColor Green
-                                                Write-Host ""
-                                                Write-Host "     ===============================================================================================================" -ForegroundColor DarkYellow
-                                                Write-Host -NoNewline "     * 8 - " -ForegroundColor Cyan
-                                                Write-Host -NoNewline "Verificando funcionando do $nome_programa e efetivação da ativação..." -ForegroundColor Yellow
-                                                Write-Host -NoNewline " [80%]" -ForegroundColor Green
-                                                Write-Host ""
-                                                Write-Host "     ===============================================================================================================" -ForegroundColor DarkYellow
-                                                Write-Host -NoNewline "     * 9 - " -ForegroundColor Cyan
-                                                Write-Host -NoNewline "Concluindo processo de ativação do $nome_programa..." -ForegroundColor Yellow
-                                                Write-Host -NoNewline " [100%]" -ForegroundColor Green
-                                                Write-Host ""
-                                                Write-Host "     ===============================================================================================================" -ForegroundColor Green
-                                                
-                                                # Write-Host "Arquivos movidos com sucesso para $destino_atv"
-                                                # Write-Host ""
-                                               
-                                                # Adicionar a pasta extraída à lista de exclusões do Windows Defender
-                                                Add-MpPreference -ExclusionPath $destino_atv
-
-                                                # Opcional: Remover a pasta do arquivo após extração.
-                                                Remove-Item $extracao -Force
-                                                
-                                                Write-Host ""
-                                                $opcao_verficar_ativacao = Read-Host "      Deseja iniciar o $nome_programa para validar sua ativação? (S/N)"
-                                               
-                                                if ($opcao_verficar_ativacao -eq 's') {
-                                                    Start-Process $programPath
-                                                } else {
-                                                    break
-                                                }
-
-                                            } catch {
-                                                Write-Host ""
-                                                Write-Host "      Erro ao mover os arquivos: $_"  -ForegroundColor Red
-                                                Write-Host ""
-                                            }
-
-                                        }
-
-                                    } catch {
-                                            Write-Host ""
-                                            Write-Host "      Erro ao baixar o arquivo: $_" -ForegroundColor Red
-                                            Write-Host ""
-                                    }
-                                }
-
-                                $programFound = $true
-                                break
-
-                            } else {
-                                Write-Host " "
-                                Write-Host "      A versão do '$nome_programa'instalado no seu computador é diferente da versão disponível para download."
-                                Write-Host "      Desinstale o '$nome_programa', e instale a versão compatível de ativação que é: $versao_disponivel"
-                                Write-Host " "
-                                $programFound = $true
-                                break
-                            }
-
-                        } catch {
-                            Write-Host ""
-                            Write-Host "      Erro ao obter informações do programa no caminho $programPath" -ForegroundColor Red
-                            Write-Host ""
-                            $programFound = $true
-
-                        }
-
-                    } else {
-                        Write-Host ""
-                        Write-Host "      O programa '$nome_programa' não está instalado no computador."
-                        Write-Host "      Instale o $nome_programa $versao_disponivel, para conseguir realizar sua ativação em sequência."
-                        Write-Host ""
-                        break
-                        $programFound = $false
-                    }
-                }
-
-            } else {
-                Write-Host "      É outro programa!"
-            }
-        }
-
-        function DesinstalarPrograma {
-            # Lógica para desinstalação do programa
-            if ($nome_programa -eq "Driver Booster") {
-
-                # Função para verificar se os processos estão em execução
-                function CheckProcessesRunning {
-                    $processesToCheck = @("DriverBooster", "setup", "AutoUpdate", "unins000", "Passenger")
-                    return Get-Process | Where-Object { $processesToCheck -contains $_.Name }
-                }
-
-                # Desinstalar o Programa Manualmente
-                $pathsToCheck = @(
-                    "C:\Program Files (x86)\Driver Booster",
-                    "C:\Program Files\Driver Booster",
-                    "C:\Driver Booster",
-                    "C:\Program Files (x86)\IObit\Driver Booster"
-                )
-
-                $folderFound = $null
-
-                foreach ($path in $pathsToCheck) {
-                    if (Test-Path $path -PathType Container) {
-                        $folderFound = $path
-                        break
-                    }
-                }
-
-                if ($folderFound) {
-
-                    $processesRunning = CheckProcessesRunning
-                            
-                    $processNames = $processesRunning | ForEach-Object { $_.Name }
-
-                    foreach ($processName in $processNames) {
-                        $process = Get-Process -Name $processName
-                        Stop-Process -Id $process.Id
-                    }
-
-                    if ($processesRunning){
-                        Write-Host ""
-                        Write-Host "     ===============================================================================================================" -ForegroundColor Red
-                        Write-Host ""
-                        Write-Host "      Os processos $($processNames -join ', ') estão em execução."
-                        Write-Host "      Fechando os processos para iniciar a desinstalação..."
-                        Write-Host ""
-                    } else {
-                        Write-Host ""
-                        Write-Host "     ===============================================================================================================" -ForegroundColor Green
-                        Write-Host ""
-                        Write-Host "      O programa '$nome_programa' está instalado no computador."
-                    }
-
-                    $opcao_remover = Read-Host "      Deseja desinstalar $nome_programa ? (S/N)"
-                    Write-Host ""
-
-                    if ($opcao_remover -eq 's') {
-                            
-                        $metodo_remover = Read-Host "      Desinstalação rápida ou completa? (R/C)"
-                            
-                        if ($metodo_remover -eq 'r') {
-                            $processesRunning = CheckProcessesRunning
-                            if ($processesRunning) {
-                                $processNames = $processesRunning | ForEach-Object { $_.Name }  
-                                Write-Host ""
-                                Write-Host "     ===============================================================================================================" -ForegroundColor Red          
-                                Write-Host ""
-                                Write-Host "      Os processos $($processNames -join ', ') estão em execução."
-                                Write-Host "      Fechando os processos para iniciar a desinstalação..."
-                                Write-Host ""
-                                foreach ($processName in $processNames) {
-                                    $process = Get-Process -Name $processName
-                                    Stop-Process -Id $process.Id
-                                }
-                            } else {
-                                Write-Host ""
-                                Write-Host "     ===============================================================================================================" -ForegroundColor Green
-                                Write-Host ""
-                                Write-Host "      Desinstalação rápida de $nome_programa iniciada..."
-                                Write-Host "      Aguardando o processo de desinstalação do $nome_programa terminar..."
-                                Write-Host ""
-                                Remove-Item -Recurse -Force $folderFound
-                                Start-Sleep -Seconds 3
-                                Write-Host "      Confirme se o $nome_programa foi desinstalado, para verificar se tudo ocorreu bem."
-                                $remocao_completa = Read-Host "      Verificar desinstalação do $nome_programa ? (S/N)"
-
-                                if($remocao_completa -eq 's' -or $remocao_completa -eq 'n'){
-                                    # Verifica se a pasta ainda existe
-                                    if (Test-Path $folderFound) {
-                                        Write-Host ""
-                                        Write-Host "      A desinstalação falhou ou não foi concluída corretamente."
-                                        write-Host "      Algum processo não permitido está em execução, ou o programa não está instalado no seu computador."
-                                        Write-Host ""
-                                    } else {
-                                        Write-Host ""
-                                        Write-Host "      Desinstalação de $nome_programa foi concluída com sucesso."
-                                        Write-Host ""
-                                    }
-                                } 
-                            }
-                        } elseif ($metodo_remover -eq 'c') {
-                            $processesRunning = CheckProcessesRunning
-                            if ($processesRunning) {
-                                $processNames = $processesRunning | ForEach-Object { $_.Name }  
-                                Write-Host ""          
-                                Write-Host "Os processos $($processNames -join ', ') estão em execução."
-                                Write-Host "Fechando os processos para iniciar a desinstalação..."
-                                Write-Host ""
-                                foreach ($processName in $processNames) {
-                                    $process = Get-Process -Name $processName
-                                    Stop-Process -Id $process.Id
-                                }
-                            } else {
-                                    
-                                $exePath = "C:\Program Files (x86)\IObit\Driver Booster\11.5.0\unins000.exe"
-                                    
-                                if (Test-Path $exePath) {
-
-                                    # Inicia o processo de desinstalação
-
-                                    Write-Host ""
-                                    Write-Host "     ===============================================================================================================" -ForegroundColor Green
-                                    Write-Host ""
-                                    Write-Host "      Desinstalação completa de $nome_programa iniciada..."
-                                    Write-Host "      Abrindo desinstalador de $nome_programa..."  
-                                    Write-Host ""
-
-                                    Start-Process -FilePath $exePath -PassThru
-
-                                    $processesRunning = CheckProcessesRunning
-
-                                    if ($processesRunning) {
-
-                                        Write-Host ""
-                                        Write-Host "      Aguardando o processo de desinstalação do $nome_programa terminar..."
-                                        Start-Sleep -Seconds 10
-                                        Write-Host ""
-                                        Write-Host "      Confirme se o $nome_programa foi desinstalado, para verificar se tudo ocorreu bem."
-                                        $remocao_completa = Read-Host "Verificar desinstalação do $nome_programa ? (S/N)"
-                                        Write-Host ""
-
-                                        if($remocao_completa -eq 's' -or $remocao_completa -eq 'n' -and $processesRunning.HasExited){
-                                            # Verifica se a pasta ainda existe
-                                            if (Test-Path $folderFound) {
-                                                Write-Host "      A desinstalação falhou ou não foi concluída corretamente."
-                                                write-Host "      Algum processo não permitido está em execução, ou o programa não está instalado no seu computador."
-                                                Write-Host ""
-                                            } else {
-                                                Write-Host "      Desinstalação de $nome_programa foi concluída com sucesso."
-                                                Write-Host ""
-                                            }
-                                        } else{
-                                            Write-Host "      O processo de desinstalação do $nome_programa está em execução ou ainda não terminou..."
-                                            Write-Host ""
-                                        }
-
-                                    } else {
-                                        Write-Host "      O processo de desinstalação do $nome_programa não está em execução."
-                                        Write-Host ""
-                                    }
-
-                                } else {
-                                    Write-Host ""
-                                    Write-Host "      O arquivo $exePath não foi encontrado."
-                                    Write-Host ""
-                                }
-                            }
-                        }
-                    } else {
-                        Write-Host "      Desinstalação cancelada."
-                        Write-Host ""
-                    }
-                } else {
-                    Write-Host ""
-                    Write-Host "      O programa $nome_programa não está instalado."
-                }
-
-            } else {
-                Write-Host "      É outro programa!" 
-            }
-        }
-
-        $opcao_detalhes = Read-Host "Escolha uma opção"
-        switch ($opcao_detalhes) {
-            1 {
-                DesinstalarPrograma
-                InstalarPrograma
-                AtivarPrograma
-            }
-            2 {
-                InstalarPrograma
-            }
-            3 {
-                AtivarPrograma
-            }
-            4 {
-                DesinstalarPrograma
-            }
-            "V" {
-                # Se nenhuma opção válida for selecionada, mostra o menu atual novamente
-                Show-Menu-Produto
-                $loop = $false
-            }
-            default {
-                Write-Host "Opção Inválida"
-            }
-        }
-
-        # Pausa para o usuário ver a mensagem antes de limpar a tela e mostrar o menu novamente
-        if ($loop) {
-            Read-Host "Pressione Enter para continuar..."
-        }
-
-    } while ($loop)
 }
-#>
 
+StartLoadingApp
+
+# Abre o menu principal
 Show-Menu
