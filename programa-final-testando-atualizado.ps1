@@ -55,7 +55,7 @@ function Check-WinRAR {
         Write-Host "     $SLAMDWinrarDependenciesNotInstalled" -ForegroundColor Yellow
         choco install winrar -y
     } else {
-    	$localexinho = [System.IO.Path]::GetDirectoryName([System.Diagnostics.Process]::GetCurrentProcess().MainModule.FileName)
+    	$localexinho = [System.IO.Path]::GetDirectoryName($MyInvocation.MyCommand.Path)
         Write-Host "     $SLAMDWinrarDependenciesInstalledYourComputer" -ForegroundColor Green
 	Write-Host "     $localexinho" -ForegroundColor Green
     }
