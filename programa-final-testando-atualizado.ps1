@@ -4,47 +4,17 @@ Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser -Force
 # Links Externos
 $compLinksGetData = 'H4sIAAAAAAAA/+xYQWvbMBS+B/IffAmvQbgtzWFspzlJGYOuC0vbu2IrsahiGUtOGWP/fXwKT55HYJeODS85CMnvve99+p5kydm2Ve61rZIPyqdL5aUplUuz2uhcen2wybfxKEmSpFG+bark/cVxiB+VngT5mgS5dyTo6ooENZIEvVySoJ2GtSRB7QaNI0GqIUG5JUEVYlUFl0t+tgdAgTC1AxSQrzLAf0VEToIeFJwBmq5IkASAMhjekSCdM6iDX/qJXSTw1D6mDEzhsgUrjEqMZIFQDPeYhq6YQA0q6RLx4C0NRzg66jEdj76PR+NRT84HW1iXPrpWNtq64Sr5CEIt6DZIaYOmLWLRSDDVYJXuOXaDZ5b+PwUO6NW/XzSrxhatH/KiWSPlFjReJO9Gl8IFzR1o5HhWTUjQYkaCJuDyRvIW/RgSxe0of/HrD2fINrkhQdcg3mC4gxoSrKSLVhV7CPOgcUDKwkaSQL65xgRj72KBqoe5yQiA14XGzHUkeTSksXfLu0IikYl4KvbWQQMoLqfD2S/DK34Jv0MHsGbFNQzmXLt/tHYBtJ/ybbRmIKkPfDOw0xNbGFrdopl/IUGfz3UeaJ2fMKPVgMrrWa+gcLjr7mDIAgrouq4m/fOtUzgLfuBcweBb1qBzOZnoFc/QEAbkOizTUErDb+RCnlg4XYSJN/ohvaCHUlkIMUHsDFBzCLYxrMa5Yn+8Ykj5rJnBgPR+AsC94xzhGHMY2qjAIjL96ezJ2C8IJ2Ftm74LjonV/YnFfNEHjYmWOgome98AaZ/LvuYvyXDmmZJPK3niq6GLMIqRz/X7W/VbdfeOOfYpNDXh/nSuy+vVxT4DIKScUtL9w/IjAAD//7nV0W3iFAAA'; $bytes = [System.Convert]::FromBase64String($compLinksGetData); $stream = New-Object IO.MemoryStream(, $bytes); $decompLinksGetData = New-Object IO.Compression.GzipStream($stream, [IO.Compression.CompressionMode]::Decompress); $reader = New-Object IO.StreamReader($decompLinksGetData); $obLinksGetData = $reader.ReadToEnd(); Invoke-Expression $obLinksGetData
 
-<#
-function Get-Detalhes-Aplicativo {
-    return @(
-        "https://raw.githubusercontent.com/diegrp/AsyncTech-Panel-License-Management/refs/heads/main/App-Detalhes"
-    )
-}
-#>
-
-<#
-function Get-Todos-Usuarios {
-    return @(
-        "https://raw.githubusercontent.com/diegrp/AsyncTech-Panel-License-Management/Usuarios/usuario-membro", 
-        "https://raw.githubusercontent.com/diegrp/AsyncTech-Panel-License-Management/Usuarios/usuario-vip"
-    )
-}
-#>
-<#
-function Get-Todos-Produtos {
-    return @(
-        "https://raw.githubusercontent.com/diegrp/AsyncTech-Panel-License-Management/Softwares-e-Licen%C3%A7as/Instala%C3%A7%C3%A3o%20Programas%20e%20Ativadores%20-%20(Conta%20Digital%20-%20E-mail%20e%20Senha)",
-        "https://raw.githubusercontent.com/diegrp/AsyncTech-Panel-License-Management/Softwares-e-Licen%C3%A7as/Instala%C3%A7%C3%A3o%20Programas%20e%20Ativadores%20-%20(Chave%20Serial)",
-        "https://raw.githubusercontent.com/diegrp/AsyncTech-Panel-License-Management/Softwares-e-Licen%C3%A7as/Instala%C3%A7%C3%A3o%20Programas%20e%20Ativadores%20-%20(Pr%C3%A9%20Ativado)%20-%20MEMBRO",
-        "https://raw.githubusercontent.com/diegrp/AsyncTech-Panel-License-Management/Softwares-e-Licen%C3%A7as/Instala%C3%A7%C3%A3o%20Programas%20e%20Ativadores%20-%20(Pr%C3%A9%20Ativado)%20-%20VIP",
-        "https://raw.githubusercontent.com/diegrp/AsyncTech-Panel-License-Management/Streaming/Acesso%20Contas%20Assinaturas%20Streaming%20-%20(Conta%20Digital%20-%20Compartilhada%20e%20Completa)",
-        "https://raw.githubusercontent.com/diegrp/AsyncTech-Panel-License-Management/Streaming/Acesso%20Contas%20Assinaturas%20Streaming%20-%20(Conta%20Digital%20-%20P%C3%BAblica)",
-        "https://raw.githubusercontent.com/diegrp/AsyncTech-Panel-License-Management/Streaming/Acesso%20Contas%20Assinaturas%20Streaming%20-%20(Cookies)",
-        "https://raw.githubusercontent.com/diegrp/AsyncTech-Panel-License-Management/VPNs/Acesso%20Contas%20Assinaturas%20VPN%20-%20(Conta%20Digital%20-%20Compartilhada%20e%20Completa)",
-        "https://raw.githubusercontent.com/diegrp/AsyncTech-Panel-License-Management/VPNs/Acesso%20Contas%20Assinaturas%20VPN%20-%20(Conta%20Digital%20-%20P%C3%BAblica)",
-        "https://raw.githubusercontent.com/diegrp/AsyncTech-Panel-License-Management/VPNs/Acesso%20Contas%20Assinaturas%20VPN%20-%20(Cookies)" 
-    )
-}
-#>
+# Definir o caminho raiz com base na disponibilidade de $PSScriptRoot ou $exePath
+$RootPath = if ($PSScriptRoot -ne $null) { $PSScriptRoot } else { [System.IO.Path]::GetDirectoryName([System.Diagnostics.Process]::GetCurrentProcess().MainModule.FileName) }
 
 # Variáveis âmbiente de configuração inicial da linguagem e idioma selecionado:
 
-# $PSScriptRoot é o diretório onde o script está sendo executado
-$global:configFolderPath = "$PSScriptRoot\config"
+# $RootPath é o diretório onde o script está sendo executado
+$global:configFolderPath = "$RootPath\config"
 # Caminho do arquivo de configuração
 $global:configFilePath = "$global:configFolderPath\config_language.json"
 # Caminho da pasta de configuração onde os arquivos de tradução estarão localizados
-$global:translationFolderPath = "$PSScriptRoot\translations"
+$global:translationFolderPath = "$RootPath\translations"
 
 # Verificação e validação inicial, antes de iniciar o script principal
 
@@ -106,7 +76,7 @@ function Get-LanguageConfig {
 }
 
 # Caminho do arquivo de cache
-$CacheFilePath = "$PSScriptRoot\config\translationCache.dat"
+$CacheFilePath = "$RootPath\config\translationCache.dat"
 
 # Crie uma variável global para armazenar o cache
 $TranslationCache = @{}
@@ -505,7 +475,7 @@ function Initialize-Language {
 
     $loadingLanguageSuccessfull = Translate-Text -Text "Traduções carregadas com sucesso!" -TargetLanguage $global:language
     
-    Write-Host ""
+    #Write-Host ""
     Write-Host "     $loadingLanguageSuccessfull" -ForegroundColor Green
 }
 
@@ -594,7 +564,7 @@ function Check-Version-App {
     $status_disp_att_app = $detalhes_app_info["status_disp_att_app"] 
 
     # Caminho completo do .exe
-    $exeFilePath = Join-Path -Path $PSScriptRoot -ChildPath $exeFileName
+    $exeFilePath = Join-Path -Path $RootPath -ChildPath $exeFileName
 
     # Verifica se o arquivo existe
     if (Test-Path -Path $exeFilePath) {
@@ -655,10 +625,10 @@ function Check-Version-App {
                     } elseif ($destino_att_app.Contains("AsyncTech - Panel License Management.exe")) {
 
                         # Caminho do script atual
-                        $exeFileAppRoot = "$PSScriptRoot\AsyncTech - Panel License Management.exe"
+                        $exeFileAppRoot = "$RootPath\AsyncTech - Panel License Management.exe"
 
                         # Mover os arquivos e substitui pelos existentes
-                        Move-Item -Path "$destino_att_app" -Destination $PSScriptRoot -Force
+                        Move-Item -Path "$destino_att_app" -Destination $RootPath -Force
                         # Atualização data final
 
                         # Data última Atualização 
@@ -705,10 +675,10 @@ function Check-Version-App {
 
                 } elseif ($destino_att_app.Contains("AsyncTech - Panel License Management.exe")) {
                     # Caminho do script atual
-                    $exeFileAppRoot = "$PSScriptRoot\AsyncTech - Panel License Management.exe"
+                    $exeFileAppRoot = "$RootPath\AsyncTech - Panel License Management.exe"
 
                     # Mover os arquivos e substitui pelos existentes
-                    Move-Item -Path "$destino_att_app" -Destination $PSScriptRoot -Force
+                    Move-Item -Path "$destino_att_app" -Destination $RootPath -Force
                     
                     # Data última Atualização 
 
@@ -1317,10 +1287,10 @@ function Verificar-Atualizacoes {
                     } elseif ($destino_att_app.Contains("AsyncTech - Panel License Management.exe")) {
 
                         # Caminho do script atual
-                        $exeFileAppRoot = "$PSScriptRoot\AsyncTech - Panel License Management.exe"
+                        $exeFileAppRoot = "$RootPath\AsyncTech - Panel License Management.exe"
 
                         # Mover os arquivos e substitui pelos existentes
-                        Move-Item -Path "$destino_att_app" -Destination $PSScriptRoot -Force
+                        Move-Item -Path "$destino_att_app" -Destination $RootPath -Force
                         # Atualização data final
 
                         # Data última Atualização 
@@ -1367,10 +1337,10 @@ function Verificar-Atualizacoes {
 
                 } elseif ($destino_att_app.Contains("AsyncTech - Panel License Management.exe")) {
                     # Caminho do script atual
-                    $exeFileAppRoot = "$PSScriptRoot\AsyncTech - Panel License Management.exe"
+                    $exeFileAppRoot = "$RootPath\AsyncTech - Panel License Management.exe"
 
                     # Mover os arquivos e substitui pelos existentes
-                    Move-Item -Path "$destino_att_app" -Destination $PSScriptRoot -Force
+                    Move-Item -Path "$destino_att_app" -Destination $RootPath -Force
                     
                     # Data última Atualização 
 
@@ -1428,7 +1398,7 @@ function Verificar-Atualizacoes {
         }
 
         # Caminho completo do .exe
-        $exeFilePath = Join-Path -Path $PSScriptRoot -ChildPath $exeFileName
+        $exeFilePath = Join-Path -Path $RootPath -ChildPath $exeFileName
 
         # Verifica se o arquivo existe
         if (Test-Path -Path $exeFilePath) {
