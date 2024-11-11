@@ -11268,10 +11268,9 @@ function Show-Process-Produto {
 function StartLoadingApp {
 
 # Captura o argumento -exePath, que foi passado do código C#
-param (
-    [string]$exePath
-)
-    
+param ([string]$exePath)
+
+    Write-Host "Valor de exePath: $exePath"
     # Definir o caminho raiz com base na disponibilidade de $PSScriptRoot ou $exePath
     $RootPath = if ($PSScriptRoot -ne $null) { $PSScriptRoot } else { $exePath }
 
