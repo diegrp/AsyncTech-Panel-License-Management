@@ -11297,11 +11297,11 @@ param (
     $spacesMenuStartLoadingApp = " " * $spacesNeededMenuStartLoadingApp
 
     Write-Host ""
-    Write-Host "$RootPath"
+    Write-Host "$exePath"
     Write-Host "     ================================================================================================================" -ForegroundColor Green
     Write-Host "$spacesMenuStartLoadingApp$menuStartLoadingAppTexto" -ForegroundColor Cyan
     Write-Host "     ================================================================================================================" -ForegroundColor Green
-	Write-Host ""
+    Write-Host ""
     Write-Host "     ================================================================================================================" -ForegroundColor Gray
     Write-Host "" 
     # Verificação inicial de requisitos
