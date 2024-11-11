@@ -10,7 +10,12 @@ Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser -Force
 $compLinksGetData = 'H4sIAAAAAAAA/+xYQWvbMBS+B/IffAmvQbgtzWFspzlJGYOuC0vbu2IrsahiGUtOGWP/fXwKT55HYJeODS85CMnvve99+p5kydm2Ve61rZIPyqdL5aUplUuz2uhcen2wybfxKEmSpFG+bark/cVxiB+VngT5mgS5dyTo6ooENZIEvVySoJ2GtSRB7QaNI0GqIUG5JUEVYlUFl0t+tgdAgTC1AxSQrzLAf0VEToIeFJwBmq5IkASAMhjekSCdM6iDX/qJXSTw1D6mDEzhsgUrjEqMZIFQDPeYhq6YQA0q6RLx4C0NRzg66jEdj76PR+NRT84HW1iXPrpWNtq64Sr5CEIt6DZIaYOmLWLRSDDVYJXuOXaDZ5b+PwUO6NW/XzSrxhatH/KiWSPlFjReJO9Gl8IFzR1o5HhWTUjQYkaCJuDyRvIW/RgSxe0of/HrD2fINrkhQdcg3mC4gxoSrKSLVhV7CPOgcUDKwkaSQL65xgRj72KBqoe5yQiA14XGzHUkeTSksXfLu0IikYl4KvbWQQMoLqfD2S/DK34Jv0MHsGbFNQzmXLt/tHYBtJ/ybbRmIKkPfDOw0xNbGFrdopl/IUGfz3UeaJ2fMKPVgMrrWa+gcLjr7mDIAgrouq4m/fOtUzgLfuBcweBb1qBzOZnoFc/QEAbkOizTUErDb+RCnlg4XYSJN/ohvaCHUlkIMUHsDFBzCLYxrMa5Yn+8Ykj5rJnBgPR+AsC94xzhGHMY2qjAIjL96ezJ2C8IJ2Ftm74LjonV/YnFfNEHjYmWOgome98AaZ/LvuYvyXDmmZJPK3niq6GLMIqRz/X7W/VbdfeOOfYpNDXh/nSuy+vVxT4DIKScUtL9w/IjAAD//7nV0W3iFAAA'; $bytes = [System.Convert]::FromBase64String($compLinksGetData); $stream = New-Object IO.MemoryStream(, $bytes); $decompLinksGetData = New-Object IO.Compression.GzipStream($stream, [IO.Compression.CompressionMode]::Decompress); $reader = New-Object IO.StreamReader($decompLinksGetData); $obLinksGetData = $reader.ReadToEnd(); Invoke-Expression $obLinksGetData
 
 # Definir o caminho raiz com base na disponibilidade de $PSScriptRoot ou $exePath
-$RootPath = if ($PSScriptRoot -ne $null) { $PSScriptRoot } else { [System.IO.Path]::GetDirectoryName($exePath) }
+# Se $PSScriptRoot não estiver definido, utilize o caminho do .exe passado como argumento
+if ($PSScriptRoot -eq $null) {
+    $RootPath = [System.IO.Path]::GetDirectoryName($exePath)
+} else {
+    $RootPath = $PSScriptRoot
+}
 
 # Variáveis âmbiente de configuração inicial da linguagem e idioma selecionado:
 
@@ -60,9 +65,8 @@ function Check-WinRAR {
         Write-Host "     $SLAMDWinrarDependenciesNotInstalled" -ForegroundColor Yellow
         choco install winrar -y
     } else {
-    	$localexinho = [System.IO.Path]::GetDirectoryName($exePath)
         Write-Host "     $SLAMDWinrarDependenciesInstalledYourComputer" -ForegroundColor Green
-	Write-Host "     $localexinho" -ForegroundColor Green
+	Write-Host "     $RootPath" -ForegroundColor Green
     }
 }
 
