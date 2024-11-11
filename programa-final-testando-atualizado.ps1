@@ -11289,7 +11289,7 @@ function StartLoadingApp {
     $spacesMenuStartLoadingApp = " " * $spacesNeededMenuStartLoadingApp
 
     Write-Host ""
-    Write-Host "$MyInvocation.MyCommand.Path"
+    Write-Host "$MyInvocation.MyCommand.Path.ToString()"
     Write-Host "     ================================================================================================================" -ForegroundColor Green
     Write-Host "$spacesMenuStartLoadingApp$menuStartLoadingAppTexto" -ForegroundColor Cyan
     Write-Host "     ================================================================================================================" -ForegroundColor Green
