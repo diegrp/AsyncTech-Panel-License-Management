@@ -53,7 +53,7 @@ function Check-WinRAR {
         choco install winrar -y
     } else {
         Write-Host "     $SLAMDWinrarDependenciesInstalledYourComputer" -ForegroundColor Green
-	Write-Host "     $RootPath" -ForegroundColor Green
+	Write-Host "     $exePath" -ForegroundColor Green
     }
 }
 
@@ -11267,6 +11267,9 @@ function Show-Process-Produto {
 
 function StartLoadingApp {
 
+param (
+    [string]$exePath
+)
     # Seleciona o idioma inicial no arquivo de configuração
     $idiomaSelecionado = $global:language = Get-LanguageConfig
 
@@ -11288,10 +11291,8 @@ function StartLoadingApp {
     $spacesNeededMenuStartLoadingApp = [Math]::Max(([Math]::Floor(($fixedWidthMenuStartLoadingApp - $menuStartLoadingAppTextoLength) / 2)), 0)
     $spacesMenuStartLoadingApp = " " * $spacesNeededMenuStartLoadingApp
 
-    $scriptLocation = $MyInvocation.MyCommand.Path
-
     Write-Host ""
-    Write-Host "$scriptLocation"
+    Write-Host "$exePath"
     Write-Host "     ================================================================================================================" -ForegroundColor Green
     Write-Host "$spacesMenuStartLoadingApp$menuStartLoadingAppTexto" -ForegroundColor Cyan
     Write-Host "     ================================================================================================================" -ForegroundColor Green
