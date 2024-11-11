@@ -6,7 +6,7 @@ param (
 Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser -Force
 
 # Se $PSScriptRoot não estiver definido, utilize o caminho do .exe passado como argumento
-$RootPath = if ($PSScriptRoot -eq $null) { $RootPath = $exePath } else { $RootPath = $PSScriptRoot }
+$RootPath = $exePath
 
 Write-Host "Root path is: $RootPath"
 Write-Host "Root path is: $exePath"
