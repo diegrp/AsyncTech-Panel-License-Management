@@ -11270,7 +11270,6 @@ function Show-Process-Produto {
 
 }
 
-
 function StartLoadingApp {
 
     # Seleciona o idioma inicial no arquivo de configuração
