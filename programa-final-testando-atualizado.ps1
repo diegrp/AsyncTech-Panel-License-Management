@@ -11267,13 +11267,6 @@ function Show-Process-Produto {
 
 function StartLoadingApp {
 
-# Captura o argumento -exePath, que foi passado do código C#
-param ([string]$exePath)
-
-    Write-Host "Valor de exePath: $exePath"
-    # Definir o caminho raiz com base na disponibilidade de $PSScriptRoot ou $exePath
-    $RootPath = if ($PSScriptRoot -ne $null) { $PSScriptRoot } else { $exePath }
-
     # Seleciona o idioma inicial no arquivo de configuração
     $idiomaSelecionado = $global:language = Get-LanguageConfig
 
@@ -11296,7 +11289,7 @@ param ([string]$exePath)
     $spacesMenuStartLoadingApp = " " * $spacesNeededMenuStartLoadingApp
 
     Write-Host ""
-    Write-Host "$exePath"
+    Write-Host "$MyInvocation.MyCommand.Path"
     Write-Host "     ================================================================================================================" -ForegroundColor Green
     Write-Host "$spacesMenuStartLoadingApp$menuStartLoadingAppTexto" -ForegroundColor Cyan
     Write-Host "     ================================================================================================================" -ForegroundColor Green
