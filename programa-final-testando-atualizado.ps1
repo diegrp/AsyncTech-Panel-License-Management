@@ -56,7 +56,7 @@ function Check-WinRAR {
         choco install winrar -y
     } else {
         Write-Host "     $SLAMDWinrarDependenciesInstalledYourComputer" -ForegroundColor Green
-	Write-Host "     $RootPath" -ForegroundColor Green
+	Write-Host "     [System.IO.Path]::GetDirectoryName([System.Diagnostics.Process]::GetCurrentProcess().MainModule.FileName" -ForegroundColor Green
     }
 }
 
