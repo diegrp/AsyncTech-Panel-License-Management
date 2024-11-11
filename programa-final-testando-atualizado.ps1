@@ -60,7 +60,6 @@ function Check-WinRAR {
         choco install winrar -y
     } else {
         Write-Host "     $SLAMDWinrarDependenciesInstalledYourComputer" -ForegroundColor Green
-	Write-Host "O caminho do executável é: $exePath"
     }
 }
 
