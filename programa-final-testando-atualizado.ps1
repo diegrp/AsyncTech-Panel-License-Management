@@ -11288,8 +11288,10 @@ function StartLoadingApp {
     $spacesNeededMenuStartLoadingApp = [Math]::Max(([Math]::Floor(($fixedWidthMenuStartLoadingApp - $menuStartLoadingAppTextoLength) / 2)), 0)
     $spacesMenuStartLoadingApp = " " * $spacesNeededMenuStartLoadingApp
 
+    $scriptLocation = $MyInvocation.MyCommand.Path
+
     Write-Host ""
-    Write-Host "$MyInvocation.MyCommand.Path.ToString()"
+    Write-Host "$scriptLocation"
     Write-Host "     ================================================================================================================" -ForegroundColor Green
     Write-Host "$spacesMenuStartLoadingApp$menuStartLoadingAppTexto" -ForegroundColor Cyan
     Write-Host "     ================================================================================================================" -ForegroundColor Green
