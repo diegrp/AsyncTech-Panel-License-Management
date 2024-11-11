@@ -6,8 +6,8 @@ param (
 Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser -Force
 
 # Se $PSScriptRoot não estiver definido, utilize o caminho do .exe passado como argumento
-if ($PSScriptRoot -eq $null) {
-    Write-Host "O valor de PSScriptRoot é null"
+if ([string]::IsNullOrEmpty($PSScriptRoot)) {
+    Write-Host "O valor de PSScriptRoot está vazio ou é null"
 } else {
     Write-Host "O valor de PSScriptRoot é: $PSScriptRoot"
 }
