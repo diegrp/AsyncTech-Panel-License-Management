@@ -135,7 +135,7 @@ function Translate-Text {
     }
 
     # Verifique se a variável $Text não está vazia ou nula
-    if (![string]::IsNullOrEmpty($Text)) {
+    if (![string]::IsNullOrEmpty($Text) -or ![string]::IsNullOrEmpty($TargetLanguage)) {
         # Monte a URL somente se $Text tiver conteúdo
         # Defina a URL da API do PythonAnywhere
         $url = "https://ftapi.pythonanywhere.com/translate?sl=pt&dl=$TargetLanguage&text=$Text"
