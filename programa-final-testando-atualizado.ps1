@@ -76,7 +76,6 @@ function Get-LanguageConfig {
         $defaultConfig = @{ language = "pt" }
         $defaultConfig | ConvertTo-Json | Set-Content -Path $global:configFilePath
         return "pt"  # Retorna o idioma padrão
-	Get-LanguageConfig
     }
 }
 
@@ -11277,7 +11276,7 @@ function StartLoadingApp {
     $idiomaSelecionado = $global:language = Get-LanguageConfig
      
     # Verifique se o caminho contém mais de uma parte (caminho completo)
-    if ($idiomaSelecionado -contains '\') {
+    if ($idiomaSelecionado -ne "pt") {
     	exit
     } else {
 	$idiomaSelecionado = $idiomaSelecionado
