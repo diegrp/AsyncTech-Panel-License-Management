@@ -11277,6 +11277,7 @@ function StartLoadingApp {
     
     # Verifica se $idiomaSelecionado contém apenas duas letras
     if ($idiomaSelecionado -match '^[a-zA-Z]{2}$') {
+        exit
     	$idiomaSelecionado = $idiomaSelecionado
     } else {
     	exit
