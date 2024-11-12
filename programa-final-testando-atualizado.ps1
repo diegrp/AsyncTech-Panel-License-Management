@@ -11277,7 +11277,7 @@ function StartLoadingApp {
      
     # Verifique se o caminho contém mais de uma parte (caminho completo)
     if ($idiomaSelecionado -ne "pt") {
-    	exit
+    	StartLoadingApp
     } else {
 	$idiomaSelecionado = $idiomaSelecionado
     }
