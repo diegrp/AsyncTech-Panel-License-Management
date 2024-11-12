@@ -71,8 +71,6 @@ function Get-LanguageConfig {
         $config = Get-Content -Raw -Path $global:configFilePath | ConvertFrom-Json
         return $config.language
     } else {
-    	Write-Host "configFilePath: $global:configFilePath"
-        Write-Host "configFolderPath: $global:configFolderPath"
         # Se não existir, cria a pasta config com o arquivo de configuração com o idioma padrão (Português)
         New-Item -Path $global:configFolderPath -ItemType Directory -Force
         $defaultConfig = @{ language = "pt" }
