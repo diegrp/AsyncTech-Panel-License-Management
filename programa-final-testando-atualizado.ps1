@@ -11302,7 +11302,7 @@ function StartLoadingApp {
     Write-Host "     ================================================================================================================" -ForegroundColor Gray
     Write-Host "" 
     # Verificação inicial de requisitos
-    Write-Host -NoNewline "     1 - " -ForegroundColor Yellow
+    Write-Host -NoNewline "     2 - " -ForegroundColor Yellow
     Write-Host -NoNewline "$($SLAMSubtitleDependencies):" -ForegroundColor Cyan
     Write-Host ""
     Write-Host ""
