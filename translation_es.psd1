@@ -5,7 +5,7 @@
    "MMSearchUpdate" = "Verificar Actualizaciones"
    "MMSelectLanguage" = "Seleccionar Idioma"
    "MMVIPGroup" = "Grupo VIP"
-   "MMExit" = "Salir"
+   "MMExit" = "Sair"
    "MMChoiceOption" = "Ingrese el número de la opción elegida"
    "MMChoiceOptionExit" = "Saliendo de la aplicación..."
 
