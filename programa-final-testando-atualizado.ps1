@@ -11273,8 +11273,8 @@ function Show-Process-Produto {
 function StartLoading {
 
     # Seleciona o idioma inicial no arquivo de configuração
-    $idiomaSelecionado = $global:language = Get-LanguageConfig | Out-Null
-
+    $idiomaSelecionado = $global:language = Get-LanguageConfig
+    
 }
 
 function StartLoadingApp {
@@ -11334,7 +11334,7 @@ function StartLoadingApp {
 
 }
 
-StartLoading
+StartLoading | Out-Null
 StartLoadingApp
 
 # Abre o menu principal
