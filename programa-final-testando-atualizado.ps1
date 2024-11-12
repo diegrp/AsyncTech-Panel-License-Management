@@ -11277,8 +11277,7 @@ function StartLoadingApp {
      
     # Verifique se o caminho contém mais de uma parte (caminho completo)
     if ($idiomaSelecionado -contains '\') {
-    	$idiomaSeleciadoAjuste = $idiomaSelecionado.Split()[-1]
-	$idiomaSelecionado = $idiomaSeleciadoAjuste 
+    	exit
     } else {
 	$idiomaSelecionado = $idiomaSelecionado
     }
