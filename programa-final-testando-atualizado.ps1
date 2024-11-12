@@ -11270,7 +11270,12 @@ function Show-Process-Produto {
 
 }
 
-StartLoadingApp
+function StartLoading {
+
+    # Seleciona o idioma inicial no arquivo de configuração
+    $idiomaSelecionado = $global:language = Get-LanguageConfig
+
+}
 
 function StartLoadingApp {
 
@@ -11279,7 +11284,7 @@ function StartLoadingApp {
      
     # Verifique se o caminho contém mais de uma parte (caminho completo)
     if ($idiomaSelecionado -ne "pt") {
-    	StartLoadingApp
+    	$idiomaSelecionadoStartLoadingApp
     } else {
 	$idiomaSelecionado = $idiomaSelecionado
     }
@@ -11335,6 +11340,9 @@ function StartLoadingApp {
     Check-Version-App
 
 }
+
+StartLoading
+StartLoadingApp
 
 # Abre o menu principal
 Show-Menu
