@@ -11279,7 +11279,8 @@ function StartLoadingApp {
     if ($idiomaSelecionado -match '^[a-zA-Z]{2}$') {
     	$idiomaSelecionado = $idiomaSelecionado
     } else {
-    	$idiomaSelecionado = $global:language
+    	exit
+    	$idiomaSelecionado = "pt"
     }
     
     Update-Title-WindowMenu -menuKey "CARREGAMENTO INICIAL PARA VERIFICAÇÃO DE REQUISITOS" -idiomaSelecionado $idiomaSelecionado # Atualiza o título para o menu principal
