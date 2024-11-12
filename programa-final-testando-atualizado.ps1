@@ -11272,14 +11272,6 @@ function Show-Process-Produto {
 
 function StartLoadingApp {
 
-    param (
-        [string]$exePath
-    )
-
-    # Definir o caminho raiz com base na disponibilidade de $PSScriptRoot ou $exePath
-    # Se $PSScriptRoot não estiver definido, utilize o caminho do .exe passado como argumento
-    $RootPath = if ([string]::IsNullOrEmpty($PSScriptRoot)) { $exePath } else { $PSScriptRoot }
-
     # Seleciona o idioma inicial no arquivo de configuração
     $idiomaSelecionado = $global:language = Get-LanguageConfig
 
@@ -11306,7 +11298,7 @@ function StartLoadingApp {
     Write-Host "     ================================================================================================================" -ForegroundColor Green
     Write-Host "$spacesMenuStartLoadingApp$menuStartLoadingAppTexto" -ForegroundColor Cyan
     Write-Host "     ================================================================================================================" -ForegroundColor Green
-	Write-Host ""
+    Write-Host ""
     Write-Host "     ================================================================================================================" -ForegroundColor Gray
     Write-Host "" 
     # Verificação inicial de requisitos
@@ -11335,7 +11327,7 @@ function StartLoadingApp {
 
 }
 
-StartLoadingApp -exePath $exePath
+StartLoadingApp
 
 # Abre o menu principal
 Show-Menu
