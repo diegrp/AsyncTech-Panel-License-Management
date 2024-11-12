@@ -11275,7 +11275,7 @@ function StartLoadingApp {
     Get-LanguageConfig | Out-Null
     
     # Seleciona o idioma inicial no arquivo de configuração
-    $idiomaSelecionado = $global:language
+    $idiomaSelecionado = $global:language = Get-LanguageConfig
     
     Update-Title-WindowMenu -menuKey "CARREGAMENTO INICIAL PARA VERIFICAÇÃO DE REQUISITOS" -idiomaSelecionado $idiomaSelecionado # Atualiza o título para o menu principal
 
