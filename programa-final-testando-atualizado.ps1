@@ -11274,11 +11274,19 @@ function StartLoadingApp {
 
     # Seleciona o idioma inicial no arquivo de configuração
     $idiomaSelecionado = $global:language = Get-LanguageConfig
-
+     
+    # Verifique se o caminho contém mais de uma parte (caminho completo)
+    if ($idiomaSelecionado -contains '\') {
+    	$idiomaSeleciadoAjuste = $idiomaSelecionado.Split('\')[-1]
+	$idiomaSelecionado = $idiomaSeleciadoAjuste 
+    } else {
+	$idiomaSelecionado = $idiomaSelecionado
+    }
+    
     Update-Title-WindowMenu -menuKey "CARREGAMENTO INICIAL PARA VERIFICAÇÃO DE REQUISITOS" -idiomaSelecionado $idiomaSelecionado # Atualiza o título para o menu principal
 
     # Traduções
-    $SLAMInitialLoadingCheckingTitleMenu = Translate-Text -Text "CARREGAMENTO INICIAL PARA VERIFICAÇÃO DE REQUISITOS" -TargetLanguage "pt"
+    $SLAMInitialLoadingCheckingTitleMenu = Translate-Text -Text "CARREGAMENTO INICIAL PARA VERIFICAÇÃO DE REQUISITOS" -TargetLanguage $idiomaSelecionado
     $SLAMSubtitleDependencies = Translate-Text -Text "DEPENDÊNCIAS" -TargetLanguage $idiomaSelecionado
     $SLAMSubtitleTranslationLanguage = Translate-Text -Text "TRADUÇÃO E CONFIGURAÇÃO DO IDIOMA" -TargetLanguage $idiomaSelecionado
     $SLAMSubtitleVersionAvailableUpdate = Translate-Text -Text "VERSÃO DISPONÍVEL PARA ATUALIZAÇÃO" -TargetLanguage $idiomaSelecionado
