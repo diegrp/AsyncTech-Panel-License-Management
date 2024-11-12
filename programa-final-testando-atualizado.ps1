@@ -375,6 +375,7 @@ function Get-Translation {
                 Write-Host -NoNewline "$loadingfileLanguageDownloadN2" -ForegroundColor Green
                 Start-Sleep -Seconds 1
                 Write-Host ""
+		Write-Host ""
             }
 
             $global:translations = Import-PowerShellDataFile -Path $translationFile
