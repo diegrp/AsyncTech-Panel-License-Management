@@ -11278,7 +11278,7 @@ function StartLoadingApp {
     Update-Title-WindowMenu -menuKey "CARREGAMENTO INICIAL PARA VERIFICAÇÃO DE REQUISITOS" -idiomaSelecionado $idiomaSelecionado # Atualiza o título para o menu principal
 
     # Traduções
-    $SLAMInitialLoadingCheckingTitleMenu = Translate-Text -Text "CARREGAMENTO INICIAL PARA VERIFICAÇÃO DE REQUISITOS" -TargetLanguage $idiomaSelecionado
+    $SLAMInitialLoadingCheckingTitleMenu = Translate-Text -Text "CARREGAMENTO INICIAL PARA VERIFICAÇÃO DE REQUISITOS" -TargetLanguage "pt"
     $SLAMSubtitleDependencies = Translate-Text -Text "DEPENDÊNCIAS" -TargetLanguage $idiomaSelecionado
     $SLAMSubtitleTranslationLanguage = Translate-Text -Text "TRADUÇÃO E CONFIGURAÇÃO DO IDIOMA" -TargetLanguage $idiomaSelecionado
     $SLAMSubtitleVersionAvailableUpdate = Translate-Text -Text "VERSÃO DISPONÍVEL PARA ATUALIZAÇÃO" -TargetLanguage $idiomaSelecionado
@@ -11302,7 +11302,7 @@ function StartLoadingApp {
     Write-Host "     ================================================================================================================" -ForegroundColor Gray
     Write-Host "" 
     # Verificação inicial de requisitos
-    Write-Host -NoNewline "     2 - " -ForegroundColor Yellow
+    Write-Host -NoNewline "     1 - " -ForegroundColor Yellow
     Write-Host -NoNewline "$($SLAMSubtitleDependencies):" -ForegroundColor Cyan
     Write-Host ""
     Write-Host ""
