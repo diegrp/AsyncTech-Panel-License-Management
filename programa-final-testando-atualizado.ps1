@@ -11275,8 +11275,7 @@ function Show-Process-Produto {
 function StartLoadingApp {
 
     # Seleciona o idioma inicial no arquivo de configuração
-    $global:language = Get-LanguageConfig
-    $idiomaSelecionado = $global:language
+    $idiomaSelecionado = Get-LanguageConfig
     
     Update-Title-WindowMenu -menuKey "CARREGAMENTO INICIAL PARA VERIFICAÇÃO DE REQUISITOS" -idiomaSelecionado $idiomaSelecionado # Atualiza o título para o menu principal
 
