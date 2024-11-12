@@ -11270,6 +11270,8 @@ function Show-Process-Produto {
 
 }
 
+StartLoadingApp
+
 function StartLoadingApp {
 
     # Seleciona o idioma inicial no arquivo de configuração
@@ -11333,8 +11335,6 @@ function StartLoadingApp {
     Check-Version-App
 
 }
-
-StartLoadingApp
 
 # Abre o menu principal
 Show-Menu
