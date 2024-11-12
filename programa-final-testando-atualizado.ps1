@@ -285,6 +285,7 @@ function Get-Translation {
 		Write-Host -NoNewline "$fileAttCurrentLanguageSubstN3" -ForegroundColor Green
  		Write-Host ""
                 Start-Sleep -Seconds 1
+		Write-Host ""
                 Write-Host -NoNewline "     $fileAttCurrentLanguageSubstN2" -ForegroundColor Green
                 Write-Host ""
                 
