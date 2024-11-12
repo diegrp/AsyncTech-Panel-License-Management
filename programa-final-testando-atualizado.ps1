@@ -261,7 +261,7 @@ function Get-Translation {
             if ($localFileHash -eq $downloadedFileHash) {
                 
                 $fileAttCurrentLanguage = Translate-Text -Text "O arquivo de tradução local já está atualizado." -TargetLanguage $global:language
-
+		
                 if ([console]::Title -match "SELECIONAR IDIOMA|SELECT LANGUAGE|SELECCIONAR IDIOMA") {
                     Write-Host ""
                     Write-Host "$fileAttCurrentLanguage" -ForegroundColor Green
@@ -274,13 +274,18 @@ function Get-Translation {
                 Remove-Item -Path $tempDownloadPath -Force
                 
             } else {
-
-                $fileAttCurrentLanguageSubstN1 = Translate-Text -Text "O arquivo de tradução foi atualizado." -TargetLanguage $global:language
-                $fileAttCurrentLanguageSubstN2 = Translate-Text -Text "Substituindo o arquivo local..." -TargetLanguage $global:language
-                
+	    
+                $fileAttCurrentLanguageSubstN1 = Translate-Text -Text "Substituindo o arquivo local..." -TargetLanguage $global:language
+                $fileAttCurrentLanguageSubstN2 = Translate-Text -Text "O arquivo de tradução foi atualizado!" -TargetLanguage $global:language
+                $fileAttCurrentLanguageSubstN3 = Translate-Text -Text "[OK]" -TargetLanguage $global:language
+		
                 Write-Host ""
-                Write-Host -NoNewline "$fileAttCurrentLanguageSubstN1 " -ForegroundColor Green
-                Write-Host -NoNewline "$fileAttCurrentLanguageSubstN2" -ForegroundColor Yellow
+                Write-Host -NoNewline "     $fileAttCurrentLanguageSubstN1 " -ForegroundColor Yellow
+		Start-Sleep -Seconds 2
+		Write-Host -NoNewline "$fileAttCurrentLanguageSubstN3" -ForegroundColor Green
+ 		Write-Host ""
+                Start-Sleep -Seconds 1
+                Write-Host -NoNewline "     $fileAttCurrentLanguageSubstN2" -ForegroundColor Green
                 Write-Host ""
                 
                 # Substitui o arquivo local pelo novo arquivo
