@@ -11294,7 +11294,7 @@ function StartLoadingApp {
     $spacesMenuStartLoadingApp = " " * $spacesNeededMenuStartLoadingApp
 
     Write-Host ""
-    Write-Host ""
+    Write-Host "$idiomaSelecionado"
     Write-Host "     ================================================================================================================" -ForegroundColor Green
     Write-Host "$spacesMenuStartLoadingApp$menuStartLoadingAppTexto" -ForegroundColor Cyan
     Write-Host "     ================================================================================================================" -ForegroundColor Green
