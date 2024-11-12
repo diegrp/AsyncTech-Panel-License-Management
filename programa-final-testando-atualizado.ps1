@@ -19,6 +19,8 @@ $global:configFolderPath = "$RootPath\config"
 $global:configFilePath = "$global:configFolderPath\config_language.json"
 # Caminho da pasta de configuração onde os arquivos de tradução estarão localizados
 $global:translationFolderPath = "$RootPath\translations"
+# Idioma default
+$global:language = "pt"
 
 # Verificação e validação inicial, antes de iniciar o script principal
 
@@ -11275,7 +11277,14 @@ function Show-Process-Produto {
 function StartLoadingApp {
 
     # Seleciona o idioma inicial no arquivo de configuração
-    $idiomaSelecionado = Get-LanguageConfig
+    $idiomaSelecionado = $global:language = Get-LanguageConfig
+    
+    # Verifica se $idiomaSelecionado contém apenas duas letras
+    if ($idiomaSelecionado -match '^[a-zA-Z]{2}$') {
+    	$idiomaSelecionado = $idiomaSelecionado
+    } else {
+    	$idiomaSelecionado = $global:language
+    }
     
     Update-Title-WindowMenu -menuKey "CARREGAMENTO INICIAL PARA VERIFICAÇÃO DE REQUISITOS" -idiomaSelecionado $idiomaSelecionado # Atualiza o título para o menu principal
 
@@ -11296,7 +11305,7 @@ function StartLoadingApp {
     $spacesMenuStartLoadingApp = " " * $spacesNeededMenuStartLoadingApp
 
     Write-Host ""
-    Write-Host "$idiomaSelecionado"
+    Write-Host ""
     Write-Host "     ================================================================================================================" -ForegroundColor Green
     Write-Host "$spacesMenuStartLoadingApp$menuStartLoadingAppTexto" -ForegroundColor Cyan
     Write-Host "     ================================================================================================================" -ForegroundColor Green
