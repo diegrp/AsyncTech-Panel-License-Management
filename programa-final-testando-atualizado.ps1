@@ -65,12 +65,14 @@ function Check-WinRAR {
 
 # Função para carregar ou criar o arquivo de configuração do idioma
 function Get-LanguageConfig {
-
+	
     if (Test-Path $global:configFilePath) {
         # Se o arquivo existir, carrega o idioma salvo
         $config = Get-Content -Raw -Path $global:configFilePath | ConvertFrom-Json
         return $config.language
     } else {
+    	Write-Host "configFilePath: $global:configFilePath"
+        Write-Host "configFolderPath: $global:configFolderPath"
         # Se não existir, cria a pasta config com o arquivo de configuração com o idioma padrão (Português)
         New-Item -Path $global:configFolderPath -ItemType Directory -Force
         $defaultConfig = @{ language = "pt" }
