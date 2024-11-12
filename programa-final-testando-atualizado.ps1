@@ -19,8 +19,6 @@ $global:configFolderPath = "$RootPath\config"
 $global:configFilePath = "$global:configFolderPath\config_language.json"
 # Caminho da pasta de configuração onde os arquivos de tradução estarão localizados
 $global:translationFolderPath = "$RootPath\translations"
-# Idioma default
-$global:language = "pt"
 
 # Verificação e validação inicial, antes de iniciar o script principal
 
