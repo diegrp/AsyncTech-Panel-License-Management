@@ -113,7 +113,7 @@ function Save-Cache {
 function Translate-Text {
     param (
         [string]$Text,
-        [string]$TargetLanguage
+        [string]$TargetLanguage = "pt"
     )
 
     # Cria uma chave única para o cache usando o texto e o idioma de destino
@@ -135,7 +135,7 @@ function Translate-Text {
     }
 
     # Verifique se a variável $Text não está vazia ou nula
-    if (![string]::IsNullOrEmpty($Text) -or ![string]::IsNullOrEmpty($TargetLanguage)) {
+    if (![string]::IsNullOrEmpty($Text)) {
         # Monte a URL somente se $Text tiver conteúdo
         # Defina a URL da API do PythonAnywhere
         $url = "https://ftapi.pythonanywhere.com/translate?sl=pt&dl=$TargetLanguage&text=$Text"
