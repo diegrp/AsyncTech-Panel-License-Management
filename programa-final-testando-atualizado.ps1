@@ -11327,7 +11327,7 @@ function StartLoadingApp {
 
 }
 
-Get-LanguageConfig
+Get-LanguageConfig | Out-Null
 StartLoadingApp
 
 # Abre o menu principal
