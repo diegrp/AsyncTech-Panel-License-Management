@@ -11276,13 +11276,12 @@ function StartLoadingApp {
     $idiomaSelecionado = $global:language = Get-LanguageConfig
     
     # Verifica se $idiomaSelecionado contém apenas duas letras
-    if ($idiomaSelecionado -match '^[a-zA-Z]{2}$') {
-        exit
-    	$idiomaSelecionado = $idiomaSelecionado
-    } else {
-    	exit
-    	$idiomaSelecionado = "pt"
-    }
+# Verifica se $idiomaSelecionado contém apenas duas letras
+if ($idiomaSelecionado -match '^[a-zA-Z]{2}$') {
+    Write-Output "O idioma selecionado é válido: $idiomaSelecionado"
+} else {
+    Write-Output "O idioma selecionado é inválido: $idiomaSelecionado"
+}
     
     Update-Title-WindowMenu -menuKey "CARREGAMENTO INICIAL PARA VERIFICAÇÃO DE REQUISITOS" -idiomaSelecionado $idiomaSelecionado # Atualiza o título para o menu principal
 
