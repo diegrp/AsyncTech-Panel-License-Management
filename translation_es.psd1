@@ -92,6 +92,21 @@
    "VGMGWALNothingLinkGroupParticipation" = "En este momento, no hay un enlace de participación para el grupo."
    "VGMGWALNothingLinkAccessWebsite" = "En este momento, no hay un enlace de acceso al sitio web."
 
+   # Login Menu
+   "LMLoginMenu" = "MENÚ DE INICIO DE SESIÓN"
+   "LMEnterPass" = "Introduce tu contraseña"
+   "LMEnterUser" = "Ingrese su nombre de usuario"
+   "LMShowUser" = "Usuario ingresado"
+   "LMShowPass" = "Contraseña ingresada"
+   # Login Successful
+   "LMSuccessLoginN1" = "Iniciar sesión exitosamente,"
+   "LMSuccessLoginN2" = "apertura"
+   "LMSuccessLoginN3" = "'TU MENÚ DE SELECCIÓN DE PRODUCTOS'."
+   # Login Failure
+   "LMErrorLoginN1" = "Error al iniciar sesión."
+   "LMErrorLoginN2" = "Nombre de usuario o contraseña incorrectos."
+   "LMEmptyLogin" = "El nombre de usuario o la contraseña no pueden estar vacíos."
+
    # Select Produc Menu
    # Details Login Account
    "SPMDLAUnlimited" = "Ilimitado"
