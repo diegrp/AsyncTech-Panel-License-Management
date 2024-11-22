@@ -1,1 +1,2 @@
-1|usuario|senha|nomeproduto,categoriaproduto,metodoativacao,3,3,duracaoplano,datainicioplano,datafimplano,statuspagamentoproduto|duracaoplanoconta|datainicioconta|datafimconta|statuspagamentoconta|tipoconta
+id|usuario|senha|nomeproduto,categoriaproduto,metodoativacao,3,3,duracaoplano,datainicioplano,datafimplano,statuspagamentoproduto|duracaoplanoconta|datainicioconta|datafimconta|statuspagamentoconta|Membro
+id|usuario|senha|nomeproduto,categoriaproduto,metodoativacao,Ilimitado,Ilimitado,duracaoplano,datainicioplano,datafimplano,statuspagamentoproduto|duracaoplanoconta|datainicioconta|datafimconta|statuspagamentoconta|VIP
