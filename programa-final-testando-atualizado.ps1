@@ -2619,7 +2619,7 @@ function Calculate-QTDVTotal {
                         
         $qtdv_atualizado = $product.qtdv_produto_atualizado
 
-        if ($qtdv_atualizado -eq "ilimitado") {
+        if ($qtdv_atualizado -eq "Ilimitado") {
             $isIlimitado = $true
             break
         }
