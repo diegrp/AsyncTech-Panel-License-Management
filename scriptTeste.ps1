@@ -1,7 +1,4 @@
-param (
-    [string]$Acao,   # "instalar" ou "desinstalar"
-    [string]$Programa
-)
+# As variáveis $Acao e $Programa são definidas antes da execução remota, então não precisamos de 'param(...)'
 
 function Escrever-Etapa {
     param([string]$Mensagem)
@@ -44,3 +41,5 @@ switch ($Acao) {
     "desinstalar" { Desinstalar-Programa }
     default      { Escrever-Etapa "Ação desconhecida: $Acao" }
 }
+
+Read-Host "Pressione Enter para sair"
