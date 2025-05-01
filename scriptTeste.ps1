@@ -22,25 +22,25 @@ function Instalar-Programa {
     Escrever-Etapa "Abrindo instalador"
     Start-Sleep -Seconds 1
 
-    Escrever-Etapa "Esperando instalação terminar"
+    Escrever-Etapa "Esperando instalaÃ§Ã£o terminar"
     Start-Sleep -Seconds 1
 
-    Escrever-Etapa "Instalação concluída"
+    Escrever-Etapa "InstalaÃ§Ã£o concluÃ­da"
 }
 
 function Desinstalar-Programa {
     Escrever-Etapa "Executando desinstalador"
     Start-Sleep -Seconds 1
 
-    Escrever-Etapa "Aguardando desinstalação"
+    Escrever-Etapa "Aguardando desinstalaÃ§Ã£o"
     Start-Sleep -Seconds 1
 
-    Escrever-Etapa "Desinstalação concluída"
+    Escrever-Etapa "DesinstalaÃ§Ã£o concluÃ­da"
 }
 
-# Execução baseada na ação
+# ExecuÃ§Ã£o baseada na aÃ§Ã£o
 switch ($Acao) {
     "instalar"   { Instalar-Programa }
     "desinstalar" { Desinstalar-Programa }
-    default      { Escrever-Etapa "Ação desconhecida: $Acao" }
+    default      { Escrever-Etapa "AÃ§Ã£o desconhecida: $Acao" }
 }
