@@ -1,14 +1,21 @@
 [Console]::OutputEncoding = [System.Text.Encoding]::UTF8
 
-# As variáveis $Acao e $Programa são definidas antes da execução remota, então não precisamos de 'param(...)'
+# Garantir que $ModoSilencioso esteja definido corretamente como booleano
+if ($ModoSilencioso -is [string]) {
+    $ModoSilencioso = $ModoSilencioso.ToLower() -eq "true"
+} elseif (-not $ModoSilencioso) {
+    $ModoSilencioso = $false
+}
 
 function Escrever-Etapa {
     param([string]$Mensagem)
 
-    # Mostrar para o usuário no PowerShell
-    Write-Host "🔧 $Mensagem"
+    # Mostrar no console do PowerShell apenas se não estiver em modo silencioso
+    if (-not $ModoSilencioso) {
+        Write-Host "🔧 $Mensagem"
+    }
 
-    # Enviar para o C# via saída padrão (JSON)
+    # Sempre envia JSON pela saída padrão (capturado no C#)
     $saida = @{
         Programa  = $Programa
         Etapa     = $Mensagem
@@ -43,9 +50,12 @@ function Desinstalar-Programa {
 
 # Execução baseada na ação
 switch ($Acao) {
-    "instalar"   { Instalar-Programa }
+    "instalar"    { Instalar-Programa }
     "desinstalar" { Desinstalar-Programa }
-    default      { Escrever-Etapa "Ação desconhecida: $Acao" }
+    default       { Escrever-Etapa "Ação desconhecida: $Acao" }
 }
 
-Read-Host "Pressione Enter para sair"
+# Mostrar prompt final se não for silencioso
+if (-not $ModoSilencioso) {
+    Read-Host "Pressione Enter para sair"
+}
