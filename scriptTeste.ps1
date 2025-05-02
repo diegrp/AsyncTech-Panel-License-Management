@@ -1,12 +1,17 @@
 [Console]::OutputEncoding = [System.Text.Encoding]::UTF8
 
 # As variáveis $Acao e $Programa são definidas antes da execução remota, então não precisamos de 'param(...)'
+
 function Escrever-Etapa {
     param([string]$Mensagem)
 
+    # Mostrar para o usuário no PowerShell
+    Write-Host "🔧 $Mensagem"
+
+    # Enviar para o C# via saída padrão (JSON)
     $saida = @{
-        Programa = $Programa
-        Etapa = $Mensagem
+        Programa  = $Programa
+        Etapa     = $Mensagem
         Timestamp = (Get-Date).ToString("HH:mm:ss")
     }
 
@@ -15,19 +20,19 @@ function Escrever-Etapa {
 
 function Instalar-Programa {
     Escrever-Etapa "Baixando instalador"
+    Write-Host "🔧 Baixando instalador do programa..."
     Start-Sleep -Seconds 1
 
     Escrever-Etapa "Abrindo instalador"
+    Write-Host "🔧 Abrindo instalador do programa..."
     Start-Sleep -Seconds 1
 
     Escrever-Etapa "Esperando instalação terminar"
+    Write-Host "🔧 Esperando instalação terminar..."
     Start-Sleep -Seconds 1
 
     Escrever-Etapa "Instalação concluída"
-
-    Write-Host "🔧 Iniciando instalação do programa..."
-    Write-Host "⚠️ Atenção!" -ForegroundColor Yellow
-    Write-Host "✅ Instalação concluída!" -ForegroundColor Green
+    Write-Host "✅ Instalação concluída..."
 }
 
 function Desinstalar-Programa {
