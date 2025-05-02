@@ -13,7 +13,7 @@ function Escrever-Etapa {
     # Mostrar no console do PowerShell apenas se não estiver em modo silencioso
     if (-not $ModoSilencioso) {
         $Timestamp = (Get-Date).ToString("HH:mm:ss")
-        Write-Host "$Timestamp "-" + 🔧 $Mensagem"
+        Write-Host "$Timestamp + "-" + 🔧 $Mensagem"
     } else {
         # Sempre envia JSON pela saída padrão (capturado no C#)
         $saida = @{
