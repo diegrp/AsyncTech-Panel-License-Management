@@ -24,6 +24,10 @@ function Instalar-Programa {
     Start-Sleep -Seconds 1
 
     Escrever-Etapa "Instalação concluída"
+
+    Write-Host "🔧 Iniciando instalação do programa..."
+    Write-Host "⚠️ Atenção!" -ForegroundColor Yellow
+    Write-Host "✅ Instalação concluída!" -ForegroundColor Green
 }
 
 function Desinstalar-Programa {
@@ -42,9 +46,5 @@ switch ($Acao) {
     "desinstalar" { Desinstalar-Programa }
     default      { Escrever-Etapa "Ação desconhecida: $Acao" }
 }
-
-Write-Host "🔧 Iniciando instalação do programa..."
-Write-Host "⚠️ Atenção!" -ForegroundColor Yellow
-Write-Host "✅ Instalação concluída!" -ForegroundColor Green
 
 Read-Host "Pressione Enter para sair"
