@@ -1,5 +1,6 @@
-# As variáveis $Acao e $Programa são definidas antes da execução remota, então não precisamos de 'param(...)'
+[Console]::OutputEncoding = [System.Text.Encoding]::UTF8
 
+# As variáveis $Acao e $Programa são definidas antes da execução remota, então não precisamos de 'param(...)'
 function Escrever-Etapa {
     param([string]$Mensagem)
 
