@@ -12,20 +12,22 @@ function Escrever-Etapa {
 
     # Mostrar no console do PowerShell apenas se não estiver em modo silencioso
     if (-not $ModoSilencioso) {
-        Write-Host "🔧 $Mensagem"
+        $Timestamp = (Get-Date).ToString("HH:mm:ss")
+        Write-Host "$Timestamp "-" + 🔧 $Mensagem"
+    } else {
+        # Sempre envia JSON pela saída padrão (capturado no C#)
+        $saida = @{
+            Programa  = $Programa
+            Etapa     = $Mensagem
+            Timestamp = (Get-Date).ToString("HH:mm:ss")
+        }
+    
+        $saida | ConvertTo-Json -Compress
     }
-
-    # Sempre envia JSON pela saída padrão (capturado no C#)
-    $saida = @{
-        Programa  = $Programa
-        Etapa     = $Mensagem
-        Timestamp = (Get-Date).ToString("HH:mm:ss")
-    }
-
-    $saida | ConvertTo-Json -Compress
 }
 
 function Instalar-Programa {
+
     Escrever-Etapa "Baixando instalador"
     Start-Sleep -Seconds 1
 
@@ -36,9 +38,11 @@ function Instalar-Programa {
     Start-Sleep -Seconds 1
 
     Escrever-Etapa "Instalação concluída"
+    
 }
 
 function Desinstalar-Programa {
+
     Escrever-Etapa "Executando desinstalador"
     Start-Sleep -Seconds 1
 
