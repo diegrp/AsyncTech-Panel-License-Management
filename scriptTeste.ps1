@@ -20,19 +20,15 @@ function Escrever-Etapa {
 
 function Instalar-Programa {
     Escrever-Etapa "Baixando instalador"
-    Write-Host "🔧 Baixando instalador do programa..."
     Start-Sleep -Seconds 1
 
     Escrever-Etapa "Abrindo instalador"
-    Write-Host "🔧 Abrindo instalador do programa..."
     Start-Sleep -Seconds 1
 
     Escrever-Etapa "Esperando instalação terminar"
-    Write-Host "🔧 Esperando instalação terminar..."
     Start-Sleep -Seconds 1
 
     Escrever-Etapa "Instalação concluída"
-    Write-Host "✅ Instalação concluída..."
 }
 
 function Desinstalar-Programa {
