@@ -43,4 +43,8 @@ switch ($Acao) {
     default      { Escrever-Etapa "Ação desconhecida: $Acao" }
 }
 
+Write-Host "🔧 Iniciando instalação do programa..."
+Write-Host "⚠️ Atenção!" -ForegroundColor Yellow
+Write-Host "✅ Instalação concluída!" -ForegroundColor Green
+
 Read-Host "Pressione Enter para sair"
